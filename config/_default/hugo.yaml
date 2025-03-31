@@ -3,7 +3,15 @@
 ############################
 
 baseURL: "https://viogami.github.io/blog"
-title: blog
+title: Violog
+
+markup:
+  highlight:
+    style: onedark
+  goldmark:
+    renderer:
+      unsafe: true
+      
 
 ############################
 ## MISC
