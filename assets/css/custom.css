@@ -1,13 +1,13 @@
 /* 更高优先级覆盖 Tailwind 的默认超链接样式 */
 .prose :where(a){
     text-decoration: none; /* 强制取消下划线 */
-    color: #007bff; /* 修改颜色 */
+    color: #00ADD8; /* 修改颜色 */
     transition: color 0.3s ease; /* 平滑颜色变化 */
 }
 
 .prose :where(a):hover {
     color: #0056b3; /* 悬停时的颜色 */
-    text-decoration: underline;/* 可选，鼠标悬停时显示下划线 */
+
 }
 
 /* 图片最大宽度 100%，保证响应式
