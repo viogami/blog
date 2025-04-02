@@ -2,13 +2,15 @@
 title: 【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下)
 subtitle: 
 summary:
-date: 
+date: 2023-02-05
 cardimage: 
 featureimage: 
 caption: 
 authors:
-    - viogami: author.jpeg
+  - viogami: author.jpeg
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
+
 ## 前言
 
 本贴将之前没有连接数据库的抽卡模拟器全部完善，最终已经放在了Github上

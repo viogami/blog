@@ -9,9 +9,10 @@ caption:
 authors:
   - viogami: author.jpeg
 ---
-<!--more-->
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。
+<!--more-->
 
 **本文基本从0开始部署Agones，进而逐步理解docker，理解K8S。**
 

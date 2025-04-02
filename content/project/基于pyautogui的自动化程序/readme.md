@@ -7,9 +7,9 @@ cardimage:
 featureimage: 
 caption: 
 authors:
-    - viogami: author.jpeg
+  - viogami: author.jpeg
 ---
-
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 主要使用pyautogui的库实现，以及使用gooey库制作了GUI。
 详细请访问我的**[github项目页面][1]**

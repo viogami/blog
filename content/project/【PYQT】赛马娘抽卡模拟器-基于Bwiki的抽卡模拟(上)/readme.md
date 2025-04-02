@@ -7,15 +7,18 @@ cardimage:
 featureimage: 
 caption: 
 authors:
-    - viogami: author.jpeg
+  - viogami: author.jpeg
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
+
 ## 前言
 
 之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。本帖先不介绍连接数据库，详情见[（下）](/index.php/archives/5/)。
-实际上Bwiki有现成的赛马娘抽卡模拟，用pyqt有参照实现更容易了：
-`<u>`[Bwiki赛马娘抽卡模拟器](https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8) `</u>`
 
 <!--more-->
+
+实际上Bwiki有现成的赛马娘抽卡模拟，用pyqt有参照实现更容易了：
+`<u>`[Bwiki赛马娘抽卡模拟器](https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8) `</u>`
 
 ## 预览
 

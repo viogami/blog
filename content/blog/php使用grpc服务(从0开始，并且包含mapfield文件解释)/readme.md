@@ -1,7 +1,7 @@
 ---
 # general config
 title: php使用grpc服务(从0开始，并且包含mapfield文件解释)
-subtitle: 
+subtitle: grpc是通过定义服务端和客户端的代码来实现的通信的。但是要实现通信，还是要将其方法包装为一个http请求，除非你把grpc的服务端代码放在本地的端口上。
 date: 2024-03-24
 authors:
   - viogami: author.png
@@ -15,10 +15,7 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
-
-grpc是通过定义服务端和客户端的代码来实现的通信的。
-
-但是要实现通信，还是要将其方法包装为一个http请求，除非你把grpc的服务端代码放在本地的端口上。
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。
 

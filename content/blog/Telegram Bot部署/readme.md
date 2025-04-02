@@ -15,6 +15,7 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 ## 基本示例我放在了github上：[Gobot][1]
 

@@ -7,8 +7,10 @@ cardimage:
 featureimage: 
 caption: 
 authors:
-    - viogami: author.jpeg
+  - viogami: author.jpeg
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
+
 ## [演示DEMO地址](http://fa.viogami.me/)
 
 ### 技术栈：gin+gorm+mysql+jwt+redis+grpc+pytorch+vue3+vite+tailwind

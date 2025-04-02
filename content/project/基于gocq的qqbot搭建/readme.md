@@ -7,8 +7,10 @@ cardimage:
 featureimage: 
 caption: 
 authors:
-    - viogami: author.jpeg
+  - viogami: author.jpeg
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
+
 你至少需要启动三个服务
 
 - qsign服务器

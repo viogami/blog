@@ -15,8 +15,7 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
-
-{{< figArray subfolder="`<subfoldername>`" figCaption="Some caption" numCols=2 >}}
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 <script src="https://giscus.app/client.js"
         data-repo="viogami/blog"

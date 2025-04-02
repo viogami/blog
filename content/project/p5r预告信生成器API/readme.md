@@ -9,6 +9,8 @@ caption:
 authors:
   - viogami: author.jpeg
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
+
 预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html)
 
 我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。

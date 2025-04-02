@@ -15,6 +15,8 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
+
 ## 三步
 
 - 下载prism文件。

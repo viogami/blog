@@ -15,6 +15,7 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
+{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 ## grpc前言
 
