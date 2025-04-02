@@ -9,8 +9,7 @@ caption:
 authors:
   - viogami: author.jpeg
 ---
-
-预告信生成器国外作者原版：<https://skyventuree.github.io/p5cc/index.html>
+预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html)
 
 我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。
 
@@ -18,7 +17,7 @@ authors:
 
 本人将网页版生成器的js代码逻辑使用go语言进行了重写和部署，并开放了其api，可以直接通过get方法获取预告信的png。get方法只能最简单的绘制文本，post方法基本集成所有功能，提供了换行功能等，Text中加入换行符"\n"即可。
 
-GitHub页面：<https://github.com/viogami/WebAPI/tree/master/p5cc>
+GitHub页面：[https://github.com/viogami/WebAPI/tree/master/p5cc](https://github.com/viogami/WebAPI/tree/master/p5cc)
 
 > 快速开始
 
@@ -43,7 +42,7 @@ logoOffset: 240     # Logo偏移量
 showWtm: ""     # 水印文字，为空则不显示
 ```
 
-![2fce0c10-4bda-4b35-ad56-e9186e727eab.png][1]
+![alt text](image/1.png)
 
 字体暂时不可更改，默认使用了 `HarmonyOSSansSC-Bold.ttf`
 
@@ -62,5 +61,3 @@ Assets:
 All assets are all under fair use.
 
 *Credits can also be seen on the website along with links to the original site and owners, at the bottom of the page.*
-
-  [1]: http://viogami.tech/usr/uploads/2025/02/3985945431.png
