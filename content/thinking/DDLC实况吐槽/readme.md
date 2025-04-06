@@ -15,11 +15,12 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
-{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 心跳文学社久闻大名，梗图也很多，但是原来是17年的游戏还是老美的，也没配音，一直没启动过。
 
 <!--more-->
+
+{{< figure src="../1.png" width=80% >}}
 
 今天看到库存就想打开试试。21年做了plus版本，虽然还没配音，但是剧情我也想吃一次原味的，做个游玩时候的心情记录。
 
@@ -27,16 +28,14 @@ authors:
 
 - ### 夏树的伏笔？感觉这角色事太多
 
-![alt text](./image/1.png)
-
 - ### 前面莫妮卡暗示挺多，伏笔
 
-![alt text](./image/2.png)
-![alt text](./image/3.png)
+{{< figure src="../2.png" width=80% >}}
+{{< figure src="../3.png" width=80% >}}
 
 - ### 不给我一心一意战士操作空间非要我选是吧，绷不住了，还不给选莫妮卡
 
-![alt text](./image/4.png)
+{{< figure src="../4.png">}}
 
 - ### 推完了，包括支线。总之还是挺短的，果然在有心理预期的情况下玩游戏，体验肯定是达不到预期的。喜欢纱世里，莫妮卡正常点吧，纯对我好我怎么不接受呢
 
@@ -46,7 +45,7 @@ authors:
 
 其实玩了支线倒挺共情夏树的，特指最后一部分。傲娇并不是极端化出来的属性，而是现实普遍存在的心理的夸张。总而言之
 反正角色各自有各自的心理问题，这不是什么戏剧化的内容，至少我觉得一定程度上解释我为什么无脑选纱世里。
-![alt text](./image/5.png)
+{{< figure src="../5.png" width=80% >}}
 
 <script src="https://giscus.app/client.js"
         data-repo="viogami/blog"

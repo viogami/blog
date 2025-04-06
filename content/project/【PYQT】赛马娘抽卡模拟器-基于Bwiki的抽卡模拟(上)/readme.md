@@ -1,13 +1,13 @@
 ---
 title: 【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)
 subtitle: 
-summary:
+summary: 
 date: 2023-02-05
 cardimage: 
 featureimage: 
 caption: 
 authors:
-  - viogami: author.jpeg
+  - viogami: author.png
 ---
 {{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
@@ -197,9 +197,9 @@ class MyMainForm(QMainWindow, Ui_Form):
                     card_type = 'SR'
                 else:
                     card_type = 'R'
-        
+      
                 cards_star.append(card_type)
-    
+  
             if 'SR' in cards_star:
                 break
 
@@ -215,7 +215,7 @@ class MyMainForm(QMainWindow, Ui_Form):
             label.setScaledContents(True)
             #同时更新计数器
             if (cards_star[i]=="R"):
-                rnum=rnum+1       
+                rnum=rnum+1     
             elif(cards_star[i]=="SR"):
                 srnum=srnum+1  
             elif(cards_star[i]=="SSR"):
@@ -306,9 +306,9 @@ class MyMainForm(QMainWindow, Ui_Form):
                     card_type = 'SR'
                 else:
                     card_type = 'R'
-        
+      
                 cards_star.append(card_type)
-    
+  
             if 'SR' in cards_star:
                 break
 
@@ -324,7 +324,7 @@ class MyMainForm(QMainWindow, Ui_Form):
             self.labels[i].setScaledContents(True)
             #同时更新计数器
             if (cards_star[i]=="R"):
-                rnum=rnum+1       
+                rnum=rnum+1     
             elif(cards_star[i]=="SR"):
                 srnum=srnum+1  
             elif(cards_star[i]=="SSR"):

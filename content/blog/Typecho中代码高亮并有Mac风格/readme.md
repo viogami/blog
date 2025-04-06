@@ -2,6 +2,7 @@
 # general config
 title: Typecho中代码高亮并有Mac风格
 subtitle: 
+summary: 下载prism文件。在head中引用，并添加行号类。修改CSS。
 date: 2023-12-10
 authors:
   - viogami: author.png
@@ -23,7 +24,6 @@ authors:
 - 在head中引用，并添加行号类。
 - 修改CSS。
 
-<!--more-->
 
 ### 第一步：官网下载，选择语言和需要的插件
 

@@ -1,21 +1,16 @@
 ---
+# general config
 title: p5r预告信生成器API
-subtitle:
-summary: 
 date: 2025-02-05
-cardimage: 
-featureimage: 
-caption:
+summary: 预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html).我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。
 authors:
-  - viogami: author.jpeg
+  - viogami: author.png
 ---
 {{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html)
 
 我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。
-
-<!--more-->
 
 本人将网页版生成器的js代码逻辑使用go语言进行了重写和部署，并开放了其api，可以直接通过get方法获取预告信的png。get方法只能最简单的绘制文本，post方法基本集成所有功能，提供了换行功能等，Text中加入换行符"\n"即可。
 
@@ -44,7 +39,7 @@ logoOffset: 240     # Logo偏移量
 showWtm: ""     # 水印文字，为空则不显示
 ```
 
-![alt text](image/1.png)
+{{< figure src="../1.png" >}}
 
 字体暂时不可更改，默认使用了 `HarmonyOSSansSC-Bold.ttf`
 

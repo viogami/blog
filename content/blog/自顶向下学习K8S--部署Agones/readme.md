@@ -7,7 +7,7 @@ cardimage:
 featureimage:
 caption: 
 authors:
-  - viogami: author.jpeg
+  - viogami: author.png
 ---
 {{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
@@ -38,7 +38,7 @@ authors:
 
 由于是个人开发测试用，只用**部署一个单节点集群**就好了，而这在docker-desktop中已经集成了，很方便，如下所示，打开即可：
 
-![alt text](images/1.png)
+{{< figure src="../1.png" width=80% >}}
 
 ```bash
 kubectl get nodes

@@ -2,6 +2,7 @@
 # general config
 title: 使用grpc在go后端和python服务间通信
 subtitle: 
+summary: gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
 date: 2024-03-21
 authors:
   - viogami: author.png
@@ -26,8 +27,6 @@ gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，
 由于我的一个go后端(也可以不是go)需要实现神经网络相关的功能，我要调用一个python的服务，于是想到了使用grpc的方式。
 
 初次接触，将从0介绍到功能实现。
-
-<!--more-->
 
 感谢官方的文档
 
@@ -229,7 +228,7 @@ if __name__ == '__main__':
 `python server.py`
 
 然后访问定义的路由地址，如下显示，nice~
-![alt text](image/1.png)
+{{< figure src="../1.png" width=80% >}}
 
 <script src="https://giscus.app/client.js"
         data-repo="viogami/blog"

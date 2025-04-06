@@ -7,7 +7,7 @@ cardimage:
 featureimage: 
 caption: 
 authors:
-  - viogami: author.jpeg
+  - viogami: author.png
 ---
 {{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 

@@ -2,6 +2,7 @@
 # general config
 title: 【逆向】解决unity导出TextAsset后部分文本出现乱码
 subtitle: 
+summary: 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。
 date: 2025-01-06
 
 # card specific config
@@ -11,9 +12,8 @@ authors:
 {{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 问题预览。可以看到，这是个配置文件，但是只有部分文本可读。
-![alt text](image/1.png)
 
-<!--more-->
+{{<figure src="../1.png" >}}
 
 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。
 既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。
