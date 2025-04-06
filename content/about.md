@@ -48,7 +48,7 @@ docker重度爱好，部署尝试过K8S，但并不熟练。
     <img src="https://camo.githubusercontent.com/2e168acdd82ce05689f70926a5db0c44fb8ec14a4916336d7323a81cc537062c/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d76696f67616d69266c61796f75743d636f6d7061637426686964655f626f726465723d74727565"
         alt="viogami's github stats"
         data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs/?username=viogami&amp;layout=compact&amp;hide_border=true"
-        style="width: 100%; height: auto;"
+        style="width: 90%; height: auto;"
         />
 </div>
 
