@@ -20,7 +20,7 @@ authors:
 
 ## 最终实现效果 👇👇👇
 
-{{< figure src="../1.png" width=80% >}}
+![img](1.png)
 
 ## 创建bot
 

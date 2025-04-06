@@ -9,7 +9,6 @@ caption:
 authors:
   - viogami: author.png
 ---
-{{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
 
 学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。
 <!--more-->
@@ -38,7 +37,7 @@ authors:
 
 由于是个人开发测试用，只用**部署一个单节点集群**就好了，而这在docker-desktop中已经集成了，很方便，如下所示，打开即可：
 
-{{< figure src="../1.png" width=80% >}}
+![alt text](1.png)
 
 ```bash
 kubectl get nodes
@@ -55,7 +54,7 @@ Kubernetes 本身主要是通过 kubectl 命令行工具和 YAML 配置文件进
 
 虽然有 `kubernetes-dashboard`，但别着急，在vscode的插件也有gui可以打开dashboard。推荐安装docker和k8s插件，在vscode中集成开发，然后我逐步解释下插件中每个显示项的作用，**从这里就开始理解如何使用K8S辣**
 
-![alt text](images/2.png)
+![alt text](2.png)
 
 - Namespace（命名空间）Kubernetes 内部的逻辑隔离单位，用于划分不同的应用、环境或团队。一个集群可以包含多个 Namespace，**每个 Namespace 内的资源相互独立**。
 - Workloads（工作负载）管理 Kubernetes 里运行的应用程序，本质上就是 运行 Pod 的控制器。Workload 负责定义应用如何部署、扩缩容、更新和运行。
@@ -115,11 +114,11 @@ kubectl apply --server-side -f https://raw.githubusercontent.com/googleforgames/
 
 然后你就可以在 `Custom Resource`中发现拉去下来的服务了！
 
-![alt text](images/3.png)
+![alt text](3.png)
 
 接下来按照官方文档操作进行部署了，并不赘述，因为本文不是介绍怎么部署agones。
 
-![alt text](images/4.png)
+![alt text](4.png)
 
 本人使用rider及其K8S插件，在游戏开发的时候进行服务器集群控制的。记住命令行得到pod的ip和端口，接下来就是网络通信的知识了。如果要在unity中和部署的服务器应用通信，自写和后端的通信协议，Agones只是个后台应用调度工具，不涉及和前端交互。
 

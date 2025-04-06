@@ -39,7 +39,7 @@ logoOffset: 240     # Logo偏移量
 showWtm: ""     # 水印文字，为空则不显示
 ```
 
-{{< figure src="../1.png" >}}
+![alt text](1.png)
 
 字体暂时不可更改，默认使用了 `HarmonyOSSansSC-Bold.ttf`
 

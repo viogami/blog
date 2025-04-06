@@ -228,7 +228,8 @@ if __name__ == '__main__':
 `python server.py`
 
 然后访问定义的路由地址，如下显示，nice~
-{{< figure src="../1.png" width=80% >}}
+
+![2](1.png)
 
 <script src="https://giscus.app/client.js"
         data-repo="viogami/blog"
