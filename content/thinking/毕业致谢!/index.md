@@ -1,9 +1,9 @@
 ---
-title: 毕业致谢
+title: 毕业致谢!
 subtitle: 
 slug: graduation-thanks
 summary: 为了论文篇幅完整性和一些私人性，我的毕业致谢并不完整，我在此做些补充
-date: 2024-05-4
+date: 2024-05-04
 authors:
   - viogami: author.png
 ---
