@@ -2,6 +2,12 @@
 # general config
 title: Typecho中代码高亮并有Mac风格
 subtitle: 
+slug: prism-mac-style
+tags: 
+  - Typecho
+  - Prism
+  - Mac风格
+  - CSS
 summary: 下载prism文件。在head中引用，并添加行号类。修改CSS。
 date: 2023-12-10
 authors:

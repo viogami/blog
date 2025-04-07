@@ -1,6 +1,7 @@
 ---
 # general config
 title: DDLC实况吐槽
+slug: ddlc
 subtitle: 
 date: 2024-07-21
 authors:

@@ -2,6 +2,12 @@
 # general config
 title: Telegram Bot部署
 subtitle: 
+slug: telegram-bot
+tags: 
+  - Telegram
+  - Bot
+  - Go
+  - Webhook
 summary: 从botfather处创建bot，命名为 `vio`.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)
 date: 2023-12-07
 authors:

@@ -1,5 +1,6 @@
 ---
 title: 清明记事
+slug: "qingming_2024"
 subtitle: 2024年清明节的记事
 summary: 2024年清明节的记事
 date: 2024-04-04
@@ -56,3 +57,19 @@ authors:
 
 机不可失失不再来，此刻刻不容缓。
 刻来，也许是一个不错的名字。我在去宝龙的路上随意的想到。
+
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

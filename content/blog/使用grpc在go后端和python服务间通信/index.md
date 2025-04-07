@@ -2,6 +2,13 @@
 # general config
 title: 使用grpc在go后端和python服务间通信
 subtitle: 
+slug: grpc-go-python
+tags: 
+  - gRPC
+  - go
+  - python
+  - grpc-go
+  - grpc-python
 summary: gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
 date: 2024-03-21
 authors:

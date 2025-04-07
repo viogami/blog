@@ -1,5 +1,6 @@
 ---
 title: 基于pyautogui的自动化程序
+slug: "ATravelerRecognizeImage"
 subtitle: ATravelerRecognizeImage
 summary:
 date: 2023-10-06 
@@ -150,3 +151,19 @@ pip install -r requirements.txt
 我根据gooey库，制作了一个图形化界面，用来调用参数和用户选项。
 
   [1]: http://github.com/viogami/ATravelerRecongizeImage
+
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

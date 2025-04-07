@@ -2,6 +2,14 @@
 # general config
 title: php使用grpc服务(从0开始，并且包含mapfield文件解释)
 subtitle: grpc是通过定义服务端和客户端的代码来实现的通信的。但是要实现通信，还是要将其方法包装为一个http请求，除非你把grpc的服务端代码放在本地的端口上。
+slug: grpc-php
+tags: 
+  - gRPC
+  - php
+  - grpc-php
+  - grpc-python
+  - grpc-go
+summary: grpc是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
 date: 2024-03-24
 authors:
   - viogami: author.png

@@ -1,6 +1,13 @@
 ---
 title: 自顶向下学习K8S--部署Agones
 subtitle: 我是gopher，离不开云原生，自然也逃不了理解docker和K8S这俩。今天抽空想玩下agones，进而对K8S有实践性的理解
+slug: k8s-agones
+tags: 
+  - K8S
+  - docker
+  - agones
+  - kubernetes
+  - 云原生
 summary: 
 date: 2024-03-28
 cardimage: 

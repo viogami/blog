@@ -1,6 +1,12 @@
 ---
 title: TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题
 subtitle: 
+slug: tls-mitmproxy-clash
+tags: 
+  - TLS
+  - mitmproxy
+  - clash
+  - 模拟器
 summary: mumu模拟器启动游戏，希望抓其传向服务器的包，实现一些自动化操作。由于游戏是日服，所以需要启用代理。我使用了clash。此外，游戏的包使用了tls1.3加密，要想截取必须获得在本地生成的密钥进行解密才能知道明文。中间人代理，我使用了mitmproxy。
 date: 2025-01-20
 cardimage: 

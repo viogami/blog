@@ -207,3 +207,19 @@ db_name = "card_database.db"#db文件名
 ### 放在了 `<u>`[github](https://github.com/viogami/DrawCard_uma) `</u>`上，觉得有用可以Star☆ ，hh
 
 本以为简单搞完的，结果还是搞到了半夜T^T
+
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

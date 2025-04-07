@@ -1,8 +1,8 @@
 ---
 title: 【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)
 slug: "uma_drawcard_1"
-subtitle: 
-summary: 
+subtitle: 本帖先不介绍连接数据库，详情见[（下）](/blog/project/uma_drawcard_2/)。
+summary: 之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。
 date: 2023-02-05
 cardimage: 
 featureimage: 
@@ -11,12 +11,6 @@ authors:
   - viogami: author.png
 ---
 {{< figArray subfolder="`<subfoldername>`" figCaption="" numCols=2 >}}
-
-## 前言
-
-之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。本帖先不介绍连接数据库，详情见[（下）](/project/uma_drawcard_2/)。
-
-<!--more-->
 
 实际上Bwiki有现成的赛马娘抽卡模拟，用pyqt有参照实现更容易了：
 [Bwiki赛马娘抽卡模拟器](https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8)
@@ -362,4 +356,20 @@ if __name__ == "__main__":
 
 ## 源码地址
 
-全部源码上传了 [GitHub](https://github.com/viogami/DrawCard_uma) 
+全部源码上传了 [GitHub](https://github.com/viogami/DrawCard_uma)
+
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>

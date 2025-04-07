@@ -1,6 +1,7 @@
 ---
 # general config
 title: 短期回顾2024/8
+slug: "review_2024-8"
 subtitle: 
 date: 2024-08-14
 authors:
@@ -15,7 +16,6 @@ authors:
 # caption: Some image caption
 # toc: true
 ---
-
 这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。
 
 <!--more-->
