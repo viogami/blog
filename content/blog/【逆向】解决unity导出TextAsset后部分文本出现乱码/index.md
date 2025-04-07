@@ -85,7 +85,7 @@ public class ResBehaviorRule : ProtoBaseStruct
 ```
 
 逐比特对比，符合字段的定义：
-![alt text](image/7.png)
+![alt text](7.png)
 
 ### 编写解密代码
 

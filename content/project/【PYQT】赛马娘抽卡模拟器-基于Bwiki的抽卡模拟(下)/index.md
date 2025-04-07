@@ -1,5 +1,6 @@
 ---
 title: 【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下)
+slug: "uma_drawcard_2"
 subtitle: 
 summary:
 date: 2023-02-05

@@ -1,5 +1,6 @@
 ---
 title: 【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)
+slug: "uma_drawcard_1"
 subtitle: 
 summary: 
 date: 2023-02-05
@@ -13,12 +14,12 @@ authors:
 
 ## 前言
 
-之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。本帖先不介绍连接数据库，详情见[（下）](/index.php/archives/5/)。
+之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。本帖先不介绍连接数据库，详情见[（下）](/project/uma_drawcard_2/)。
 
 <!--more-->
 
 实际上Bwiki有现成的赛马娘抽卡模拟，用pyqt有参照实现更容易了：
-`<u>`[Bwiki赛马娘抽卡模拟器](https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8) `</u>`
+[Bwiki赛马娘抽卡模拟器](https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8)
 
 ## 预览
 
@@ -37,19 +38,18 @@ authors:
 - [ ] 显示抽卡记录的日志
 
 项目结构：
-![uma_1.png][1]
-
+![uma_1.png](1.png)
 QT界面预览：
-![uma_2.png][2]
+![uma_2.png](2.png)
 QT控件表：
-![uma_3.png][3]
+![uma_3.png](3.png)
 程序界面预览：
-![uma_4.png][4]
+![uma_4.png](4.png)
 
 ## 运行展示
 
 由于我展示还没有创建卡牌的数据库，我只根据星级给抽卡结果进行了分类，从数据库中查找卡牌的各种信息更符合实际（但卡牌数据的构建实在过于麻烦，遂先不搞）。所以结果我做的只有外框显示就行了
-![uma_5.png][5]
+![uma_5.png](5.png)
 
 ## 具体实现
 
@@ -362,10 +362,4 @@ if __name__ == "__main__":
 
 ## 源码地址
 
-全部源码上传了 `<u>`[GitHub](https://github.com/viogami/DrawCard_uma) `</u>`
-
-  [1]: /usr/uploads/2023/09/1863852261.png
-  [2]: /usr/uploads/2023/09/2464354897.png
-  [3]: /usr/uploads/2023/09/2683830125.png
-  [4]: /usr/uploads/2023/09/1742441539.png
-  [5]: /usr/uploads/2023/09/3260476996.png
+全部源码上传了 [GitHub](https://github.com/viogami/DrawCard_uma) 
