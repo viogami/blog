@@ -3,12 +3,12 @@ title: VioGo--不止聊天的奇妙bot
 subtitle: 目前正在重构，并且开发后台管理界面！除了聊天,VioGo的目标是可以在后台分析聊天数据的奇妙bot！
 slug: viogo
 tags:
-- Go
-- gocqhttp
-- chatgpt
-- bot
-- qqbot
-- paas
+  - Go
+  - gocqhttp
+  - chatgpt
+  - bot
+  - qqbot
+  - paas
 summary: 
 date: 2025-04-07
 authors:
@@ -21,7 +21,7 @@ authors:
 **如果你有想法和意见请提issue！这对我和bot都很重要！**
 **欢迎qq加群讨论：340961300**
 
-<!-- more -->
+<!--more-->
 
 实现平台以及实现的外部功能:
 
