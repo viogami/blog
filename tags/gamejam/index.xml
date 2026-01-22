@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gamejam :: Tag :: Hugo Relearn Theme</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/tags/gamejam/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/tags/gamejam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gamejam记录-2024CIGA</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/gamejam-2024ciga/index.html</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/gamejam-2024ciga/index.html</guid>
+      <description>第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0</description>
+    </item>
+  </channel>
+</rss>

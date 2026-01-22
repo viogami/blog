@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags :: Purple Pulpo</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tag :: Bot</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/bot/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/bot/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Chatgpt</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/chatgpt/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/chatgpt/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Go</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/go/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/go/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Gocqhttp</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/gocqhttp/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/gocqhttp/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Paas</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/paas/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/paas/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Qqbot</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/qqbot/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/qqbot/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Clash</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/clash/index.html</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/clash/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Mitmproxy</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/mitmproxy/index.html</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/mitmproxy/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: TLS</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/tls/index.html</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/tls/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 模拟器</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/index.html</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: C#</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c%23/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c%23/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Json</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/json/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/json/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Protobuf</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/protobuf/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/protobuf/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Unity</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/unity/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/unity/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 二进制文件</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 游戏开发</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 逆向</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E9%80%86%E5%90%91/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E9%80%86%E5%90%91/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: CIGA</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/ciga/index.html</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/ciga/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Gamejam</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/gamejam/index.html</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/gamejam/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 贪吃蛇</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E8%B4%AA%E5%90%83%E8%9B%87/index.html</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E8%B4%AA%E5%90%83%E8%9B%87/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: C&#43;&#43;</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: C&#43;&#43; Build Tools</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-build-tools/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-build-tools/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: C&#43;&#43; Cmake Tools for Windows</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-cmake-tools-for-windows/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-cmake-tools-for-windows/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Rider</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/rider/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/rider/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Ue5</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/ue5/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/ue5/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Vs2022</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/vs2022/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/vs2022/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 开发环境</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Docker</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/docker/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/docker/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Linux</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/linux/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/linux/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Mysql</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/mysql/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/mysql/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Windows</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/windows/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/windows/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 开发问题</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Agones</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/agones/index.html</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/agones/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: K8S</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/k8s/index.html</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/k8s/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Kubernetes</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/kubernetes/index.html</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/kubernetes/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: 云原生</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.html</link>
+      <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: GRPC</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc/index.html</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Grpc-Go</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc-go/index.html</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc-go/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Grpc-Php</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc-php/index.html</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc-php/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Grpc-Python</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc-python/index.html</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc-python/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Php</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/php/index.html</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/php/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Python</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/python/index.html</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/python/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: CSS</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/css/index.html</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/css/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Mac风格</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/mac%E9%A3%8E%E6%A0%BC/index.html</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/mac%E9%A3%8E%E6%A0%BC/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Prism</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/prism/index.html</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/prism/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Typecho</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/typecho/index.html</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/typecho/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Telegram</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/telegram/index.html</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/telegram/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag :: Webhook</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/webhook/index.html</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/webhook/index.html</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

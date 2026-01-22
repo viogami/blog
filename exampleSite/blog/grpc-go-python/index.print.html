@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="使用grpc在go后端和python服务间通信 :: Purple Pulpo">
+    <meta name="twitter:description" content="gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="使用grpc在go后端和python服务间通信 :: Purple Pulpo">
+    <meta property="og:description" content="gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Blog">
+    <meta property="article:published_time" content="2024-03-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-21T00:00:00+00:00">
+    <meta property="article:tag" content="GRPC">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Grpc-Go">
+    <meta property="article:tag" content="Grpc-Python">
+    <meta itemprop="name" content="使用grpc在go后端和python服务间通信 :: Purple Pulpo">
+    <meta itemprop="description" content="gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)">
+    <meta itemprop="datePublished" content="2024-03-21T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-03-21T00:00:00+00:00">
+    <meta itemprop="wordCount" content="410">
+    <meta itemprop="keywords" content="GRPC,Go,Python,Grpc-Go,Grpc-Python">
+    <title>使用grpc在go后端和python服务间通信 :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html" rel="canonical" type="text/html" title="使用grpc在go后端和python服务间通信 :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/blog\/grpc-go-python\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#grpc前言">grpc前言</a></li>
+    <li><a href="#主要流程">主要流程</a></li>
+    <li><a href="#安装protoc解释器">安装protoc解释器</a></li>
+    <li><a href="#go端工作">go端工作</a></li>
+    <li><a href="#python端工作">python端工作</a>
+      <ul>
+        <li><a href="#生成grpc文件">生成grpc文件</a></li>
+      </ul>
+    </li>
+    <li><a href="#启动">启动</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/blog/index.html"><span itemprop="name">Blog</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">使用grpc在go后端和python服务间通信</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/grpc-php/index.html" title="php使用grpc服务(从0开始，并且包含mapfield文件解释) (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html" title="Typecho中代码高亮并有Mac风格 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable blog" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/go/index.html">Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc/index.html">GRPC</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-go/index.html">Grpc-Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-python/index.html">Grpc-Python</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/python/index.html">Python</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="使用grpc在go后端和python服务间通信">使用grpc在go后端和python服务间通信</h1>
+
+<h2 id="grpc前言">grpc前言<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，
+基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。
+<strong>grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)</strong></p>
+<p>由于我的一个go后端(也可以不是go)需要实现神经网络相关的功能，我要调用一个python的服务，于是想到了使用grpc的方式。</p>
+<p>初次接触，将从0介绍到功能实现。</p>
+<p>感谢官方的文档</p>
+<blockquote>
+<p><a href="https://grpc.io/docs/languages/go/quickstart/" rel="external">https://grpc.io/docs/languages/go/quickstart/</a></p>
+</blockquote>
+<h2 id="主要流程">主要流程<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>定义.proto文件：创建一个 .proto 文件，定义图数据和 GCN 结果的消息类型以及服务接口。</li>
+<li>生成 gRPC 代码：使用 Protocol Buffers 编译器 protoc，根据 .proto 文件生成 Go 和 Python 的 gRPC 代码。</li>
+<li>实现 Python 服务器：在 Python 中实现 gRPC 服务器，接收来自 Go 客户端的图数据，进行 GCN 处理，并返回处理结果。</li>
+<li>实现 Go 客户端：在 Go 中实现 gRPC 客户端，发送图数据到 Python 服务器，并接收处理结果。</li>
+</ul>
+<h2 id="安装protoc解释器">安装protoc解释器<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>grpc是通过pb(protocolbuffer)这个协议工作的，首先安装protoc的解释器，并将其bin文件夹添加到环境变量。
+地址：<a href="https://github.com/protocolbuffers/protobuf/releases" rel="external">https://github.com/protocolbuffers/protobuf/releases</a>
+下载后解压到任意文件夹位置，然后将解压后的bin文件夹添加到环境变量。</p>
+<p>打开cmd输入 <code>protoc</code>有数据返回就ok了。</p>
+<p><strong>为了在项目中使用protoc的一些指令可以正常工作，还有把bin文件下的 <code>protoc.exe</code>文件复制一份到 <code>C:\Windows\System32</code>文件夹下。</strong></p>
+<p>顺便一提，为了proto文件可以在vscode高亮显示，可以安装官方的插件：protobuf，作者：pbkit</p>
+<h2 id="go端工作">go端工作<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>首先安装go的grpc库</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">go</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="o">-</span><span class="nx">u</span><span class="w"> </span><span class="nx">google</span><span class="p">.</span><span class="nx">golang</span><span class="p">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">grpc</span></span></span></code></pre></div>
+<p>然后安装可以将proto文件自动解析为go文件的解释器：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">go</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">google</span><span class="p">.</span><span class="nx">golang</span><span class="p">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">protobuf</span><span class="o">/</span><span class="nx">cmd</span><span class="o">/</span><span class="nx">protoc</span><span class="o">-</span><span class="nx">gen</span><span class="o">-</span><span class="k">go</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">go</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">google</span><span class="p">.</span><span class="nx">golang</span><span class="p">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">grpc</span><span class="o">/</span><span class="nx">cmd</span><span class="o">/</span><span class="nx">protoc</span><span class="o">-</span><span class="nx">gen</span><span class="o">-</span><span class="k">go</span><span class="o">-</span><span class="nx">grpc</span></span></span></code></pre></div>
+<p>定义proto文件 <code>gcn.proto</code>：
+其中go_package是指定生成的文件位置和文件所在包名。“.” 表示文件生成在当前目录，“；”表示参数分割，后面的proto是将生成文件放在proto包中。
+还有更多可选参数，自行参考官方</p>
+<blockquote>
+<p>go_package：指定生成 Go 代码时的包路径，格式为 option go_package = &ldquo;package_path&rdquo;;，用于将生成的代码放置在指定的 Go 包中。</p>
+<p>java_package：指定生成 Java 代码时的包路径，格式为 option java_package = &ldquo;package_path&rdquo;;，用于将生成的代码放置在指定的 Java 包中。</p>
+<p>java_outer_classname：指定生成 Java 代码时的外部类名，格式为 option java_outer_classname = &ldquo;ClassName&rdquo;;，用于指定生成的 Java 类的外部类名。</p>
+<p>cc_generic_services：指定是否生成 C++ 通用服务（generic services），格式为 option
+cc_generic_services = true; 或 option cc_generic_services = false;，默认为
+true。</p>
+<p>cc_enable_arenas：指定是否启用 C++ arenas 内存管理，格式为 option cc_enable_arenas =
+true; 或 option cc_enable_arenas = false;，默认为 false。</p>
+<p>optimize_for：指定优化选项，可以是 SPEED、CODE_SIZE 或 LITE_RUNTIME，格式为 option
+optimize_for = SPEED;，默认为 SPEED。</p>
+<p>deprecated：指定消息或字段已过时，格式为 option deprecated = true;。</p>
+<p>rpc_timeout：指定 gRPC 调用的超时时间，格式为 option rpc_timeout = &ldquo;10s&rdquo;;，表示超时时间为 10
+秒。</p>
+</blockquote>
+<p>gcn.proto协议文件具体定义为：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">syntax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#34;proto3&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">option</span><span class="w"> </span><span class="nx">go_package</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#34;.;proto&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">repeated</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nx">features</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">Edge</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nx">source_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nx">target_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">GraphData</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">repeated</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="nx">nodes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">repeated</span><span class="w"> </span><span class="nx">Edge</span><span class="w"> </span><span class="nx">edges</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">GCNResult</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">map</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">node_scores</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">service</span><span class="w"> </span><span class="nx">GCNService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">rpc</span><span class="w"> </span><span class="nf">ProcessGraph</span><span class="p">(</span><span class="nx">GraphData</span><span class="p">)</span><span class="w"> </span><span class="nf">returns</span><span class="w"> </span><span class="p">(</span><span class="nx">GCNResult</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>我这里是用来处理图数据。</p>
+<p>接下来生成 gRPC 代码：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">protoc</span><span class="w"> </span><span class="o">--</span><span class="nx">go_out</span><span class="p">=.</span><span class="w"> </span><span class="o">--</span><span class="nx">go_opt</span><span class="p">=</span><span class="nx">paths</span><span class="p">=</span><span class="nx">source_relative</span><span class="w"> </span><span class="nx">your_proto_file</span><span class="p">.</span><span class="nx">proto</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">protoc</span><span class="w"> </span><span class="o">--</span><span class="k">go</span><span class="o">-</span><span class="nx">grpc_out</span><span class="p">=.</span><span class="w"> </span><span class="o">--</span><span class="k">go</span><span class="o">-</span><span class="nx">grpc_opt</span><span class="p">=</span><span class="nx">paths</span><span class="p">=</span><span class="nx">source_relative</span><span class="w"> </span><span class="nx">your_proto_file</span><span class="p">.</span><span class="nx">proto</span></span></span></code></pre></div>
+<p>会生成两个文件 <code>gcn.pb.go</code>和 <code>gcn_grpc.pb.go</code></p>
+<ul>
+<li>前者生成的文件，包含所有pb协议的go代码，将数据格式写为go的结构体形式。包含填充、序列化，检索请求和响应消息类型。</li>
+<li>后者包含<strong>客户端</strong>使用中定义的方法，调用的接口类型。以及<strong>服务端</strong>要实现的接口类型。包含创建客户端服务和服务端服务的方法。
+<strong>请注意，无论go后端作为请求grpc的一方(client)还是做出响应的一方(server),这两个文件都是必须生成的。</strong>
+使用 <code>client := pb.NewXXXXServiceClient(conn)</code>的方式创建客户端</li>
+</ul>
+<p>最后就是完成go端的grpc请求代码，每次请求都创建一个grpc的连接，请求完毕defer断开：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">GCN_request</span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float32</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">conn</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">grpc</span><span class="p">.</span><span class="nf">Dial</span><span class="p">(</span><span class="s">&#34;localhost:9999&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">grpc</span><span class="p">.</span><span class="nf">WithTransportCredentials</span><span class="p">(</span><span class="nx">insecure</span><span class="p">.</span><span class="nf">NewCredentials</span><span class="p">()))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Failed to connect to gcnserver(py) by grpc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">defer</span><span class="w"> </span><span class="nx">conn</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">pb</span><span class="p">.</span><span class="nf">NewGCNServiceClient</span><span class="p">(</span><span class="nx">conn</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="c1">// 创建一个实例的图数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">G_example</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">GraphData</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Nodes</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Node</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node1&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">Features</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">}},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node2&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">Features</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">0.4</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Edges</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Edge</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">{</span><span class="nx">SourceId</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node1&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">TargetId</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node2&#34;</span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="c1">// 发送请求并接收响应</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nf">ProcessGraph</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nf">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">G_example</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Error calling ProcessGraph</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">NodeScores</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>最后的最后别忘了创建一个路由调用这个方法。</p>
+<h2 id="python端工作">python端工作<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>py同样安装grpc相关库</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">grpcio</span>
+</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">grpcio</span><span class="o">-</span><span class="n">tools</span></span></span></code></pre></div>
+<h3 id="生成grpc文件">生成grpc文件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>终端cd到proto文件目录下，执行：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">grpc_tools</span><span class="o">.</span><span class="n">protoc</span> <span class="o">-</span><span class="n">I</span> <span class="o">./</span> <span class="o">--</span><span class="n">python_out</span><span class="o">=./</span> <span class="o">--</span><span class="n">grpc_python_out</span><span class="o">=.</span> <span class="n">your</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">proto</span></span></span></code></pre></div>
+<p>py的服务端代码grpc相关的代码较为简洁，重点在于数据处理。将其服务端口和grpc客户端的请求端口保持一致。
+部分代码取自官方示例。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">grpc</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">concurrent</span> <span class="kn">import</span> <span class="n">futures</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">proto</span> <span class="kn">import</span> <span class="n">gcn_pb2_grpc</span><span class="p">,</span> <span class="n">gcn_pb2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GCNServicer</span><span class="p">(</span><span class="n">gcn_pb2_grpc</span><span class="o">.</span><span class="n">GCNServiceServicer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ProcessGraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Process graph data using GCN and return result</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># example: return gcn_pb2.GCNResult(node_scores={&#34;node1&#34;: 0.5, &#34;node2&#34;: 0.8})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">server</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="o">=</span> <span class="n">grpc</span><span class="o">.</span><span class="n">server</span><span class="p">(</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gcn_pb2_grpc</span><span class="o">.</span><span class="n">add_GCNServiceServicer_to_server</span><span class="p">(</span><span class="n">GCNServicer</span><span class="p">(),</span> <span class="n">server</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="o">.</span><span class="n">add_insecure_port</span><span class="p">(</span><span class="s1">&#39;[::]:9999&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;gRPC 服务端已开启,端口为9999...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="o">.</span><span class="n">wait_for_termination</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="p">()</span></span></span></code></pre></div>
+<h2 id="启动">启动<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>做好了以上工作就大功告成了，启动两个服务即可</p>
+<p><code>go run main.go</code></p>
+<p><code>python server.py</code></p>
+<p>然后访问定义的路由地址，如下显示，nice~</p>
+<p><a href="#R-image-c207f9a8606f573bf4c2616f173fbe8a" class="lightbox-link"><img alt="2" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c207f9a8606f573bf4c2616f173fbe8a"><img alt="2" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/1.png"></a></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Mar 21, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

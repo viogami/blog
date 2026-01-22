@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>游戏开发 :: Tag :: Hugo Relearn Theme</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【逆向】解决unity导出TextAsset后部分文本出现乱码</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/blog/decrypt-textasset-garbled/index.html</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/blog/decrypt-textasset-garbled/index.html</guid>
+      <description>该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</description>
+    </item>
+    <item>
+      <title>Gamejam记录-2024CIGA</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/gamejam-2024ciga/index.html</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/gamejam-2024ciga/index.html</guid>
+      <description>第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0</description>
+    </item>
+    <item>
+      <title>用最轻量的VS负载进行UE5开发(使用rider)</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/blog/ue5-rider-vs/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/blog/ue5-rider-vs/index.html</guid>
+      <description>vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。</description>
+    </item>
+  </channel>
+</rss>

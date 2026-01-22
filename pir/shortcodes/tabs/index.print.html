@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html id="R-html" lang="art-x-pir" dir="rtl" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="Show rrrambl&#39;n &#39;n tabbed views">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/pir/shortcodes/tabs/featured.png">
+    <meta name="twitter:title" content="Tabs :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta name="twitter:description" content="Show rrrambl&#39;n &#39;n tabbed views">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/pir/shortcodes/tabs/index.html">
+    <meta property="og:site_name" content="Cap&#39;n Hugo Relearrrn Theme">
+    <meta property="og:title" content="Tabs :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta property="og:description" content="Show rrrambl&#39;n &#39;n tabbed views">
+    <meta property="og:locale" content="art_x_pir">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/pir/shortcodes/tabs/featured.png">
+    <meta itemprop="name" content="Tabs :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta itemprop="description" content="Show rrrambl&#39;n &#39;n tabbed views">
+    <meta itemprop="wordCount" content="947">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/pir/shortcodes/tabs/featured.png">
+    <meta itemprop="keywords" content="Howto,Reference">
+    <title>Tabs :: Cap&#39;n Hugo Relearrrn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/shortcodes/tabs/index.html" rel="alternate" hreflang="x-default">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/shortcodes/tabs/index.html" rel="alternate" hreflang="en">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/shortcodes/tabs/index.html" rel="alternate" hreflang="art-x-pir">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/shortcodes/tabs/index.html" rel="canonical" type="text/html" title="Tabs :: Cap&#39;n Hugo Relearrrn Theme">
+    <link href="/hugo-theme-relearn/pir/shortcodes/tabs/index.xml" rel="alternate" type="application/rss+xml" title="Tabs :: Cap&#39;n Hugo Relearrrn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070409" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070409" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070409" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.pir.js?1769070409";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070409" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070409" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070409" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070409" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070409" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070409" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/pir\/shortcodes\/tabs\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text t' clipboard`;
+      window.T_Copied_to_clipboard = `Text copied t' clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied t' clipboard!`;
+      window.T_Reset_view = `Rrreset view`;
+      window.T_View_reset = `View rrreset!`;
+      window.T_No_results_found = `No rrresults found fer "{0}"`;
+      window.T_N_results_found = `{1} rrresults found fer "{0}"`;
+      window.T_Browser_unsupported_feature = `This browserrr doesn't supporrrt this featurrre`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070409"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/pir/shortcodes/tabs/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table o&#39; Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#parameters">Parameters</a></li>
+      </ul>
+    </li>
+    <li><a href="#examples">Examples</a>
+      <ul>
+        <li><a href="#behavior-of-the-groupid">Behavior o' th' <code>groupid</code></a></li>
+        <li><a href="#nested-tab-views-and-color">Nested Tab Views an' Color</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/pir/index.html"><span itemprop="name">Cap&#39;n Hugo Relearrrn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/pir/shortcodes/index.html"><span itemprop="name">Shorrrtcodes</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Tabs</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/shortcodes/tabs/_index.pir.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/shortcodes/tabs/index.print.html" title="Prrrint whole chapterrr (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/shortcodes/tab/index.html" title="Tab (🡒)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/shortcodes/tree/index.html" title="Tree (🡐)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Morrre"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable shortcodes" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="tabs">Tabs</h1>
+
+<p>Th' <code>tabs</code> shortcode displays arbitrary rrrambl'n 'n an unlimited number o' tabs.</p>
+<div class="tab-panel" data-tab-group="R-tabs-0d913f9fe763c7a81956dc0e45128adf">
+  <div class="tab-nav">
+    <div class="tab-nav-title">hello.</div>
+    <button
+      aria-controls="R-tab-id-9547366b54d0988c48a414c8fe299cee" aria-expanded="true"
+      data-tab-item="R-tab-dfed5bc177b87ab317c584e06566adc6"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-0d913f9fe763c7a81956dc0e45128adf','R-tab-dfed5bc177b87ab317c584e06566adc6')"
+    >
+      <span class="tab-nav-text">py</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-34cba2f102449a705995be9171287ea5" aria-expanded="false"
+      data-tab-item="R-tab-77cbc257e66302866cf6191754c0c8e3"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-0d913f9fe763c7a81956dc0e45128adf','R-tab-77cbc257e66302866cf6191754c0c8e3')"
+    >
+      <span class="tab-nav-text">sh</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-4a971b8491feae9d8904bbe0f63c5f1c" aria-expanded="false"
+      data-tab-item="R-tab-4a8a08f09d37b73795649038408b5f33"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-0d913f9fe763c7a81956dc0e45128adf','R-tab-4a8a08f09d37b73795649038408b5f33')"
+    >
+      <span class="tab-nav-text">c</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-9547366b54d0988c48a414c8fe299cee"
+      data-tab-item="R-tab-dfed5bc177b87ab317c584e06566adc6"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-34cba2f102449a705995be9171287ea5"
+      data-tab-item="R-tab-77cbc257e66302866cf6191754c0c8e3"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello World!&#34;</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-4a971b8491feae9d8904bbe0f63c5f1c"
+      data-tab-item="R-tab-4a8a08f09d37b73795649038408b5f33"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="nf">printf</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">);</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tab-panel" data-tab-group="R-tabs-2a518aaded6fe403869fb0eed35a7fc9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-50732b060688e05d54fbb19baca11280" aria-expanded="true"
+      data-tab-item="R-tab-c4e0fd5fb3f65eef402b7d6133e84793"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-2a518aaded6fe403869fb0eed35a7fc9','R-tab-c4e0fd5fb3f65eef402b7d6133e84793')"
+    >
+      <span class="tab-nav-text">Python Say'n</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-d20afb56456a0cd3d9103f12b3f40414" aria-expanded="false"
+      data-tab-item="R-tab-56a9e485b57b5be9c078d433cce753a9"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-2a518aaded6fe403869fb0eed35a7fc9','R-tab-56a9e485b57b5be9c078d433cce753a9')"
+    >
+      <span class="tab-nav-text">Terminal Sourcecode</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-7bd2ef556e8187271694cbe9250abef0" aria-expanded="false"
+      data-tab-item="R-tab-b65dcd58a37234549d8d78ddd99e1467"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: fuchsia;"
+      onclick="switchTab('R-tabs-2a518aaded6fe403869fb0eed35a7fc9','R-tab-b65dcd58a37234549d8d78ddd99e1467')"
+    >
+      <span class="tab-nav-text">C Rambl'ns</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-82942d783220487be46db9da44ca5638" aria-expanded="false"
+      data-tab-item="R-tab-9858236d7f2923b665c7c824de9d9a9e"
+      class="tab-nav-button tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: red;"
+      onclick="switchTab('R-tabs-2a518aaded6fe403869fb0eed35a7fc9','R-tab-9858236d7f2923b665c7c824de9d9a9e')"
+    >
+      <span class="tab-nav-text">C++ Ramblings++</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-8ad8b9a886fcf373f42b10f0147fb5d2" aria-expanded="false"
+      data-tab-item="R-tab-46cea276b8a59b7573296a9ec8bc9dac"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-2a518aaded6fe403869fb0eed35a7fc9','R-tab-46cea276b8a59b7573296a9ec8bc9dac')"
+    >
+      <span class="tab-nav-text">C# <del>GC be cool</del></span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-50732b060688e05d54fbb19baca11280"
+      data-tab-item="R-tab-c4e0fd5fb3f65eef402b7d6133e84793"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<p>Th' AI native programm'n language.</p>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-d20afb56456a0cd3d9103f12b3f40414"
+      data-tab-item="R-tab-56a9e485b57b5be9c078d433cce753a9"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;For guys who like t' tinker.&#34;</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-7bd2ef556e8187271694cbe9250abef0"
+      data-tab-item="R-tab-b65dcd58a37234549d8d78ddd99e1467"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: fuchsia;">
+      <div class="tab-content-text">
+<p>For th' connoisseur o' programm'n.</p>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-82942d783220487be46db9da44ca5638"
+      data-tab-item="R-tab-9858236d7f2923b665c7c824de9d9a9e"
+      class="tab-content tab-panel-style cstyle filled" style="--VARIABLE-BOX-color: red;">
+      <div class="tab-content-text">
+<p>For th' guys that can cope wit' rules.</p>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-8ad8b9a886fcf373f42b10f0147fb5d2"
+      data-tab-item="R-tab-46cea276b8a59b7573296a9ec8bc9dac"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p>For guys that need two destructors.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="usage">Usage<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<div class="tab-panel" data-tab-group="R-tabs-9691d2e718490e633c0467c5421f6980">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-3c2901ad484aacd15e8cac433ddc6c14" aria-expanded="true"
+      data-tab-item="R-tab-48f074fa17f82e80816475181040e35f"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-9691d2e718490e633c0467c5421f6980','R-tab-48f074fa17f82e80816475181040e35f')"
+    >
+      <span class="tab-nav-text">shortcode</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-eea6542557bb189fb7e794679bcd4e9f" aria-expanded="false"
+      data-tab-item="R-tab-0e87c1212a698494dcdb198af3e0eb2f"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-9691d2e718490e633c0467c5421f6980','R-tab-0e87c1212a698494dcdb198af3e0eb2f')"
+    >
+      <span class="tab-nav-text">partial</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-3c2901ad484aacd15e8cac433ddc6c14"
+      data-tab-item="R-tab-48f074fa17f82e80816475181040e35f"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;hello.&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;py&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```python
+</span></span></span><span class="line"><span class="cl"><span class="s">print(&#34;Hello World!&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;sh&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```bash
+</span></span></span><span class="line"><span class="cl"><span class="s">echo &#34;Hello World!&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;c&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```c
+</span></span></span><span class="line"><span class="cl"><span class="s">printf(&#34;Hello World!&#34;);
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;Python Saying&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">Th'</span><span class="w"> </span><span class="nx">AI</span><span class="w"> </span><span class="nx">native</span><span class="w"> </span><span class="nx">programm'n</span><span class="w"> </span><span class="nx">language</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;Terminal Sourcecode&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```bash
+</span></span></span><span class="line"><span class="cl"><span class="s">echo &#34;For guys who like t' tinker.&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;C Ramblings&#34;</span><span class="w"> </span><span class="nx">color</span><span class="p">=</span><span class="s">&#34;fuchsia&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">For</span><span class="w"> </span><span class="nx">th'</span><span class="w"> </span><span class="nx">connoisseur</span><span class="w"> </span><span class="nx">o'</span><span class="w"> </span><span class="nx">programm'n</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;C++ Ramblings++&#34;</span><span class="w"> </span><span class="nx">color</span><span class="p">=</span><span class="s">&#34;red&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">For</span><span class="w"> </span><span class="nx">th'</span><span class="w"> </span><span class="nx">guys</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">can</span><span class="w"> </span><span class="nx">cope</span><span class="w"> </span><span class="nx">wit'</span><span class="w"> </span><span class="nx">rules</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;C# ~~GC be cool~~&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">For</span><span class="w"> </span><span class="nx">guys</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">two</span><span class="w"> </span><span class="nx">destructors</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-eea6542557bb189fb7e794679bcd4e9f"
+      data-tab-item="R-tab-0e87c1212a698494dcdb198af3e0eb2f"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;shortcodes/tabs.html&#34;</span><span class="w"> </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;page&#34;</span><span class="w">  </span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;hello.&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="nf">slice</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;py&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;```python\nprint(\&#34;Hello World!\&#34;)\n```&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;sh&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;```bash\necho \&#34;Hello World!\&#34;\n```&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;c&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;```c\nprintf(\&#34;Hello World!\&#34;);\n```&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;shortcodes/tabs.html&#34;</span><span class="w"> </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;page&#34;</span><span class="w">  </span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="nf">slice</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;Python Saying&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;The AI native programm'n language.&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;Terminal Sourcecode&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;For guys who like t' tinker around.&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;color&#34;</span><span class="w"> </span><span class="s">&#34;fuchsia&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;C Ramblings&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;For th' connoisseur o' programm'n.&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;color&#34;</span><span class="w"> </span><span class="s">&#34;red&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;C++ Ramblings++&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;For th' guys that can cope wit' rules.&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;title&#34;</span><span class="w"> </span><span class="s">&#34;C# ~~GC be cool~~&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s">&#34;content&#34;</span><span class="w"> </span><span class="p">(</span><span class="s">&#34;For guys that need two destructors.&#34;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="p">.</span><span class="nx">RenderStr'n</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)}}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>If ye just want a single tab ye can instead call th' <a href="/hugo-theme-relearn/pir/shortcodes/tab/index.html"><code>tab</code> shortcode</a> standalone.</p>
+<p>Also follow th' above link t' see th' parameter fer each nested tab.</p>
+<h3 id="parameters">Parameters<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Default</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>groupid</strong></td>
+          <td><em>&lt;random&gt;</em></td>
+          <td>Arbitrary name o' th' group th' tab view belongs t'.<br><br>Tab views wit' th' same <strong>groupid</strong> synchr'nize their selected tab. Th' tab select'n be restored automatically based on th' <code>groupid</code> fer tab view. If th' selected tab cannot be found 'n a tab group th' first tab be selected instead.<br><br>This synchronizat'n applies t' th' whole ship!</td>
+      </tr>
+      <tr>
+          <td><strong>style</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Sets a default value fer every contained tab. Can be overridden by each tab. See th' <a href="/hugo-theme-relearn/pir/shortcodes/tab/index.html#parameters"><code>tab</code> shortcode</a> fer poss'ble values.</td>
+      </tr>
+      <tr>
+          <td><strong>color</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Sets a default value fer every contained tab. Can be overridden by each tab. See th' <a href="/hugo-theme-relearn/pir/shortcodes/tab/index.html#parameters"><code>tab</code> shortcode</a> fer poss'ble values.</td>
+      </tr>
+      <tr>
+          <td><strong>title</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Arbitrary title written 'n front o' th' tab view.</td>
+      </tr>
+      <tr>
+          <td><strong>ay'con</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td><a href="/hugo-theme-relearn/pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' title.</td>
+      </tr>
+      <tr>
+          <td><em><strong>&lt;content&gt;</strong></em></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Arbitrary number o' tabs defined wit' th' <code>tab</code> sub-shortcode.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="examples">Examples<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="behavior-of-the-groupid">Behavior o' th' <code>groupid</code><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>See what happens t' th' tab views while ye select different tabs.</p>
+<p>While press'n a tab o' Group A switches all tab views o' Group A 'n sync (if th' tab be available), th' tabs o' Group B be left untouched.</p>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Avast
+  </summary>
+  <div class="box-content">
+<p>Th' selected tab will be <a href="/hugo-theme-relearn/pir/configuration/sitemanagement/storedinformation/index.html">stored 'n th' reader&rsquo;s browser</a>.</p>
+  </div>
+</details>
+<div class="tab-panel" data-tab-group="R-tabs-e5b346e832cd15167a0aaec8e007cde7">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-1be9b814f817a2d97ee63ab26cee62b3" aria-expanded="true"
+      data-tab-item="R-tab-bb0aa83f3f01763cab535147f5548185"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-e5b346e832cd15167a0aaec8e007cde7','R-tab-bb0aa83f3f01763cab535147f5548185')"
+    >
+      <span class="tab-nav-text">Group A, Tab View 1</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-1ab742fedf599163133123b66e912133" aria-expanded="false"
+      data-tab-item="R-tab-04bc54b83e010ae7b71b020537ac5470"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-e5b346e832cd15167a0aaec8e007cde7','R-tab-04bc54b83e010ae7b71b020537ac5470')"
+    >
+      <span class="tab-nav-text">Group A, Tab View 2</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-defecb9beb7416c478b0e105ab8b723c" aria-expanded="false"
+      data-tab-item="R-tab-0bb4dda796362c0d7a33b81c9291567d"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-e5b346e832cd15167a0aaec8e007cde7','R-tab-0bb4dda796362c0d7a33b81c9291567d')"
+    >
+      <span class="tab-nav-text">Group B</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-1be9b814f817a2d97ee63ab26cee62b3"
+      data-tab-item="R-tab-bb0aa83f3f01763cab535147f5548185"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;a&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;json&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">highlight</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="s">&#34;linenos=true&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;World&#34;</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">highlight</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;_**XML**_ stuff&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```xml
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Hello&gt;World&lt;/Hello&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;text&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nx">Hello</span><span class="w"> </span><span class="nx">World</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-1ab742fedf599163133123b66e912133"
+      data-tab-item="R-tab-04bc54b83e010ae7b71b020537ac5470"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;a&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;json&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">highlight</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="s">&#34;linenos=true&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;World&#34;</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">highlight</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;XML stuff&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```xml
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Hello&gt;World&lt;/Hello&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-defecb9beb7416c478b0e105ab8b723c"
+      data-tab-item="R-tab-0bb4dda796362c0d7a33b81c9291567d"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;b&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;json&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">highlight</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="s">&#34;linenos=true&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;World&#34;</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">highlight</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;XML stuff&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="s">```xml
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Hello&gt;World&lt;/Hello&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="group-a-tab-view-1">Group A, Tab View 1<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="tab-panel" data-tab-group="R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-ecb91a52e5477304fb9ab7b119714ed1" aria-expanded="true"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-0dd5a011b4eec09ce44ae8767fd007dc" aria-expanded="false"
+      data-tab-item="R-tab-33821aa9d8481f23925434031bff5e3c"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d','R-tab-33821aa9d8481f23925434031bff5e3c')"
+    >
+      <span class="tab-nav-text"><em><strong>XML</strong></em> stuff</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-a87ac30f02787d94d4e01f3e88b78c92" aria-expanded="false"
+      data-tab-item="R-tab-1cb251ec0d568de6a929b520c4aed8d1"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d','R-tab-1cb251ec0d568de6a929b520c4aed8d1')"
+    >
+      <span class="tab-nav-text">text</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-ecb91a52e5477304fb9ab7b119714ed1"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">{</span> <span class="nt">&#34;Hello&#34;</span><span class="p">:</span> <span class="s2">&#34;World&#34;</span> <span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-0dd5a011b4eec09ce44ae8767fd007dc"
+      data-tab-item="R-tab-33821aa9d8481f23925434031bff5e3c"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Hello&gt;</span>World<span class="nt">&lt;/Hello&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-a87ac30f02787d94d4e01f3e88b78c92"
+      data-tab-item="R-tab-1cb251ec0d568de6a929b520c4aed8d1"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<pre><code>Hello World
+</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="group-a-tab-view-2">Group A, Tab View 2<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="tab-panel" data-tab-group="R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-330dc5bd7206c7b6e27411e5e3a568ff" aria-expanded="true"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-dd6dca2e84940e7ce6f5e9e41a05f7fc" aria-expanded="false"
+      data-tab-item="R-tab-33821aa9d8481f23925434031bff5e3c"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-d7195bd26e9e5eec6028c8a5454dfd0d','R-tab-33821aa9d8481f23925434031bff5e3c')"
+    >
+      <span class="tab-nav-text">XML stuff</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-330dc5bd7206c7b6e27411e5e3a568ff"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">{</span> <span class="nt">&#34;Hello&#34;</span><span class="p">:</span> <span class="s2">&#34;World&#34;</span> <span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-dd6dca2e84940e7ce6f5e9e41a05f7fc"
+      data-tab-item="R-tab-33821aa9d8481f23925434031bff5e3c"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Hello&gt;</span>World<span class="nt">&lt;/Hello&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h4 id="group-b">Group B<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<div class="tab-panel" data-tab-group="R-tabs-7fe8053a023f8e50e519830def56ae42">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-671eacc6dee60286680ff3d33d31b1b6" aria-expanded="true"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-7fe8053a023f8e50e519830def56ae42','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-e667cde1f529b66ff98f16cbb329639a" aria-expanded="false"
+      data-tab-item="R-tab-33821aa9d8481f23925434031bff5e3c"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-7fe8053a023f8e50e519830def56ae42','R-tab-33821aa9d8481f23925434031bff5e3c')"
+    >
+      <span class="tab-nav-text">XML stuff</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-671eacc6dee60286680ff3d33d31b1b6"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">{</span> <span class="nt">&#34;Hello&#34;</span><span class="p">:</span> <span class="s2">&#34;World&#34;</span> <span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-e667cde1f529b66ff98f16cbb329639a"
+      data-tab-item="R-tab-33821aa9d8481f23925434031bff5e3c"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Hello&gt;</span>World<span class="nt">&lt;/Hello&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h3 id="nested-tab-views-and-color">Nested Tab Views an' Color<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>In case ye want t' nest tab views, th' parent tab that contains nested tab views needs t' be declared wit' <code>{{&lt; tab &gt;}}</code> instead o' <code>{{% tab %}}</code>. Avast, that 'n this case it be not poss'ble t' put markdown 'n th' parent tab.</p>
+<p>Ye can also set style an' color parameter fer all tabs an' overwrite them on tab level. See th' <a href="/hugo-theme-relearn/pir/shortcodes/tab/index.html#parameters"><code>tab</code> shortcode</a> fer poss'ble values.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;main&#34;</span><span class="w"> </span><span class="nx">style</span><span class="p">=</span><span class="s">&#34;primary&#34;</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;Rationale&#34;</span><span class="w"> </span><span class="nx">ay'con</span><span class="p">=</span><span class="s">&#34;thumbtack&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;Text&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Simple</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">poss'ble</span><span class="w"> </span><span class="nx">here</span><span class="o">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;tabs-example-language&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;python&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Python</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="o">**</span><span class="nx">super</span><span class="o">**</span><span class="w"> </span><span class="nx">easy</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="nx">most</span><span class="w"> </span><span class="nx">o'</span><span class="w"> </span><span class="nx">th'</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">ye</span><span class="w"> </span><span class="nx">don</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">t'</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="nx">unicode</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;bash&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Bash</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="k">fer</span><span class="w"> </span><span class="o">**</span><span class="nx">hackers</span><span class="o">**</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;Code&#34;</span><span class="w"> </span><span class="nx">style</span><span class="p">=</span><span class="s">&#34;default&#34;</span><span class="w"> </span><span class="nx">color</span><span class="p">=</span><span class="s">&#34;darkorchid&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">...</span><span class="nx">but</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="nx">markdown</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{&lt;</span><span class="w"> </span><span class="nx">tabs</span><span class="w"> </span><span class="nx">groupid</span><span class="p">=</span><span class="s">&#34;tabs-example-language&#34;</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;python&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">```python
+</span></span></span><span class="line"><span class="cl"><span class="s">  print(&#34;Hello World!&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s">  ```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="nx">title</span><span class="p">=</span><span class="s">&#34;bash&#34;</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">```bash
+</span></span></span><span class="line"><span class="cl"><span class="s">  echo &#34;Hello World!&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">  ```</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{</span><span class="o">%</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="o">%</span><span class="p">}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tab</span><span class="w"> </span><span class="p">&gt;}}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">{{&lt;</span><span class="w"> </span><span class="o">/</span><span class="nx">tabs</span><span class="w"> </span><span class="p">&gt;}}</span></span></span></code></pre></div>
+<div class="tab-panel" data-tab-group="R-tabs-fad58de7366495db4650cfefac2fcd61">
+  <div class="tab-nav">
+    <div class="tab-nav-title"><i class="fa-fw fas fa-thumbtack"></i> Rationale</div>
+    <button
+      aria-controls="R-tab-id-97bb70251f099ec7b24c5e4d8c414130" aria-expanded="true"
+      data-tab-item="R-tab-9dffbf69ffba8bc38bc4e01abf4b1675"
+      class="tab-nav-button tab-panel-style cstyle primary active" tabindex="-1"
+      onclick="switchTab('R-tabs-fad58de7366495db4650cfefac2fcd61','R-tab-9dffbf69ffba8bc38bc4e01abf4b1675')"
+    >
+      <span class="tab-nav-text">Text</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-05e1685340e15d1a4674d5d3bc834ff3" aria-expanded="false"
+      data-tab-item="R-tab-ca0dbad92a874b2f69b549293387925e"
+      class="tab-nav-button tab-panel-style cstyle default" style="--VARIABLE-BOX-color: darkorchid;"
+      onclick="switchTab('R-tabs-fad58de7366495db4650cfefac2fcd61','R-tab-ca0dbad92a874b2f69b549293387925e')"
+    >
+      <span class="tab-nav-text">Code</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-97bb70251f099ec7b24c5e4d8c414130"
+      data-tab-item="R-tab-9dffbf69ffba8bc38bc4e01abf4b1675"
+      class="tab-content tab-panel-style cstyle primary active">
+      <div class="tab-content-text">
+Simple text be poss'ble here...
+  <div class="tab-panel" data-tab-group="R-tabs-684da3d4a062ce84a1077bc558ba12cc">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-05456237653c0bf7b163b1294c7d6c35" aria-expanded="true"
+      data-tab-item="R-tab-23eeeb4347bdd26bfc6b7ee9a3b755dd"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-684da3d4a062ce84a1077bc558ba12cc','R-tab-23eeeb4347bdd26bfc6b7ee9a3b755dd')"
+    >
+      <span class="tab-nav-text">python</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-b361560d95ffc722ab40e81129fb2359" aria-expanded="false"
+      data-tab-item="R-tab-d574d4bb40c84861791a694a999cce69"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-684da3d4a062ce84a1077bc558ba12cc','R-tab-d574d4bb40c84861791a694a999cce69')"
+    >
+      <span class="tab-nav-text">bash</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-05456237653c0bf7b163b1294c7d6c35"
+      data-tab-item="R-tab-23eeeb4347bdd26bfc6b7ee9a3b755dd"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<p>Python be <strong>super</strong> easy.</p>
+<ul>
+<li>most o' th' time.</li>
+<li>if ye don&rsquo;t want t' output unicode</li>
+</ul>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-b361560d95ffc722ab40e81129fb2359"
+      data-tab-item="R-tab-d574d4bb40c84861791a694a999cce69"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<p>Bash be fer <strong>hackers</strong>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-05e1685340e15d1a4674d5d3bc834ff3"
+      data-tab-item="R-tab-ca0dbad92a874b2f69b549293387925e"
+      class="tab-content tab-panel-style cstyle default" style="--VARIABLE-BOX-color: darkorchid;">
+      <div class="tab-content-text">
+...but no markdown
+  <div class="tab-panel" data-tab-group="R-tabs-684da3d4a062ce84a1077bc558ba12cc">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-ace676d2bb9c05aa2c1a6eb19964292a" aria-expanded="true"
+      data-tab-item="R-tab-23eeeb4347bdd26bfc6b7ee9a3b755dd"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-684da3d4a062ce84a1077bc558ba12cc','R-tab-23eeeb4347bdd26bfc6b7ee9a3b755dd')"
+    >
+      <span class="tab-nav-text">python</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-c0145592d34e199df8cb96f11803b9dc" aria-expanded="false"
+      data-tab-item="R-tab-d574d4bb40c84861791a694a999cce69"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-684da3d4a062ce84a1077bc558ba12cc','R-tab-d574d4bb40c84861791a694a999cce69')"
+    >
+      <span class="tab-nav-text">bash</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-ace676d2bb9c05aa2c1a6eb19964292a"
+      data-tab-item="R-tab-23eeeb4347bdd26bfc6b7ee9a3b755dd"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hello World!&#34;</span><span class="p">)</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-c0145592d34e199df8cb96f11803b9dc"
+      data-tab-item="R-tab-d574d4bb40c84861791a694a999cce69"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello World!&#34;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categorrries" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/howto/index.html">Howto</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/reference/index.html">Reference</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070409" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

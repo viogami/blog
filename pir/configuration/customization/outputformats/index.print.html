@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html id="R-html" lang="art-x-pir" dir="rtl" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="Adding Custom Output Formats">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="Output Formats :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta name="twitter:description" content="Adding Custom Output Formats">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/customization/outputformats/index.html">
+    <meta property="og:site_name" content="Cap&#39;n Hugo Relearrrn Theme">
+    <meta property="og:title" content="Output Formats :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta property="og:description" content="Adding Custom Output Formats">
+    <meta property="og:locale" content="art_x_pir">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="Output Formats :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta itemprop="description" content="Adding Custom Output Formats">
+    <meta itemprop="wordCount" content="1023">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="keywords" content="Explanation,Howto">
+    <title>Output Formats :: Cap&#39;n Hugo Relearrrn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/customization/outputformats/index.html" rel="alternate" hreflang="x-default">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/customization/outputformats/index.html" rel="alternate" hreflang="en">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/customization/outputformats/index.html" rel="alternate" hreflang="art-x-pir">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/customization/outputformats/index.html" rel="canonical" type="text/html" title="Output Formats :: Cap&#39;n Hugo Relearrrn Theme">
+    <link href="/hugo-theme-relearn/pir/configuration/customization/outputformats/index.xml" rel="alternate" type="application/rss+xml" title="Output Formats :: Cap&#39;n Hugo Relearrrn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070409" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070409" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070409" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.pir.js?1769070409";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070409" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070409" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070409" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070409" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070409" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070409" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/pir\/configuration\/customization\/outputformats\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text t' clipboard`;
+      window.T_Copied_to_clipboard = `Text copied t' clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied t' clipboard!`;
+      window.T_Reset_view = `Rrreset view`;
+      window.T_View_reset = `View rrreset!`;
+      window.T_No_results_found = `No rrresults found fer "{0}"`;
+      window.T_N_results_found = `{1} rrresults found fer "{0}"`;
+      window.T_Browser_unsupported_feature = `This browserrr doesn't supporrrt this featurrre`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070409"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/pir/configuration/customization/outputformats/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table o&#39; Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#creating-an-output-format">Creat'n an Output Format</a></li>
+    <li><a href="#partials">Partials</a>
+      <ul>
+        <li><a href="#for-html-output-formats">For HTML Output Formats</a></li>
+        <li><a href="#for-non-html-output-formats">For Non-HTML Output Formats</a></li>
+      </ul>
+    </li>
+    <li><a href="#migration-from-relearn-7">Migrat'n from Relearrrn 7</a>
+      <ul>
+        <li><a href="#for-html-output-formats-1">For HTML Output Formats</a></li>
+        <li><a href="#for-non-html-output-formats-1">For Non-HTML Output Formats</a></li>
+      </ul>
+    </li>
+    <li><a href="#migration-from-relearn-6">Migrat'n from Relearrrn 6</a>
+      <ul>
+        <li><a href="#for-html-output-formats-2">For HTML Output Formats</a></li>
+        <li><a href="#for-non-html-output-formats-2">For Non-HTML Output Formats</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/pir/index.html"><span itemprop="name">Cap&#39;n Hugo Relearrrn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/pir/configuration/index.html"><span itemprop="name">Configurrrat&#39;n</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/pir/configuration/customization/index.html"><span itemprop="name">Customization</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Output Formats</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/configuration/customization/outputformats/_index.pir.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/configuration/customization/outputformats/index.print.html" title="Prrrint whole chapterrr (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/configuration/customization/designs/index.html" title="Page Designs (🡒)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/configuration/customization/taxonomy/index.html" title="Taxonomies (🡐)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Morrre"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable configuration" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="output-formats">Output Formats</h1>
+
+<p>Cap'n Hugo can display yer rrrambl'n 'n different <a href="https://gohugo.io/configuration/output-formats/" rel="external" target="_self">formats</a> like HTML, JSON, Google AMP, etc. T' do this, templates must be provided.</p>
+<p>Th' Relearrrn theme by default comes wit' templates fer <a href="/hugo-theme-relearn/pir/configuration/sitemanagement/outputformats/index.html">HTML, HTML fer print, RSS an' Marrrkdown</a>. If this be not enough, this plank describes how ye can create yer own output formats.</p>
+<p>If ye instead just want t' <a href="/hugo-theme-relearn/pir/configuration/customization/designs/index.html">cust'mize th' layout o' an exist'n output format</a>, th' theme got ye covered as well.</p>
+<h2 id="creating-an-output-format">Creat'n an Output Format<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Suppose ye want t' be able t' send yer articles as HTML formatted emails. Th' planks o' these format need t' be self contained so an email client can display th' rrrambl'n without load'n any further assets.</p>
+<p>Therefore we add a new output format called <code>email</code> that outputs HTML an' assembles a completely custom HTML document structure.</p>
+<ol>
+<li>
+<p>Add th' output format t' yer <code>hugo.toml</code></p>
+<div class="tab-panel" data-tab-group="R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">hugo.</div>
+    <button
+      aria-controls="R-tab-id-9ac1dd2f64179530f447f64a696593a0" aria-expanded="true"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-ec18ad9a83c312380533fa93ac6fc61c')"
+    >
+      <span class="tab-nav-text">toml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-6347346fb9ddb86d68990afa4418e086" aria-expanded="false"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-6eedc03a68a69933c763e674f2d7c42f')"
+    >
+      <span class="tab-nav-text">yaml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-58feac3ac61ccad30cd0e8e699436a68" aria-expanded="false"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-9ac1dd2f64179530f447f64a696593a0"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputFormats</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">outputFormats</span><span class="p">.</span><span class="nx">email</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">baseName</span> <span class="p">=</span> <span class="s1">&#39;index.email&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isHTML</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">mediaType</span> <span class="p">=</span> <span class="s1">&#39;text/html&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;email&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">noUgly</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">permalink'ble</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">outputs</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">home</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;rss&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">plank</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">section</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;rss&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">]</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-6347346fb9ddb86d68990afa4418e086"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">outputFormats</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">email</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">baseName</span><span class="p">:</span><span class="w"> </span><span class="l">index.email</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">isHTML</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mediaType</span><span class="p">:</span><span class="w"> </span><span class="l">text/html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">email</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">noUgly</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">permalink'ble</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">outputs</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">home</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">rss</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">email</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">plank</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">email</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">section</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">rss</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">email</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-58feac3ac61ccad30cd0e8e699436a68"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;outputFormats&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;baseName&#34;</span><span class="p">:</span> <span class="s2">&#34;index.email&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;isHTML&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;mediaType&#34;</span><span class="p">:</span> <span class="s2">&#34;text/html&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;email&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;noUgly&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;permalinkable&#34;</span><span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;outputs&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;home&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;html&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;rss&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;email&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;page&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;html&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;email&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;section&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;html&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;rss&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;email&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<p>Create a file <code>layouts/_default/baseof.email.html</code></p>
+<div class="tab-panel" data-tab-group="R-tabs-1233159be8e554b08117ccefaebd2104">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-089197b10f9f2b8474eec1a38e0c625f" aria-expanded="true"
+      data-tab-item="R-tab-4613d3821b4d88aa486bb6efac122e4e"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-1233159be8e554b08117ccefaebd2104','R-tab-4613d3821b4d88aa486bb6efac122e4e')"
+    >
+      <span class="tab-nav-text">layouts/_default/baseof.email.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-089197b10f9f2b8474eec1a38e0c625f"
+      data-tab-item="R-tab-4613d3821b4d88aa486bb6efac122e4e"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* add some styles here t' make it pretty */</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* add chroma style fer code highlight'n */</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="err">{-</span> <span class="err">&#34;/assets/css/chroma-relearn-light.css&#34;</span> <span class="err">|</span> <span class="err">readFile</span> <span class="err">|</span> <span class="err">safeCSS</span> <span class="p">}</span><span class="err">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    {{- block &#34;body&#34; . }}{{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div><p>Th' marked <code>block</code> construct above will cause th' display o' th' article wit' a default HTML structure. 	In case ye want t' keep it really simple, ye could replace this line wit' just <code>{{ .Content }}</code>.</p>
+</li>
+<li>
+<p><em>Optional</em>: create a file <code>layouts/_default/article.email.html</code></p>
+<p>In our case, we want t' display a disclaimer 'n front o' every article. T' do this we have t' define th' output o' an article ourself an' rely on th' above <code>block</code> statement t' call our template.</p>
+<div class="tab-panel" data-tab-group="R-tabs-7ec772d837a49e251ba6e66b35ccd588">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-def4e1014989043de688cc3529610ed7" aria-expanded="true"
+      data-tab-item="R-tab-03bc281e9fde36dbbdc0fc98affa0e69"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-7ec772d837a49e251ba6e66b35ccd588','R-tab-03bc281e9fde36dbbdc0fc98affa0e69')"
+    >
+      <span class="tab-nav-text">layouts/_default/article.email.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-def4e1014989043de688cc3529610ed7"
+      data-tab-item="R-tab-03bc281e9fde36dbbdc0fc98affa0e69"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;email&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    View this article on <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://example.com{{ .RelPermalink }}&#34;</span><span class="p">&gt;</span>our website<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{ partial &#34;article-content.html&#34; . }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+<li>
+<p><em>Optional</em>: create a file <code>layouts/_default/_markup_/render-image.email.html</code></p>
+<p>In our case, we want t' convert each image into a base 64 encoded str'n t' display it inline 'n th' email without load'n external assets.</p>
+<div class="tab-panel" data-tab-group="R-tabs-e049f86f12c3f9309d5506168b89edb2">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-a598cd6f6467e7f4081602aea7de10a3" aria-expanded="true"
+      data-tab-item="R-tab-0cbb66da3b45b492ea5d7912790a1f9f"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-e049f86f12c3f9309d5506168b89edb2','R-tab-0cbb66da3b45b492ea5d7912790a1f9f')"
+    >
+      <span class="tab-nav-text">layouts/_default/<em>marrrkup</em>/render-image.email.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-a598cd6f6467e7f4081602aea7de10a3"
+      data-tab-item="R-tab-0cbb66da3b45b492ea5d7912790a1f9f"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- $dest_url := urls.Parse .Destinat'n }}
+</span></span><span class="line"><span class="cl">{{- $dest_path := path.Clean ($dest_url.Path) }}
+</span></span><span class="line"><span class="cl">{{- $img := .Page.Resources.GetMatch $dest_path }}
+</span></span><span class="line"><span class="cl">{{- if an' (not $img) .Page.File }}
+</span></span><span class="line"><span class="cl">  {{- $path := path.Join .Page.File.Dir $dest_path }}
+</span></span><span class="line"><span class="cl">  {{- $img = resources.Get $path }}
+</span></span><span class="line"><span class="cl">{{- end }}
+</span></span><span class="line"><span class="cl">{{- if $img }}
+</span></span><span class="line"><span class="cl">  {{- if (gt (len $img.Content) 1000000000) }}
+</span></span><span class="line"><span class="cl">    {{/* currently resiz'n does not work fer animated gifs :-( */}}
+</span></span><span class="line"><span class="cl">    {{- $img = $img.Resize &#34;600x webp q75&#34; }}
+</span></span><span class="line"><span class="cl">  {{- end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;data:{{ $img.MediaType }};base64,{{ $img.Content | base64Encode }}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- end }}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ol>
+<h2 id="partials">Partials<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="for-html-output-formats">For HTML Output Formats<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>If ye want t' keep th' general HTML framework an' only change specific parts, ye can provide these as blocks:</p>
+<ul>
+<li><code>layouts/_default/list.&lt;FORMAT&gt;.html</code>: <em>Optional</em>: Controls how sections be displayed</li>
+<li><code>layouts/_default/single.&lt;FORMAT&gt;.html</code>: <em>Optional</em>: Controls how a planks be displayed</li>
+<li><code>layouts/_default/taxonomy.&lt;FORMAT&gt;.html</code>: <em>Optional</em>: Controls how taxonomy planks be displayed</li>
+<li><code>layouts/_default/term.&lt;FORMAT&gt;.html</code>: <em>Optional</em>: Controls how term planks be displayed</li>
+</ul>
+<p>For a real-world example, check out th' <code>print</code> output format implementat'n</p>
+<ul>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/list.print.html" rel="external" target="_self"><code>layouts/_default/list.print.html</code></a></li>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/single.print.html" rel="external" target="_self"><code>layouts/_default/single.print.html</code></a></li>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/taxonomy.print.html" rel="external" target="_self"><code>layouts/_default/taxonomy.print.html</code></a></li>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/taxonomy.print.html" rel="external" target="_self"><code>layouts/_default/term.print.html</code></a></li>
+</ul>
+<h3 id="for-non-html-output-formats">For Non-HTML Output Formats<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><code>layouts/_default/list.&lt;FORMAT&gt;.&lt;EXTENSION&gt;</code>: <em>Mandatory</em>: Controls how sections be displayed</li>
+<li><code>layouts/_default/single.&lt;FORMAT&gt;.&lt;EXTENSION&gt;</code>: <em>Mandatory</em>: Controls how planks be displayed</li>
+<li><code>layouts/_default/baseof.&lt;FORMAT&gt;.&lt;EXTENSION&gt;</code>: <em>Optional</em>: Controls how sections an' planks be displayed. If not provided, ye have t' provide yer implementat'n 'n <code>list.&lt;FORMAT&gt;.&lt;EXTENSION&gt;</code> an' <code>single.&lt;FORMAT&gt;.&lt;EXTENSION&gt;</code></li>
+</ul>
+<p>For a real-world example, check out th' <code>markdown</code> output format implementat'n</p>
+<ul>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/baseof.markdown.md" rel="external" target="_self"><code>layouts/_default/baseof.md</code></a></li>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/list.markdown.md" rel="external" target="_self"><code>layouts/_default/list.md</code></a></li>
+<li><a href="https://github.com/McShelby/hugo-theme-relearn/blob/main/layouts/_default/single.markdown.md" rel="external" target="_self"><code>layouts/_default/single.md</code></a></li>
+</ul>
+<h2 id="migration-from-relearn-7">Migrat'n from Relearrrn 7<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Cap'n Hugo 0.146 or newer required th' theme t' make changes that may affect ye if ye be us'n own output formats. Ye may have t' adjust yer templates 'n <code>layouts/_default</code> accord'n t' Hugo&rsquo;s migrat'n instruct'ns.</p>
+<h3 id="for-html-output-formats-1">For HTML Output Formats<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Ye need t' define a block <code>storeOutputFormat</code> fer yer HTML based output format templates an' add <code>{{- .Store.Set \&quot;relearnOutputFormat\&quot; \&quot;&lt;your-output-format-name&gt;\&quot; }}</code> t' it.</li>
+</ul>
+<h3 id="for-non-html-output-formats-1">For Non-HTML Output Formats<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Move yer files <code>layouts/&lt;DESIGN&gt;/views</code> up one level t' <code>layouts/&lt;DESIGN&gt;</code></li>
+</ul>
+<h2 id="migration-from-relearn-6">Migrat'n from Relearrrn 6<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Previous t' Relearrrn 7, HTML output formats did not use th' <code>baseof.html</code> but now do.</p>
+<h3 id="for-html-output-formats-2">For HTML Output Formats<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>
+<p>Move yer files <code>layouts/partials/article.&lt;FORMAT&gt;.html</code> t' <code>layouts/_default/article.&lt;FORMAT&gt;.html</code></p>
+<p>Th' files will most likely require further modificat'ns as they now receive th' plank as it context (dot <code>.</code>) instead o' th' <code>.page</code> an' <code>.content</code> parameter.</p>
+<p><strong>Old</strong>:</p>
+<div class="tab-panel" data-tab-group="R-tabs-47d4466440cc2dc7bd4e31f81f3357ce">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-d1c4043c12c4734d94950b0b3fce632c" aria-expanded="true"
+      data-tab-item="R-tab-b1374606b5a0f03e531f69297c15aed4"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-47d4466440cc2dc7bd4e31f81f3357ce','R-tab-b1374606b5a0f03e531f69297c15aed4')"
+    >
+      <span class="tab-nav-text">layouts/partials/article.&lt;FORMAT&gt;.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-d1c4043c12c4734d94950b0b3fce632c"
+      data-tab-item="R-tab-b1374606b5a0f03e531f69297c15aed4"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line hl"><span class="cl">{{- $page := .page }}
+</span></span><span class="line hl"><span class="cl">{{- $content := .content }}
+</span></span><span class="line hl"><span class="cl">{{- wit' $page }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;default&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;headline&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- partial &#34;content-header.html&#34; . }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{partial &#34;heading-pre.html&#34; .}}{{partial &#34;head'n.html&#34; .}}{{partial &#34;heading-post.html&#34; .}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line hl"><span class="cl">  {{ $content | safeHTML }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;footline&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- partial &#34;content-footer.html&#34; . }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">{{- end }}</span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div><p><strong>New</strong>:</p>
+<div class="tab-panel" data-tab-group="R-tabs-f8f7967a238b8d8d4ca30668cfb6c6c9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-10ee2221b58a99ff657ef2781880f6cb" aria-expanded="true"
+      data-tab-item="R-tab-2295647ab25bb82d878fc5d13d72cd0a"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-f8f7967a238b8d8d4ca30668cfb6c6c9','R-tab-2295647ab25bb82d878fc5d13d72cd0a')"
+    >
+      <span class="tab-nav-text">layouts/_default/article.&lt;FORMAT&gt;.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-10ee2221b58a99ff657ef2781880f6cb"
+      data-tab-item="R-tab-2295647ab25bb82d878fc5d13d72cd0a"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;default&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;headline&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- partial &#34;content-header.html&#34; . }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  {{partial &#34;heading-pre.html&#34; .}}{{partial &#34;head'n.html&#34; .}}{{partial &#34;heading-post.html&#34; .}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line hl"><span class="cl">  {{ partial &#34;article-content.html&#34; . }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;footline&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- partial &#34;content-footer.html&#34; . }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+<h3 id="for-non-html-output-formats-2">For Non-HTML Output Formats<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>
+<p>Merge yer files <code>layouts/partials/header.&lt;FORMAT&gt;.html</code>, <code>layouts/partials/footer.&lt;FORMAT&gt;.html</code> t' <code>layouts/_default/baseof.&lt;FORMAT&gt;.html</code></p>
+<p><strong>Old</strong>:</p>
+<div class="tab-panel" data-tab-group="R-tabs-87998cdc6b927e8ce183d12b5f99ebdc">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-2a63768135187a5bb40fa55ea8c453c8" aria-expanded="true"
+      data-tab-item="R-tab-76770b9a2ec923de1d603838db2351fa"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-87998cdc6b927e8ce183d12b5f99ebdc','R-tab-76770b9a2ec923de1d603838db2351fa')"
+    >
+      <span class="tab-nav-text">layouts/partials/header.&lt;FORMAT&gt;.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-2a63768135187a5bb40fa55ea8c453c8"
+      data-tab-item="R-tab-76770b9a2ec923de1d603838db2351fa"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* add some styles here t' make it pretty */</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* add chroma style fer code highlight'n */</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="err">{-</span> <span class="err">&#34;/assets/css/chroma-relearn-light.css&#34;</span> <span class="err">|</span> <span class="err">readFile</span> <span class="err">|</span> <span class="err">safeCSS</span> <span class="p">}</span><span class="err">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div><div class="tab-panel" data-tab-group="R-tabs-7edd465cfcf25446187ed325c0c7eda3">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-dabd134d9c819b08a1a7378eb6df51b4" aria-expanded="true"
+      data-tab-item="R-tab-39b14af803ebde2c5427c7b1dc76b2dd"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-7edd465cfcf25446187ed325c0c7eda3','R-tab-39b14af803ebde2c5427c7b1dc76b2dd')"
+    >
+      <span class="tab-nav-text">layouts/partials/footer.&lt;FORMAT&gt;.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-dabd134d9c819b08a1a7378eb6df51b4"
+      data-tab-item="R-tab-39b14af803ebde2c5427c7b1dc76b2dd"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div><p><strong>New</strong>:</p>
+<p>Th' upper part o' th' file be from yer <code>header.&lt;FORMAT&gt;.html</code> an' th' lower part be from yer <code>footer.&lt;FORMAT&gt;.html</code>.</p>
+<p>Th' marked line needs t' be added, so yer output format uses a potential <code>layouts/_default/article.&lt;FORMAT&gt;.html</code></p>
+<div class="tab-panel" data-tab-group="R-tabs-42b48c8b9a4dee2515910bd06fb2076f">
+  <div class="tab-nav">
+    <div class="tab-nav-title">&#8203;</div>
+    <button
+      aria-controls="R-tab-id-04a5c6718313f062cc916c69aa5e9636" aria-expanded="true"
+      data-tab-item="R-tab-9b88c4963b54dccfae4fc3f88dff45b0"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-42b48c8b9a4dee2515910bd06fb2076f','R-tab-9b88c4963b54dccfae4fc3f88dff45b0')"
+    >
+      <span class="tab-nav-text">layouts/_default/baseof.&lt;FORMAT&gt;.html</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-04a5c6718313f062cc916c69aa5e9636"
+      data-tab-item="R-tab-9b88c4963b54dccfae4fc3f88dff45b0"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{ .Title }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* add some styles here t' make it pretty */</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">/* add chroma style fer code highlight'n */</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="err">{-</span> <span class="err">&#34;/assets/css/chroma-relearn-light.css&#34;</span> <span class="err">|</span> <span class="err">readFile</span> <span class="err">|</span> <span class="err">safeCSS</span> <span class="p">}</span><span class="err">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line hl"><span class="cl">    {{- block &#34;body&#34; . }}{{ end }}
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div></li>
+</ul>
+ 
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categorrries" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/explanation/index.html">Explanation</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/howto/index.html">Howto</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070409" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

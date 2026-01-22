@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thinking :: Hugo Relearn Theme</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/thinking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>短期回顾2024/8</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/review_2024-8/index.html</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/review_2024-8/index.html</guid>
+      <description>这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。</description>
+    </item>
+    <item>
+      <title>DDLC实况吐槽</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/ddlc/index.html</link>
+      <pubDate>Sun, 21 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/ddlc/index.html</guid>
+      <description>心跳文学社久闻大名，梗图也很多，但是原来是17年的游戏还是老美的，也没配音，一直没启动过。</description>
+    </item>
+    <item>
+      <title>Gamejam记录-2024CIGA</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/gamejam-2024ciga/index.html</link>
+      <pubDate>Mon, 15 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/gamejam-2024ciga/index.html</guid>
+      <description>第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0</description>
+    </item>
+    <item>
+      <title>毕业致谢!</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/graduation-thanks/index.html</link>
+      <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/graduation-thanks/index.html</guid>
+      <description>为了论文篇幅完整性和一些私人性，我的毕业致谢并不完整，我在此做些补充</description>
+    </item>
+    <item>
+      <title>清明记事</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/qingming_2024/index.html</link>
+      <pubDate>Thu, 04 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/qingming_2024/index.html</guid>
+      <description>2024年清明节的记事</description>
+    </item>
+  </channel>
+</rss>

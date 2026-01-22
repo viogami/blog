@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php :: Tag :: Purple Pulpo</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/php/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>php使用grpc服务(从0开始，并且包含mapfield文件解释)</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-php/index.html</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-php/index.html</guid>
+      <description>grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。&#xA;现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~</description>
+    </item>
+  </channel>
+</rss>

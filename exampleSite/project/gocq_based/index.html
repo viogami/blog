@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="你至少需要启动三个服务
+qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="基于gocq的qqbot搭建 :: Purple Pulpo">
+    <meta name="twitter:description" content="你至少需要启动三个服务
+qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/gocq_based/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="基于gocq的qqbot搭建 :: Purple Pulpo">
+    <meta property="og:description" content="你至少需要启动三个服务
+qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Project">
+    <meta property="article:published_time" content="2024-01-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-01-27T00:00:00+00:00">
+    <meta itemprop="name" content="基于gocq的qqbot搭建 :: Purple Pulpo">
+    <meta itemprop="description" content="你至少需要启动三个服务
+qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。">
+    <meta itemprop="datePublished" content="2024-01-27T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-01-27T00:00:00+00:00">
+    <meta itemprop="wordCount" content="540">
+    <title>基于gocq的qqbot搭建 :: Purple Pulpo</title>
+    <link href="/hugo-theme-relearn/exampleSite/project/gocq_based/index.print.html" rel="alternate" type="text/html" title="基于gocq的qqbot搭建 :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-html.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/project\/gocq_based\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support html" data-origin="/hugo-theme-relearn/exampleSite/project/gocq_based/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#qsign">qsign</a>
+      <ul>
+        <li><a href="#如果你熟悉docker会最基本的卷挂载端口映射可以使用"><strong>如果你熟悉docker，会最基本的卷挂载，端口映射可以使用：</strong></a></li>
+        <li><a href="#如果不熟悉docker可以使用如下镜像一键部署908版本"><strong>如果不熟悉docker，可以使用如下镜像一键部署9.0.8版本</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#gocq">gocq</a>
+      <ul>
+        <li><a href="#第一步">第一步</a></li>
+        <li><a href="#第二步">第二步</a></li>
+        <li><a href="#第三步">第三步</a></li>
+        <li><a href="#第四步">第四步</a></li>
+      </ul>
+    </li>
+    <li><a href="#后端建设">后端建设</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/project/index.html"><span itemprop="name">Project</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">基于gocq的qqbot搭建</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/gocq_based/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/p5r_p5cc/index.html" title="p5r预告信生成器API (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/atravelerrecognizeimage/index.html" title="基于pyautogui的自动化程序 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable project" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="基于gocq的qqbot搭建">基于gocq的qqbot搭建</h1>
+
+<p>你至少需要启动三个服务</p>
+<ul>
+<li>qsign服务器</li>
+<li>go-cqhttp</li>
+<li>你自己的机器人后端</li>
+</ul>
+<p>gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名
+为了可以实现双向通信，你的后端需要实现websocket的通信。</p>
+<h2 id="qsign">qsign<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>从dokcer hub中搜索qsign，按照更新时间排序，找到一个能用的，运行 <code>pull</code>命令。
+注意，下载次数最高的镜像无法拉取的，删了跑路了，时间排序到一个有新版本的镜像，低版本的qsign可能会无法登陆。</p>
+<blockquote>
+<p>如果是通过宝塔部署，在镜像中通过镜像搜索，找到qsign相关镜像无法拉取，都是该镜像跑路了，仓库中不存在，换一个镜像重新拉取即可。</p>
+</blockquote>
+<p><strong>建议将其部署在国外服务器上。</strong>
+通过请求qsign服务器，gocq会得到一个token，这个token需要一段时间后刷新，所以需要qsign服务器一直保持活跃。
+可以使用docker拉取一个镜像，快速部署,部署后配置域名，get该地址可以获得一个json信息为配置成功。</p>
+<p>注意：最好部署新的版本，如9.0.8，但是docker镜像很多都是镜像只支持老版本，要用新版本需要手动导入新的版本文件，到挂载卷里</p>
+<h3 id="如果你熟悉docker会最基本的卷挂载端口映射可以使用"><strong>如果你熟悉docker，会最基本的卷挂载，端口映射可以使用：</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="https://hub.docker.com/r/bennettwu/qsign-server" rel="external">https://hub.docker.com/r/bennettwu/qsign-server</a>
+这个镜像的发布者说明也很清楚了，可以不用命令行部署，直接宝塔拉取镜像，创建容器，然后进入容器挂载卷的文件夹内，把9.0.8版本的文件放入，注意，不是文件夹，是覆盖&rsquo;/app/txlib&rsquo;内的</p>
+<p><a href="#R-image-ca7a2422355f3578b860490288e55b47" class="lightbox-link"><img alt="docker.png" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/gocq_based/gocq_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca7a2422355f3578b860490288e55b47"><img alt="docker.png" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/gocq_based/gocq_1.png"></a></p>
+<p>这个镜像较为完整，功能也正常，到docker挂载卷的文件中放入9.0.8版本的qsing文件，同时修改config文件。
+<strong>config中一点要设置自动注册实例为true，并且设置端口，config中设置的端口将直接影响容器内端口映射是否能正确</strong></p>
+<p>最后这个镜像可以通过：<code>'http://your-site:1145/sign'</code>来访问该qsign服务。
+其中，1145是我手动映射到容器的外部端口，/sign是该镜像指明的url访问。</p>
+<h3 id="如果不熟悉docker可以使用如下镜像一键部署908版本"><strong>如果不熟悉docker，可以使用如下镜像一键部署9.0.8版本</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="https://hub.docker.com/r/woxigousade/qsign" rel="external">https://hub.docker.com/r/woxigousade/qsign</a></p>
+<p><a href="#R-image-194ae48b636756725d86d39631879048" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/gocq_based/qsign.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-194ae48b636756725d86d39631879048"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/gocq_based/qsign.png"></a></p>
+<p><code>注意，该镜像在被请求一次后，容器可能会停止，需要自己设置自动重启。同时实例自动注册可能出现问题，原因未知，因为本人熟悉点docker，我已经换上面的那个了</code>。</p>
+<p>部署可以直接参考docker镜像发布者的说明。
+通过命令行,镜像run个容器：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker run -d -p 9000:8080 --restart<span class="o">=</span>always --name<span class="o">=</span>qsign -e <span class="nv">VERSION</span><span class="o">=</span>9.0.8 woxigousade/qsign:latest</span></span></code></pre></div>
+<p>命令解释：</p>
+<ul>
+<li>服务器9000端口映射容器内8080端口</li>
+<li>重启策略设置为&quot;always&quot;</li>
+<li>创建的容器名为&rsquo;qsing'</li>
+<li>使用版本9.0.8</li>
+</ul>
+<p><strong>完成了docker部署，并启动容器之后给该docker部署的镜像设置公网可以访问的域名或者暴露该端口(如9000)直接用端口号访问即可，直接get会有json信息返回，鉴定为部署成功</strong>，返回code 0和1都是正常的，主要要看gocq的登录返回信息。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;msg&#34;</span><span class="p">:</span> <span class="s2">&#34;Parameter &#39;uin&#39; is missing.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;data&#34;</span><span class="p">:</span> <span class="s2">&#34;failed&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<h2 id="gocq">gocq<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>拉取gocq项目文件，直接启动一次项目，生成必要的文件</li>
+<li>修改协议</li>
+<li>填写配置文件</li>
+<li>打包部署到服务器</li>
+</ul>
+<h3 id="第一步">第一步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>无要点，下载项目的release版本，或者安装go直接拉项目本地跑</p>
+<h3 id="第二步">第二步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>建议使用手表协议，device.json改protocol的值为2
+将qsign中的config.json文件重命名为6.json，放在项目的 <code>data/versions</code>文件中</p>
+<h3 id="第三步">第三步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>注意 <code>config.yml</code>文件的填写
+只有三个地方是必须要修改的：<strong>qq号和密码、qsign服务器地址、服务后端地址(http or ws)</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># go-cqhttp 默认配置文件</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="c"># 账号相关</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">uin</span><span class="p">:</span><span class="w"> </span><span class="l">your-qq# QQ账号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c"># 密码为空时使用扫码登录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">encrypt</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">  </span><span class="c"># 是否开启密码加密</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">      </span><span class="c"># 在线状态 请参考 https://docs.go-cqhttp.org/guide/config.html#在线状态</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">relogin</span><span class="p">:</span><span class="w"> </span><span class="c"># 重连设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="c"># 首次重连延迟, 单位秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="c"># 重连间隔</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">max-times</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c"># 最大重连次数, 0为无限制</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否使用服务器下发的新地址进行重连</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 注意, 此设置可能导致在海外服务器上连接情况更差</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">use-sso-address</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否允许发送临时会话消息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">allow-temp-session</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 数据包的签名服务器列表，第一个作为主签名服务器，后续作为备用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 兼容 https://github.com/fuqiuluo/unidbg-fetch-qsign</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 如果遇到 登录 45 错误, 或者发送信息风控的话需要填入一个或多个服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 不建议设置过多，设置主备各一个即可，超过 5 个只会取前五个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 示例:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># sign-servers: </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   - url: &#39;http://127.0.0.1:8080&#39; # 本地签名服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     key: &#34;114514&#34;  # 相应 key</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     authorization: &#34;-&#34;   # authorization 内容, 依服务端设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   - url: &#39;https://signserver.example.com&#39; # 线上签名服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     key: &#34;114514&#34;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     authorization: &#34;-&#34;   </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 服务器可使用docker在本地搭建或者使用他人开放的服务</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sign-servers</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;your-qsign-site&#39;</span><span class="w">  </span><span class="c"># 主签名服务器地址， 必填</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;114514&#39;</span><span class="w">  </span><span class="c"># 签名服务器所需要的apikey, 如果签名服务器的版本在1.1.0及以下则此项无效</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">authorization</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w">   </span><span class="c"># authorization 内容, 依服务端设置，如 &#39;Bearer xxxx&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 判断签名服务不可用（需要切换）的额外规则</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 0: 不设置 （此时仅在请求无法返回结果时判定为不可用）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 1: 在获取到的 sign 为空 （若选此建议关闭 auto-register，一般为实例未注册但是请求签名的情况）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 2: 在获取到的 sign 或 token 为空（若选此建议关闭 auto-refresh-token ）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">rule-change-sign-server</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 连续寻找可用签名服务器最大尝试次数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为 0 时会在连续 3 次没有找到可用签名服务器后保持使用主签名服务器，不再尝试进行切换备用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 否则会在达到指定次数后 **退出** 主程序</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">max-check-count</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 签名服务请求超时时间(s)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sign-server-timeout</span><span class="p">:</span><span class="w"> </span><span class="m">60</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 如果签名服务器的版本在1.1.0及以下, 请将下面的参数改成true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 建议使用 1.1.6 以上版本，低版本普遍半个月冻结一次</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">is-below-110</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 在实例可能丢失（获取到的签名为空）时是否尝试重新注册</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为 true 时，在签名服务不可用时可能每次发消息都会尝试重新注册并签名。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为 false 时，将不会自动注册实例，在签名服务器重启或实例被销毁后需要重启 go-cqhttp 以获取实例</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 否则后续消息将不会正常签名。关闭此项后可以考虑开启签名服务器端 auto_register 避免需要重启</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 由于实现问题，当前建议关闭此项，推荐开启签名服务器的自动注册实例</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">auto-register</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否在 token 过期后立即自动刷新签名 token（在需要签名时才会检测到，主要防止 token 意外丢失）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 独立于定时刷新</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">auto-refresh-token</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 定时刷新 token 间隔时间，单位为分钟, 建议 30~40 分钟, 不可超过 60 分钟</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 目前丢失token也不会有太大影响，可设置为 0 以关闭，推荐开启</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">refresh-interval</span><span class="p">:</span><span class="w"> </span><span class="m">40</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">heartbeat</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 心跳频率, 单位秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># -1 为关闭心跳</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">message</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 上报数据类型</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 可选: string,array</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">post-format</span><span class="p">:</span><span class="w"> </span><span class="l">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否忽略无效的CQ码, 如果为假将原样发送</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ignore-invalid-cqcode</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否强制分片发送消息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 分片发送将会带来更快的速度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 但是兼容性会有些问题</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">force-fragment</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否将url分片发送</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">fix-url</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 下载图片等请求网络代理</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">proxy-rewrite</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否上报自身消息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">report-self-message</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 移除服务端的Reply附带的At</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">remove-reply-at</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为Reply附加更多信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">extra-reply-data</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 跳过 Mime 扫描, 忽略错误数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">skip-mime-scan</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否自动转换 WebP 图片</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">convert-webp-image</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># download 超时时间(s)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">http-timeout</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">output</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 日志等级 trace,debug,info,warn,error</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-level</span><span class="p">:</span><span class="w"> </span><span class="l">warn</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 日志时效 单位天. 超过这个时间之前的日志将会被自动删除. 设置为 0 表示永久保留.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-aging</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否在每次启动时强制创建全新的文件储存日志. 为 false 的情况下将会在上次启动时创建的日志文件续写</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-force-new</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否启用日志颜色</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-colorful</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否启用 DEBUG</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># 开启调试模式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># 默认中间件锚点</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">default-middlewares</span><span class="p">:</span><span class="w"> </span><span class="cp">&amp;default</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 访问密钥, 强烈推荐在公网的服务器设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">access-token</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 事件过滤器文件目录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filter</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># API限速设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 该设置为全局生效</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 原 cqhttp 虽然启用了 rate_limit 后缀, 但是基本没插件适配</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 目前该限速设置为令牌桶算法, 请参考:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E6%A1%B6%E7%AE%97%E6%B3%95/6597000?fr=aladdin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">rate-limit</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># 是否启用限速</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c"># 令牌回复频率, 单位秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c"># 令牌桶大小</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="c"># 数据库相关设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">leveldb</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 是否启用内置leveldb数据库</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 启用将会增加10-20MB的内存占用和一定的磁盘空间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 关闭将无法使用 撤回 回复 get_msg 等上下文相关功能</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sqlite3</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 是否启用内置sqlite3数据库</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 启用将会增加一定的内存占用和一定的磁盘空间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 关闭将无法使用 撤回 回复 get_msg 等上下文相关功能</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cachettl</span><span class="p">:</span><span class="w"> </span><span class="m">3600000000000</span><span class="w"> </span><span class="c"># 1h</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># 连接服务列表</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">servers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 添加方式，同一连接方式可添加多个，具体配置说明请查看文档</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- http: # http 通信</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- ws:   # 正向 Websocket</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- ws-reverse: # 反向 Websocket</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- pprof: #性能分析服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 反向WS设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">ws-reverse</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 反向WS Universal 地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 注意 设置了此项地址后下面两项将会被忽略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">universal</span><span class="p">:</span><span class="w"> </span><span class="l">wss://your-site/ws</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 反向WS API 地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">api</span><span class="p">:</span><span class="w"> </span><span class="l">ws://your_websocket_api.server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 反向WS Event 地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l">ws://your_websocket_event.server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 重连间隔 单位毫秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">reconnect-interval</span><span class="p">:</span><span class="w"> </span><span class="m">3000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">middlewares</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="cp">*default</span><span class="w"> </span><span class="c"># 引用默认中间件</span></span></span></code></pre></div>
+<h3 id="第四步">第四步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>不输入密码，使用扫码登陆。注意先在本地登陆一次，登陆成功后把 <code>data</code>文件夹和 <code>session.token</code>文件上传服务器即可，在服务器端登陆可能会显示登陆风险，要求同一网络。</p>
+<h2 id="后端建设">后端建设<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>我用go写的后端
+创建ws连接的路由
+部署你的后端到国外服务器上/Paas上,将pass提供的地址作为ws地址。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 27, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row manual-wrap" href="/hugo-theme-relearn/exampleSite/index.html">
+          <span class="logo-image default-animation" data-r-logo-variant="learn neon">
+<svg class="inlinecontent lazy figure-image" style="height: auto;width: auto;" xmlns="http://www.w3.org/2000/svg" viewBox="75 75 350 350"><style>@media (prefers-color-scheme:dark){path{fill:#fff}}</style><path d="M250,80 a170,170 0 1,0 0,340 a170,170 0 1,0 0,-340 M250,95 a155,155 0 1,1 0,310 a155,155 0 1,1 0,-310 Z"/><path d="M 250 110 C 223.33333 123.33333 203.33333 156.66667 190 210 C 190 230 200 246.66667 220 260 C 246.66667 273.33333 270 273.33333 290 260 C 310 246.66667 316.66667 230 310 210 C 296.66667 156.66667 276.66667 123.33333 250 110 z M 230 152 A 22 28 0 0 1 250.02539 168.43164 A 22 28 0 0 1 270 152 A 22 28 0 0 1 292 180 A 22 28 0 0 1 270 208 A 22 28 0 0 1 250 191.48828 A 22 28 0 0 1 230 208 A 22 28 0 0 1 208 180 A 22 28 0 0 1 230 152 z"/><path d="M 232 190 A 7 7 0 1 0 218 190 A 7 7 0 1 0 232 190"/><path d="M 282 190 A 7 7 0 1 0 268 190 A 7 7 0 1 0 282 190"/><path d="m 251.62695,262.67773 -3.2539,14.64454 c 29.6411,6.58691 52.50119,14.00059 68.27343,21.88671 15.77224,7.88612 23.89316,16.12675 26.23829,23.16211 l 0.16796,0.50586 0.23829,0.47657 c 2.77431,5.54863 2.96984,9.14709 2.09375,11.77539 -0.8761,2.62829 -3.18965,5.38779 -8.73829,8.16211 -5.54863,2.77431 -9.14709,2.96984 -11.77539,2.09375 -2.62829,-0.8761 -5.38779,-3.18965 -8.16211,-8.73829 -5.77224,-11.54447 -5.77224,-21.74849 0,-33.29296 l -13.41796,-6.70704 c -7.5611,15.12219 -7.5611,31.58485 0,46.70704 3.89235,7.7847 9.46618,13.80448 16.83789,16.26171 7.3717,2.45724 15.4399,0.9861 23.22461,-2.90625 7.7847,-3.89235 13.80448,-9.46618 16.26171,-16.83789 2.45724,-7.3717 0.9861,-15.4399 -2.90625,-23.22461 l 0.40625,0.98243 c -4.32154,-12.96464 -16.20062,-23.05735 -33.76171,-31.83789 -17.5611,-8.78055 -41.36767,-16.36687 -71.72657,-23.11329 z"/><path d="m 251.06055,262.57617 -2.1211,14.84766 c 22.66512,3.23787 40.0389,8.90614 52.08594,16.43554 12.04704,7.52941 18.84739,16.55167 21.69922,27.95899 l 0.19922,0.79883 0.36719,0.73633 c 2.77431,5.54863 2.96984,9.14709 2.09375,11.77539 -0.8761,2.62829 -3.18965,5.38779 -8.73829,8.16211 -5.54863,2.77431 -9.14709,2.96984 -11.77539,2.09375 -2.62829,-0.8761 -5.38779,-3.18965 -8.16211,-8.73829 -5.77224,-11.54447 -5.77224,-21.74849 0,-33.29296 l -13.41796,-6.70704 c -7.5611,15.12219 -7.5611,31.58485 0,46.70704 3.89235,7.7847 9.46618,13.80448 16.83789,16.26171 7.3717,2.45724 15.4399,0.9861 23.22461,-2.90625 7.7847,-3.89235 13.80448,-9.46618 16.26171,-16.83789 2.36474,-7.09422 1.02935,-14.82889 -2.53906,-22.33984 -3.93242,-14.96263 -13.69431,-27.38609 -28.10156,-36.39063 -14.61962,-9.13726 -33.91251,-15.13566 -57.91406,-18.56445 z"/><path d="m 254.16016,263.75977 -8.32032,12.48046 c 18.87994,12.58663 30.93166,27.79106 37.04493,46.13086 l 0.16796,0.50586 0.23829,0.47657 c 2.77431,5.54863 2.96984,9.14709 2.09375,11.77539 -0.8761,2.62829 -3.18965,5.38779 -8.73829,8.16211 -5.54863,2.77431 -9.14709,2.96984 -11.77539,2.09375 -2.62829,-0.8761 -5.38779,-3.18965 -8.16211,-8.73829 -5.77224,-11.54447 -5.77224,-21.74849 0,-33.29296 l -13.41796,-6.70704 c -7.5611,15.12219 -7.5611,31.58485 0,46.70704 3.89235,7.7847 9.46618,13.80448 16.83789,16.26171 7.3717,2.45724 15.4399,0.9861 23.22461,-2.90625 7.7847,-3.89235 13.80448,-9.46618 16.26171,-16.83789 2.36103,-7.08308 1.03217,-14.80481 -2.52343,-22.30468 -7.22746,-21.63209 -21.83225,-39.74038 -42.93164,-53.80664 z"/><path d="m 245.83984,263.75977 c -21.09939,14.06626 -35.70418,32.17455 -42.93164,53.80664 -3.5556,7.49987 -4.88446,15.2216 -2.52343,22.30468 2.45723,7.37171 8.47701,12.94554 16.26171,16.83789 7.78471,3.89235 15.85291,5.36349 23.22461,2.90625 7.37171,-2.45723 12.94554,-8.47701 16.83789,-16.26171 7.5611,-15.12219 7.5611,-31.58485 0,-46.70704 l -13.41796,6.70704 c 5.77224,11.54447 5.77224,21.74849 0,33.29296 -2.77432,5.54864 -5.53382,7.86219 -8.16211,8.73829 -2.6283,0.87609 -6.22676,0.68056 -11.77539,-2.09375 -5.54864,-2.77432 -7.86219,-5.53382 -8.73829,-8.16211 -0.87609,-2.6283 -0.68056,-6.22676 2.09375,-11.77539 l 0.23829,-0.47657 0.16796,-0.50586 c 6.11327,-18.3398 18.16499,-33.54423 37.04493,-46.13086 z"/><path d="m 248.5293,262.64648 c -35.0305,7.0061 -60.89872,25.32088 -75.23828,54 C 169.62227,323.98397 167.5,330.83333 167.5,337.5 c 0,6.66667 2.53811,13.14358 7.19727,17.80273 5.1011,5.1011 13.27646,6.61163 20.17382,4.3125 6.89737,-2.29912 13.32304,-7.20389 20.43164,-14.3125 l 0.86133,-0.85937 0.54492,-1.08984 c 7.5611,-15.12219 7.5611,-31.58485 0,-46.70704 l -13.41796,6.70704 c 5.58408,11.16816 5.64385,21.1051 0.42382,32.1914 -5.75159,5.55819 -10.66362,8.86574 -13.58593,9.83985 -3.10264,1.03421 -3.26061,0.87806 -4.82618,-0.6875 C 183.29523,342.68976 182.5,340.83333 182.5,337.5 c 0,-3.33333 1.21106,-8.15064 4.20898,-14.14648 12.32711,-24.65421 33.12555,-39.67277 64.76172,-46 z"/><path d="m 248.37305,262.67773 c -30.3589,6.74642 -54.16547,14.33274 -71.72657,23.11329 -17.56109,8.78054 -29.44017,18.87325 -33.76171,31.83789 l 0.40625,-0.98243 c -3.89235,7.78471 -5.36349,15.85291 -2.90625,23.22461 2.45723,7.37171 8.47701,12.94554 16.26171,16.83789 7.78471,3.89235 15.85291,5.36349 23.22461,2.90625 7.37171,-2.45723 12.94554,-8.47701 16.83789,-16.26171 7.5611,-15.12219 7.5611,-31.58485 0,-46.70704 l -13.41796,6.70704 c 5.77224,11.54447 5.77224,21.74849 0,33.29296 -2.77432,5.54864 -5.53382,7.86219 -8.16211,8.73829 -2.6283,0.87609 -6.22676,0.68056 -11.77539,-2.09375 -5.54864,-2.77432 -7.86219,-5.53382 -8.73829,-8.16211 -0.87609,-2.6283 -0.68056,-6.22676 2.09375,-11.77539 l 0.23829,-0.47657 0.16796,-0.50586 c 2.34513,-7.03536 10.46605,-15.27599 26.23829,-23.16211 15.77224,-7.88612 38.63233,-15.2998 68.27343,-21.88671 z"/></svg>
+          </span>
+          <span class="logo-title default-animation">Purple 
+Pulpo</span>
+        </a>
+        <search><form action="/hugo-theme-relearn/exampleSite/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/index.html"><i class="fa-fw fas fa-anchor"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/ship/index.html"><a class="padding default-animation" href="/hugo-theme-relearn/exampleSite/ship/index.html"><i class="fa-fw fas fa-sailboat"></i> The Ship</a><ul id="R-subsections-f2829979d9134657756050c6e1f580bb" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/log/index.html"><a class="padding default-animation" href="/hugo-theme-relearn/exampleSite/log/index.html"><i class="fa-fw fas fa-pen-fancy"></i> Captain&#39;s Log</a><ul id="R-subsections-23c22f75c84b98545748a65894702014" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/about/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/about/index.html"><i class="fa-fw fas fa-info-circle"></i> About</a></li>
+            <li class="parent " data-nav-id="/hugo-theme-relearn/exampleSite/project/index.html"><a class="padding default-animation" href="/hugo-theme-relearn/exampleSite/project/index.html">Project</a><ul id="R-subsections-2ca1f4ebdc59348ffdc31d97a51a98d5" class="collapsible-menu">
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/project/viogo/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/viogo/index.html">VioGo--不止聊天的奇妙bot</a></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/project/p5r_p5cc/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/p5r_p5cc/index.html">p5r预告信生成器API</a></li>
+            <li class="active " data-nav-id="/hugo-theme-relearn/exampleSite/project/gocq_based/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/gocq_based/index.html">基于gocq的qqbot搭建</a></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/project/atravelerrecognizeimage/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/atravelerrecognizeimage/index.html">基于pyautogui的自动化程序</a></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/project/favani/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/favani/index.html">FavAni--从0开始的web开发日志</a></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/index.html">【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)</a></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/project/uma_drawcard_2/index.html"><a class="padding" href="/hugo-theme-relearn/exampleSite/project/uma_drawcard_2/index.html">【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下)</a></li></ul></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/blog/index.html"><a class="padding default-animation" href="/hugo-theme-relearn/exampleSite/blog/index.html">Blog</a><ul id="R-subsections-c061e150208a7ab43c1b0b723b79816b" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/hugo-theme-relearn/exampleSite/thinking/index.html"><a class="padding default-animation" href="/hugo-theme-relearn/exampleSite/thinking/index.html">Thinking</a><ul id="R-subsections-8b478e6c695c7f1f1380b52d24c6d575" class="collapsible-menu"></ul></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://mcshelby.github.io/hugo-theme-relearn/index.html"><a class="padding" href="https://mcshelby.github.io/hugo-theme-relearn/index.html" rel="external"><i class="fa-fw fas fa-puzzle-piece"></i> Relearn Docs</a></li>
+            <li class="" data-nav-id="https://github.com/McShelby/hugo-theme-relearn"><a class="padding" href="https://github.com/McShelby/hugo-theme-relearn" rel="external"><i class="fa-fw fab fa-github"></i> GitHub Repo</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Language</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-en" value="en" data-url="/hugo-theme-relearn/exampleSite/project/gocq_based/index.html" lang="en" selected data-selected>English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-variant">Theme</label>
+                  <select id="R-select-variant">
+                    <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                    <option id="R-select-variant-neon" value="neon">Dark</option>
+                    <option id="R-select-variant-learn" value="learn">Light</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+              <script>window.relearn.markVariant();</script>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

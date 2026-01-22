@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 :: Hugo Relearn Theme">
+    <meta name="twitter:description" content="dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/blog/docker-mysql-error/index.html">
+    <meta property="og:site_name" content="Hugo Relearn Theme">
+    <meta property="og:title" content="【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 :: Hugo Relearn Theme">
+    <meta property="og:description" content="dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Blog">
+    <meta property="article:published_time" content="2024-04-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-04-27T00:00:00+00:00">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Mysql">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Windows">
+    <meta property="article:tag" content="开发问题">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 :: Hugo Relearn Theme">
+    <meta itemprop="description" content="dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).">
+    <meta itemprop="datePublished" content="2024-04-27T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-04-27T00:00:00+00:00">
+    <meta itemprop="wordCount" content="29">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="keywords" content="Docker,Mysql,Linux,Windows,开发问题">
+    <title>【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 :: Hugo Relearn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/blog/docker-mysql-error/index.html" rel="canonical" type="text/html" title="【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070402" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070402" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1769070402";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070402" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/blog\/docker-mysql-error\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070402"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/blog/docker-mysql-error/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#解决方案">解决方案</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/index.html"><span itemprop="name">Hugo Relearn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/blog/index.html"><span itemprop="name">Blog</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/blog/【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错/index.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/blog/docker-mysql-error/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/blog/ue5-rider-vs/index.html" title="用最轻量的VS负载进行UE5开发(使用rider) (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/blog/k8s-agones/index.html" title="自顶向下学习K8S--部署Agones (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable blog" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/docker/index.html">Docker</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/linux/index.html">Linux</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/mysql/index.html">Mysql</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/windows/index.html">Windows</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/index.html">开发问题</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="开发问题linux启动docker镜像成功而win启动该镜像mysql报错">【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错</h1>
+
+<ul>
+<li>dockers报错：<code>Starting MySQL database server mysqld ...failed</code></li>
+<li>进入容器内部，查看mysql错误日志：<code>cat /var/log/mysql/error.log</code></li>
+<li>mysql具体报错：<code>Different lower_case_table_names settings for server ('2') and data dictionary ('0').</code></li>
+</ul>
+<p><strong>出现该问题的重要前提是：</strong></p>
+<ul>
+<li>docker启动mysql并不是根据官方mysql镜像，而是在一个基础php镜像上安装的mysql服务。</li>
+<li>我的mysql数据通过docker的卷挂载在外部，通过一个mysql文件夹管理。</li>
+</ul>
+<p>当我把linux上可以运行的镜像和mysql外部卷都发送给win机器运行，由于<strong>mysql数据是外部挂载的</strong>，所以会出现同一个镜像，换了操作系统却无法运行的问题。本质上是mysql在linux和win上的环境变量<code>lower_case_table_names</code>默认值不同导致的。由于数据库数据在linux上初始化，该值已经为0，而在win上需要为2，所以报错。</p>
+<blockquote>
+<p>Docker镜像确实是操作系统无关的，但是MySQL的lower_case_table_names设置是与操作系统有关的。这是因为lower_case_table_names设置决定了MySQL如何存储和比较表名和数据库名。</p>
+<p>在Windows和Mac系统中，文件系统通常不区分大小写，因此MySQL默认将lower_case_table_names设置为2。在这种设置下，MySQL将表名存储为小写，并且比较时不区分大小写。</p>
+<p>在Linux系统中，文件系统通常区分大小写，因此MySQL默认将lower_case_table_names设置为0。在这种设置下，MySQL将表名存储为给定的大小写，并且比较时区分大小写。</p>
+<p>当你在一个系统（例如Windows）上创建MySQL数据，然后尝试在另一个系统（例如Linux）上使用这些数据时，可能会出现这个错误。这是因为数据字典（存储了表名和数据库名的元数据）的lower_case_table_names设置与服务器的设置不一致。</p>
+</blockquote>
+<h2 id="解决方案">解决方案<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>解决个蛋，一般都是放在linux上运行的，mysql在哪初始化就在哪部署。将镜像和外部卷都放在linux机器上部署就好了。win上报错要启动mysql前修改那个环境变量的值。</p>
+<p>或者有一种麻烦的思路，就是将其mysql服务从一个容器中剥离出来，新开一个容器启动，这样方便设置环境变量。如果要修改一个非mysql基础镜像的mysql环境变量还是比较繁琐的。新开一个容器，用docker-compose启动即可。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Apr 27, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070402" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

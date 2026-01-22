@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="Project :: Hugo Relearn Theme">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/project/index.html">
+    <meta property="og:site_name" content="Hugo Relearn Theme">
+    <meta property="og:title" content="Project :: Hugo Relearn Theme">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="Project :: Hugo Relearn Theme">
+    <meta itemprop="datePublished" content="2025-04-07T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2025-04-07T00:00:00+00:00">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <title>Project :: Hugo Relearn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/project/index.html" rel="canonical" type="text/html" title="Project :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/project/index.xml" rel="alternate" type="application/rss+xml" title="Project :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070402" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070402" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1769070402";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070402" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/project\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070402"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/project/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/index.html"><span itemprop="name">Hugo Relearn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Project</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/project/_index.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/project/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/shortcodes/tree/index.html" title="Tree (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/project/viogo/index.html" title="VioGo--不止聊天的奇妙bot (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable project" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="project">Project</h1>
+
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Apr 7, 2025
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Project</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/bot/index.html">Bot</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/chatgpt/index.html">Chatgpt</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/go/index.html">Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/gocqhttp/index.html">Gocqhttp</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/paas/index.html">Paas</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/qqbot/index.html">Qqbot</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="viogo--不止聊天的奇妙bot">VioGo--不止聊天的奇妙bot</h1>
+
+<p>纯go编写的机器人业务后端，bot取名为 <strong>Vio</strong> ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。
+可以完成基于chatgpt聊天任务，以及一些简单的指令响应。</p>
+<p><strong>如果你有想法和意见请提issue！这对我和bot都很重要！</strong>
+<strong>欢迎qq加群讨论：340961300</strong></p>
+<p>实现平台以及实现的外部功能:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> QQ bot
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 随机涩图</li>
+<li><input checked="" disabled="" type="checkbox"> 猎杀对决枪声语音</li>
+<li><input checked="" disabled="" type="checkbox"> 发送已撤回的消息</li>
+<li><input checked="" disabled="" type="checkbox"> 禁言抽奖</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Telegram bot(暂时已停止开发)</li>
+</ul>
+<h2 id="写在前面preface">写在前面/Preface<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>有部署聊天机器人的想法，但是我使用的国内服务器，而且服务器性能也一般，于是决定不用云服务器部署了，找个国外的Paas平台，把写的后端送上去就好了。</p>
+<p>目前已经完成了：</p>
+<ul>
+<li>天然支持http请求，使用go原生net包，创建了一个 <code>/post</code>请求的路由，可以解析post内容转发调用chatgpt的api</li>
+<li><del>为Tg设置了webhook，可以监听tg服务器的消息，实现tgbot。针对Telegram的消息处理，对私人，群组，超级群组各有不同的应答模式。</del></li>
+<li>配合<a href="https://github.com/Mrs4s/go-cqhttp" rel="external" target="_self">go-cqhttp</a>使用，用于实现qqbot,基于上报事件，调用gocq提供的api进行回复。注意参考<a href="https://docs.go-cqhttp.org/reference/#websocket" rel="external" target="_self">gocq官方文档</a>。可以调用api发送图片，随机图片api<a href="https://api.lolicon.app/setu/v2" rel="external" target="_self">参考</a></li>
+</ul>
+<p>AI调用：</p>
+<ul>
+<li>目前只支持了chatGPT，调用其api进行回复。该功能使用了<a href="https://github.com/sashabaranov/go-openai" rel="external" target="_self">go-openai</a>库，支持了go语言对openai api的调用</li>
+<li>提示词参考：<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh/blob/main/prompts-zh.json" rel="external" target="_self">awesome-chatgpt-prompts-zh</a></li>
+</ul>
+<h2 id="结构说明">结构说明<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>AI： 提供ai服务，从ai_server文件中驱动，子文件为具体的api的调用实现。</li>
+<li>config： 定义环境变量结构体</li>
+<li>docs: 文档页面，使用 <code>docsify</code></li>
+<li>gocq： qqbot的业务层核心。
+<ul>
+<li>command: 最业务层的逻辑，使用各种基础设施和其他服务，完成机器人指令的调用</li>
+<li>cqCode: 定义qq消息中cq码的结构体，实现编码和解码</li>
+<li>cqEvent: 属于gocq中事件的定义，只用于参考，未使用其结构体</li>
+<li>event: 监听上报事情后的处理入口</li>
+<li>gocq_resp_params: 响应参数的结构体定义</li>
+<li>gocq_send_params: 发送参数的结构体定义</li>
+<li>gocq_sender: gocq的发送者实例，用于api调用</li>
+<li>gocq_server: 在这里注册了一个gocq的<strong>单例</strong>，全局调用gocq相关的基础设施</li>
+</ul>
+</li>
+<li>server： 创建or使用服务(http,ws,tgbot)
+<ul>
+<li>handler: 处理http和请求以及ws请求</li>
+<li>server: 使用依赖注入启动各种服务</li>
+</ul>
+</li>
+<li>unused: 未实现，或者搁置的功能，如tgbot</li>
+<li>utils: 调用外界功能的函数库和工具库</li>
+</ul>
+<h2 id="实现要点">实现要点<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>服务层注册基础设施，如redis(目前只搭载了redis缓存，用于存放部分聊天数据)，通过依赖注入的方式激活其他只能单个存在的服务，如gocq服务(依赖ws连接存在，ws连接只有一次，所以是个全局单例)。</li>
+<li>gocq服务在handler中进行ws连接的时候完全创建，因为ws连接读消息是阻塞的，为了实现并发，在gocq服务中，我创建了一个消息发送者，一个消息队列，以及一个响应map。handler中只处理接受到的上报事件，把接受到的响应存放在一个channel中，在具体需要响应数据的地方去pop。响应map是根据响应中的echo映射指定的响应数据。这样实现了消息接受，发送和处理的解耦，可以同时并发处理。</li>
+<li>redis的作用：最简单的场景，存放撤回的消息id，因为未知需要取用该撤回的消息的时机，存放在redis中方便需要的时候进行api调用取到该消息。目前使用的是heroku的add-ons的redis组件，也是通过环境变量读取redis的url地址进行注册：<code>REDISCLOUD_URL</code></li>
+<li>AI服务: 预计支持多种ai的调用，目前已经完成了ai服务的代码解耦并且结构化，便于扩充。</li>
+<li>前端设计: 预计做成一个后台管理面板，精力有限，会使用直接模板，注重功能的实现，不只聊天！</li>
+<li>结构体设计完全遵循gocq文档</li>
+<li>使用go的websocket库创建和qqbot的ws连接，为基于gocq的qqbot的服务入口。</li>
+<li>gocq的配置建议阅读我的<a href="http://viogami.tech/index.php/blog/144/" rel="external" target="_self">个人博客</a></li>
+<li>chatgpt的调用参考go的openai库文档即可，也很完善。注意调用api是无法进行联系上下文对话的，要实现上下文对话只有把历史消息都post给api，这显然是不现实的。</li>
+</ul>
+<h2 id="部署建议">部署建议<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>我推荐放在paas上，key和密钥是通过环境变量读取的，也就是config中定义的字段。
+因为tgbot要求后端webhook地址必须有证书，也就是https访问。一般paas平台都会自带证书的，放自己服务器上需要自己配证书服务，麻烦点，并且需要修改项目中读取环境变量的代码，改为读取配置文件(新建).</p>
+<p><strong>我是放在heroku这个paas平台，国外的，可以通过github学生包免费使用，但是需要绑定国外visa卡。</strong></p>
+<p>之前也有使用过Zeabur，国人开发的，discord上官方也很活跃，如果服务请求不多，可以使用，每月有5刀的免费额度，无需绑卡。</p>
+<h3 id="paas推荐">paas推荐<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Heroku</li>
+<li>Zeabur</li>
+</ul>
+<p>更多paas相关信息，可以查询 <a href="https://github.com/ripienaar/free-for-dev" rel="external" target="_self">Free for dev</a>中的列表.</p>
+<p>Zeabur挺不错，国内社区，discord上回复也很即使，一键部署挺快的，github集成。
+zeabur上项目部署非常快,甚至不用写dockfile,而且对go项目有完整的支持,算是符合他们的口号:</p>
+<blockquote>
+<p>Deploying your service with one click</p>
+</blockquote>
+<p>但是Zeabur每月5$，如果是聊天机器人，按量付费肯定是不够的。</p>
+<p>Heroku只有欧洲和美国的部署点，但也是git集成，非常方便，现在我已经转移到了heroku，主要我有github学生包，可以白嫖heroku</p>
+<p><strong>heroku注册要关闭adguard，需要绑定国外银行卡，绑卡时建议关闭梯子</strong>。</p>
+<h2 id="paas部署注意点">Paas部署注意点<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="端口号">端口号<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>注意一下项目的端口号设置,最好设置在环境变量中,然后在项目中通过 <code>os.Getenv(&quot;xxx&quot;)</code>来获取端口号.</p>
+<p>支持go部署的paas中，环境变量 <code>PORT</code> 一般都默认8080，且为全局的。无需写入环境变量，直接调用就好了。</p>
+<ul>
+<li>对于tgbot：官方示例中使用的8443端口，在部署到paas平台时8443端口需要确认是否开放。</li>
+</ul>
+<h3 id="tgbot证书问题">tgbot证书问题<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>heroku和zeabur部署项目自带证书,做完域名映射可以直接https访问.
+<em>所以在设置webhook进行和tg服务器通讯的时候不需要手动加载 <code>cert.pem</code> 和 <code>key.pem</code></em></p>
+<p>在部署tg的bot时,可以修改tgbot官方对go语言搭建bot示例中的:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="w">  </span><span class="o">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">log</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;Authorized on account %s&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">bot</span><span class="p">.</span><span class="nx">Self</span><span class="p">.</span><span class="nx">UserName</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">wh</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">tgbotapi</span><span class="p">.</span><span class="nf">NewWebhook</span><span class="p">(</span><span class="nx">TG_WEBHOOK_URL</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">bot</span><span class="p">.</span><span class="nx">Token</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="o">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">go</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;:&#34;</span><span class="o">+</span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">)</span></span></span></code></pre></div>
+<p>直接使用 <code>NewWebhook</code>和 <code>ListenAndServe</code>函数即可.</p>
+<h3 id="环境变量">环境变量<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>实例定义四个环境变量</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-env" data-lang="env"><span class="line"><span class="cl"><span class="nv">TG_WEBHOOK_URL</span><span class="o">=</span>https://yousite.com/tgbot
+</span></span><span class="line"><span class="cl"><span class="nv">BOT_TOKEN</span><span class="o">=</span>your token
+</span></span><span class="line"><span class="cl"><span class="nv">chatGPTAPIKey</span><span class="o">=</span>sk-your key
+</span></span><span class="line"><span class="cl"><span class="nv">ChatGPTURL_proxy</span> <span class="o">=</span> <span class="s2">&#34;https://your-proxy-site/v1&#34;</span></span></span></code></pre></div>
+<p>tips: 免费的gpt api的代理 -&gt; ChatGPTURL_proxy=&quot;<a href="https://one-api.bltcy.top/v1" rel="external" target="_self">https://one-api.bltcy.top/v1</a>&quot;</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Apr 7, 2025
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="p5r预告信生成器api">p5r预告信生成器API</h1>
+
+<p>预告信生成器国外作者原版：<a href="https://skyventuree.github.io/p5cc/index.html" rel="external" target="_self">https://skyventuree.github.io/p5cc/index.html</a></p>
+<p>我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。</p>
+<p>本人将网页版生成器的js代码逻辑使用go语言进行了重写和部署，并开放了其api，可以直接通过get方法获取预告信的png。get方法只能最简单的绘制文本，post方法基本集成所有功能，提供了换行功能等，Text中加入换行符&quot;\n&quot;即可。</p>
+<p>GitHub页面：<a href="https://github.com/viogami/WebAPI/tree/master/p5cc" rel="external" target="_self">https://github.com/viogami/WebAPI/tree/master/p5cc</a></p>
+<blockquote>
+<p>快速开始</p>
+</blockquote>
+<p><code>http://api.viogami.tech/p5cc/:text</code></p>
+<p>eg:
+<a href="http://api.viogami.tech/p5cc/persona5" rel="external" target="_self">http://api.viogami.tech/p5cc/persona5</a></p>
+<h2 id="感谢p5r风格字体的制作者和预告信样式的制作者">感谢<a href="https://github.com/LzxHahaha" rel="external" target="_self">p5r风格字体的制作者</a>和<a href="https://github.com/skyventuree" rel="external" target="_self">预告信样式的制作者</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>使用了golang的<a href="github.com/fogleman/gg">gg库</a>进行绘图。提供了GET方法和POST方法。GET使用动态路由直接生成，POST参数示例如下：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;persona5&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">fontSize</span><span class="p">:</span><span class="w"> </span><span class="m">120</span><span class="w">    </span><span class="c"># 字体大小</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">gutter </span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">      </span><span class="c"># 字体间距</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">padding </span><span class="p">:</span><span class="w"> </span><span class="m">240</span><span class="w">     </span><span class="c"># 文字边距</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">textAlign</span><span class="p">:</span><span class="w"> </span><span class="l">center </span><span class="w"> </span><span class="c"># 文字对齐方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">showLogo</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">     </span><span class="c"># 是否显示Logo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">logoScale</span><span class="p">:</span><span class="w"> </span><span class="m">1.0</span><span class="w">     </span><span class="c"># Logo缩放比例</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">logoOffset</span><span class="p">:</span><span class="w"> </span><span class="m">240</span><span class="w">     </span><span class="c"># Logo偏移量</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">showWtm</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">     </span><span class="c"># 水印文字，为空则不显示</span></span></span></code></pre></div>
+<p><a href="#R-image-5c6fb01eb0d5c8865718f3551e0ffe70" class="lightbox-link"><img alt="alt text" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/p5r_p5cc/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5c6fb01eb0d5c8865718f3551e0ffe70"><img alt="alt text" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/p5r_p5cc/1.png"></a></p>
+<p>字体暂时不可更改，默认使用了 <code>HarmonyOSSansSC-Bold.ttf</code></p>
+<h2 id="credits">Credits<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Persona 5 © ATLUS. © SEGA.</p>
+<p>This repositories`s cord forks from <a href="https://github.com/skyventuree/p5cc" rel="external" target="_self">p5cc</a></p>
+<p>Assets:</p>
+<ul>
+<li>Persona 5 Calling Card Base by <a href="https://www.deviantart.com/elmind" rel="external" target="_self">Elmind</a>.</li>
+<li>Persona 5 Style Text Generator by <a href="https://github.com/LzxHahaha" rel="external" target="_self">@LzxHahaha</a>. Ported and modified by <a href="https://github.com/sorae42" rel="external" target="_self">sorae42</a>.</li>
+<li>Persona 5 Logo and Assets by ALTUS.</li>
+</ul>
+<p>All assets are all under fair use.</p>
+<p><em>Credits can also be seen on the website along with links to the original site and owners, at the bottom of the page.</em></p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Feb 5, 2025
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="基于gocq的qqbot搭建">基于gocq的qqbot搭建</h1>
+
+<p>你至少需要启动三个服务</p>
+<ul>
+<li>qsign服务器</li>
+<li>go-cqhttp</li>
+<li>你自己的机器人后端</li>
+</ul>
+<p>gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名
+为了可以实现双向通信，你的后端需要实现websocket的通信。</p>
+<h2 id="qsign">qsign<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>从dokcer hub中搜索qsign，按照更新时间排序，找到一个能用的，运行 <code>pull</code>命令。
+注意，下载次数最高的镜像无法拉取的，删了跑路了，时间排序到一个有新版本的镜像，低版本的qsign可能会无法登陆。</p>
+<blockquote>
+<p>如果是通过宝塔部署，在镜像中通过镜像搜索，找到qsign相关镜像无法拉取，都是该镜像跑路了，仓库中不存在，换一个镜像重新拉取即可。</p>
+</blockquote>
+<p><strong>建议将其部署在国外服务器上。</strong>
+通过请求qsign服务器，gocq会得到一个token，这个token需要一段时间后刷新，所以需要qsign服务器一直保持活跃。
+可以使用docker拉取一个镜像，快速部署,部署后配置域名，get该地址可以获得一个json信息为配置成功。</p>
+<p>注意：最好部署新的版本，如9.0.8，但是docker镜像很多都是镜像只支持老版本，要用新版本需要手动导入新的版本文件，到挂载卷里</p>
+<h3 id="如果你熟悉docker会最基本的卷挂载端口映射可以使用"><strong>如果你熟悉docker，会最基本的卷挂载，端口映射可以使用：</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="https://hub.docker.com/r/bennettwu/qsign-server" rel="external" target="_self">https://hub.docker.com/r/bennettwu/qsign-server</a>
+这个镜像的发布者说明也很清楚了，可以不用命令行部署，直接宝塔拉取镜像，创建容器，然后进入容器挂载卷的文件夹内，把9.0.8版本的文件放入，注意，不是文件夹，是覆盖&rsquo;/app/txlib&rsquo;内的</p>
+<p><a href="#R-image-8f024afd67971dff8f0785387e095109" class="lightbox-link"><img alt="docker.png" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/gocq_based/gocq_1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8f024afd67971dff8f0785387e095109"><img alt="docker.png" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/gocq_based/gocq_1.png"></a></p>
+<p>这个镜像较为完整，功能也正常，到docker挂载卷的文件中放入9.0.8版本的qsing文件，同时修改config文件。
+<strong>config中一点要设置自动注册实例为true，并且设置端口，config中设置的端口将直接影响容器内端口映射是否能正确</strong></p>
+<p>最后这个镜像可以通过：<code>'http://your-site:1145/sign'</code>来访问该qsign服务。
+其中，1145是我手动映射到容器的外部端口，/sign是该镜像指明的url访问。</p>
+<h3 id="如果不熟悉docker可以使用如下镜像一键部署908版本"><strong>如果不熟悉docker，可以使用如下镜像一键部署9.0.8版本</strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><a href="https://hub.docker.com/r/woxigousade/qsign" rel="external" target="_self">https://hub.docker.com/r/woxigousade/qsign</a></p>
+<p><a href="#R-image-8ad95235d7e724be245b6a3425f7a6fb" class="lightbox-link"><img alt="alt text" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/gocq_based/qsign.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8ad95235d7e724be245b6a3425f7a6fb"><img alt="alt text" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/gocq_based/qsign.png"></a></p>
+<p><code>注意，该镜像在被请求一次后，容器可能会停止，需要自己设置自动重启。同时实例自动注册可能出现问题，原因未知，因为本人熟悉点docker，我已经换上面的那个了</code>。</p>
+<p>部署可以直接参考docker镜像发布者的说明。
+通过命令行,镜像run个容器：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl">docker run -d -p 9000:8080 --restart<span class="o">=</span>always --name<span class="o">=</span>qsign -e <span class="nv">VERSION</span><span class="o">=</span>9.0.8 woxigousade/qsign:latest</span></span></code></pre></div>
+<p>命令解释：</p>
+<ul>
+<li>服务器9000端口映射容器内8080端口</li>
+<li>重启策略设置为&quot;always&quot;</li>
+<li>创建的容器名为&rsquo;qsing'</li>
+<li>使用版本9.0.8</li>
+</ul>
+<p><strong>完成了docker部署，并启动容器之后给该docker部署的镜像设置公网可以访问的域名或者暴露该端口(如9000)直接用端口号访问即可，直接get会有json信息返回，鉴定为部署成功</strong>，返回code 0和1都是正常的，主要要看gocq的登录返回信息。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;code&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;msg&#34;</span><span class="p">:</span> <span class="s2">&#34;Parameter &#39;uin&#39; is missing.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;data&#34;</span><span class="p">:</span> <span class="s2">&#34;failed&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<h2 id="gocq">gocq<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>拉取gocq项目文件，直接启动一次项目，生成必要的文件</li>
+<li>修改协议</li>
+<li>填写配置文件</li>
+<li>打包部署到服务器</li>
+</ul>
+<h3 id="第一步">第一步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>无要点，下载项目的release版本，或者安装go直接拉项目本地跑</p>
+<h3 id="第二步">第二步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>建议使用手表协议，device.json改protocol的值为2
+将qsign中的config.json文件重命名为6.json，放在项目的 <code>data/versions</code>文件中</p>
+<h3 id="第三步">第三步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>注意 <code>config.yml</code>文件的填写
+只有三个地方是必须要修改的：<strong>qq号和密码、qsign服务器地址、服务后端地址(http or ws)</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># go-cqhttp 默认配置文件</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">account</span><span class="p">:</span><span class="w"> </span><span class="c"># 账号相关</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">uin</span><span class="p">:</span><span class="w"> </span><span class="l">your-qq# QQ账号</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c"># 密码为空时使用扫码登录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">encrypt</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">  </span><span class="c"># 是否开启密码加密</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">      </span><span class="c"># 在线状态 请参考 https://docs.go-cqhttp.org/guide/config.html#在线状态</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">relogin</span><span class="p">:</span><span class="w"> </span><span class="c"># 重连设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">delay</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="c"># 首次重连延迟, 单位秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">   </span><span class="c"># 重连间隔</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">max-times</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">  </span><span class="c"># 最大重连次数, 0为无限制</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否使用服务器下发的新地址进行重连</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 注意, 此设置可能导致在海外服务器上连接情况更差</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">use-sso-address</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否允许发送临时会话消息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">allow-temp-session</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 数据包的签名服务器列表，第一个作为主签名服务器，后续作为备用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 兼容 https://github.com/fuqiuluo/unidbg-fetch-qsign</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 如果遇到 登录 45 错误, 或者发送信息风控的话需要填入一个或多个服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 不建议设置过多，设置主备各一个即可，超过 5 个只会取前五个</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 示例:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># sign-servers: </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   - url: &#39;http://127.0.0.1:8080&#39; # 本地签名服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     key: &#34;114514&#34;  # 相应 key</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     authorization: &#34;-&#34;   # authorization 内容, 依服务端设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   - url: &#39;https://signserver.example.com&#39; # 线上签名服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     key: &#34;114514&#34;  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#     authorization: &#34;-&#34;   </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#   ...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 服务器可使用docker在本地搭建或者使用他人开放的服务</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sign-servers</span><span class="p">:</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;your-qsign-site&#39;</span><span class="w">  </span><span class="c"># 主签名服务器地址， 必填</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;114514&#39;</span><span class="w">  </span><span class="c"># 签名服务器所需要的apikey, 如果签名服务器的版本在1.1.0及以下则此项无效</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">authorization</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w">   </span><span class="c"># authorization 内容, 依服务端设置，如 &#39;Bearer xxxx&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 判断签名服务不可用（需要切换）的额外规则</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 0: 不设置 （此时仅在请求无法返回结果时判定为不可用）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 1: 在获取到的 sign 为空 （若选此建议关闭 auto-register，一般为实例未注册但是请求签名的情况）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 2: 在获取到的 sign 或 token 为空（若选此建议关闭 auto-refresh-token ）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">rule-change-sign-server</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 连续寻找可用签名服务器最大尝试次数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为 0 时会在连续 3 次没有找到可用签名服务器后保持使用主签名服务器，不再尝试进行切换备用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 否则会在达到指定次数后 **退出** 主程序</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">max-check-count</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 签名服务请求超时时间(s)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sign-server-timeout</span><span class="p">:</span><span class="w"> </span><span class="m">60</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 如果签名服务器的版本在1.1.0及以下, 请将下面的参数改成true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 建议使用 1.1.6 以上版本，低版本普遍半个月冻结一次</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">is-below-110</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 在实例可能丢失（获取到的签名为空）时是否尝试重新注册</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为 true 时，在签名服务不可用时可能每次发消息都会尝试重新注册并签名。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为 false 时，将不会自动注册实例，在签名服务器重启或实例被销毁后需要重启 go-cqhttp 以获取实例</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 否则后续消息将不会正常签名。关闭此项后可以考虑开启签名服务器端 auto_register 避免需要重启</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 由于实现问题，当前建议关闭此项，推荐开启签名服务器的自动注册实例</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">auto-register</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否在 token 过期后立即自动刷新签名 token（在需要签名时才会检测到，主要防止 token 意外丢失）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 独立于定时刷新</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">auto-refresh-token</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 定时刷新 token 间隔时间，单位为分钟, 建议 30~40 分钟, 不可超过 60 分钟</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 目前丢失token也不会有太大影响，可设置为 0 以关闭，推荐开启</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">refresh-interval</span><span class="p">:</span><span class="w"> </span><span class="m">40</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">heartbeat</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 心跳频率, 单位秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># -1 为关闭心跳</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">message</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 上报数据类型</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 可选: string,array</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">post-format</span><span class="p">:</span><span class="w"> </span><span class="l">string</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否忽略无效的CQ码, 如果为假将原样发送</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">ignore-invalid-cqcode</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否强制分片发送消息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 分片发送将会带来更快的速度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 但是兼容性会有些问题</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">force-fragment</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否将url分片发送</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">fix-url</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 下载图片等请求网络代理</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">proxy-rewrite</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否上报自身消息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">report-self-message</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 移除服务端的Reply附带的At</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">remove-reply-at</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 为Reply附加更多信息</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">extra-reply-data</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 跳过 Mime 扫描, 忽略错误数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">skip-mime-scan</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否自动转换 WebP 图片</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">convert-webp-image</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># download 超时时间(s)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">http-timeout</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">output</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 日志等级 trace,debug,info,warn,error</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-level</span><span class="p">:</span><span class="w"> </span><span class="l">warn</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 日志时效 单位天. 超过这个时间之前的日志将会被自动删除. 设置为 0 表示永久保留.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-aging</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否在每次启动时强制创建全新的文件储存日志. 为 false 的情况下将会在上次启动时创建的日志文件续写</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-force-new</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否启用日志颜色</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">log-colorful</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 是否启用 DEBUG</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">debug</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># 开启调试模式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># 默认中间件锚点</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">default-middlewares</span><span class="p">:</span><span class="w"> </span><span class="cp">&amp;default</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 访问密钥, 强烈推荐在公网的服务器设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">access-token</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 事件过滤器文件目录</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">filter</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># API限速设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 该设置为全局生效</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 原 cqhttp 虽然启用了 rate_limit 后缀, 但是基本没插件适配</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 目前该限速设置为令牌桶算法, 请参考:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># https://baike.baidu.com/item/%E4%BB%A4%E7%89%8C%E6%A1%B6%E7%AE%97%E6%B3%95/6597000?fr=aladdin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">rate-limit</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c"># 是否启用限速</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">frequency</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">  </span><span class="c"># 令牌回复频率, 单位秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">bucket</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c"># 令牌桶大小</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="c"># 数据库相关设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">leveldb</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 是否启用内置leveldb数据库</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 启用将会增加10-20MB的内存占用和一定的磁盘空间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 关闭将无法使用 撤回 回复 get_msg 等上下文相关功能</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sqlite3</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 是否启用内置sqlite3数据库</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 启用将会增加一定的内存占用和一定的磁盘空间</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># 关闭将无法使用 撤回 回复 get_msg 等上下文相关功能</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enable</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">cachettl</span><span class="p">:</span><span class="w"> </span><span class="m">3600000000000</span><span class="w"> </span><span class="c"># 1h</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c"># 连接服务列表</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">servers</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 添加方式，同一连接方式可添加多个，具体配置说明请查看文档</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- http: # http 通信</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- ws:   # 正向 Websocket</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- ws-reverse: # 反向 Websocket</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c">#- pprof: #性能分析服务器</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># 反向WS设置</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">ws-reverse</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 反向WS Universal 地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 注意 设置了此项地址后下面两项将会被忽略</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">universal</span><span class="p">:</span><span class="w"> </span><span class="l">wss://your-site/ws</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 反向WS API 地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">api</span><span class="p">:</span><span class="w"> </span><span class="l">ws://your_websocket_api.server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 反向WS Event 地址</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">event</span><span class="p">:</span><span class="w"> </span><span class="l">ws://your_websocket_event.server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># 重连间隔 单位毫秒</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">reconnect-interval</span><span class="p">:</span><span class="w"> </span><span class="m">3000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">middlewares</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">&lt;&lt;</span><span class="p">:</span><span class="w"> </span><span class="cp">*default</span><span class="w"> </span><span class="c"># 引用默认中间件</span></span></span></code></pre></div>
+<h3 id="第四步">第四步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>不输入密码，使用扫码登陆。注意先在本地登陆一次，登陆成功后把 <code>data</code>文件夹和 <code>session.token</code>文件上传服务器即可，在服务器端登陆可能会显示登陆风险，要求同一网络。</p>
+<h2 id="后端建设">后端建设<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>我用go写的后端
+创建ws连接的路由
+部署你的后端到国外服务器上/Paas上,将pass提供的地址作为ws地址。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 27, 2024
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="基于pyautogui的自动化程序">基于pyautogui的自动化程序</h1>
+
+<p>主要使用pyautogui的库实现，以及使用gooey库制作了GUI。
+详细请访问我的**<a href="http://github.com/viogami/ATravelerRecongizeImage" rel="external" target="_self">github项目页面</a>**</p>
+<p>图像识别旅者</p>
+<table>
+  <thead>
+      <tr>
+          <th>❗ 免责声明 <code>&lt;br&gt;</code>本脚本使用后果均为使用者个人承担 <code>&lt;br&gt;</code>The consequence of using this script must be undertaken by user.</th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<h2 id="功能">功能<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 支持图形化界面
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 自定义excel和图片路径</li>
+<li><input checked="" disabled="" type="checkbox"> 使用checkbox选择是否循环和跳过匹配不到的图片</li>
+<li><input checked="" disabled="" type="checkbox"> 设置菜单，显示关于文本</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 指令功能
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 多次匹配不到一个指令可以跳过该指令</li>
+<li><input checked="" disabled="" type="checkbox"> 可以设置只执行一次的指令</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 鼠标功能
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 单击</li>
+<li><input checked="" disabled="" type="checkbox"> 双击</li>
+<li><input checked="" disabled="" type="checkbox"> 右键</li>
+<li><input checked="" disabled="" type="checkbox"> 移动到指定图片的位置</li>
+<li><input checked="" disabled="" type="checkbox"> 移动到指定屏幕坐标</li>
+<li><input checked="" disabled="" type="checkbox"> 长按鼠标</li>
+<li><input checked="" disabled="" type="checkbox"> 长按鼠标拖拽</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 输入功能
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 文本输入</li>
+<li><input checked="" disabled="" type="checkbox"> 键盘按键键入</li>
+<li><input checked="" disabled="" type="checkbox"> 按键可以长按</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 等待功能
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 用户自定义每一步等待时长</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 滚轮功能</li>
+<li><input checked="" disabled="" type="checkbox"> 截图功能
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 截全屏</li>
+<li><input checked="" disabled="" type="checkbox"> 自定义范围</li>
+<li><input checked="" disabled="" type="checkbox"> 保存截图，命名为“字母+数字”组合</li>
+</ul>
+</li>
+<li><input checked="" disabled="" type="checkbox"> 用户自定义鼠标参数</li>
+<li><input checked="" disabled="" type="checkbox"> 优化gui界面</li>
+<li><input checked="" disabled="" type="checkbox"> 优化Excel表，添加了更加准确的数据检查。</li>
+</ul>
+<h2 id="使用方法">使用方法<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>在commands.xlsx文件中配置每一步的指令，根据表格提示填入对应的内容(你也可以填入数字指令：0123456789，分别具备鼠标拖拽，单击，双击，右键单击，输入，等待，滚动，移动，截图，键盘按键的功能)。</li>
+<li>关于重复：对于单一指令的重复，当重复过程中多次匹配失败则会跳出重复，执行下一条指令。</li>
+<li>指令文件（commands.xlsx）表格添加了数据验证，方便指令填写。可以存在多个指令文件，每次选择相应的作业去完成。</li>
+<li>点击ATRI.py文件运行，最好使用pyw，无黑窗启动。❤</li>
+</ul>
+<h2 id="功能解释">功能解释<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>鼠标拖拽[0]:必须指定一个图片参数，使鼠标移动到该图片位置。如果可选参数是数字，进行鼠标长按操作，参数值为长按时间；可选参数为图片名，则进行拖拽操作，拖拽到可选参数的图片位置</li>
+<li>左键单击<a href="http://github.com/viogami/ATravelerRecongizeImage" rel="external" target="_self">1</a>:鼠标单击</li>
+<li>左键双击[2]:鼠标双击</li>
+<li>右键单击[3]:鼠标右键单击</li>
+<li>输入[4]:输入一段文本</li>
+<li>等待[5]:time.sleep()</li>
+<li>滚轮[6]:使用滚轮，正值前滚，负值后滚</li>
+<li>移动鼠标[7]:移动鼠标到指定的图片位置。如果参数输入的不是图片名而是坐标，类似 <code>[200,300]</code>,则会移动到坐标位置。</li>
+<li>截图[8]：鼠标点击和移动默认为图片的中心位置，截图的区域指定内容必须类似为 <code>[0,0,200,300]</code>&lsquo;的坐标格式，分别代表矩形区域对角线的坐标</li>
+<li>键盘按键[9]，默认为立即释放,如果可选参数不为空，则表示长按该按键的时间</li>
+</ul>
+<h2 id="效果演示">效果演示<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>用户可以根据自定义的指令文件搭配出繁多的操作流程，接下来举例说明如何使用该程序打开浏览器，并输入一行js代码：</p>
+<p>以下是指令表，指令类型数字代码和文字都可以。</p>
+<table>
+  <thead>
+      <tr>
+          <th>指令类型</th>
+          <th>参数(图片名称.png、输入内容、等待时长/秒、截图范围)</th>
+          <th>重复次数(-1代表只运行一次 0代表多次匹配不到可以跳过)</th>
+          <th>可选参数(图片名称.png、时间/秒）</th>
+          <th>备注</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>2</td>
+          <td>edge.png</td>
+          <td>-1</td>
+          <td></td>
+          <td>打开edge浏览器，只运行一次</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>search.png</td>
+          <td>-1</td>
+          <td></td>
+          <td>点击搜索栏，只运行一次</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>&lt;www.baidu.com&gt;</td>
+          <td>-1</td>
+          <td></td>
+          <td>输入百度网址，只运行一次</td>
+      </tr>
+      <tr>
+          <td>键盘按键</td>
+          <td>enter</td>
+          <td></td>
+          <td></td>
+          <td>输入回车</td>
+      </tr>
+      <tr>
+          <td>键盘按键</td>
+          <td>F12</td>
+          <td>-1</td>
+          <td></td>
+          <td>进入开发者模式，只运行一次</td>
+      </tr>
+      <tr>
+          <td>1</td>
+          <td>control.png</td>
+          <td></td>
+          <td></td>
+          <td>点击控制台，准备输入代码</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td>console.log(&ldquo;Hello world!&rdquo;);</td>
+          <td></td>
+          <td></td>
+          <td>输入js代码</td>
+      </tr>
+      <tr>
+          <td>键盘按键</td>
+          <td>enter</td>
+          <td></td>
+          <td></td>
+          <td>输入回车，打印log</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>[200,500,500,800]</td>
+          <td></td>
+          <td></td>
+          <td>区域截图，并保存</td>
+      </tr>
+      <tr>
+          <td>9</td>
+          <td>F5</td>
+          <td></td>
+          <td></td>
+          <td>刷新页面</td>
+      </tr>
+      <tr>
+          <td>等待</td>
+          <td>5</td>
+          <td></td>
+          <td></td>
+          <td>等待5秒，然后循环输入js</td>
+      </tr>
+  </tbody>
+</table>
+<p>每一步的逻辑备注在注释里，这样就可以实现一直输入js，一直截图的效果，当然这只是一个简单的效果，更多复杂的搭配根据指令而异。</p>
+<p>本人也用过作为游戏辅助程序用来挂机刷道具，用处多多，多多开发 😄</p>
+<h2 id="注意事项">注意事项<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li><strong>文件夹必须放在英文路径下</strong></li>
+<li>python版本不要高于3.9，3.9版本改变了xlrd包中部分函数名的使用，在读取xlsx文件会异常。（解决方案：找到xlrd包的位置，打开 <code>xlsx.py</code>文件,查找里面的 <code>getiterator</code>()函数，全部替换成 <code>iter()</code>，保存关闭后即可。）</li>
+<li>注意coloerd包的版本，gooey库内用的colored包最高版本为1.4.4，colored包在2023.7进行更新到了2.0，而gooey还未适应。</li>
+</ul>
+<h2 id="安装依赖">安装依赖<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>在项目根目录shift+右键，打开Powershell窗口，执行：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span></span></span></code></pre></div>
+<h2 id="更新日志">更新日志<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="v15">v1.5<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>完善了最后的功能，比如拖拽鼠标，延迟按键等。</li>
+<li>优化了excel，指令变为可选下拉栏。</li>
+<li>优化了数据检查，为一些不合法参数添加了一些必要说明，比如截图的参数格式等。</li>
+<li>丰富了预览文档，图示操作，并添加了一些使用技巧。</li>
+<li>因为早期框架构思的不好，如今功能扩充困难，此为最终版本，不再做其他调整。</li>
+</ul>
+<h3 id="v14">v1.4<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>改变了单一指令重复执行的逻辑，如果在重复执行的过程中图片匹配失败10次，则会跳出循环，不再重复，进而执行下一条指令。防止卡壳。</p>
+<p>实现了可以添加只执行一次的指令的功能。</p>
+<h3 id="v13">v1.3<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>没事做重新捡起来优化一下，改变了gui界面，优化了文件的格式和排布，增加了代码可读性。
+同时增加了键盘按键的功能，不过目前只做了按下立即释放的功能，后续会增加长按(延迟释放)的功能。</p>
+<h3 id="v12">v1.2<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>添加了截图功能，可以自定义截图范围，图片保存的文件夹也可以自定义。
+添加了自定义鼠标参数的功能，点击间隔和执行时鼠标移动持续时间，默认均为0.2</p>
+<h3 id="v11">v1.1<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>改了功能“7”为移动鼠标，判断功能后面再补。</p>
+<p>主要添加了是否循环和匹配不到自动跳过的功能，图片也支持手动输入文件夹检索了。</p>
+<h3 id="v10">v1.0<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>这是一个基于图片匹配的自动操作脚本，可以实现部分软件操作的自动化。</p>
+<p>我根据gooey库，制作了一个图形化界面，用来调用参数和用户选项。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Oct 6, 2023
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="favani--从0开始的web开发日志">FavAni--从0开始的web开发日志</h1>
+
+<h2 id="演示demo地址"><a href="http://fa.viogami.tech/" rel="external" target="_self">演示DEMO地址</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="技术栈gingormmysqljwtredisgrpcpytorchvue3vitetailwind">技术栈：gin+gorm+mysql+jwt+redis+grpc+pytorch+vue3+vite+tailwind<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h2 id="前言">前言<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><del>一方面为了完成毕设(毕设大概率是造前人的轮子了)，一方面也是</del>毕设导师要求用WP了，那纯兴趣使然了。
+这个项目的开发很是缓慢，因为今年大部分时间在考研，而且前后端技术栈有很多空白，如果类似bangumi这样的网站，数据库的知识也不能缺乏。我coding效率一般，好在有chatgpt的强力支持，bangmui的网站api是开放的，但我可能没精力实现全部功能。<del>我的目标其实是一个纯粹的个人打分网站(去社交化，但提供社交软件导入)</del></p>
+<p>随着对web开发的认知逐步完善，我决定大改需求，原来的目标推翻重做，造轮子实在比较蠢。</p>
+<p>我是bangumi网站的用户，兴趣之余也想利用本人能力仿制一个功能类似的项目，添加个人认为有必要的其他功能，使用不同于bangumi站点的设计框架，设计一个可以给用户类似使用需求的web应用。</p>
+<p>&mdash;&ndash;时间线总览&mdash;&ndash;</p>
+<ul>
+<li>确认了需求和使用什么前后端的框架,今天从0搭建了vue+elementui框架 [2023/9/30]</li>
+<li>使用vite+vue3+elements-plus开发前端，之前vue-cil太多是基于vue2的，要做就做新的
+[2023/10/10]</li>
+<li>没时间搞，今天想了一下看，把需求推翻重做，不是以仿bangumi的web应用为目标，bangui有自己正在开发的react应用，多劳无益，还不如去fork。现在摸清楚了bangumi的api怎么调用，数据怎么get，post，做完一个完成的自助数据查询网站也不错了。没多余精力搞前端，u3d还在水深火热之中[2023/11/16]</li>
+<li>决定使用vue3+go的前后端框架，完成了对用户和条目信息的get和分析。
+[2023/11/16]</li>
+<li>花了两天，做了界面，用<a href="https://github.com/qingwave/weave" rel="external" target="_self">weave</a>的界面做了一定的参考，可以想象，css是复杂精密的，界面制作是个细活，还是挺难上手的。完成了功能</li>
+<li>查询用户，用户页面，用户页面进行用户收藏查询(一次显示8个，有下一页按钮)</li>
+<li>导航，页脚，侧边栏设计</li>
+<li>时间线，关于，以及重点的文档页面，通过调用github的api获取仓库的README.md文件</li>
+<li>查询条目
+[2023/11/27]</li>
+<li>实现了前后端基本交互，完善了登陆和注册功能，线上连接了mysql和redis
+[2024/1/4]</li>
+<li>终极完善了登录注册功能，使用了中间件鉴权，jwt的方式，给两种登录方式各设置了不同的token。
+[2024/2]</li>
+<li>实现了收藏的大部分功能，推荐算法的执行部分使用python编写，部署为一个微服务，通过<strong>grpc</strong>的方式调用。
+[2024/3]</li>
+</ul>
+<p>bangumi开源项目，相关链接：
+<strong><a href="https://bangumi.github.io/api/#/" rel="external" target="_self">bangumi API</a></strong>
+<strong><a href="https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md" rel="external" target="_self">bangmui 用户授权机制</a></strong></p>
+<p>自助数据检索功能</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 在login页面，输入用户名，返回用户相关信息</li>
+<li><input checked="" disabled="" type="checkbox"> 输入相关条目，返回需要的条目信息</li>
+</ul>
+<h2 id="原型设计">原型设计<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>参考bangumi各种辅助工具的UI逻辑，但是界面设计可以更现代化一点，可能会花费很多时间，会经济的考虑设计样式。
+项目参考：<a href="https://github.com/qingwave/weave" rel="external" target="_self">weave</a></p>
+<h2 id="前端">前端<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>个人作全栈开发，用vue这种较为轻量的前端开发框架。目前决定使用vue3+element-plus做前端。
+框架搭建：下载node.js，配置环境。创建第一个vue单页应用。根据elementUI的官方步骤，搭建框架</p>
+<hr>
+<p>今天发现之前是基于vue2的，用的是vue官方vue-cli脚手架，现在更推荐使用vite，仅支持vue3，遂改之。
+elementui也更新为element-plus仅用于支持vue3。vite不用全局安装，较为轻量。有了以前摸索的基础，下载了路由组件和element-plus，迅速就搭建好了空项目。</p>
+<p>花了一下午搞清楚了bangumi的API是怎么在vite中用axios的get和post请求调用的，记录了。输入用户名或者各种搜索条件可以获取到相应的数据了，下一步做一个数据爬取，然后完善功能吧。</p>
+<hr>
+<p>前端基本首页做完了，现在就是功能逻辑了，用户的功能也大差不大了，项目准备build发布一次，后续开发一下检索的功能，并开发后端和数据库，进行数据处理。</p>
+<p>基本完善了99%的页面设计。</p>
+<h2 id="后端">后端<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>后端用golang编写，使用GIN的框架。
+Restful API，使用gorm接入mysql，接入redis。</p>
+<p>目前实现了一个基本的登陆和注册功能，并把用户数据存放到数据库。处理前端POST的数据进行登陆和注册验证。
+使用jwt，构造鉴权中间件，分组路由实现。</p>
+<p>数据库中目前只有一个用户表。同时新建了条目表和用户收藏表，用于建立两表之间的联系。
+添加了tag表，gorm中用many2many的方式和条目表构建一个关系，同时用于对用户标签化，便于进行推荐算法。</p>
+<p>使用grpc服务和python后端通信。由于神经网络算法的代码过于依赖python，我将其微服务化，可以使得该代码给多个项目使用。通过定义protoc文件，生成protoc文件，编写grpc客户端和服务端代码，算法后端已经成熟的运行了。</p>
+<h2 id="总结">总结<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>vue基本官方文档就能解决90%的问题，构建后大小也很惊人， 只有几MB。
+其实完成了这个，vue的使用倒没有熟练多少，更多是了解了很多前端技术栈的知识，刚起步的时候，连vue和vite是什么都分不清，还一直以为我用的是vite框架呢🤣(导致项目名字也叫digbgm_<strong>vite</strong>了，笑)</p>
+<p>走完从开发到生产环境部署的全流程，实践一遍可以学到很多以为简单但并没那么简单的事情。比如api的调用跨域(需要nginx使用反代理，把指定的地址反代到跨域的地址)，刷新404问题，都是典中典，新手是这样的</p>
+<p>前端最大的问题，我觉得是配css，这是最折磨的，特别我还有一点强迫，还好我也不是主营前端，css凑合吧…
+现在我觉得说不定用tailwind会好一点。。。😥</p>
+<hr>
+<p>后端的搭建基于我对go的逐渐熟练以后，在有了go的相关基础和gin的一定使用经验后，我快速搭建了该项目的后端，并进行了线上部署。go打包后为linux可执行文件，上线是很快的，一键部署。在使用配置文件启动项目后，也更加了灵活。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Sep 30, 2023
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="pyqt赛马娘抽卡模拟器-基于bwiki的抽卡模拟上">【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)</h1>
+
+<p>实际上Bwiki有现成的赛马娘抽卡模拟，用pyqt有参照实现更容易了：
+<a href="https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8" rel="external" target="_self">Bwiki赛马娘抽卡模拟器</a></p>
+<h2 id="预览">预览<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>功能实现</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 单抽+十连的结果图片显示</li>
+<li><input checked="" disabled="" type="checkbox"> 十连保底出现SR</li>
+<li><input checked="" disabled="" type="checkbox"> 重做界面，删除无用的登陆界面</li>
+<li><input checked="" disabled="" type="checkbox"> 可以抽取马娘池，也可以抽取支援卡池子</li>
+<li><input checked="" disabled="" type="checkbox"> 对抽卡结果的统计</li>
+<li><input checked="" disabled="" type="checkbox"> 可以自主选择卡池</li>
+<li><input checked="" disabled="" type="checkbox"> 选择不同卡池出现不同的标志性图片</li>
+<li><input checked="" disabled="" type="checkbox"> 显示公告</li>
+<li><input disabled="" type="checkbox"> 建立抽卡模拟器的数据库，建立表：卡池表，卡牌表，卡池&amp;卡牌表，抽取结果表</li>
+<li><input disabled="" type="checkbox"> 连接数据库</li>
+<li><input disabled="" type="checkbox"> 显示抽卡记录的日志</li>
+</ul>
+<p>项目结构：
+<a href="#R-image-e79df11d0fc9569f82ed04829f3db944" class="lightbox-link"><img alt="uma_1.png" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e79df11d0fc9569f82ed04829f3db944"><img alt="uma_1.png" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/1.png"></a>
+QT界面预览：
+<a href="#R-image-b51ca8dfce417098d58f713e774a7d18" class="lightbox-link"><img alt="uma_2.png" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b51ca8dfce417098d58f713e774a7d18"><img alt="uma_2.png" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/2.png"></a>
+QT控件表：
+<a href="#R-image-cfdc5081883bfa124cb1567482e7bc1d" class="lightbox-link"><img alt="uma_3.png" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cfdc5081883bfa124cb1567482e7bc1d"><img alt="uma_3.png" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/3.png"></a>
+程序界面预览：
+<a href="#R-image-6db88ead6e8a2ab8eb36bce78f3d2562" class="lightbox-link"><img alt="uma_4.png" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6db88ead6e8a2ab8eb36bce78f3d2562"><img alt="uma_4.png" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/4.png"></a></p>
+<h2 id="运行展示">运行展示<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>由于我展示还没有创建卡牌的数据库，我只根据星级给抽卡结果进行了分类，从数据库中查找卡牌的各种信息更符合实际（但卡牌数据的构建实在过于麻烦，遂先不搞）。所以结果我做的只有外框显示就行了
+<a href="#R-image-19454ac6a1c87f634824d4444bdbb40a" class="lightbox-link"><img alt="uma_5.png" class="bg-white border lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-19454ac6a1c87f634824d4444bdbb40a"><img alt="uma_5.png" class="bg-white border lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/project/uma_drawcard_1/5.png"></a></p>
+<h2 id="具体实现">具体实现<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>同样，我们需要将UI文件和启动的py文件分离。通过QTdesigner设计的界面，在vscode的qt插件中右键，选中“PYQT:Compile Form”,自动生成ui的py文件，之后新建一个启动器文件。这样的好处在于可以随时改变界面。
+创建一个res文件夹存放图片文件，一个data文件夹存放数据文件。</p>
+<p>start.py的源码：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#PyQt5中使用的基本控件</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span><span class="n">QMessageBox</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="kn">import</span> <span class="n">QPixmap</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#导入designer界面</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Ui_抽卡系统</span> <span class="kn">import</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyMainForm</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">,</span> <span class="n">Ui_Form</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">MyMainForm</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#提供标题</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&#34;抽卡模拟器&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#添加信号和槽。  </span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">change_cardpool</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">change_pool</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">change_cardpool_2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">change_pool_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getone</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">one</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getten</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ten</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getone_2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">one_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getten_2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ten_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">askbutton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 加载并显示默认图片</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/2.5th Anniversary卡池.png&#34;</span> <span class="c1">#默认出现的图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/2.5th Anniversary支援卡池.png&#34;</span> <span class="c1">#默认出现的图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image_2</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span></span></span></code></pre></div>
+<p>加载图片，参数设置一个图片的路径</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="c1">#马池图</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">load_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">image_path</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#支援卡池图</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">load_image_2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">image_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap_2</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool_2</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool_2</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>  </span></span></code></pre></div>
+<p>定义改变卡池的函数</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">change_pool</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cardpool_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cardpool_Box</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="c1">#读取卡池信息  </span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_cardpool</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">cardpool_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">cardpool_name</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span> 
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">change_pool_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cardpool_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cardpool_Box_2</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="c1">#读取卡池信息  </span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_cardpool_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">cardpool_name</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">cardpool_name</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span> 
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image_2</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>  </span></span></code></pre></div>
+<p>池单抽和十连函数的实现</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">one</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">#清空十连的显示结果</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_6</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_7</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_9</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_10</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 根据概率随机抽取星级</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">weights</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#显示抽卡结果</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">star</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_11</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_11</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ten</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#单抽结果置为空</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_11</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 确保至少出现一张SR卡,具体实现为没有SR卡就循环重抽</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cards_star</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rand_num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1"># 生成0到1之间的随机数</span>
+</span></span><span class="line"><span class="cl">                <span class="n">card_type</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 根据随机数和概率判断抽到的卡牌类型</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SSR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">elif</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">                <span class="n">cards_star</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card_type</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;SR&#39;</span> <span class="ow">in</span> <span class="n">cards_star</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#将十张卡内容展现出来，并计算抽卡结果的计数</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_6</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_7</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_9</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_10</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#同时更新计数器</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>   
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>  
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span></span></span></code></pre></div>
+<p>接下来定义抽卡的函数，实现单抽和十连</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">################# 支援卡池（上两个函数的复制，就是改变了标签名字，xxx-&gt;xxx_2）</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">one_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">#清空十连的显示结果</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_13</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_14</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_16</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_17</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_18</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_19</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_20</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_21</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 根据概率随机抽取星级</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">weights</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#显示抽卡结果</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">star</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_22</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_22</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ten_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#单抽结果置为空</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_22</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 确保至少出现一张SR卡,具体实现为没有SR卡就循环重抽</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cards_star</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rand_num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1"># 生成0到1之间的随机数</span>
+</span></span><span class="line"><span class="cl">                <span class="n">card_type</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 根据随机数和概率判断抽到的卡牌类型</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SSR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">elif</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">                <span class="n">cards_star</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card_type</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;SR&#39;</span> <span class="ow">in</span> <span class="n">cards_star</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#将十张卡内容展现出来，并计算抽卡结果的计数</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_13</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_14</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_16</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_17</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_18</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_19</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_20</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_21</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#同时更新计数器</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>   
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>  
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span></span></span></code></pre></div>
+<p>最后写一下公告，并运行</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">     <span class="c1">#定义公告函数</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>   
+</span></span><span class="line"><span class="cl">        <span class="n">text</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&#34;data/公告.txt&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>   
+</span></span><span class="line"><span class="cl">        <span class="n">QMessageBox</span><span class="o">.</span><span class="n">about</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&#34;公告内容&#34;</span><span class="p">,</span> <span class="n">text</span> <span class="p">)</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#固定语句。sys.argv是命令行参数列表，确保程序可以双击运行</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#初始化</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myWin</span> <span class="o">=</span> <span class="n">MyMainForm</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#将窗口控件显示在屏幕上</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myWin</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#程序运行，sys.exit方法确保程序完整退出。</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span></span></span></code></pre></div>
+<p>公告还是从txt文件读取，其中很多参数在程序里是写死了的，比如抽卡概率，图片文件位置和名称等，适当更改。</p>
+<h2 id="源码地址">源码地址<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>全部源码上传了 <a href="https://github.com/viogami/DrawCard_uma" rel="external" target="_self">GitHub</a></p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Feb 5, 2023
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="pyqt赛马娘抽卡模拟器-基于bwiki的抽卡模拟下">【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下)</h1>
+
+<h2 id="前言">前言<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>本贴将之前没有连接数据库的抽卡模拟器全部完善，最终已经放在了Github上</p>
+<p>用的mysql构建的数据库，导出sql文件，用SQlite3再读一遍，生成一个db文件，创建了四个表</p>
+<table>
+  <thead>
+      <tr>
+          <th>表</th>
+          <th>属性</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>卡池表</td>
+          <td>序号，卡池名，up角色</td>
+      </tr>
+      <tr>
+          <td>卡牌表</td>
+          <td>卡牌序号，卡牌名，卡牌星级，卡牌种类</td>
+      </tr>
+      <tr>
+          <td>卡池&amp;卡牌表</td>
+          <td>序号，卡池名，卡牌名</td>
+      </tr>
+      <tr>
+          <td>抽卡记录表</td>
+          <td>记录序号，卡池名，卡牌名</td>
+      </tr>
+  </tbody>
+</table>
+<p>简单易用就好，其实后两个表应该用卡池和卡牌表的主键(序号)来做外码的，但查询语句多写一段有点麻烦，就不绕弯子，直接用名字查了。</p>
+<h2 id="预览">预览<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>功能实现</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 单抽+十连的结果图片显示</li>
+<li><input checked="" disabled="" type="checkbox"> 十连保底出现SR</li>
+<li><input checked="" disabled="" type="checkbox"> 重做界面，删除无用的登陆界面</li>
+<li><input checked="" disabled="" type="checkbox"> 可以抽取马娘池，也可以抽取支援卡池子</li>
+<li><input checked="" disabled="" type="checkbox"> 对抽卡结果的统计</li>
+<li><input checked="" disabled="" type="checkbox"> 可以自主选择卡池</li>
+<li><input checked="" disabled="" type="checkbox"> 选择不同卡池出现不同的标志性图片</li>
+<li><input checked="" disabled="" type="checkbox"> 显示公告</li>
+<li><input checked="" disabled="" type="checkbox"> 建立抽卡模拟器的数据库，建立表：卡池表，卡牌表，卡池&amp;卡牌表，抽取结果表</li>
+<li><input checked="" disabled="" type="checkbox"> 连接数据库</li>
+<li><input checked="" disabled="" type="checkbox"> 抽卡后输出抽卡日志</li>
+</ul>
+<h2 id="说明">说明<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>抽卡逻辑为：</p>
+<ul>
+<li>先得到本次抽卡卡的稀有度</li>
+<li>在数据库中查询该稀有度的所有卡牌，随机返回一张</li>
+<li>十连保底，但up的概率并未添加</li>
+</ul>
+<p>对于日志中的None，表示的是卡名称查询不到。这是因为卡牌数据库构建的不完备，数据太少，有的品质的卡没有具体写入，修改data文件夹中的数据可以完善。data文件夹就是数据库中构建的三个表，而第四个表&ndash;抽卡记录表在程序运行后会以txt格式输出到根目录。</p>
+<h2 id="具体修改">具体修改<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>为了简明，我把数据库相关的函数写在了conn2sql.py文件中，其中包含数据库的创建，添加元素，查找卡牌以及将数据库的某表输出为txt
+源码：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sqlite3</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建数据库</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">create_database_from_sql</span><span class="p">(</span><span class="n">sql_file</span><span class="p">,</span> <span class="n">db_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">sql_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sql_statements</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">sql_statements</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 数据写入数据库</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#添加卡池信息</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">insert_cardpool</span><span class="p">(</span><span class="n">text_file</span><span class="p">,</span> <span class="n">db_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">text_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pool_no</span><span class="p">,</span> <span class="n">pool_name</span><span class="p">,</span><span class="n">pool_up</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;INSERT INTO card_pool (pool_no,pool_name,pool_up) VALUES (?,?,?)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="p">(</span><span class="n">pool_no</span><span class="p">,</span> <span class="n">pool_name</span><span class="p">,</span><span class="n">pool_up</span><span class="p">))</span>   
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#添加卡牌信息</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">insert_card</span><span class="p">(</span><span class="n">text_file</span><span class="p">,</span> <span class="n">db_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">text_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">card_no</span><span class="p">,</span> <span class="n">card_name</span><span class="p">,</span><span class="n">card_kind</span><span class="p">,</span><span class="n">card_star</span><span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;INSERT INTO card (card_no, card_name,card_kind,card_star) VALUES (?,?,?,?)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="p">(</span><span class="n">card_no</span><span class="p">,</span> <span class="n">card_name</span><span class="p">,</span><span class="n">card_kind</span><span class="p">,</span><span class="n">card_star</span><span class="p">))</span>   
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#添加卡池和卡牌信息</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">insert_pool_card</span><span class="p">(</span><span class="n">text_file</span><span class="p">,</span> <span class="n">db_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">text_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">lines</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pool_name</span><span class="p">,</span><span class="n">card_name</span><span class="o">=</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;INSERT INTO poolcard (pool_name, card_name) VALUES (?,?)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                           <span class="p">(</span><span class="n">pool_name</span><span class="p">,</span><span class="n">card_name</span><span class="p">))</span>   
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加抽卡记录</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">insert_draw_log</span><span class="p">(</span><span class="n">db_name</span><span class="p">,</span><span class="n">pool_name</span><span class="p">,</span><span class="n">card_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;INSERT INTO draw_log (pool_name,card_name) VALUES (?,?)&#34;</span><span class="p">,</span> <span class="p">(</span><span class="n">pool_name</span><span class="p">,</span><span class="n">card_name</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#返回卡牌名</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_cardname</span><span class="p">(</span><span class="n">pool_name</span><span class="p">,</span> <span class="n">star</span><span class="p">,</span> <span class="n">db_name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;SELECT card_name FROM poolcard WHERE pool_name = ?&#34;</span><span class="p">,</span> <span class="p">(</span><span class="n">pool_name</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pool_cards</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="n">pool_cards</span> <span class="o">=</span> <span class="p">[</span><span class="n">card</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">pool_cards</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">matching_star_cards</span> <span class="o">=</span> <span class="p">[</span><span class="n">card</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">pool_cards</span> <span class="k">if</span> <span class="n">get_card_star</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span> <span class="o">==</span> <span class="n">star</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">matching_star_cards</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">random_card</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">matching_star_cards</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">random_card</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">random_card</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_card_star</span><span class="p">(</span><span class="n">card_name</span><span class="p">,</span> <span class="n">conn</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&#34;SELECT card_star FROM card WHERE card_name = ?&#34;</span><span class="p">,</span> <span class="p">(</span><span class="n">card_name</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="c1">#将数据库的表输出为txt</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">export_table_to_txt</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span> <span class="n">db_name</span><span class="p">,</span> <span class="n">txt_file</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;SELECT * FROM </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">table_data</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#写入文件</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">txt_file</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table_data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">row_str</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="se">\t</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">row</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">row_str</span> <span class="o">+</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div>
+<p>在启动器/主文件中引用即可。</p>
+<p>除此之外，还有修改原先的start.py文件的部分内容。
+为了使得抽卡记录每次都要存入数据库中，抽卡的单抽和十连函数要略加修改。
+具体为</p>
+<ul>
+<li>先添加控件信息的读取</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">poolname</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cardpool_Box</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span><span class="c1">#卡池名</span>
+</span></span><span class="line"><span class="cl"><span class="n">db_name</span> <span class="o">=</span> <span class="s2">&#34;card_database.db&#34;</span><span class="c1">#db文件名</span></span></span></code></pre></div>
+<ul>
+<li>再添加使用数据库查询的函数，使得每次抽卡获得具体的卡牌名</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="c1">#得到抽卡结果</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cardname</span><span class="o">=</span><span class="n">conn2sql</span><span class="o">.</span><span class="n">get_cardname</span><span class="p">(</span><span class="n">pool_name</span><span class="o">=</span><span class="n">poolname</span><span class="p">,</span><span class="n">star</span><span class="o">=</span><span class="n">star</span><span class="p">,</span><span class="n">db_name</span><span class="o">=</span><span class="n">db_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">conn2sql</span><span class="o">.</span><span class="n">insert_draw_log</span><span class="p">(</span><span class="n">db_name</span><span class="p">,</span><span class="n">poolname</span><span class="p">,</span><span class="n">cardname</span><span class="p">)</span> <span class="c1">#存入抽卡记录的数据库</span></span></span></code></pre></div>
+<ul>
+<li>最后添加抽卡日志的输出</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#输出日志文件</span>
+</span></span><span class="line"><span class="cl">        <span class="n">table_name</span><span class="o">=</span><span class="s2">&#34;draw_log&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">txt_file</span><span class="o">=</span><span class="s2">&#34;draw_log.txt&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">conn2sql</span><span class="o">.</span><span class="n">export_table_to_txt</span><span class="p">(</span><span class="n">table_name</span><span class="p">,</span><span class="n">db_name</span><span class="p">,</span><span class="n">txt_file</span><span class="p">)</span> <span class="c1">#抽卡记录表导出为txt</span></span></span></code></pre></div>
+<p>对主文件中的四个抽卡函数(<code>one,one2,ten,ten2</code>)均做类似操作即完成了数据库的连接。</p>
+<p>公告内容可有可无，就是一个信息弹窗。</p>
+<p>注意数据库不要重复创建，开始先判空。</p>
+<h2 id="最后">最后<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="放在了-ugithub-u上觉得有用可以star-hh">放在了 <code>&lt;u&gt;</code><a href="https://github.com/viogami/DrawCard_uma" rel="external" target="_self">github</a> <code>&lt;/u&gt;</code>上，觉得有用可以Star☆ ，hh<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>本以为简单搞完的，结果还是搞到了半夜T^T</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Feb 5, 2023
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070402" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

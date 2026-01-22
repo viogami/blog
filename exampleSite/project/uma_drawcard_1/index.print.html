@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) :: Purple Pulpo">
+    <meta name="twitter:description" content="之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) :: Purple Pulpo">
+    <meta property="og:description" content="之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Project">
+    <meta property="article:published_time" content="2023-02-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-02-05T00:00:00+00:00">
+    <meta itemprop="name" content="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) :: Purple Pulpo">
+    <meta itemprop="description" content="之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。">
+    <meta itemprop="datePublished" content="2023-02-05T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2023-02-05T00:00:00+00:00">
+    <meta itemprop="wordCount" content="540">
+    <title>【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/index.html" rel="canonical" type="text/html" title="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/project\/uma_drawcard_1\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#预览">预览</a></li>
+    <li><a href="#运行展示">运行展示</a></li>
+    <li><a href="#具体实现">具体实现</a></li>
+    <li><a href="#源码地址">源码地址</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/project/index.html"><span itemprop="name">Project</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/favani/index.html" title="FavAni--从0开始的web开发日志 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/uma_drawcard_2/index.html" title="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下) (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable project" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="pyqt赛马娘抽卡模拟器-基于bwiki的抽卡模拟上">【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上)</h1>
+
+<p>实际上Bwiki有现成的赛马娘抽卡模拟，用pyqt有参照实现更容易了：
+<a href="https://wiki.biligame.com/umamusume/%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F%E5%99%A8" rel="external">Bwiki赛马娘抽卡模拟器</a></p>
+<h2 id="预览">预览<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>功能实现</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 单抽+十连的结果图片显示</li>
+<li><input checked="" disabled="" type="checkbox"> 十连保底出现SR</li>
+<li><input checked="" disabled="" type="checkbox"> 重做界面，删除无用的登陆界面</li>
+<li><input checked="" disabled="" type="checkbox"> 可以抽取马娘池，也可以抽取支援卡池子</li>
+<li><input checked="" disabled="" type="checkbox"> 对抽卡结果的统计</li>
+<li><input checked="" disabled="" type="checkbox"> 可以自主选择卡池</li>
+<li><input checked="" disabled="" type="checkbox"> 选择不同卡池出现不同的标志性图片</li>
+<li><input checked="" disabled="" type="checkbox"> 显示公告</li>
+<li><input disabled="" type="checkbox"> 建立抽卡模拟器的数据库，建立表：卡池表，卡牌表，卡池&amp;卡牌表，抽取结果表</li>
+<li><input disabled="" type="checkbox"> 连接数据库</li>
+<li><input disabled="" type="checkbox"> 显示抽卡记录的日志</li>
+</ul>
+<p>项目结构：
+<a href="#R-image-96e3159ece838b9d3d0cc76871dbd3cd" class="lightbox-link"><img alt="uma_1.png" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-96e3159ece838b9d3d0cc76871dbd3cd"><img alt="uma_1.png" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/1.png"></a>
+QT界面预览：
+<a href="#R-image-c7fc42100c061ffc647a3fe780185c61" class="lightbox-link"><img alt="uma_2.png" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c7fc42100c061ffc647a3fe780185c61"><img alt="uma_2.png" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/2.png"></a>
+QT控件表：
+<a href="#R-image-00ff42abb385abaffd6782e0dad60df3" class="lightbox-link"><img alt="uma_3.png" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-00ff42abb385abaffd6782e0dad60df3"><img alt="uma_3.png" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/3.png"></a>
+程序界面预览：
+<a href="#R-image-bce9dfc20dcd73fdab99f15f12d1d3c8" class="lightbox-link"><img alt="uma_4.png" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bce9dfc20dcd73fdab99f15f12d1d3c8"><img alt="uma_4.png" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/4.png"></a></p>
+<h2 id="运行展示">运行展示<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>由于我展示还没有创建卡牌的数据库，我只根据星级给抽卡结果进行了分类，从数据库中查找卡牌的各种信息更符合实际（但卡牌数据的构建实在过于麻烦，遂先不搞）。所以结果我做的只有外框显示就行了
+<a href="#R-image-f935b17ddc73787438a5b05166469ffc" class="lightbox-link"><img alt="uma_5.png" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f935b17ddc73787438a5b05166469ffc"><img alt="uma_5.png" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/project/uma_drawcard_1/5.png"></a></p>
+<h2 id="具体实现">具体实现<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>同样，我们需要将UI文件和启动的py文件分离。通过QTdesigner设计的界面，在vscode的qt插件中右键，选中“PYQT:Compile Form”,自动生成ui的py文件，之后新建一个启动器文件。这样的好处在于可以随时改变界面。
+创建一个res文件夹存放图片文件，一个data文件夹存放数据文件。</p>
+<p>start.py的源码：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">random</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#PyQt5中使用的基本控件</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span> <span class="n">QMainWindow</span><span class="p">,</span><span class="n">QMessageBox</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">PyQt5.QtGui</span> <span class="kn">import</span> <span class="n">QPixmap</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#导入designer界面</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Ui_抽卡系统</span> <span class="kn">import</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MyMainForm</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">,</span> <span class="n">Ui_Form</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">super</span><span class="p">(</span><span class="n">MyMainForm</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">setupUi</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#提供标题</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&#34;抽卡模拟器&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#添加信号和槽。  </span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">change_cardpool</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">change_pool</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">change_cardpool_2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">change_pool_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getone</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">one</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getten</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ten</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getone_2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">one_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">getten_2</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ten_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">askbutton</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 加载并显示默认图片</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/2.5th Anniversary卡池.png&#34;</span> <span class="c1">#默认出现的图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/2.5th Anniversary支援卡池.png&#34;</span> <span class="c1">#默认出现的图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image_2</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span></span></span></code></pre></div>
+<p>加载图片，参数设置一个图片的路径</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="c1">#马池图</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">load_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">image_path</span><span class="p">):</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#支援卡池图</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">load_image_2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">image_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap_2</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool_2</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap_2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">view_pool_2</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>  </span></span></code></pre></div>
+<p>定义改变卡池的函数</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">change_pool</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cardpool_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cardpool_Box</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="c1">#读取卡池信息  </span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_cardpool</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">cardpool_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">cardpool_name</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span> 
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">change_pool_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cardpool_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cardpool_Box_2</span><span class="o">.</span><span class="n">currentText</span><span class="p">()</span> <span class="c1">#读取卡池信息  </span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_cardpool_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="n">cardpool_name</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">cardpool_name</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span> 
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">load_image_2</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>  </span></span></code></pre></div>
+<p>池单抽和十连函数的实现</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">one</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">#清空十连的显示结果</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_6</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_7</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_9</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_10</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 根据概率随机抽取星级</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">weights</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#显示抽卡结果</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">star</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_11</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_11</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ten</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#单抽结果置为空</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_11</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 确保至少出现一张SR卡,具体实现为没有SR卡就循环重抽</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cards_star</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rand_num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1"># 生成0到1之间的随机数</span>
+</span></span><span class="line"><span class="cl">                <span class="n">card_type</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 根据随机数和概率判断抽到的卡牌类型</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SSR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">elif</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">                <span class="n">cards_star</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card_type</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;SR&#39;</span> <span class="ow">in</span> <span class="n">cards_star</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#将十张卡内容展现出来，并计算抽卡结果的计数</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_3</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_4</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_6</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_7</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_8</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_9</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_10</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#同时更新计数器</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>   
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>  
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span></span></span></code></pre></div>
+<p>接下来定义抽卡的函数，实现单抽和十连</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">################# 支援卡池（上两个函数的复制，就是改变了标签名字，xxx-&gt;xxx_2）</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">one_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="c1">#清空十连的显示结果</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_13</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_14</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_16</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_17</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_18</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_19</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_20</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_21</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 根据概率随机抽取星级</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">weights</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">star_probabilities</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#显示抽卡结果</span>
+</span></span><span class="line"><span class="cl">        <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">star</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_22</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_22</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span><span class="p">(</span><span class="n">star</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ten_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#单抽结果置为空</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">label_22</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#获取控件数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">ssrnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">srnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rnum</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">text</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="c1"># 定义不同星级卡的概率</span>
+</span></span><span class="line"><span class="cl">        <span class="n">star_probabilities</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;R&#34;</span><span class="p">:</span> <span class="mf">0.79</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SR&#34;</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;SSR&#34;</span><span class="p">:</span> <span class="mf">0.03</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># 确保至少出现一张SR卡,具体实现为没有SR卡就循环重抽</span>
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cards_star</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rand_num</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1"># 生成0到1之间的随机数</span>
+</span></span><span class="line"><span class="cl">                <span class="n">card_type</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># 根据随机数和概率判断抽到的卡牌类型</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SSR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">elif</span> <span class="n">rand_num</span> <span class="o">&lt;</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SSR&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">star_probabilities</span><span class="p">[</span><span class="s1">&#39;SR&#39;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;SR&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">card_type</span> <span class="o">=</span> <span class="s1">&#39;R&#39;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">                <span class="n">cards_star</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">card_type</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="s1">&#39;SR&#39;</span> <span class="ow">in</span> <span class="n">cards_star</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="k">break</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#将十张卡内容展现出来，并计算抽卡结果的计数</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">label_12</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_13</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_14</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_15</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                       <span class="bp">self</span><span class="o">.</span><span class="n">label_16</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_17</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_18</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_19</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_20</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">label_21</span><span class="p">]</span> <span class="c1">#将标签存放为标签数组</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">i</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&#34;res/&#34;</span><span class="o">+</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="s2">&#34;.png&#34;</span>  <span class="c1"># 替换为你的图片路径</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pixmap</span> <span class="o">=</span> <span class="n">QPixmap</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span> <span class="c1">#变为Qpixmap对象</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 调整 QLabel 大小以适应图片</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">setPixmap</span><span class="p">(</span><span class="n">pixmap</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">setScaledContents</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#同时更新计数器</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;R&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">rnum</span><span class="o">=</span><span class="n">rnum</span><span class="o">+</span><span class="mi">1</span>   
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">srnum</span><span class="o">=</span><span class="n">srnum</span><span class="o">+</span><span class="mi">1</span>  
+</span></span><span class="line"><span class="cl">            <span class="k">elif</span><span class="p">(</span><span class="n">cards_star</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="s2">&#34;SSR&#34;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ssrnum</span><span class="o">=</span><span class="n">ssrnum</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#更新统计数据</span>
+</span></span><span class="line"><span class="cl">        <span class="n">getnum</span><span class="o">=</span><span class="n">getnum</span><span class="o">+</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_getnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">getnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_rnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">rnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_srnum_2</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">srnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_ssrnum_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">ssrnum</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">value_Pssr_3</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">ssrnum</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="p">(</span><span class="n">getnum</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span><span class="o">+</span><span class="s2">&#34;%&#34;</span><span class="p">)</span></span></span></code></pre></div>
+<p>最后写一下公告，并运行</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">     <span class="c1">#定义公告函数</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ask</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>   
+</span></span><span class="line"><span class="cl">        <span class="n">text</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&#34;data/公告.txt&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>   
+</span></span><span class="line"><span class="cl">        <span class="n">QMessageBox</span><span class="o">.</span><span class="n">about</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&#34;公告内容&#34;</span><span class="p">,</span> <span class="n">text</span> <span class="p">)</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#固定语句。sys.argv是命令行参数列表，确保程序可以双击运行</span>
+</span></span><span class="line"><span class="cl">    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#初始化</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myWin</span> <span class="o">=</span> <span class="n">MyMainForm</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#将窗口控件显示在屏幕上</span>
+</span></span><span class="line"><span class="cl">    <span class="n">myWin</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#程序运行，sys.exit方法确保程序完整退出。</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">())</span></span></span></code></pre></div>
+<p>公告还是从txt文件读取，其中很多参数在程序里是写死了的，比如抽卡概率，图片文件位置和名称等，适当更改。</p>
+<h2 id="源码地址">源码地址<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>全部源码上传了 <a href="https://github.com/viogami/DrawCard_uma" rel="external">GitHub</a></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Feb 5, 2023
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

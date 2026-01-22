@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TLS :: Tag :: Hugo Relearn Theme</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/tags/tls/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/tags/tls/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/blog/tls-mitmproxy-clash/index.html</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/blog/tls-mitmproxy-clash/index.html</guid>
+      <description>所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。&#xA;问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试</description>
+    </item>
+  </channel>
+</rss>

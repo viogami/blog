@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Blog :: Purple Pulpo">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="Blog :: Purple Pulpo">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Blog :: Purple Pulpo">
+    <meta itemprop="datePublished" content="2025-01-20T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2025-01-20T00:00:00+00:00">
+    <title>Blog :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/index.html" rel="canonical" type="text/html" title="Blog :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/blog/index.xml" rel="alternate" type="application/rss+xml" title="Blog :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/blog\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/blog/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Blog</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/project/uma_drawcard_2/index.html" title="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下) (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/index.html" title="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable blog" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="blog">Blog</h1>
+
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 20, 2025
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Blog</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/clash/index.html">Clash</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/mitmproxy/index.html">Mitmproxy</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/tls/index.html">TLS</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/index.html">模拟器</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="tls流量解密mitmproxy抓包模拟器流量走clash代理证书问题">TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题</h1>
+
+<p><strong>所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。</strong></p>
+<h3 id="问题场景">问题场景<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试</p>
+<p>mumu模拟器启动游戏，希望抓其传向服务器的包，实现一些自动化操作。由于游戏是日服，所以需要启用代理。我使用了clash。此外，游戏的包使用了tls1.3加密，要想截取必须获得在本地生成的密钥进行解密才能知道明文。中间人代理，我使用了mitmproxy。</p>
+<h3 id="问题显露">问题显露<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>mitmproxy可以代理一个本地端口，在tls(https)流量进入进行握手阶段的时候，通过配置证书可以解读明文.但问题是流量必须走clash的，不然没梯子访问不了国外的服务器。而clash作为代理工具是没有保存该key的功能的。</p>
+<h3 id="思路">思路<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>很自然的想法，让模拟器流量先走mitmproxy，而后再走clash作为流量出入口，mitmproxy作为模拟器和clash的中间人。这样就可以实现流量的截取和梯子转发，最后通过如wireshark这类的抓包工具进行数据包分析。</p>
+<p><a href="#R-image-6a1a394e2a99ec08b627d6bf948b5209" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6a1a394e2a99ec08b627d6bf948b5209"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/1.png"></a></p>
+<h3 id="证书问题">证书问题<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>这样看起来ok了，模拟器访问网页，在终端也可以看到mitmproxy的流量经过了。但是在启动游戏的时候，依然会看到如下报错：</p>
+<blockquote>
+<p>clinet TLS handshake failed. The client may not trust the proxys certificate for xxx.com(Openssl Error ssl routines , , tlsv1 alert access denied)</p>
+</blockquote>
+<p>字面意思，mitmproxy 在进行 TLS 握手时，客户端无法信任 mitmproxy 的证书。通常情况下，mitmproxy 会自动生成一个伪造的证书来替代目标网站的真实证书，以便解密和转发流量。如果客户端（例如浏览器或模拟器）没有信任 mitmproxy 的证书，它就会拒绝与代理的安全连接。</p>
+<p><strong>那就得在模拟器安装上mitmproxy的证书。</strong>
+默认情况下，mitmproxy 的证书存储路径是 ~/.mitmproxy/（Linux/macOS）或 C:\Users&lt;username&gt;.mitmproxy\（Windows），其中有一个文件叫 mitmproxy-ca-cert.pem。
+将 mitmproxy-ca-cert.pem 证书文件传输到 Android 设备或模拟器。
+打开设备的 设置，找到 安全性 或 证书管理，然后选择 从存储导入证书。
+选择下载的证书文件并导入。
+导入后，设备应该信任 mitmproxy 的根证书。</p>
+<p>但是mumu12模拟器没有如上设置。并不是无他法。
+第一步，安装openssl
+第二步，把pem证书通过openssl转换为DER格式的证书</p>
+<p><code>openssl x509 -subject_hash_old -in mitmproxy-ca-cert.pem.pem</code></p>
+<p>第三步，重命名pem文件为 <code>哈希值.0</code>
+<a href="#R-image-9b37b8735c9e5daac1d9221f04eb6e1a" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9b37b8735c9e5daac1d9221f04eb6e1a"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/2.png"></a></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb root
+</span></span><span class="line"><span class="cl">adb remount
+</span></span><span class="line"><span class="cl">adb push xxxxxxx.0 /system/etc/security/cacerts/</span></span></code></pre></div>
+<p><strong>参考帖子：<a href="https://blog.csdn.net/haduwi/article/details/125696208" rel="external">https://blog.csdn.net/haduwi/article/details/125696208</a></strong></p>
+<h3 id="结束">结束<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>导入了证书后，mitmproxy的event log就没有报错了，美滋滋，开始用wireshark进行数据包分析吧。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 20, 2025
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c%23/index.html">C#</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/json/index.html">Json</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/protobuf/index.html">Protobuf</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/unity/index.html">Unity</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6/index.html">二进制文件</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html">游戏开发</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E9%80%86%E5%90%91/index.html">逆向</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="逆向解决unity导出textasset后部分文本出现乱码">【逆向】解决unity导出TextAsset后部分文本出现乱码</h1>
+
+<p>问题预览。可以看到，这是个配置文件，但是只有部分文本可读。</p>
+<p><a href="#R-image-4755e4ffc73f967448bbce6022efaf67" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4755e4ffc73f967448bbce6022efaf67"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/1.png"></a></p>
+<p>该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。
+既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</p>
+<p>既然是游戏工程项目，考虑两个方向：是否是用protobuff读取的二进制文件；是否是直接用读取字节流的方式读取的配置文件。</p>
+<h3 id="是否是pb的二进制文件">是否是pb的二进制文件？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>直接拿到导出的二级进制文件导出到该网站识别：
+<a href="https://protobuf-decoder.netlify.app/" rel="external">https://protobuf-decoder.netlify.app/</a></p>
+<p><a href="#R-image-69fd003b7be1af8522b159d8e290680d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-69fd003b7be1af8522b159d8e290680d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/2.png"></a></p>
+<p>可以看到，没有识别出合适的字段名。据此判断该文本文件不是pb的二进制文件。</p>
+<h3 id="是否是按字节流读取的文本">是否是按字节流读取的文本？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>按照字节流读取文本，这在客户端中不少见, 因为比json省空间, 但缺点是可读性为0, 我的评价就是狗屎, 你少出几张宽高不是4的整倍数的图, 这都不用扣这点配置表省的空间。。在源码中可能是这样出现的：
+<a href="#R-image-bdca71dd9a19f59c4dd4f7c0b8d29bf0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bdca71dd9a19f59c4dd4f7c0b8d29bf0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/3.png"></a>
+<a href="#R-image-ec717cb63a4ff177799c5bfa752cfac4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec717cb63a4ff177799c5bfa752cfac4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/4.png"></a></p>
+<p>使用010 editor打开该二进制文件。逐字节进行观察分析：所有配置文件都有相同的4B文件头，随后是文件长度的16进制，然后是相同的4B字节“00 00 00 01”,再之后是配置文件的配置项数，最后是4B的校验比特。总之就是开头的20B为配置文件的描述文件头。
+<a href="#R-image-45fc0bf8e7c49d695595e95a5f65f744" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-45fc0bf8e7c49d695595e95a5f65f744"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/5.png"></a></p>
+<h3 id="获得二进制文本的字段描述">获得二进制文本的字段描述<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>此处需要逆向代码，由于是ill2cpp打包的，只能dump出函数名，但也够用了。在dnspy中搜索和配置文件同名的项，可以找到一个定义了所有配置文件model的文件夹<strong>ResDef</strong>。其中定义了配置文件的字段内容：
+<a href="#R-image-7e245ee8276d9c03c0e354e56fa04d04" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/6.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e245ee8276d9c03c0e354e56fa04d04"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/6.png"></a></p>
+<p>该项目确实是用protobuff进行通信的，但配置文件还是json格式的，其中配置字段也符合json嵌套的格式。我们逐比特进行字段解读，发现字节流确实是可读的。其中需要注意以下三点：</p>
+<ul>
+<li>这种由开发者自定义的二进制文件，一般都是<strong>大端序</strong>读取的字节，直接用<code>readbytes</code>方法不合适，要逆序一下。</li>
+<li>注意其中的string类型的比特编码方式，一般是由4B文件指定长度，后面该长度的字节编码为字符串。</li>
+<li>注意数组类型在字节流文件中的编码方式，可能和字符串一样用4B指定长度，也可能是定长编码。本示例项目中就是定长编码，所有数组大小都固定为3。</li>
+</ul>
+<p>配置字段的定义如下：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">AchieveBaseConfig</span> <span class="p">:</span> <span class="n">ProtoBaseStruct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">SortNO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">string</span> <span class="n">Desc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">Classify</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">ClassifySubType</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">ShowProgress</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">ResBehaviorRule</span> <span class="n">Behavior</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">BootyID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">MaxProgress</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">JumpID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ResBehaviorRule</span> <span class="p">:</span> <span class="n">ProtoBaseStruct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">Type</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">Param</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>逐比特对比，符合字段的定义：
+<a href="#R-image-2e7a05d97b7f8c311b631e2c52fe9827" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/7.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e7a05d97b7f8c311b631e2c52fe9827"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/7.png"></a></p>
+<h3 id="编写解密代码">编写解密代码<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>编写解密函数类BinaryConfigParser，根据字段类型逐行读取，注意大小端处理，字符串和数组类型处理以及嵌套类型的处理(需要递归)，最后在主函数中调用。如下只给出主函数的调用部分，<code>BinaryConfigParser</code>类过长，且解码不同二进制文件方法也不相同，就未放出，如需要可留言。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Program</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 解码二进制文件</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Decode</span><span class="p">(</span><span class="kt">string</span> <span class="n">fileName</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arrayLen</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">binaryFilePath</span> <span class="p">=</span> <span class="s">$&#34;TextAsset\\{fileName}&#34;</span><span class="p">;</span> <span class="c1">// 替换为实际的二进制文件路径</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态获取类型</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Type</span> <span class="n">type</span> <span class="p">=</span> <span class="n">Type</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">$&#34;ResDef.{fileName}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态调用泛型方法</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">method</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">BinaryConfigParser</span><span class="p">).</span><span class="n">GetMethod</span><span class="p">(</span><span class="s">&#34;ReadConfigArray&#34;</span><span class="p">).</span><span class="n">MakeGenericMethod</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// 读取配置项</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">configs</span> <span class="p">=</span> <span class="n">method</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]</span> <span class="p">{</span> <span class="n">binaryFilePath</span><span class="p">,</span> <span class="n">arrayLen</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存为 JSON 数组格式</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">jsonArray</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">configs</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存到文件</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">jsonOutputPath</span> <span class="p">=</span> <span class="s">$&#34;output_json\\{fileName}.json&#34;</span><span class="p">;</span> <span class="c1">// 替换为实际的 JSON 要存放的文件路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">jsonOutputPath</span><span class="p">,</span> <span class="n">jsonArray</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;文件 {fileName} 已解码为 JSON 文件: {jsonOutputPath}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//自动化解码</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">AutoDecode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">textAssetFolder</span> <span class="p">=</span> <span class="s">&#34;TextAsset&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">outputFolder</span> <span class="p">=</span> <span class="s">&#34;output_json&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 确保输出文件夹存在</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">Directory</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 获取TextAsset文件夹下的所有文件</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">files</span> <span class="p">=</span> <span class="n">Directory</span><span class="p">.</span><span class="n">GetFiles</span><span class="p">(</span><span class="n">textAssetFolder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 遍历所有文件</span>
+</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">filePath</span> <span class="k">in</span> <span class="n">files</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">fileName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">outputJsonPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">,</span> <span class="s">$&#34;{fileName}.json&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// 检查是否已生成JSON文件</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputJsonPath</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// // 输入固定数组长度,由于长度未知,所以循环100次，直到找到正确的长度</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// for (int arrayLen = 0; arrayLen &lt; 100; arrayLen++)</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// {</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//     // 调用Decode生成JSON</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//     Decode(fileName, arrayLen);</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// }</span>
+</span></span><span class="line"><span class="cl">                    <span class="kt">int</span> <span class="n">arrayLen</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Decode</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="n">arrayLen</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;处理文件 {fileName} 失败！&#34;</span><span class="p">+</span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 程序入口</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">AutoDecode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 6, 2025
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;/index.html">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-build-tools/index.html">C&#43;&#43; Build Tools</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-cmake-tools-for-windows/index.html">C&#43;&#43; Cmake Tools for Windows</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/rider/index.html">Rider</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/ue5/index.html">Ue5</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/vs2022/index.html">Vs2022</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html">开发环境</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html">游戏开发</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="用最轻量的vs负载进行ue5开发使用rider">用最轻量的VS负载进行UE5开发(使用rider)</h1>
+
+<p>从UE5官方文档来看，要下的负载还是很多的。但查看rider官方文档，只要我们下一个vs的工具集就ok了，那就试试看。</p>
+<p><a href="#R-image-0b27a0f06c36822bba53878b4207fae2" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0b27a0f06c36822bba53878b4207fae2"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/1.png"></a></p>
+<p><strong>下载 Visual Studio Build Tools：</strong></p>
+<p>访问 Visual Studio 官方网站 下载 Visual Studio Build Tools。</p>
+<p><a href="#R-image-56532450671a464a526f3efe35bdd0a7" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-56532450671a464a526f3efe35bdd0a7"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/2.png"></a></p>
+<p>运行安装程序，选择所需的组件：</p>
+<ul>
+<li>
+<p>选择“<strong>C++ build tools</strong>”，这是最重要的部分。
+在安装选项中选择：
+MSVC v142 - VS 2019 C++ x64/x86 build tools（或更高版本,我用2022）
+Windows 11 SDK（win10或更高版本）
+C++ CMake tools for Windows</p>
+</li>
+<li>
+<p>选择“<strong>单个组件</strong>”中的.NET框架SDK。</p>
+</li>
+</ul>
+<p><a href="#R-image-8f039050dab130c84e6c691361eb237f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8f039050dab130c84e6c691361eb237f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/3.png"></a></p>
+<p>开始安装，等待安装完成。</p>
+<p><strong>配置 Unreal Engine 5</strong>
+在完成上述步骤后，可以配置 Unreal Engine 5 使用这些工具来编译项目。</p>
+<p>1.启动 Unreal Engine 5 并打开项目。
+2.转到“编辑” -&gt; “项目设置”。在左侧菜单中找到“平台” -&gt; “Windows”。确认编译器路径 指向刚安装的 MSVC 编译工具，vs2022。
+3.转到”编辑器偏好设置“ -&gt;&ldquo;通用&rdquo; -&gt; &ldquo;源代码&rdquo; ，选择编辑器为 &ldquo;rider&rdquo;</p>
+<hr>
+<p>这样就完成了最轻量的使用rider做编辑器进行UE5开发了，<strong>不下载vs2022的编辑器，只下载必要构建工具，编辑器使用rider</strong>。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jun 12, 2024
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/docker/index.html">Docker</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/linux/index.html">Linux</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/mysql/index.html">Mysql</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/windows/index.html">Windows</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/index.html">开发问题</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="开发问题linux启动docker镜像成功而win启动该镜像mysql报错">【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错</h1>
+
+<ul>
+<li>dockers报错：<code>Starting MySQL database server mysqld ...failed</code></li>
+<li>进入容器内部，查看mysql错误日志：<code>cat /var/log/mysql/error.log</code></li>
+<li>mysql具体报错：<code>Different lower_case_table_names settings for server ('2') and data dictionary ('0').</code></li>
+</ul>
+<p><strong>出现该问题的重要前提是：</strong></p>
+<ul>
+<li>docker启动mysql并不是根据官方mysql镜像，而是在一个基础php镜像上安装的mysql服务。</li>
+<li>我的mysql数据通过docker的卷挂载在外部，通过一个mysql文件夹管理。</li>
+</ul>
+<p>当我把linux上可以运行的镜像和mysql外部卷都发送给win机器运行，由于<strong>mysql数据是外部挂载的</strong>，所以会出现同一个镜像，换了操作系统却无法运行的问题。本质上是mysql在linux和win上的环境变量<code>lower_case_table_names</code>默认值不同导致的。由于数据库数据在linux上初始化，该值已经为0，而在win上需要为2，所以报错。</p>
+<blockquote>
+<p>Docker镜像确实是操作系统无关的，但是MySQL的lower_case_table_names设置是与操作系统有关的。这是因为lower_case_table_names设置决定了MySQL如何存储和比较表名和数据库名。</p>
+<p>在Windows和Mac系统中，文件系统通常不区分大小写，因此MySQL默认将lower_case_table_names设置为2。在这种设置下，MySQL将表名存储为小写，并且比较时不区分大小写。</p>
+<p>在Linux系统中，文件系统通常区分大小写，因此MySQL默认将lower_case_table_names设置为0。在这种设置下，MySQL将表名存储为给定的大小写，并且比较时区分大小写。</p>
+<p>当你在一个系统（例如Windows）上创建MySQL数据，然后尝试在另一个系统（例如Linux）上使用这些数据时，可能会出现这个错误。这是因为数据字典（存储了表名和数据库名的元数据）的lower_case_table_names设置与服务器的设置不一致。</p>
+</blockquote>
+<h2 id="解决方案">解决方案<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>解决个蛋，一般都是放在linux上运行的，mysql在哪初始化就在哪部署。将镜像和外部卷都放在linux机器上部署就好了。win上报错要启动mysql前修改那个环境变量的值。</p>
+<p>或者有一种麻烦的思路，就是将其mysql服务从一个容器中剥离出来，新开一个容器启动，这样方便设置环境变量。如果要修改一个非mysql基础镜像的mysql环境变量还是比较繁琐的。新开一个容器，用docker-compose启动即可。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Apr 27, 2024
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/agones/index.html">Agones</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/docker/index.html">Docker</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/k8s/index.html">K8S</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/kubernetes/index.html">Kubernetes</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.html">云原生</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="自顶向下学习k8s--部署agones">自顶向下学习K8S--部署Agones</h1>
+
+<p>学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。</p>
+<p><strong>本文基本从0开始部署Agones，进而逐步理解docker，理解K8S。</strong></p>
+<p>相信如果你能发现本文，自然了解Agones是什么，如果不知道自行了解下，不做多介绍，引用官方介绍：</p>
+<blockquote>
+<p>Agones 是一个开源平台，用于部署、托管、扩展和编排专用游戏服务器，用于大型多人游戏，构建在行业标准的分布式系统平台
+Kubernetes 之上。</p>
+</blockquote>
+<p>部署Agones只是一个任务性的引子，重点还是K8S.</p>
+<h2 id="准备工作">准备工作<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="安装docker-desktop">安装docker-desktop<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>由于我是win机器，在一切之前，得介绍下开发环境，但很简单。
+首先得安装docker，注意如下：</p>
+<ul>
+<li><strong>打开任务管理器，看看cpu有没有开启虚拟化，没有则在bios设置中开启。(必要)</strong></li>
+<li>安装wsl，无需开启hyper-v,所以家庭还是专业版的windows没啥影响。</li>
+<li>自备代理工具，docker官网需要魔法。</li>
+</ul>
+<p><strong>安装完docker基本就完成了。</strong></p>
+<p>由于是个人开发测试用，只用<strong>部署一个单节点集群</strong>就好了，而这在docker-desktop中已经集成了，很方便，如下所示，打开即可：</p>
+<p><a href="#R-image-6663d126819bab24936f9f382d29a76f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6663d126819bab24936f9f382d29a76f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/1.png"></a></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get nodes</span></span></code></pre></div>
+<p>如果返回类似 Ready 状态的节点，说明 Kubernetes 已经启动成功。</p>
+<p><em>注意 ❌：Docker Desktop 的 Kubernetes 只能运行在单个节点上，不适用于生产环境的高可用集群。</em></p>
+<h3 id="vscode的k8s插件">vscode的K8S插件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>安装桌面版的docker是有图形化界面的，很直观，但K8S目前我们是没有GUI的，需要吗？并不一定，使用gui会更多的限制你。
+Kubernetes 本身主要是通过 kubectl 命令行工具和 YAML 配置文件进行管理的。</p>
+<p>虽然有 <code>kubernetes-dashboard</code>，但别着急，在vscode的插件也有gui可以打开dashboard。推荐安装docker和k8s插件，在vscode中集成开发，然后我逐步解释下插件中每个显示项的作用，<strong>从这里就开始理解如何使用K8S辣</strong></p>
+<p><a href="#R-image-3062284ade8f82609c294a51b45f2028" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3062284ade8f82609c294a51b45f2028"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/2.png"></a></p>
+<ul>
+<li>Namespace（命名空间）Kubernetes 内部的逻辑隔离单位，用于划分不同的应用、环境或团队。一个集群可以包含多个 Namespace，<strong>每个 Namespace 内的资源相互独立</strong>。</li>
+<li>Workloads（工作负载）管理 Kubernetes 里运行的应用程序，本质上就是 运行 Pod 的控制器。Workload 负责定义应用如何部署、扩缩容、更新和运行。</li>
+<li>Network（网络） 负责 Kubernetes Pod 之间、Pod 和外部系统之间的通信。管理 Service、Ingress、Network Policy 这些 K8s 网络资源。</li>
+<li>Storage（存储）管理 Kubernetes 里的持久化存储，确保 Pod 重新启动后数据不会丢失。Volume 只在 Pod 生命周期内有效，但 PersistentVolume（PV）可持久存储数据。</li>
+<li>Configuration（配置管理）管理应用的配置信息、环境变量、Secrets（敏感信息）。让应用和环境解耦，比如可以在不修改代码的情况下更改应用配置。</li>
+<li>Custom Resource（自定义资源）扩展 Kubernetes，增加新的资源类型，比如 Agones 添加了 GameServer 资源。允许你 创建自己的 K8s API，以适配特定的业务需求。</li>
+<li>Helm Releases（Helm 版本管理）管理 Helm 安装的应用（比如 agones）。<strong>Helm 是 Kubernetes 的包管理工具</strong>，可以一键安装、更新、删除复杂应用。</li>
+</ul>
+<h4 id="但docker-desktop-不包含k8s的包管理工具-helm">但Docker Desktop 不包含K8S的包管理工具 Helm<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>但安装了K8S插件会自动提示下载 <code>kubectl</code>和 <code>helm</code>，前者是命令行操作工具。都是编译好的exe。如果需要可以配到环境变量中，位置在 <code>.../user/.vs-kubernetes</code>下</p>
+<h2 id="提出疑问-区别概念">提出疑问-区别概念<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>好了，在部署之前，安装了上文所说的插件，如果刚入门K8S，难免有一些疑问，下面我着重进行些概念补充，希望下面可以顺利进行~</p>
+<h3 id="kubernetes-中-node-和-pod-的关系">Kubernetes 中 Node 和 Pod 的关系<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Node（节点）就是机器，它可以是：物理机（裸机服务器），虚拟机（云服务器、Docker Desktop 里的虚拟 K8s 节点），你的本机（如果你用 Docker Desktop Kubernetes）</p>
+<p>Pod（Pod 是容器的封装单位），Pod 运行在 Node上，一个Pod 里面可以有一个或多个容器，Pod共享存储（Volume）、网络（IP 地址）等，K8s 只管理 Pod，不直接管理容器</p>
+<p>如果 Kubernetes 是一个数据中心：</p>
+<ul>
+<li>Node = 一台服务器</li>
+<li>Pod = 服务器上的一个应用进程组（可能包含多个容器）</li>
+<li>容器 = 运行的进程（比如 Nginx、MySQL 等）</li>
+</ul>
+<h3 id="现实中一个项目是不是只要一个k8s集群就够了">现实中，一个项目是不是只要一个k8s集群就够了？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p><strong>YES！一个 Kubernetes 集群足够应付绝大部分的项目需求，包括扩展、弹性、资源管理和容器的自动化部署。</strong></p>
+<p>一个K8S集群中会有很多nodes，这些nodes就是物理上的机器，可以有很多个，每个nodes里有很多pods，pods才是实际的部署的应用。nodes已经完成了分布式，多集群可能确实在大型复杂项目的跨地区部署中用到，但咱可以不用了解</p>
+<h3 id="命名空间和nodes有什么区别为什么有了nodes还需要namespace">命名空间和nodes有什么区别，为什么有了nodes还需要namespace<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Nodes（节点） 物理或虚拟机，负责运行 Pod 实际的计算资源（CPU、内存、存储）</li>
+<li>Namespace（命名空间） 逻辑隔离的环境，管理不同的 K8s 资源 逻辑上的组织单位，不影响物理资源分配
+<em>可以把 Node 理解为 &ldquo;真实的服务器&rdquo;，而 Namespace 更像是 &ldquo;应用的文件夹或项目空间&rdquo;</em></li>
+</ul>
+<h2 id="安装agones">安装Agones<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>好了，终于来到重点也不算是重点的部分了。</p>
+<h3 id="但并不重要因为你可以根据官方文档逐步操作">但并不重要，因为你可以根据<a href="https://agones.dev/site/docs/installation/install-agones/yaml/" rel="external">官方文档</a>逐步操作<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>根据agones官方文档，安装可以通过yaml文件，也可以通过helm包管理安装。</p>
+<p>我是用kubectl命令行拉取的yaml文件完成的安装</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create namespace agones-system
+</span></span><span class="line"><span class="cl">kubectl apply --server-side -f https://raw.githubusercontent.com/googleforgames/agones/release-1.48.0/install/yaml/install.yaml</span></span></code></pre></div>
+<p>然后你就可以在 <code>Custom Resource</code>中发现拉去下来的服务了！</p>
+<p><a href="#R-image-2431ebfbf79432a60e61f2394f69cf1e" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2431ebfbf79432a60e61f2394f69cf1e"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/3.png"></a></p>
+<p>接下来按照官方文档操作进行部署了，并不赘述，因为本文不是介绍怎么部署agones。</p>
+<p><a href="#R-image-38c031f1121cb6fbd96457a3855ec3a0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-38c031f1121cb6fbd96457a3855ec3a0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/k8s-agones/4.png"></a></p>
+<p>本人使用rider及其K8S插件，在游戏开发的时候进行服务器集群控制的。记住命令行得到pod的ip和端口，接下来就是网络通信的知识了。如果要在unity中和部署的服务器应用通信，自写和后端的通信协议，Agones只是个后台应用调度工具，不涉及和前端交互。</p>
+<p><strong>注意 ❌ Agones Unity SDK 适用于 服务器端（GameServer） 的 Unity 进程而不是前端！</strong></p>
+<p>例如：你用 Unity 制作了一款 服务器端模拟的游戏逻辑，需要让 Agones 调度这个服务器。或者你的游戏服务器是 Unity 编写的，想要与 Agones 交互来管理它的生命周期。但是，<strong>如果你想让 Unity 客户端 连接到 GameServer，那 Unity SDK 并不需要。客户端应该直接用 WebSocket、TCP、UDP、HTTP 连接 GameServer。</strong></p>
+<h2 id="结束">结束<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>怎么就结束了？
+因为从安装agones敲下一行命令行开始，已经完成了一次K8S的体验，只要了解从0到启动一个K8S单节点集群的全过程每个操作的意义，那么恭喜你，已经入门K8S了，就这么简单，剩下的内容需要在一次次部署应用，一次次开关容器中不断积累吧。这不是整体图看这个概念那个概念是什么意思可以解决的。</p>
+<p>怎么用kubectl操作，怎么用helm包管理，这就是启动K8S后亟待解决的唯二的问题，在实践中结束吧！</p>
+<h3 id="如果你有任何疑问都可以评论联系我">如果你有任何疑问，都可以评论联系我~<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Mar 28, 2024
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc/index.html">GRPC</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-go/index.html">Grpc-Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-php/index.html">Grpc-Php</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-python/index.html">Grpc-Python</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/php/index.html">Php</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="php使用grpc服务从0开始并且包含mapfield文件解释">php使用grpc服务(从0开始，并且包含mapfield文件解释)</h1>
+
+<p>grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。</p>
+<p>现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~</p>
+<h2 id="流程">流程<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>php的服务器安装protoc</li>
+<li>php的服务器安装grpc</li>
+<li><del>编写服务端代码</del></li>
+<li>编写客户端代码</li>
+</ul>
+<p>由于服务端(python)的代码已经编写或者说已经部署，就不做叙述了。</p>
+<p>安装代码请根据自己的php版本和grpc版本酌情自定义。本人使用的php8.0，grpc1.62.0，protobuf4.62.0</p>
+<h2 id="安装protoc解释器">安装protoc解释器<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>和windows开发一样，使用grpc服务均需要使用protoc解释器，去官方github下的release下载linux版本：
+<a href="https://github.com/protocolbuffers/protobuf/releases/download/v26.0/protoc-26.0-linux-x86_64.zip" rel="external">protoc-26.0-linux-x86_64.zip</a></p>
+<p>解压到 <code>/usr/bin/</code>目录下</p>
+<blockquote>
+<p>如果你使用宝塔，你也可以直接先在本地电脑上解压，把解压后的bin文件夹里的protoc文件上传到 <code>/usr/bin/</code>中就好了。</p>
+</blockquote>
+<p>终端中输入 <code>protoc</code>,有返回即为成功</p>
+<h2 id="安装grpc">安装grpc<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>无论你服务器是否安装pecl，可以直接通过http请求安装php相关包，但是必须安装了php(废话)</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 下载解压 grpc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">wget http://pecl.php.net/get/grpc-1.62.0.tgz
+</span></span><span class="line"><span class="cl">tar xvf grpc-1.62.0.tgz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> grpc-1.62.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成配置并编译安装(编译安装时间很长，我大概安装了一小时左右)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 注意选择你自己的路径以及php版本，我是80</span>
+</span></span><span class="line"><span class="cl">/www/server/php/80/bin/phpize
+</span></span><span class="line"><span class="cl">./configure --with-php-config<span class="o">=</span>/www/server/php/80/bin/php-config
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> make install</span></span></code></pre></div>
+<p>之后要配置php的拓展
+<strong>注意，这是必要的，compose安装的grpc依赖，底层还是调用的这个grpc拓展！</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 配置PHP扩展</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> grpc-1.62.0
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;extension = grpc.so&#34;</span> &gt;&gt; /www/server/php/80/etc/php.ini
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> protobuf-4.62.0  <span class="c1"># 如果没有路径请仿照grpc安装的方式手动安装安装一下，我个人觉得可能并不需要</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;extension = protobuf.so&#34;</span> &gt;&gt; /www/server/php/80/etc/php.ini</span></span></code></pre></div>
+<p>最后重启一下php和nginx服务就大功告成了</p>
+<h2 id="编译protoc文件">编译protoc文件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>具体的protoc文件的定义详细见我<a href="http://viogami.me/index.php/archives/158/" rel="external">之前的博客</a></p>
+<p>需要安装protoc和grpc_php_plugin</p>
+<p>使用如下代码生成：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">protoc --php_out ./ you-file.proto  <span class="c1">#需要安装protoc解释器，生成protoc的php定义文件在当前目录(./)</span>
+</span></span><span class="line"><span class="cl">protoc --grpc_out ./ you-file.proto <span class="c1">#需要grpc_php_plugin插件安装，生成grpc文件在当前目录</span></span></span></code></pre></div>
+<p>第一行生成你的proto数据定义文件，我生成了 <code>GCNResult.php</code>,<code>Node.php</code>,<code>Edge.php</code>,<code>GraphData.php</code>,
+同时还会生成一个GPBMetaData文件夹。
+第二行生成php的grpc文件：<code>GCNServiceClient.php</code></p>
+<p>注意，如果你没有生成grpc文件的插件(安装grpc出现问题)，可以直接下载该插件
+然后通过如下代码生成 <code>xxxClient.php</code>文件</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">protoc --grpc_out ./ --plugin<span class="o">=</span>protoc-gen-grpc<span class="o">=</span>/your-path-to-plugin/grpc_php_plugin you-filename.proto
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">:: 自用
+</span></span><span class="line"><span class="cl">:: protoc --grpc_out ./ --plugin<span class="o">=</span>protoc-gen-grpc<span class="o">=</span>/opt/share/grpc_php_plugin gcn.proto</span></span></code></pre></div>
+<h2 id="编写php请求的代码客户端代码">编写php请求的代码(客户端代码)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="编写文件前置注意事项">编写文件前置注意事项<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><strong>注意：如果你使用宝塔，需要把php设置里的禁用函数 <code>putenv</code>和 <code>proc_open</code>给删除，不然composer安装无法进行。</strong></li>
+<li>需要编写composer.json文件，因为使用了 <code>dirname(__FILE__).'/vendor/autoload.php'</code>该自动导入功能。json文件内容示例：</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;require&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;grpc/grpc&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;google/protobuf&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;autoload&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;psr-4&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;GPBMetadata\\&#34;</span><span class="p">:</span> <span class="s2">&#34;protoc/GPBMetadata/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;protoc\\&#34;</span><span class="p">:</span> <span class="s2">&#34;protoc/&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>编写后在服务器该文件目录下启动终端输入 <code>composer install</code>即可，会生成vendor文件夹</p>
+<p>现在我将编写一个最简单的php文件来调用这个服务。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="nx">dirname</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span> <span class="c1">// 引入 gRPC PHP 扩展的自动加载文件
+</span></span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/GraphData.php&#39;</span><span class="p">;</span> <span class="c1">// 引入包含 protoc文件夹下的grpc生成文件
+</span></span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/Node.php&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/Edge.php&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/GCNResult.php&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/GCNServiceClient.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 进行grpc请求，获取gcn处理后的数据，返回json字符串
+</span></span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">GCN_request</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GCNServiceClient</span><span class="p">(</span><span class="s1">&#39;localhost:9999&#39;</span><span class="p">,</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;credentials&#39;</span> <span class="o">=&gt;</span> <span class="nx">\Grpc\ChannelCredentials</span><span class="o">::</span><span class="na">createInsecure</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1">// 创建一个实例的图数据
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$G_example</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GraphData</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$G_example</span><span class="o">-&gt;</span><span class="na">setNodes</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">new</span> <span class="nx">Node</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">setId</span><span class="p">(</span><span class="s2">&#34;node1&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setFeatures</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">new</span> <span class="nx">Node</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">setId</span><span class="p">(</span><span class="s2">&#34;node2&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setFeatures</span><span class="p">([</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$G_example</span><span class="o">-&gt;</span><span class="na">setEdges</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">new</span> <span class="nx">Edge</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">setSourceId</span><span class="p">(</span><span class="s2">&#34;node1&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setTargetId</span><span class="p">(</span><span class="s2">&#34;node2&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1">// 发送请求并接收响应
+</span></span></span><span class="line"><span class="cl">    <span class="k">list</span><span class="p">(</span><span class="nv">$response</span><span class="p">,</span> <span class="nv">$status</span><span class="p">)</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">ProcessGraph</span><span class="p">(</span><span class="nv">$G_example</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">wait</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span><span class="o">-&gt;</span><span class="na">code</span> <span class="o">!==</span> <span class="nx">Grpc\STATUS_OK</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// gRPC 请求出错
+</span></span></span><span class="line"><span class="cl">    <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s1">&#39;Error calling grpc server -&gt; ProcessGraph: &#39;</span> <span class="o">.</span> <span class="nv">$status</span><span class="o">-&gt;</span><span class="na">details</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 因为我的返回结果是个map数据类型，php中没有该类型，需要做一个遍历取值，如果是string类型可以直接取。
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$NodeScores</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getNodeScores</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$NodeScores</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">json_encode</span><span class="p">(</span><span class="nv">$NodeScores</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>该函数返回一个json数据，想要修改可以使用 <code>json_decode()</code> , 至此，大功告成！</p>
+<h2 id="备注">备注<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>因为我的protoc文件的返回结果定义为一个map，这是go才有的数据结构，php没有
+使用 <code>var_dump($response-&gt;getNodeScores())</code>可以看到这是谷歌grpc核心中定义的一个mapfield object，可以直接像go的map一样，用 <code>$response-&gt;getNodeScores()['xxx']</code>获取值。</p>
+<p>虽然官网显示有ToString()的方法：<a href="https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString" rel="external">https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString</a>
+但是在这里无法使用，所以我只能通过遍历的方式获取所有值存到一个数组里，毕竟map结构本身就不支持一次获取全部，还是要遍历。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Mar 24, 2024
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/go/index.html">Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc/index.html">GRPC</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-go/index.html">Grpc-Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/grpc-python/index.html">Grpc-Python</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/python/index.html">Python</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="使用grpc在go后端和python服务间通信">使用grpc在go后端和python服务间通信</h1>
+
+<h2 id="grpc前言">grpc前言<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，
+基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。
+<strong>grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)</strong></p>
+<p>由于我的一个go后端(也可以不是go)需要实现神经网络相关的功能，我要调用一个python的服务，于是想到了使用grpc的方式。</p>
+<p>初次接触，将从0介绍到功能实现。</p>
+<p>感谢官方的文档</p>
+<blockquote>
+<p><a href="https://grpc.io/docs/languages/go/quickstart/" rel="external">https://grpc.io/docs/languages/go/quickstart/</a></p>
+</blockquote>
+<h2 id="主要流程">主要流程<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>定义.proto文件：创建一个 .proto 文件，定义图数据和 GCN 结果的消息类型以及服务接口。</li>
+<li>生成 gRPC 代码：使用 Protocol Buffers 编译器 protoc，根据 .proto 文件生成 Go 和 Python 的 gRPC 代码。</li>
+<li>实现 Python 服务器：在 Python 中实现 gRPC 服务器，接收来自 Go 客户端的图数据，进行 GCN 处理，并返回处理结果。</li>
+<li>实现 Go 客户端：在 Go 中实现 gRPC 客户端，发送图数据到 Python 服务器，并接收处理结果。</li>
+</ul>
+<h2 id="安装protoc解释器">安装protoc解释器<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>grpc是通过pb(protocolbuffer)这个协议工作的，首先安装protoc的解释器，并将其bin文件夹添加到环境变量。
+地址：<a href="https://github.com/protocolbuffers/protobuf/releases" rel="external">https://github.com/protocolbuffers/protobuf/releases</a>
+下载后解压到任意文件夹位置，然后将解压后的bin文件夹添加到环境变量。</p>
+<p>打开cmd输入 <code>protoc</code>有数据返回就ok了。</p>
+<p><strong>为了在项目中使用protoc的一些指令可以正常工作，还有把bin文件下的 <code>protoc.exe</code>文件复制一份到 <code>C:\Windows\System32</code>文件夹下。</strong></p>
+<p>顺便一提，为了proto文件可以在vscode高亮显示，可以安装官方的插件：protobuf，作者：pbkit</p>
+<h2 id="go端工作">go端工作<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>首先安装go的grpc库</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">go</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="o">-</span><span class="nx">u</span><span class="w"> </span><span class="nx">google</span><span class="p">.</span><span class="nx">golang</span><span class="p">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">grpc</span></span></span></code></pre></div>
+<p>然后安装可以将proto文件自动解析为go文件的解释器：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="k">go</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">google</span><span class="p">.</span><span class="nx">golang</span><span class="p">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">protobuf</span><span class="o">/</span><span class="nx">cmd</span><span class="o">/</span><span class="nx">protoc</span><span class="o">-</span><span class="nx">gen</span><span class="o">-</span><span class="k">go</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">go</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">google</span><span class="p">.</span><span class="nx">golang</span><span class="p">.</span><span class="nx">org</span><span class="o">/</span><span class="nx">grpc</span><span class="o">/</span><span class="nx">cmd</span><span class="o">/</span><span class="nx">protoc</span><span class="o">-</span><span class="nx">gen</span><span class="o">-</span><span class="k">go</span><span class="o">-</span><span class="nx">grpc</span></span></span></code></pre></div>
+<p>定义proto文件 <code>gcn.proto</code>：
+其中go_package是指定生成的文件位置和文件所在包名。“.” 表示文件生成在当前目录，“；”表示参数分割，后面的proto是将生成文件放在proto包中。
+还有更多可选参数，自行参考官方</p>
+<blockquote>
+<p>go_package：指定生成 Go 代码时的包路径，格式为 option go_package = &ldquo;package_path&rdquo;;，用于将生成的代码放置在指定的 Go 包中。</p>
+<p>java_package：指定生成 Java 代码时的包路径，格式为 option java_package = &ldquo;package_path&rdquo;;，用于将生成的代码放置在指定的 Java 包中。</p>
+<p>java_outer_classname：指定生成 Java 代码时的外部类名，格式为 option java_outer_classname = &ldquo;ClassName&rdquo;;，用于指定生成的 Java 类的外部类名。</p>
+<p>cc_generic_services：指定是否生成 C++ 通用服务（generic services），格式为 option
+cc_generic_services = true; 或 option cc_generic_services = false;，默认为
+true。</p>
+<p>cc_enable_arenas：指定是否启用 C++ arenas 内存管理，格式为 option cc_enable_arenas =
+true; 或 option cc_enable_arenas = false;，默认为 false。</p>
+<p>optimize_for：指定优化选项，可以是 SPEED、CODE_SIZE 或 LITE_RUNTIME，格式为 option
+optimize_for = SPEED;，默认为 SPEED。</p>
+<p>deprecated：指定消息或字段已过时，格式为 option deprecated = true;。</p>
+<p>rpc_timeout：指定 gRPC 调用的超时时间，格式为 option rpc_timeout = &ldquo;10s&rdquo;;，表示超时时间为 10
+秒。</p>
+</blockquote>
+<p>gcn.proto协议文件具体定义为：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">syntax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#34;proto3&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">option</span><span class="w"> </span><span class="nx">go_package</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#34;.;proto&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">repeated</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nx">features</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">Edge</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nx">source_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nx">target_id</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">GraphData</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">repeated</span><span class="w"> </span><span class="nx">Node</span><span class="w"> </span><span class="nx">nodes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">repeated</span><span class="w"> </span><span class="nx">Edge</span><span class="w"> </span><span class="nx">edges</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">message</span><span class="w"> </span><span class="nx">GCNResult</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="kd">map</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">node_scores</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">service</span><span class="w"> </span><span class="nx">GCNService</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">rpc</span><span class="w"> </span><span class="nf">ProcessGraph</span><span class="p">(</span><span class="nx">GraphData</span><span class="p">)</span><span class="w"> </span><span class="nf">returns</span><span class="w"> </span><span class="p">(</span><span class="nx">GCNResult</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>我这里是用来处理图数据。</p>
+<p>接下来生成 gRPC 代码：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">protoc</span><span class="w"> </span><span class="o">--</span><span class="nx">go_out</span><span class="p">=.</span><span class="w"> </span><span class="o">--</span><span class="nx">go_opt</span><span class="p">=</span><span class="nx">paths</span><span class="p">=</span><span class="nx">source_relative</span><span class="w"> </span><span class="nx">your_proto_file</span><span class="p">.</span><span class="nx">proto</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">protoc</span><span class="w"> </span><span class="o">--</span><span class="k">go</span><span class="o">-</span><span class="nx">grpc_out</span><span class="p">=.</span><span class="w"> </span><span class="o">--</span><span class="k">go</span><span class="o">-</span><span class="nx">grpc_opt</span><span class="p">=</span><span class="nx">paths</span><span class="p">=</span><span class="nx">source_relative</span><span class="w"> </span><span class="nx">your_proto_file</span><span class="p">.</span><span class="nx">proto</span></span></span></code></pre></div>
+<p>会生成两个文件 <code>gcn.pb.go</code>和 <code>gcn_grpc.pb.go</code></p>
+<ul>
+<li>前者生成的文件，包含所有pb协议的go代码，将数据格式写为go的结构体形式。包含填充、序列化，检索请求和响应消息类型。</li>
+<li>后者包含<strong>客户端</strong>使用中定义的方法，调用的接口类型。以及<strong>服务端</strong>要实现的接口类型。包含创建客户端服务和服务端服务的方法。
+<strong>请注意，无论go后端作为请求grpc的一方(client)还是做出响应的一方(server),这两个文件都是必须生成的。</strong>
+使用 <code>client := pb.NewXXXXServiceClient(conn)</code>的方式创建客户端</li>
+</ul>
+<p>最后就是完成go端的grpc请求代码，每次请求都创建一个grpc的连接，请求完毕defer断开：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span><span class="w"> </span><span class="nf">GCN_request</span><span class="p">()</span><span class="w"> </span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">float32</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">conn</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">grpc</span><span class="p">.</span><span class="nf">Dial</span><span class="p">(</span><span class="s">&#34;localhost:9999&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">grpc</span><span class="p">.</span><span class="nf">WithTransportCredentials</span><span class="p">(</span><span class="nx">insecure</span><span class="p">.</span><span class="nf">NewCredentials</span><span class="p">()))</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Failed to connect to gcnserver(py) by grpc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">defer</span><span class="w"> </span><span class="nx">conn</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">pb</span><span class="p">.</span><span class="nf">NewGCNServiceClient</span><span class="p">(</span><span class="nx">conn</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="c1">// 创建一个实例的图数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">G_example</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">pb</span><span class="p">.</span><span class="nx">GraphData</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Nodes</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Node</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node1&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">Features</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.3</span><span class="p">}},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">{</span><span class="nx">Id</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node2&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">Features</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="kt">float32</span><span class="p">{</span><span class="mf">0.4</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">}},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">Edges</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="o">*</span><span class="nx">pb</span><span class="p">.</span><span class="nx">Edge</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="p">{</span><span class="nx">SourceId</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node1&#34;</span><span class="p">,</span><span class="w"> </span><span class="nx">TargetId</span><span class="p">:</span><span class="w"> </span><span class="s">&#34;node2&#34;</span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">},</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="c1">// 发送请求并接收响应</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="nx">result</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nf">ProcessGraph</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nf">Background</span><span class="p">(),</span><span class="w"> </span><span class="nx">G_example</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c1">// Error calling ProcessGraph</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kc">nil</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">.</span><span class="nx">NodeScores</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>最后的最后别忘了创建一个路由调用这个方法。</p>
+<h2 id="python端工作">python端工作<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>py同样安装grpc相关库</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">grpcio</span>
+</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">grpcio</span><span class="o">-</span><span class="n">tools</span></span></span></code></pre></div>
+<h3 id="生成grpc文件">生成grpc文件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>终端cd到proto文件目录下，执行：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">grpc_tools</span><span class="o">.</span><span class="n">protoc</span> <span class="o">-</span><span class="n">I</span> <span class="o">./</span> <span class="o">--</span><span class="n">python_out</span><span class="o">=./</span> <span class="o">--</span><span class="n">grpc_python_out</span><span class="o">=.</span> <span class="n">your</span><span class="o">-</span><span class="n">file</span><span class="o">.</span><span class="n">proto</span></span></span></code></pre></div>
+<p>py的服务端代码grpc相关的代码较为简洁，重点在于数据处理。将其服务端口和grpc客户端的请求端口保持一致。
+部分代码取自官方示例。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">grpc</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">concurrent</span> <span class="kn">import</span> <span class="n">futures</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">proto</span> <span class="kn">import</span> <span class="n">gcn_pb2_grpc</span><span class="p">,</span> <span class="n">gcn_pb2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GCNServicer</span><span class="p">(</span><span class="n">gcn_pb2_grpc</span><span class="o">.</span><span class="n">GCNServiceServicer</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">ProcessGraph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Process graph data using GCN and return result</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># example: return gcn_pb2.GCNResult(node_scores={&#34;node1&#34;: 0.5, &#34;node2&#34;: 0.8})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">server</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="o">=</span> <span class="n">grpc</span><span class="o">.</span><span class="n">server</span><span class="p">(</span><span class="n">futures</span><span class="o">.</span><span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gcn_pb2_grpc</span><span class="o">.</span><span class="n">add_GCNServiceServicer_to_server</span><span class="p">(</span><span class="n">GCNServicer</span><span class="p">(),</span> <span class="n">server</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="o">.</span><span class="n">add_insecure_port</span><span class="p">(</span><span class="s1">&#39;[::]:9999&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;gRPC 服务端已开启,端口为9999...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="o">.</span><span class="n">wait_for_termination</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="p">()</span></span></span></code></pre></div>
+<h2 id="启动">启动<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>做好了以上工作就大功告成了，启动两个服务即可</p>
+<p><code>go run main.go</code></p>
+<p><code>python server.py</code></p>
+<p>然后访问定义的路由地址，如下显示，nice~</p>
+<p><a href="#R-image-c207f9a8606f573bf4c2616f173fbe8a" class="lightbox-link"><img alt="2" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c207f9a8606f573bf4c2616f173fbe8a"><img alt="2" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/1.png"></a></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Mar 21, 2024
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/css/index.html">CSS</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/mac%E9%A3%8E%E6%A0%BC/index.html">Mac风格</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/prism/index.html">Prism</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/typecho/index.html">Typecho</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="typecho中代码高亮并有mac风格">Typecho中代码高亮并有Mac风格</h1>
+
+<h2 id="三步">三步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>下载prism文件。</li>
+<li>在head中引用，并添加行号类。</li>
+<li>修改CSS。</li>
+</ul>
+<h3 id="第一步官网下载选择语言和需要的插件">第一步：官网下载，选择语言和需要的插件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>易得</p>
+<h3 id="第二步headerphp文件的head块中添加如下代码">第二步：header.php文件的head块中添加如下代码<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="nx">为pre块添加</span> <span class="nx">line</span><span class="o">-</span><span class="nx">numbers</span> <span class="nx">类</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">document</span><span class="o">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">var</span> <span class="nx">codeBlocks</span> <span class="o">=</span> <span class="nx">document</span><span class="o">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.post-content pre:not(.line-numbers)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">codeBlocks</span><span class="o">.</span><span class="k">forEach</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">codeBlock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">codeBlock</span><span class="o">.</span><span class="nx">classList</span><span class="o">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;line-numbers&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="nx">prism</span> <span class="nx">代码高亮</span><span class="o">&amp;</span><span class="nx">主题选择</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="nx">注意prismjs_theme</span> <span class="nx">是我在function文件中定义的</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;?</span><span class="nx">php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span><span class="na">prismjs_theme</span> <span class="o">==</span> <span class="s1">&#39;tomorrow&#39;</span><span class="p">)</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;替换为你的prism.css的路径，下同&#39;); ?&gt;&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;script src=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;替换为你的prism.js的路径，下同&#39;); ?&gt;&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;?php elseif ($this-&gt;options-&gt;prismjs_theme == &#39;coy&#39;) : ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;prismjs/coy/prism.css&#39;); ?&gt;&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;script src=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;prismjs/coy/prism.js&#39;); ?&gt;&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;?php endif; ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;!-- 修改为mac样式,请替换你的mac.css文件路径--&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;css/mac.css&#39;); ?&gt;&#34; /&gt;
+</span></span></span></code></pre></div>
+<h3 id="第三步修改满意的css">第三步：修改满意的CSS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>下面只写了 <code>mac.css</code>文件。
+<strong>注意，我的效果也修改了下载了 <code>prism.css</code>文件。</strong>
+更具体的css可以参考我的github仓库，该主题是开源的。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* macOS 风格的代码框样式 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="nt">language-</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">transition</span><span class="p">:</span> <span class="k">box-shadow</span> <span class="mf">0.3</span><span class="kt">s</span> <span class="kc">ease-in-out</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-width</span><span class="p">:</span> <span class="mi">85</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* macOS 风格的图标 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="nt">language-</span><span class="o">]</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&#34;../img/icon_mac.svg&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">background-position-y</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">top</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">left</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">54</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 悬浮 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="nt">language-</span><span class="o">]</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">25</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></div>
+<h2 id="你也可以直接从我的仓库拉取源代码ayakin">你也可以直接从我的仓库拉取源代码！👉👉<strong><a href="https://github.com/viogami/Ayakin-TypechoTheme" rel="external">Ayakin</a></strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Dec 10, 2023
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/bot/index.html">Bot</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/go/index.html">Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/telegram/index.html">Telegram</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/webhook/index.html">Webhook</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="telegram-bot部署">Telegram Bot部署</h1>
+
+<h2 id="基本示例我放在了github上gobot">基本示例我放在了github上：<a href="https://github.com/viogami/viogo" rel="external">Gobot</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="最终实现效果-">最终实现效果 👇👇👇<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><a href="#R-image-e716d2d9bae3d35a90d70496dade67c8" class="lightbox-link"><img alt="img" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/telegram-bot/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e716d2d9bae3d35a90d70496dade67c8"><img alt="img" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/telegram-bot/1.png"></a></p>
+<h2 id="创建bot">创建bot<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>从botfather处创建bot，命名为 <code>vio</code>.
+明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)</p>
+<h2 id="使用https">使用HTTPS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>在Telegram的Bot API中，使用HTTPS是强烈建议的。如果Bot使用HTTP而不是HTTPS，Telegram服务器可能会拒绝处理请求。
+为了确保Tg Bot能够正常运行并保障通信安全，最好使用HTTPS。许多服务提供商都提供免费的SSL证书.
+如：<strong>Let&rsquo;s Encrypt证书</strong>，它是一种免费的、开源的证书颁发机构（CA），可以用来为服务器启用HTTPS，从而实现安全的Bot通信。</p>
+<p>但是如果部署在paas平台，则无需考虑证书相关的问题，更多部署细节可以查看我 <a href="https://github.com/viogami/viogo#%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98" rel="external">仓库的说明</a></p>
+<h2 id="响应方式">响应方式<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Telegram Bot有以下响应方式：</p>
+<p>长轮询（Long Polling）： 这是一种常见的实时通信方式。Bot向Telegram服务器发送一个请求，然后服务器一直保持连接打开，直到有新消息到达。这样，Bot能够即时收到用户的消息并立即作出响应。长轮询是一种相对简单的方式，适用于需要实时性的场景。</p>
+<p>Webhook： Webhook是一种更为高效和现代的方式。允许你在你的服务器上设置一个HTTP端点，当有新消息到达时，Telegram服务器会向这个端点发送POST请求。这样，你的Bot可以立即得知有新消息，并作出响应。使用Webhook能够避免频繁的轮询操作，提高效率。</p>
+<p>云函数（Cloud Functions）： 你还可以将Bot的部分功能部署到云函数（如AWS Lambda、Google Cloud Functions等）上，以响应特定的事件。这样可以实现高度的可伸缩性和响应性。</p>
+<h2 id="webhook">webhook<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>为了有较好的实时通信体验，并且完成多方通信，我准备使用webhook的方案。</p>
+<p><strong>设置Webhook端点</strong>： 在我服务器上，创建一个HTTP端点来接收Telegram的Webhook请求。这个端点需要运行在公共网络上，并且能够处理POST请求。这个端点将会接收到所有的Telegram消息。</p>
+<p><strong>配置Bot的Webhook</strong>： 使用Telegram Bot API设置Bot的Webhook，指向刚刚创建的HTTP端点。可以使用NewWebhook方法，指定Webhook的URL(我部署在paas平台上，无需使用证书密钥)。</p>
+<h2 id="paas平台部署">paas平台部署<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>我选择了zeabur这个服务提供平台,</p>
+<p>zeabur上项目部署非常快,甚至不用写dockfile,而且对go项目有完整的支持,算是符合他们的口号:</p>
+<blockquote>
+<p>Deploying your service with one click</p>
+</blockquote>
+<p>在使用paas服务时，需要注意项目的端口号设置,最好设置在环境变量中,然后在项目中通过 <code>os.Getenv(&quot;xxx&quot;)</code>来获取端口号.</p>
+<p>zeabur的go项目中，环境变量PORT是默认8080，且为全局的。也可以不设置，直接调用就好了。</p>
+<ul>
+<li>对于tgbot：官方示例中使用的8443端口，在部署到paas平台时8443端口需要确认是否开放。 我建议不要使用官方示例中把端口号写明的写法，通过环境变量PORT调用端口号，避免webhook创建失败，或者监听未开放的端口等问题。</li>
+</ul>
+<h2 id="调用chatgpt-api">调用chatGPT API<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="首先获取密钥">首先获取密钥<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>但是注意，不是申请了账号密钥就可以使用的，只有三个月内注册的账号每个月有免费的5$的额度。如果没有额度，申请的密钥也是无法使用的。很多购买的GPT的账号，api基本都是没额度或者额度每个月都被其他人用完的，可以使用国内的中转代理，来解决密钥的问题。 我推荐一个：<a href="https://one-api.bltcy.top/" rel="external">柏拉图次元Al</a></p>
+<h3 id="gpt代理问题">GPT代理问题<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>注意：如果使用中转，需要更换post请求的URL</p>
+<p>使用go-openai库后，需要更改config
+更多细节可以查看服务提供商的文档，以及这个<a href="https://github.com/sashabaranov/go-openai/issues/513#issuecomment-1851585302" rel="external">issue</a></p>
+<p>示例：<code>URL：&quot;https://api.example.com/v1&quot;</code>.
+其中后面的“v1”是必须的</p>
+<h3 id="实现数据处理逻辑">实现数据处理逻辑<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>对于tgbot来说，私聊要回复信息需要知道user的id或者username，但是在群里中需要知道chat的id。</p>
+<p>注意，tg的群组分为group和supergroup，公开的群组都是supergroup，只有私群是group。</p>
+<p>设置了消息处理逻辑，如果想直接用chatgpt的api来聊天，写一个函数调用就可以了。</p>
+<p>对于go语言来说，有一个以及封装好的，对于openai API使用的库：<a href="https://github.com/sashabaranov/go-openai" rel="external">go-openai</a></p>
+<h3 id="重新部署">重新部署<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>把chatGPT的API密钥写在环境变量中，redeploy服务就好了</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Dec 7, 2023
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

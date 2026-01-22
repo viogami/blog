@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chatgpt :: Tag :: Purple Pulpo</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/chatgpt/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VioGo--不止聊天的奇妙bot</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/viogo/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/viogo/index.html</guid>
+      <description>纯go编写的机器人业务后端，bot取名为 Vio ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。 可以完成基于chatgpt聊天任务，以及一些简单的指令响应。&#xA;如果你有想法和意见请提issue！这对我和bot都很重要！ 欢迎qq加群讨论：340961300</description>
+    </item>
+  </channel>
+</rss>

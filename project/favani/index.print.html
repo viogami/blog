@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="演示DEMO地址 技术栈：gin&#43;gorm&#43;mysql&#43;jwt&#43;redis&#43;grpc&#43;pytorch&#43;vue3&#43;vite&#43;tailwind">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="FavAni--从0开始的web开发日志 :: Hugo Relearn Theme">
+    <meta name="twitter:description" content="演示DEMO地址 技术栈：gin&#43;gorm&#43;mysql&#43;jwt&#43;redis&#43;grpc&#43;pytorch&#43;vue3&#43;vite&#43;tailwind">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/project/favani/index.html">
+    <meta property="og:site_name" content="Hugo Relearn Theme">
+    <meta property="og:title" content="FavAni--从0开始的web开发日志 :: Hugo Relearn Theme">
+    <meta property="og:description" content="演示DEMO地址 技术栈：gin&#43;gorm&#43;mysql&#43;jwt&#43;redis&#43;grpc&#43;pytorch&#43;vue3&#43;vite&#43;tailwind">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Project">
+    <meta property="article:published_time" content="2023-09-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-09-30T00:00:00+00:00">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="FavAni--从0开始的web开发日志 :: Hugo Relearn Theme">
+    <meta itemprop="description" content="演示DEMO地址 技术栈：gin&#43;gorm&#43;mysql&#43;jwt&#43;redis&#43;grpc&#43;pytorch&#43;vue3&#43;vite&#43;tailwind">
+    <meta itemprop="datePublished" content="2023-09-30T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2023-09-30T00:00:00+00:00">
+    <meta itemprop="wordCount" content="63">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <title>FavAni--从0开始的web开发日志 :: Hugo Relearn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/project/favani/index.html" rel="canonical" type="text/html" title="FavAni--从0开始的web开发日志 :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070402" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070402" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1769070402";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070402" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/project\/favani\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070402"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/project/favani/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#演示demo地址">演示DEMO地址</a>
+      <ul>
+        <li><a href="#技术栈gingormmysqljwtredisgrpcpytorchvue3vitetailwind">技术栈：gin+gorm+mysql+jwt+redis+grpc+pytorch+vue3+vite+tailwind</a></li>
+      </ul>
+    </li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#原型设计">原型设计</a></li>
+    <li><a href="#前端">前端</a></li>
+    <li><a href="#后端">后端</a></li>
+    <li><a href="#总结">总结</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/index.html"><span itemprop="name">Hugo Relearn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/project/index.html"><span itemprop="name">Project</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">FavAni--从0开始的web开发日志</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/project/FavAni--从0开始的web开发日志/index.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/project/favani/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/project/atravelerrecognizeimage/index.html" title="基于pyautogui的自动化程序 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/project/uma_drawcard_1/index.html" title="【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable project" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="favani--从0开始的web开发日志">FavAni--从0开始的web开发日志</h1>
+
+<h2 id="演示demo地址"><a href="http://fa.viogami.tech/" rel="external" target="_self">演示DEMO地址</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="技术栈gingormmysqljwtredisgrpcpytorchvue3vitetailwind">技术栈：gin+gorm+mysql+jwt+redis+grpc+pytorch+vue3+vite+tailwind<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h2 id="前言">前言<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><del>一方面为了完成毕设(毕设大概率是造前人的轮子了)，一方面也是</del>毕设导师要求用WP了，那纯兴趣使然了。
+这个项目的开发很是缓慢，因为今年大部分时间在考研，而且前后端技术栈有很多空白，如果类似bangumi这样的网站，数据库的知识也不能缺乏。我coding效率一般，好在有chatgpt的强力支持，bangmui的网站api是开放的，但我可能没精力实现全部功能。<del>我的目标其实是一个纯粹的个人打分网站(去社交化，但提供社交软件导入)</del></p>
+<p>随着对web开发的认知逐步完善，我决定大改需求，原来的目标推翻重做，造轮子实在比较蠢。</p>
+<p>我是bangumi网站的用户，兴趣之余也想利用本人能力仿制一个功能类似的项目，添加个人认为有必要的其他功能，使用不同于bangumi站点的设计框架，设计一个可以给用户类似使用需求的web应用。</p>
+<p>&mdash;&ndash;时间线总览&mdash;&ndash;</p>
+<ul>
+<li>确认了需求和使用什么前后端的框架,今天从0搭建了vue+elementui框架 [2023/9/30]</li>
+<li>使用vite+vue3+elements-plus开发前端，之前vue-cil太多是基于vue2的，要做就做新的
+[2023/10/10]</li>
+<li>没时间搞，今天想了一下看，把需求推翻重做，不是以仿bangumi的web应用为目标，bangui有自己正在开发的react应用，多劳无益，还不如去fork。现在摸清楚了bangumi的api怎么调用，数据怎么get，post，做完一个完成的自助数据查询网站也不错了。没多余精力搞前端，u3d还在水深火热之中[2023/11/16]</li>
+<li>决定使用vue3+go的前后端框架，完成了对用户和条目信息的get和分析。
+[2023/11/16]</li>
+<li>花了两天，做了界面，用<a href="https://github.com/qingwave/weave" rel="external" target="_self">weave</a>的界面做了一定的参考，可以想象，css是复杂精密的，界面制作是个细活，还是挺难上手的。完成了功能</li>
+<li>查询用户，用户页面，用户页面进行用户收藏查询(一次显示8个，有下一页按钮)</li>
+<li>导航，页脚，侧边栏设计</li>
+<li>时间线，关于，以及重点的文档页面，通过调用github的api获取仓库的README.md文件</li>
+<li>查询条目
+[2023/11/27]</li>
+<li>实现了前后端基本交互，完善了登陆和注册功能，线上连接了mysql和redis
+[2024/1/4]</li>
+<li>终极完善了登录注册功能，使用了中间件鉴权，jwt的方式，给两种登录方式各设置了不同的token。
+[2024/2]</li>
+<li>实现了收藏的大部分功能，推荐算法的执行部分使用python编写，部署为一个微服务，通过<strong>grpc</strong>的方式调用。
+[2024/3]</li>
+</ul>
+<p>bangumi开源项目，相关链接：
+<strong><a href="https://bangumi.github.io/api/#/" rel="external" target="_self">bangumi API</a></strong>
+<strong><a href="https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md" rel="external" target="_self">bangmui 用户授权机制</a></strong></p>
+<p>自助数据检索功能</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 在login页面，输入用户名，返回用户相关信息</li>
+<li><input checked="" disabled="" type="checkbox"> 输入相关条目，返回需要的条目信息</li>
+</ul>
+<h2 id="原型设计">原型设计<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>参考bangumi各种辅助工具的UI逻辑，但是界面设计可以更现代化一点，可能会花费很多时间，会经济的考虑设计样式。
+项目参考：<a href="https://github.com/qingwave/weave" rel="external" target="_self">weave</a></p>
+<h2 id="前端">前端<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>个人作全栈开发，用vue这种较为轻量的前端开发框架。目前决定使用vue3+element-plus做前端。
+框架搭建：下载node.js，配置环境。创建第一个vue单页应用。根据elementUI的官方步骤，搭建框架</p>
+<hr>
+<p>今天发现之前是基于vue2的，用的是vue官方vue-cli脚手架，现在更推荐使用vite，仅支持vue3，遂改之。
+elementui也更新为element-plus仅用于支持vue3。vite不用全局安装，较为轻量。有了以前摸索的基础，下载了路由组件和element-plus，迅速就搭建好了空项目。</p>
+<p>花了一下午搞清楚了bangumi的API是怎么在vite中用axios的get和post请求调用的，记录了。输入用户名或者各种搜索条件可以获取到相应的数据了，下一步做一个数据爬取，然后完善功能吧。</p>
+<hr>
+<p>前端基本首页做完了，现在就是功能逻辑了，用户的功能也大差不大了，项目准备build发布一次，后续开发一下检索的功能，并开发后端和数据库，进行数据处理。</p>
+<p>基本完善了99%的页面设计。</p>
+<h2 id="后端">后端<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>后端用golang编写，使用GIN的框架。
+Restful API，使用gorm接入mysql，接入redis。</p>
+<p>目前实现了一个基本的登陆和注册功能，并把用户数据存放到数据库。处理前端POST的数据进行登陆和注册验证。
+使用jwt，构造鉴权中间件，分组路由实现。</p>
+<p>数据库中目前只有一个用户表。同时新建了条目表和用户收藏表，用于建立两表之间的联系。
+添加了tag表，gorm中用many2many的方式和条目表构建一个关系，同时用于对用户标签化，便于进行推荐算法。</p>
+<p>使用grpc服务和python后端通信。由于神经网络算法的代码过于依赖python，我将其微服务化，可以使得该代码给多个项目使用。通过定义protoc文件，生成protoc文件，编写grpc客户端和服务端代码，算法后端已经成熟的运行了。</p>
+<h2 id="总结">总结<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>vue基本官方文档就能解决90%的问题，构建后大小也很惊人， 只有几MB。
+其实完成了这个，vue的使用倒没有熟练多少，更多是了解了很多前端技术栈的知识，刚起步的时候，连vue和vite是什么都分不清，还一直以为我用的是vite框架呢🤣(导致项目名字也叫digbgm_<strong>vite</strong>了，笑)</p>
+<p>走完从开发到生产环境部署的全流程，实践一遍可以学到很多以为简单但并没那么简单的事情。比如api的调用跨域(需要nginx使用反代理，把指定的地址反代到跨域的地址)，刷新404问题，都是典中典，新手是这样的</p>
+<p>前端最大的问题，我觉得是配css，这是最折磨的，特别我还有一点强迫，还好我也不是主营前端，css凑合吧…
+现在我觉得说不定用tailwind会好一点。。。😥</p>
+<hr>
+<p>后端的搭建基于我对go的逐渐熟练以后，在有了go的相关基础和gin的一定使用经验后，我快速搭建了该项目的后端，并进行了线上部署。go打包后为linux可执行文件，上线是很快的，一键部署。在使用配置文件启动项目后，也更加了灵活。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Sep 30, 2023
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070402" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

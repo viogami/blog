@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="How to set up a multilingual site">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="Multilingual :: Hugo Relearn Theme">
+    <meta name="twitter:description" content="How to set up a multilingual site">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.html">
+    <meta property="og:site_name" content="Hugo Relearn Theme">
+    <meta property="og:title" content="Multilingual :: Hugo Relearn Theme">
+    <meta property="og:description" content="How to set up a multilingual site">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="Multilingual :: Hugo Relearn Theme">
+    <meta itemprop="description" content="How to set up a multilingual site">
+    <meta itemprop="wordCount" content="455">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="keywords" content="Howto,DisableLanguageSwitchingButton">
+    <title>Multilingual :: Hugo Relearn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.html" rel="alternate" hreflang="x-default">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.html" rel="alternate" hreflang="en">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/sitemanagement/multilingual/index.html" rel="alternate" hreflang="art-x-pir">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.html" rel="canonical" type="text/html" title="Multilingual :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.xml" rel="alternate" type="application/rss+xml" title="Multilingual :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070402" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070402" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1769070402";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070402" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070402" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070402" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070402" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/configuration\/sitemanagement\/multilingual\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070402"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#translation-by-file-name">Translation by File Name</a></li>
+    <li><a href="#translation-by-content-directory">Translation by Content Directory</a></li>
+    <li><a href="#search-settings">Search Settings</a></li>
+    <li><a href="#turn-off-language-switching">Turn Off Language Switching</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/index.html"><span itemprop="name">Hugo Relearn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/configuration/index.html"><span itemprop="name">Configuration</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/configuration/sitemanagement/index.html"><span itemprop="name">Site Management</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Multilingual</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/configuration/sitemanagement/multilingual/_index.en.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/configuration/sitemanagement/multilingual/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/configuration/sitemanagement/structure/index.html" title="Directory Structure (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/configuration/sitemanagement/versioning/index.html" title="Versioning (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable configuration" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="multilingual">Multilingual</h1>
+
+<p>The Relearn theme works with <a href="https://gohugo.io/content-management/multilingual/" rel="external" target="_self">Hugo&rsquo;s multilingual mode</a>.</p>
+<p>It supports many languages, including right-to-left languages.</p>
+
+<details class="box cstyle notices transparent expand">
+  <summary class="box-label">
+    <i class="expander-icon fa-fw fas fa-chevron-right"></i> 
+    Supported languages
+  </summary>
+  <div class="box-content">
+<ul>
+<li>Arabic</li>
+<li>Simplified Chinese</li>
+<li>Traditional Chinese</li>
+<li>Czech</li>
+<li>Danish</li>
+<li>Dutch</li>
+<li>English</li>
+<li>Finnish</li>
+<li>French</li>
+<li>German</li>
+<li>Hindi</li>
+<li>Hungarian</li>
+<li>Indonesian</li>
+<li>Italian</li>
+<li>Japanese</li>
+<li>Korean</li>
+<li>Persian</li>
+<li>Polish</li>
+<li>Portuguese</li>
+<li>Romanian</li>
+<li>Russian</li>
+<li>Spanish</li>
+<li>Swahili</li>
+<li>Turkish</li>
+<li>Ukrainian</li>
+<li>Vietnamese</li>
+</ul>
+  </div>
+</details>
+<h2 id="translation-by-file-name">Translation by File Name<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Here&rsquo;s how to make your site multilingual using <a href="https://gohugo.io/content-management/multilingual/#translation-by-file-name" rel="external" target="_self">translations by file name</a>:</p>
+<ol>
+<li>
+<p>Set up languages in your <code>hugo.toml</code> file:</p>
+<div class="tab-panel" data-tab-group="R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">hugo.</div>
+    <button
+      aria-controls="R-tab-id-fa3e1011501615eb9d3c4de8ccd17e80" aria-expanded="true"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-ec18ad9a83c312380533fa93ac6fc61c')"
+    >
+      <span class="tab-nav-text">toml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-373e90251d35fc638f6d7c1364bcb231" aria-expanded="false"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-6eedc03a68a69933c763e674f2d7c42f')"
+    >
+      <span class="tab-nav-text">yaml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-3151ad73f5a58eeaa85c87f22d5a0526" aria-expanded="false"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-fa3e1011501615eb9d3c4de8ccd17e80"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s1">&#39;English&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My Website&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">pir</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;art-x-pir&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageDirection</span> <span class="p">=</span> <span class="s1">&#39;rtl&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s1">&#39;Pirrratish&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Arrr, my Website&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-373e90251d35fc638f6d7c1364bcb231"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">English</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My Website</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pir</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">art-x-pir</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageDirection</span><span class="p">:</span><span class="w"> </span><span class="l">rtl</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">Pirrratish</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Arrr, my Website</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-3151ad73f5a58eeaa85c87f22d5a0526"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;defaultContentLanguage&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;en&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageName&#34;</span><span class="p">:</span> <span class="s2">&#34;English&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My Website&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pir&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;art-x-pir&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageDirection&#34;</span><span class="p">:</span> <span class="s2">&#34;rtl&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageName&#34;</span><span class="p">:</span> <span class="s2">&#34;Pirrratish&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Arrr, my Website&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<p>Duplicate your content files and add language codes to their file names:</p>
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>third-day.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>third-day.pir.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.en.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.pir.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt accent cstyle"></i><span>hugo.toml</span></li>
+</ul>
+</div>
+</li>
+</ol>
+<h2 id="translation-by-content-directory">Translation by Content Directory<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>The theme also support <a href="https://gohugo.io/content-management/multilingual/#translation-by-content-directory" rel="external" target="_self">translations by content directory</a> which can be configured in a similar way.</p>
+<ol>
+<li>
+<p>Set up languages in your <code>hugo.toml</code> file:</p>
+<div class="tab-panel" data-tab-group="R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">hugo.</div>
+    <button
+      aria-controls="R-tab-id-7ecd4b71f72c12c6acce1e0d18c5162a" aria-expanded="true"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-ec18ad9a83c312380533fa93ac6fc61c')"
+    >
+      <span class="tab-nav-text">toml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-5708d8e3d469e2b4ea374c117b31d76b" aria-expanded="false"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-6eedc03a68a69933c763e674f2d7c42f')"
+    >
+      <span class="tab-nav-text">yaml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-dfa590fc3c466f777888a8434180fb4f" aria-expanded="false"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-7ecd4b71f72c12c6acce1e0d18c5162a"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">en</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">contentDir</span> <span class="p">=</span> <span class="s1">&#39;content/en&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;en&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s1">&#39;English&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My Website&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">pir</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">contentDir</span> <span class="p">=</span> <span class="s1">&#39;content/pir&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;art-x-pir&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageDirection</span> <span class="p">=</span> <span class="s1">&#39;rtl&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languageName</span> <span class="p">=</span> <span class="s1">&#39;Pirrratish&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Arrr, my Website&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">2</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-5708d8e3d469e2b4ea374c117b31d76b"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">defaultContentLanguage</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">languages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">en</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l">content/en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">en</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">English</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">My Website</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">pir</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">contentDir</span><span class="p">:</span><span class="w"> </span><span class="l">content/pir</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageCode</span><span class="p">:</span><span class="w"> </span><span class="l">art-x-pir</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageDirection</span><span class="p">:</span><span class="w"> </span><span class="l">rtl</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">languageName</span><span class="p">:</span><span class="w"> </span><span class="l">Pirrratish</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l">Arrr, my Website</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="m">2</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-dfa590fc3c466f777888a8434180fb4f"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;defaultContentLanguage&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;languages&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;en&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;contentDir&#34;</span><span class="p">:</span> <span class="s2">&#34;content/en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;en&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageName&#34;</span><span class="p">:</span> <span class="s2">&#34;English&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;My Website&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;pir&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;contentDir&#34;</span><span class="p">:</span> <span class="s2">&#34;content/pir&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageCode&#34;</span><span class="p">:</span> <span class="s2">&#34;art-x-pir&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageDirection&#34;</span><span class="p">:</span> <span class="s2">&#34;rtl&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;languageName&#34;</span><span class="p">:</span> <span class="s2">&#34;Pirrratish&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;Arrr, my Website&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">         <span class="nt">&#34;weight&#34;</span><span class="p">:</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+</li>
+<li>
+<p>Duplicate your content files into separate directories named by their language code:</p>
+<div class="list-tree"><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>content</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>en</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>pir</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>log</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>first-day</span><ul>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>second-day</span><ul>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>third-day.md</span></li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.md</span></li>
+</ul>
+</li>
+<li><i class="fa-fw fab fa-markdown secondary cstyle"></i><span>_index.md</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-folder"></i><span>themes</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>hugo-theme-relearn</span><ul>
+<li><i class="fa-fw fas fa-folder"></i><span>&hellip;</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><i class="fa-fw fas fa-file-alt accent cstyle"></i><span>hugo.toml</span></li>
+</ul>
+</div>
+</li>
+</ol>
+<h2 id="search-settings">Search Settings<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Check the <a href="/hugo-theme-relearn/configuration/sidebar/search/index.html#mixed-language-support">search configuration</a> for multilingual options.</p>
+<h2 id="turn-off-language-switching">Turn Off Language Switching<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><span class="badge cstyle option badge-with-title"><span class="badge-title"><i class="fa-fw fas fa-gears"></i></span><span class="badge-content">Option</span></span> By default the theme shows a language switcher in the lower part of the menu.</p>
+<p>If you want to have more control, where the language switcher is positioned or you want to configure a different icon, see the <a href="/hugo-theme-relearn/configuration/sidebar/menus/index.html#defining-sidebar-menus">chapter on sidebar configuration</a>.</p>
+<p>To disable the language switcher set <code>disableLanguageSwitchingButton=true</code></p>
+<div class="tab-panel" data-tab-group="R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">hugo.</div>
+    <button
+      aria-controls="R-tab-id-3f71ac14a554052e9e3f32cc01a74671" aria-expanded="true"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-ec18ad9a83c312380533fa93ac6fc61c')"
+    >
+      <span class="tab-nav-text">toml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-581fc4ec1f238b32bd27732d2c9e708c" aria-expanded="false"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-6eedc03a68a69933c763e674f2d7c42f')"
+    >
+      <span class="tab-nav-text">yaml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-91dc3d52240d218f00277a07e702d8b1" aria-expanded="false"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-3f71ac14a554052e9e3f32cc01a74671"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">disableLanguageSwitchingButton</span> <span class="p">=</span> <span class="kc">true</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-581fc4ec1f238b32bd27732d2c9e708c"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">params</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">disableLanguageSwitchingButton</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-91dc3d52240d218f00277a07e702d8b1"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;params&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;disableLanguageSwitchingButton&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/categories/howto/index.html">Howto</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070402" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070402" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

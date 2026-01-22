@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html id="R-html" lang="art-x-pir" dir="rtl" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="How to display custom taxonomies on your pages">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="Taxonomies :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta name="twitter:description" content="How to display custom taxonomies on your pages">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/customization/taxonomy/index.html">
+    <meta property="og:site_name" content="Cap&#39;n Hugo Relearrrn Theme">
+    <meta property="og:title" content="Taxonomies :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta property="og:description" content="How to display custom taxonomies on your pages">
+    <meta property="og:locale" content="art_x_pir">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Configurrrat&#39;n">
+    <meta property="article:tag" content="Taxonomy">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="Taxonomies :: Cap&#39;n Hugo Relearrrn Theme">
+    <meta itemprop="description" content="How to display custom taxonomies on your pages">
+    <meta itemprop="wordCount" content="357">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="keywords" content="Taxonomy">
+    <title>Taxonomies :: Cap&#39;n Hugo Relearrrn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/customization/taxonomy/index.html" rel="alternate" hreflang="x-default">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/configuration/customization/taxonomy/index.html" rel="alternate" hreflang="en">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/customization/taxonomy/index.html" rel="alternate" hreflang="art-x-pir">
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/pir/configuration/customization/taxonomy/index.html" rel="canonical" type="text/html" title="Taxonomies :: Cap&#39;n Hugo Relearrrn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769070409" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769070409" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769070409" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.pir.js?1769070409";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769070409" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070409" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769070409" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070409" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769070409" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769070409" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/pir\/configuration\/customization\/taxonomy\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text t' clipboard`;
+      window.T_Copied_to_clipboard = `Text copied t' clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied t' clipboard!`;
+      window.T_Reset_view = `Rrreset view`;
+      window.T_View_reset = `View rrreset!`;
+      window.T_No_results_found = `No rrresults found fer "{0}"`;
+      window.T_N_results_found = `{1} rrresults found fer "{0}"`;
+      window.T_Browser_unsupported_feature = `This browserrr doesn't supporrrt this featurrre`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769070409"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/pir/configuration/customization/taxonomy/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table o&#39; Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#default-behavior">Default Behavior</a></li>
+    <li><a href="#setting-up-custom-taxonomies">Sett'n Up Custom Taxonomies</a></li>
+    <li><a href="#showing-custom-taxonomies">Show'n Custom Taxonomies</a>
+      <ul>
+        <li><a href="#parameters">Parameters</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/pir/index.html"><span itemprop="name">Cap&#39;n Hugo Relearrrn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/pir/configuration/index.html"><span itemprop="name">Configurrrat&#39;n</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/pir/configuration/customization/index.html"><span itemprop="name">Customization</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Taxonomies</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/configuration/customization/taxonomy.pir.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/configuration/customization/taxonomy/index.print.html" title="Prrrint whole chapterrr (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/configuration/customization/outputformats/index.html" title="Output Formats (🡒)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/pir/configuration/reference/index.html" title="Options Reference (🡐)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Morrre"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable configuration" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tag-a-taggs" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/tags/taxonomy/index.html">Taxonomy</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="taxonomies">Taxonomies</h1>
+
+<p>This plank explains how t' show custom taxonomies on yer planks.</p>
+<p>For more details, check th' official docs on <a href="https://gohugo.io/content-management/taxonomies/#configure-taxonomies" rel="external" target="_self">sett'n up custom taxonomies</a> an' <a href="https://gohugo.io/content-management/taxonomies/#assign-terms-to-content" rel="external" target="_self">us'n them 'n yer rrrambl'n</a>.</p>
+<h2 id="default-behavior">Default Behavior<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Th' Relearrrn theme automatically shows Hugo&rsquo;s <a href="https://gohugo.io/content-management/taxonomies/#default-taxonomies" rel="external" target="_self">default taxonomies</a> <em>tags</em> an' <em>categories</em> out o' th' box.</p>
+<ul>
+<li>Tags appear at th' top o' th' plank 'n alphabetical order 'n form o' baggage tags.</li>
+<li>Categories appear at th' bottom o' th' plank 'n alphabetical order as a list prefixed wit' an ay'con.</li>
+</ul>
+<p>Each item links t' a plank show'n all articles wit' that term.</p>
+<h2 id="setting-up-custom-taxonomies">Sett'n Up Custom Taxonomies<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>T' add custom taxonomies, update yer <code>hugo.toml</code> file. Ye also have t' add th' default taxonomies if ye want t' use them.</p>
+<div class="tab-panel" data-tab-group="R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9">
+  <div class="tab-nav">
+    <div class="tab-nav-title">hugo.</div>
+    <button
+      aria-controls="R-tab-id-47457941a914f38d109c333be71e7dc8" aria-expanded="true"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-nav-button tab-panel-style cstyle initial active" tabindex="-1"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-ec18ad9a83c312380533fa93ac6fc61c')"
+    >
+      <span class="tab-nav-text">toml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-7520657738f98061bb5ef53ec3fdbf91" aria-expanded="false"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-6eedc03a68a69933c763e674f2d7c42f')"
+    >
+      <span class="tab-nav-text">yaml</span>
+    </button>
+    <button
+      aria-controls="R-tab-id-eb1a96873c0638e3285faa1b26ff371a" aria-expanded="false"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-nav-button tab-panel-style cstyle initial"
+      onclick="switchTab('R-tabs-c9edc9b3721ed1719443e64b6ad9a1a9','R-tab-466deec76ecdf5fca6d38571f6324d54')"
+    >
+      <span class="tab-nav-text">json</span>
+    </button>
+  </div>
+  <div class="tab-content-container">
+    <div
+      id="R-tab-id-47457941a914f38d109c333be71e7dc8"
+      data-tab-item="R-tab-ec18ad9a83c312380533fa93ac6fc61c"
+      class="tab-content tab-panel-style cstyle initial active">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">category</span> <span class="p">=</span> <span class="s1">&#39;categories&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mycustomtag</span> <span class="p">=</span> <span class="s1">&#39;mycustomtags&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">tag</span> <span class="p">=</span> <span class="s1">&#39;tags&#39;</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-7520657738f98061bb5ef53ec3fdbf91"
+      data-tab-item="R-tab-6eedc03a68a69933c763e674f2d7c42f"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">taxonomies</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l">categories</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mycustomtag</span><span class="p">:</span><span class="w"> </span><span class="l">mycustomtags</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l">tags</span></span></span></code></pre></div>
+      </div>
+    </div>
+    <div
+      id="R-tab-id-eb1a96873c0638e3285faa1b26ff371a"
+      data-tab-item="R-tab-466deec76ecdf5fca6d38571f6324d54"
+      class="tab-content tab-panel-style cstyle initial">
+      <div class="tab-content-text">
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="nt">&#34;taxonomies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;category&#34;</span><span class="p">:</span> <span class="s2">&#34;categories&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;mycustomtag&#34;</span><span class="p">:</span> <span class="s2">&#34;mycustomtags&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;tag&#34;</span><span class="p">:</span> <span class="s2">&#34;tags&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 id="showing-custom-taxonomies">Show'n Custom Taxonomies<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>T' display yer custom taxonomy terms, add this t' yer plank (usually 'n <code>layouts/partials/content-footer.html</code>):</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="p">{{</span><span class="w"> </span><span class="nx">partial</span><span class="w"> </span><span class="s">&#34;term-list.html&#34;</span><span class="w"> </span><span class="p">(</span><span class="nx">dict</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;page&#34;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;taxonomy&#34;</span><span class="w"> </span><span class="s">&#34;mycustomtags&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s">&#34;icon&#34;</span><span class="w"> </span><span class="s">&#34;layer-group&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">)</span><span class="w"> </span><span class="p">}}</span></span></span></code></pre></div>
+<h3 id="parameters">Parameters<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link t' clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Default</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>plank</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Mandatory reference t' th' plank.</td>
+      </tr>
+      <tr>
+          <td><strong>taxonomy</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Th' plural name o' th' taxonomy t' display as used 'n yer front matter.</td>
+      </tr>
+      <tr>
+          <td><strong>class</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>Additional CSS classes set on th' outermost generated HTML element.<br><br>If set t' <code>tags</code> ye will get th' visuals fer display'n th' <em>tags</em> taxonomy, otherwise it will be a simple list o' links as fer th' <em>categories</em> taxonomy.</td>
+      </tr>
+      <tr>
+          <td><strong>style</strong></td>
+          <td><code>primary</code></td>
+          <td>Th' style scheme used if <strong>class</strong> be <code>tags</code>.<br><br>- by severity: <code>caut'n</code>, <code>important</code>, <code>info</code>, <code>note</code>, <code>tip</code>, <code>warning</code><br>- by brand color: <code>primary</code>, <code>secondary</code>, <code>accent</code><br>- by color: <code>blue</code>, <code>cyan</code>, <code>green</code>, <code>grey</code>, <code>magenta</code>, <code>orange</code>, <code>red</code><br>- by special color: <code>default</code>, <code>transparent</code>, <code>code</code>, <code>link</code>, <code>act'n</code>, <code>inline</code></td>
+      </tr>
+      <tr>
+          <td><strong>color</strong></td>
+          <td>see notes</td>
+          <td>Th' <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value" rel="external" target="_self">CSS color value</a> t' be used if <strong>class</strong> be <code>tags</code>. If not set, th' chosen color depends on th' <strong>style</strong>. Any given value will overwrite th' default.<br><br>- fer severity styles: a nice match'n color fer th' severity<br>- fer all other styles: th' correspond'n color</td>
+      </tr>
+      <tr>
+          <td><strong>ay'con</strong></td>
+          <td><em>&lt;empty&gt;</em></td>
+          <td>An optional <a href="/hugo-theme-relearn/pir/shortcodes/icon/index.html#finding-an-icon">Font Awesome ay'con name</a> set t' th' left o' th' list.</td>
+      </tr>
+  </tbody>
+</table>
+ 
+
+  <footer class="footline">
+<div class="R-taxonomy taxonomy-categories cstyle" title="Categorrries" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/explanation/index.html">Explanation</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/howto/index.html">Howto</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/pir/categories/reference/index.html">Reference</a></li>
+  </ul>
+</div>
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070409" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769070409" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

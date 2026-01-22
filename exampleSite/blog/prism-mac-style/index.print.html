@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="下载prism文件。在head中引用，并添加行号类。修改CSS。">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Typecho中代码高亮并有Mac风格 :: Purple Pulpo">
+    <meta name="twitter:description" content="下载prism文件。在head中引用，并添加行号类。修改CSS。">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="Typecho中代码高亮并有Mac风格 :: Purple Pulpo">
+    <meta property="og:description" content="下载prism文件。在head中引用，并添加行号类。修改CSS。">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Blog">
+    <meta property="article:published_time" content="2023-12-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-10T00:00:00+00:00">
+    <meta property="article:tag" content="Typecho">
+    <meta property="article:tag" content="Prism">
+    <meta property="article:tag" content="Mac风格">
+    <meta property="article:tag" content="CSS">
+    <meta itemprop="name" content="Typecho中代码高亮并有Mac风格 :: Purple Pulpo">
+    <meta itemprop="description" content="下载prism文件。在head中引用，并添加行号类。修改CSS。">
+    <meta itemprop="datePublished" content="2023-12-10T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2023-12-10T00:00:00+00:00">
+    <meta itemprop="wordCount" content="161">
+    <meta itemprop="keywords" content="Typecho,Prism,Mac风格,CSS">
+    <title>Typecho中代码高亮并有Mac风格 :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html" rel="canonical" type="text/html" title="Typecho中代码高亮并有Mac风格 :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/blog\/prism-mac-style\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#三步">三步</a>
+      <ul>
+        <li><a href="#第一步官网下载选择语言和需要的插件">第一步：官网下载，选择语言和需要的插件</a></li>
+        <li><a href="#第二步headerphp文件的head块中添加如下代码">第二步：header.php文件的head块中添加如下代码</a></li>
+        <li><a href="#第三步修改满意的css">第三步：修改满意的CSS</a></li>
+      </ul>
+    </li>
+    <li><a href="#你也可以直接从我的仓库拉取源代码ayakin">你也可以直接从我的仓库拉取源代码！👉👉<strong>Ayakin</strong></a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/blog/index.html"><span itemprop="name">Blog</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Typecho中代码高亮并有Mac风格</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html" title="使用grpc在go后端和python服务间通信 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/telegram-bot/index.html" title="Telegram Bot部署 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable blog" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/css/index.html">CSS</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/mac%E9%A3%8E%E6%A0%BC/index.html">Mac风格</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/prism/index.html">Prism</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/typecho/index.html">Typecho</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="typecho中代码高亮并有mac风格">Typecho中代码高亮并有Mac风格</h1>
+
+<h2 id="三步">三步<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>下载prism文件。</li>
+<li>在head中引用，并添加行号类。</li>
+<li>修改CSS。</li>
+</ul>
+<h3 id="第一步官网下载选择语言和需要的插件">第一步：官网下载，选择语言和需要的插件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>易得</p>
+<h3 id="第二步headerphp文件的head块中添加如下代码">第二步：header.php文件的head块中添加如下代码<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="nx">为pre块添加</span> <span class="nx">line</span><span class="o">-</span><span class="nx">numbers</span> <span class="nx">类</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">document</span><span class="o">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="k">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">var</span> <span class="nx">codeBlocks</span> <span class="o">=</span> <span class="nx">document</span><span class="o">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.post-content pre:not(.line-numbers)&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">codeBlocks</span><span class="o">.</span><span class="k">forEach</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">codeBlock</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">codeBlock</span><span class="o">.</span><span class="nx">classList</span><span class="o">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;line-numbers&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="nx">script</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="nx">prism</span> <span class="nx">代码高亮</span><span class="o">&amp;</span><span class="nx">主题选择</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;!--</span> <span class="nx">注意prismjs_theme</span> <span class="nx">是我在function文件中定义的</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;?</span><span class="nx">php</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">options</span><span class="o">-&gt;</span><span class="na">prismjs_theme</span> <span class="o">==</span> <span class="s1">&#39;tomorrow&#39;</span><span class="p">)</span> <span class="o">:</span> <span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;替换为你的prism.css的路径，下同&#39;); ?&gt;&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;script src=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;替换为你的prism.js的路径，下同&#39;); ?&gt;&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;?php elseif ($this-&gt;options-&gt;prismjs_theme == &#39;coy&#39;) : ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;prismjs/coy/prism.css&#39;); ?&gt;&#34; /&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;script src=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;prismjs/coy/prism.js&#39;); ?&gt;&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;?php endif; ?&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;!-- 修改为mac样式,请替换你的mac.css文件路径--&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;link rel=&#34;stylesheet&#34; href=&#34;&lt;?php $this-&gt;options-&gt;themeUrl(&#39;css/mac.css&#39;); ?&gt;&#34; /&gt;
+</span></span></span></code></pre></div>
+<h3 id="第三步修改满意的css">第三步：修改满意的CSS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>下面只写了 <code>mac.css</code>文件。
+<strong>注意，我的效果也修改了下载了 <code>prism.css</code>文件。</strong>
+更具体的css可以参考我的github仓库，该主题是开源的。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* macOS 风格的代码框样式 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="nt">language-</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span> <span class="mi">0</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">transition</span><span class="p">:</span> <span class="k">box-shadow</span> <span class="mf">0.3</span><span class="kt">s</span> <span class="kc">ease-in-out</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">max-width</span><span class="p">:</span> <span class="mi">85</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* macOS 风格的图标 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="nt">language-</span><span class="o">]</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="s2">&#34;../img/icon_mac.svg&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">background-position-y</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">top</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">left</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">54</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">/* 悬浮 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">pre</span><span class="o">[</span><span class="nt">class</span><span class="o">*=</span><span class="nt">language-</span><span class="o">]</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">25</span><span class="kt">px</span> <span class="mi">15</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span></span></span></code></pre></div>
+<h2 id="你也可以直接从我的仓库拉取源代码ayakin">你也可以直接从我的仓库拉取源代码！👉👉<strong><a href="https://github.com/viogami/Ayakin-TypechoTheme" rel="external">Ayakin</a></strong><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Dec 10, 2023
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

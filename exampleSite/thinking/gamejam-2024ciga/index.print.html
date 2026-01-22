@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Gamejam记录-2024CIGA :: Purple Pulpo">
+    <meta name="twitter:description" content="第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/gamejam-2024ciga/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="Gamejam记录-2024CIGA :: Purple Pulpo">
+    <meta property="og:description" content="第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Thinking">
+    <meta property="article:published_time" content="2024-07-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-15T00:00:00+00:00">
+    <meta property="article:tag" content="Gamejam">
+    <meta property="article:tag" content="Unity">
+    <meta property="article:tag" content="游戏开发">
+    <meta property="article:tag" content="CIGA">
+    <meta property="article:tag" content="贪吃蛇">
+    <meta itemprop="name" content="Gamejam记录-2024CIGA :: Purple Pulpo">
+    <meta itemprop="description" content="第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0">
+    <meta itemprop="datePublished" content="2024-07-15T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-07-15T00:00:00+00:00">
+    <meta itemprop="wordCount" content="32">
+    <meta itemprop="keywords" content="Gamejam,Unity,游戏开发,CIGA,贪吃蛇">
+    <title>Gamejam记录-2024CIGA :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/gamejam-2024ciga/index.html" rel="canonical" type="text/html" title="Gamejam记录-2024CIGA :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/thinking\/gamejam-2024ciga\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/thinking/gamejam-2024ciga/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#开题">开题</a></li>
+    <li><a href="#讨论">讨论</a></li>
+    <li><a href="#开发">开发</a></li>
+    <li><a href="#体会">体会</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/thinking/index.html"><span itemprop="name">Thinking</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Gamejam记录-2024CIGA</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/thinking/gamejam-2024ciga/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/thinking/ddlc/index.html" title="DDLC实况吐槽 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/thinking/graduation-thanks/index.html" title="毕业致谢! (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable thinking" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/ciga/index.html">CIGA</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/gamejam/index.html">Gamejam</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/unity/index.html">Unity</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html">游戏开发</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E8%B4%AA%E5%90%83%E8%9B%87/index.html">贪吃蛇</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="gamejam记录-2024ciga">Gamejam记录-2024CIGA</h1>
+
+<p>第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了<a href="https://viogami.itch.io/soulship" rel="external">itch.io网站</a>.
+并且演示视频也发到了b站：<a href="https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0" rel="external">https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0</a></p>
+<h2 id="开题">开题<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>我是觉得游戏开发这样的事，还是大家线下一起讨论，一起开发才是最有乐趣的。
+但是工期也挺感人，在开始前几天有一个程序因为太忙来不了，只能线下，好在我去gamejam线下场地拉到一个想要solo的大哥辅助我。(实际上线上的程序比我厉害太多，最后游戏内的人物移动逻辑还是他写的)。后来的朋友协助了游戏策划案的讨论和游戏UI的unity实现，还是帮了挺大忙的，不然我真的捉襟见肘。</p>
+<p>实际上我参加gamejam主要是想体验游戏开发的工作流和头脑风暴的乐趣。今年的主题是 <code>limited and unlimited</code>,有限和无限。
+在题目公布的极短时间内，我们就想到了两个有趣的游戏内容实体：贪吃蛇和永动机。⚔️
+前者来源于衔尾蛇，有限的身体，无限的符号。后者更是字面意义上的扣题了。还是比较有趣的两个概念。</p>
+<h2 id="讨论">讨论<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>当时我们贪吃蛇游戏的设计原型选定为 <code>马里奥星球</code>以及 <code>诺基亚3D贪吃蛇</code>。永动机的原型却没有完善的方案，有一个思路是做一个拼图游戏，实现一个永动机，参考 <code>致命框架</code>。在不断的讨论中，永动机还是没有思考到一个有趣的点，后面想做一个物理模拟的游戏，但是又逐渐搁置了。</p>
+<p>对于我而言，2天的开发时间，减去休息讨论等，实际的有效开发时间也就一天。体量肯定是很小的。我初次完成整个项目，对质量不敢打包票，但是我也希望我能把大家讨论的结果完美实现。</p>
+<p>在讨论到贪吃蛇的同时，我联想到了一个unity的feel插件的一个demo演示。其中就有一个贪吃蛇🐍。他做了改动，蛇吃了食物会短暂加速并变的灵动，但一定时间没吃到又会逐渐变回原型。我觉得这是个很有趣的点。最后在贪吃蛇和永动机不休的讨论需要拍板的时候，我选择了贪吃蛇，更容易实现，更容易拓展，永动机的思路说到底，我还是不明确的。(但实际上贪吃蛇要考虑的细节也很多啊)</p>
+<h2 id="开发">开发<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>选择了开发目标和方案，两个策划连夜写完了策划案，设计的原型就是诺基亚的3D贪吃蛇。但是我希望还是2D。如何做好3D，或者2.5D的游戏，我尚且没有实际体会。不敢冒风险，以及没有学习时间，gamejam果然还是有点准备好，我属于临阵没磨枪的，吃了点亏，贪吃蛇的基本实现还出了点问题，好在线上的程序帮我解决了。他也提出了策划意见相合的开发模式，但最后大家还是选择了2D。😶‍🌫️</p>
+<p>预期的效果是贪吃蛇可以在正反两面移动，正面空间受限，时间无限，吃到的东西变长。反面时间受限，空间无限，吃到东西变短。
+蛇长度为0则死亡，吃到自己身体也死亡。玩家目标是得到更多的积分。正面两面的穿梭也十分有爽感，并且达成了扣题。</p>
+<p>但由于进度原因，不得不在项目上做一些减法，比如反转的动画效果，比如反面障碍物的生成算法。其实3D变成2D也是做了减法。时间还是挺紧张的，我开发的时候也遇到了一些不好解决的问题浪费了许多时间，最后一些特效也没来得及加上，挺可惜的。</p>
+<p>无论如何，到时间了就要上菜，几乎没有时间测试，测了几分钟大概hhh，就赶鸭子上架了。</p>
+<h2 id="体会">体会<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>体会到了什么？游戏开发的工作流，游戏业内人士的交流以及更多的朋友，更多的技术经验。</p>
+<p>实际上到了演示环节，我们的还是半成品，并且演示的时候还出现了一些未知的bug，自然受到的关注并不理想。而且扪心自问，我们做到游戏说到底也并没有太多有趣的点。
+作为gamejam，游戏的包装并不重要，如果侧重玩法，就不要讲故事。
+在演示环节有个组做的是个解密的游戏，画风是极简的，就几个线条元素，控制一个小球，点击可以加速到光速。到达指定的点为成功。游戏名叫光子，是个很不错的游戏。
+有了这个体会，我觉得gamejam对美术的要求我觉得并不用太高，但是仍然是有备无患，多多益善。只是包装上面，我觉得并不强求。</p>
+<p>另一方面，我自己在最后也有一些bug难以修复，主要是因为我最初的原型没有做到完善。如果做一个贪吃蛇，就应该先把最基本的贪吃蛇逻辑写完美再做接下来的工作。因为前面的问题，和后面添加的功能发生了连锁反应，一时找不到原因。还有一个问题就是改动频繁导致的一些逻辑混乱。</p>
+<p>总之，尘埃落定，从讨论到立项到开发到几乎没有的测试到上台演示，也对实际的游戏开发有了一个小孔成像。感谢我的队友对我的支持，都是很有趣的人，希望有机会可以再一起做游戏，哈哈哈😎</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jul 15, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

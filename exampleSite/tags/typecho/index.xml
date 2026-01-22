@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typecho :: Tag :: Purple Pulpo</title>
+    <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/typecho/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 10 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typecho中代码高亮并有Mac风格</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html</link>
+      <pubDate>Sun, 10 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html</guid>
+      <description>下载prism文件。在head中引用，并添加行号类。修改CSS。</description>
+    </item>
+  </channel>
+</rss>

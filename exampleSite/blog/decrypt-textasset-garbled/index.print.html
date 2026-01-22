@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="【逆向】解决unity导出TextAsset后部分文本出现乱码 :: Purple Pulpo">
+    <meta name="twitter:description" content="该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="【逆向】解决unity导出TextAsset后部分文本出现乱码 :: Purple Pulpo">
+    <meta property="og:description" content="该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Blog">
+    <meta property="article:published_time" content="2025-01-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-01-06T00:00:00+00:00">
+    <meta property="article:tag" content="Unity">
+    <meta property="article:tag" content="逆向">
+    <meta property="article:tag" content="游戏开发">
+    <meta property="article:tag" content="二进制文件">
+    <meta property="article:tag" content="Protobuf">
+    <meta property="article:tag" content="Json">
+    <meta itemprop="name" content="【逆向】解决unity导出TextAsset后部分文本出现乱码 :: Purple Pulpo">
+    <meta itemprop="description" content="该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta itemprop="datePublished" content="2025-01-06T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2025-01-06T00:00:00+00:00">
+    <meta itemprop="wordCount" content="255">
+    <meta itemprop="keywords" content="Unity,逆向,游戏开发,二进制文件,Protobuf,Json,C#">
+    <title>【逆向】解决unity导出TextAsset后部分文本出现乱码 :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/index.html" rel="canonical" type="text/html" title="【逆向】解决unity导出TextAsset后部分文本出现乱码 :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769070418" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769070418" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769070418";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769070418" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769070418" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769070418" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769070418" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/blog\/decrypt-textasset-garbled\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#是否是pb的二进制文件">是否是pb的二进制文件？</a></li>
+        <li><a href="#是否是按字节流读取的文本">是否是按字节流读取的文本？</a></li>
+        <li><a href="#获得二进制文本的字段描述">获得二进制文本的字段描述</a></li>
+        <li><a href="#编写解密代码">编写解密代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/blog/index.html"><span itemprop="name">Blog</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">【逆向】解决unity导出TextAsset后部分文本出现乱码</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/index.html" title="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/index.html" title="用最轻量的VS负载进行UE5开发(使用rider) (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable blog" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c%23/index.html">C#</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/json/index.html">Json</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/protobuf/index.html">Protobuf</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/unity/index.html">Unity</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6/index.html">二进制文件</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html">游戏开发</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E9%80%86%E5%90%91/index.html">逆向</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="逆向解决unity导出textasset后部分文本出现乱码">【逆向】解决unity导出TextAsset后部分文本出现乱码</h1>
+
+<p>问题预览。可以看到，这是个配置文件，但是只有部分文本可读。</p>
+<p><a href="#R-image-4755e4ffc73f967448bbce6022efaf67" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4755e4ffc73f967448bbce6022efaf67"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/1.png"></a></p>
+<p>该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。
+既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</p>
+<p>既然是游戏工程项目，考虑两个方向：是否是用protobuff读取的二进制文件；是否是直接用读取字节流的方式读取的配置文件。</p>
+<h3 id="是否是pb的二进制文件">是否是pb的二进制文件？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>直接拿到导出的二级进制文件导出到该网站识别：
+<a href="https://protobuf-decoder.netlify.app/" rel="external">https://protobuf-decoder.netlify.app/</a></p>
+<p><a href="#R-image-69fd003b7be1af8522b159d8e290680d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-69fd003b7be1af8522b159d8e290680d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/2.png"></a></p>
+<p>可以看到，没有识别出合适的字段名。据此判断该文本文件不是pb的二进制文件。</p>
+<h3 id="是否是按字节流读取的文本">是否是按字节流读取的文本？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>按照字节流读取文本，这在客户端中不少见, 因为比json省空间, 但缺点是可读性为0, 我的评价就是狗屎, 你少出几张宽高不是4的整倍数的图, 这都不用扣这点配置表省的空间。。在源码中可能是这样出现的：
+<a href="#R-image-bdca71dd9a19f59c4dd4f7c0b8d29bf0" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bdca71dd9a19f59c4dd4f7c0b8d29bf0"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/3.png"></a>
+<a href="#R-image-ec717cb63a4ff177799c5bfa752cfac4" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ec717cb63a4ff177799c5bfa752cfac4"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/4.png"></a></p>
+<p>使用010 editor打开该二进制文件。逐字节进行观察分析：所有配置文件都有相同的4B文件头，随后是文件长度的16进制，然后是相同的4B字节“00 00 00 01”,再之后是配置文件的配置项数，最后是4B的校验比特。总之就是开头的20B为配置文件的描述文件头。
+<a href="#R-image-45fc0bf8e7c49d695595e95a5f65f744" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-45fc0bf8e7c49d695595e95a5f65f744"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/5.png"></a></p>
+<h3 id="获得二进制文本的字段描述">获得二进制文本的字段描述<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>此处需要逆向代码，由于是ill2cpp打包的，只能dump出函数名，但也够用了。在dnspy中搜索和配置文件同名的项，可以找到一个定义了所有配置文件model的文件夹<strong>ResDef</strong>。其中定义了配置文件的字段内容：
+<a href="#R-image-7e245ee8276d9c03c0e354e56fa04d04" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/6.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e245ee8276d9c03c0e354e56fa04d04"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/6.png"></a></p>
+<p>该项目确实是用protobuff进行通信的，但配置文件还是json格式的，其中配置字段也符合json嵌套的格式。我们逐比特进行字段解读，发现字节流确实是可读的。其中需要注意以下三点：</p>
+<ul>
+<li>这种由开发者自定义的二进制文件，一般都是<strong>大端序</strong>读取的字节，直接用<code>readbytes</code>方法不合适，要逆序一下。</li>
+<li>注意其中的string类型的比特编码方式，一般是由4B文件指定长度，后面该长度的字节编码为字符串。</li>
+<li>注意数组类型在字节流文件中的编码方式，可能和字符串一样用4B指定长度，也可能是定长编码。本示例项目中就是定长编码，所有数组大小都固定为3。</li>
+</ul>
+<p>配置字段的定义如下：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">AchieveBaseConfig</span> <span class="p">:</span> <span class="n">ProtoBaseStruct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">SortNO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">string</span> <span class="n">Desc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">Classify</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">ClassifySubType</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">ShowProgress</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">ResBehaviorRule</span> <span class="n">Behavior</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">BootyID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">MaxProgress</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">JumpID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ResBehaviorRule</span> <span class="p">:</span> <span class="n">ProtoBaseStruct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">Type</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">Param</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>逐比特对比，符合字段的定义：
+<a href="#R-image-2e7a05d97b7f8c311b631e2c52fe9827" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/7.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e7a05d97b7f8c311b631e2c52fe9827"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/7.png"></a></p>
+<h3 id="编写解密代码">编写解密代码<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>编写解密函数类BinaryConfigParser，根据字段类型逐行读取，注意大小端处理，字符串和数组类型处理以及嵌套类型的处理(需要递归)，最后在主函数中调用。如下只给出主函数的调用部分，<code>BinaryConfigParser</code>类过长，且解码不同二进制文件方法也不相同，就未放出，如需要可留言。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Program</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 解码二进制文件</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Decode</span><span class="p">(</span><span class="kt">string</span> <span class="n">fileName</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arrayLen</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">binaryFilePath</span> <span class="p">=</span> <span class="s">$&#34;TextAsset\\{fileName}&#34;</span><span class="p">;</span> <span class="c1">// 替换为实际的二进制文件路径</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态获取类型</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Type</span> <span class="n">type</span> <span class="p">=</span> <span class="n">Type</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">$&#34;ResDef.{fileName}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态调用泛型方法</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">method</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">BinaryConfigParser</span><span class="p">).</span><span class="n">GetMethod</span><span class="p">(</span><span class="s">&#34;ReadConfigArray&#34;</span><span class="p">).</span><span class="n">MakeGenericMethod</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// 读取配置项</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">configs</span> <span class="p">=</span> <span class="n">method</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]</span> <span class="p">{</span> <span class="n">binaryFilePath</span><span class="p">,</span> <span class="n">arrayLen</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存为 JSON 数组格式</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">jsonArray</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">configs</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存到文件</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">jsonOutputPath</span> <span class="p">=</span> <span class="s">$&#34;output_json\\{fileName}.json&#34;</span><span class="p">;</span> <span class="c1">// 替换为实际的 JSON 要存放的文件路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">jsonOutputPath</span><span class="p">,</span> <span class="n">jsonArray</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;文件 {fileName} 已解码为 JSON 文件: {jsonOutputPath}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//自动化解码</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">AutoDecode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">textAssetFolder</span> <span class="p">=</span> <span class="s">&#34;TextAsset&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">outputFolder</span> <span class="p">=</span> <span class="s">&#34;output_json&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 确保输出文件夹存在</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">Directory</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 获取TextAsset文件夹下的所有文件</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">files</span> <span class="p">=</span> <span class="n">Directory</span><span class="p">.</span><span class="n">GetFiles</span><span class="p">(</span><span class="n">textAssetFolder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 遍历所有文件</span>
+</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">filePath</span> <span class="k">in</span> <span class="n">files</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">fileName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">outputJsonPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">,</span> <span class="s">$&#34;{fileName}.json&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// 检查是否已生成JSON文件</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputJsonPath</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// // 输入固定数组长度,由于长度未知,所以循环100次，直到找到正确的长度</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// for (int arrayLen = 0; arrayLen &lt; 100; arrayLen++)</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// {</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//     // 调用Decode生成JSON</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//     Decode(fileName, arrayLen);</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// }</span>
+</span></span><span class="line"><span class="cl">                    <span class="kt">int</span> <span class="n">arrayLen</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Decode</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="n">arrayLen</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;处理文件 {fileName} 失败！&#34;</span><span class="p">+</span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 程序入口</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">AutoDecode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 6, 2025
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769070418" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769070418" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
