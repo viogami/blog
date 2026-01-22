@@ -9,3 +9,5 @@ exampleSite/public*
 hugo*.exe
 *.xcf
 *.zip
+public
+.frontmatter
