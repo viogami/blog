@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/log/first-day/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/log/first-day/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/log/first-day/index.html" />
@@ -17,6 +21,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/upper/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/upper/index.html" />
     <xhtml:link rel="alternate" hreflang="art-x-pir" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/pir/ship/upper/index.html" />
+  </url>
+  <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/index.html</loc>
+    <lastmod>2024-04-27T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/log/index.html</loc>
@@ -37,6 +45,10 @@
     <xhtml:link rel="alternate" hreflang="art-x-pir" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/pir/ship/midst/index.html" />
   </url>
   <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/index.html</loc>
+    <lastmod>2024-06-12T00:00:00+00:00</lastmod>
+  </url>
+  <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/about/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/about/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/about/index.html" />
@@ -53,6 +65,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/log/third-day/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/log/third-day/index.html" />
     <xhtml:link rel="alternate" hreflang="art-x-pir" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/pir/log/third-day/index.html" />
+  </url>
+  <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/index.html</loc>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/index.html</loc>
+    <lastmod>2025-01-20T00:00:00+00:00</lastmod>
   </url>
   <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/bot/index.html</loc>
@@ -72,10 +92,6 @@
   </url>
   <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/paas/index.html</loc>
-    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
-  </url>
-  <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</loc>
     <lastmod>2025-04-07T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -105,10 +121,6 @@
     <lastmod>2025-02-05T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/index.html</loc>
-    <lastmod>2025-01-20T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/clash/index.html</loc>
     <lastmod>2025-01-20T00:00:00+00:00</lastmod>
   </url>
@@ -121,7 +133,7 @@
     <lastmod>2025-01-20T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/tls-mitmproxy-clash/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/index.html</loc>
     <lastmod>2025-01-20T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -129,7 +141,7 @@
     <lastmod>2025-01-20T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/decrypt-textasset-garbled/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/index.html</loc>
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -161,15 +173,11 @@
     <lastmod>2025-01-06T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/index.html</loc>
-    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
-  </url>
-  <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/review_2024-8/index.html</loc>
     <lastmod>2024-08-14T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/ddlc/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/_more/ddlc/index.html</loc>
     <lastmod>2024-07-21T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -217,7 +225,7 @@
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.html</loc>
     <lastmod>2024-06-12T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -225,7 +233,7 @@
     <lastmod>2024-05-04T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/docker-mysql-error/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/docker-mysql-error/index.html</loc>
     <lastmod>2024-04-27T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -269,7 +277,7 @@
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/k8s-agones/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/k8s-agones/index.html</loc>
     <lastmod>2024-03-28T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -293,7 +301,7 @@
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-php/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-php/index.html</loc>
     <lastmod>2024-03-24T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -301,7 +309,7 @@
     <lastmod>2024-03-21T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-go-python/index.html</loc>
     <lastmod>2024-03-21T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -325,7 +333,7 @@
     <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/prism-mac-style/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/prism-mac-style/index.html</loc>
     <lastmod>2023-12-10T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -333,7 +341,7 @@
     <lastmod>2023-12-07T00:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/telegram-bot/index.html</loc>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/telegram-bot/index.html</loc>
     <lastmod>2023-12-07T00:00:00+00:00</lastmod>
   </url>
   <url>
@@ -355,6 +363,9 @@
   <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/uma_drawcard_2/index.html</loc>
     <lastmod>2023-02-05T00:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/_more/about/index.html</loc>
   </url>
   <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/midst/captain/index.html</loc>
@@ -381,9 +392,15 @@
     <xhtml:link rel="alternate" hreflang="art-x-pir" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/pir/ship/upper/nest/index.html" />
   </url>
   <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/%E9%9A%8F%E7%AC%94/test/index.html</loc>
+  </url>
+  <url>
     <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/upper/helm/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/upper/helm/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/upper/helm/index.html" />
     <xhtml:link rel="alternate" hreflang="art-x-pir" href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/pir/ship/upper/helm/index.html" />
+  </url>
+  <url>
+    <loc>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/%E9%9A%8F%E7%AC%94/index.html</loc>
   </url>
 </urlset>

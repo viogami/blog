@@ -10,9 +10,9 @@
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/tags/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/blog/docker-mysql-error/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/web/docker-mysql-error/index.html</link>
       <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/blog/docker-mysql-error/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/web/docker-mysql-error/index.html</guid>
       <description>dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).</description>
     </item>
   </channel>

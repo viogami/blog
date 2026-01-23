@@ -17,16 +17,16 @@
     </item>
     <item>
       <title>使用grpc在go后端和python服务间通信</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-go-python/index.html</link>
       <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-go-python/index.html</guid>
       <description>gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)</description>
     </item>
     <item>
       <title>Telegram Bot部署</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/telegram-bot/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/telegram-bot/index.html</link>
       <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/telegram-bot/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/telegram-bot/index.html</guid>
       <description>从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)</description>
     </item>
   </channel>

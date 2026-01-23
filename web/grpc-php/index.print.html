@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。
+现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~">
+    <meta name="author" content="Sören Weber">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta name="twitter:title" content="php使用grpc服务(从0开始，并且包含mapfield文件解释) :: Hugo Relearn Theme">
+    <meta name="twitter:description" content="grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。
+现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/web/grpc-php/index.html">
+    <meta property="og:site_name" content="Hugo Relearn Theme">
+    <meta property="og:title" content="php使用grpc服务(从0开始，并且包含mapfield文件解释) :: Hugo Relearn Theme">
+    <meta property="og:description" content="grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。
+现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Web">
+    <meta property="article:published_time" content="2024-03-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-24T00:00:00+00:00">
+    <meta property="article:tag" content="GRPC">
+    <meta property="article:tag" content="Php">
+    <meta property="article:tag" content="Grpc-Php">
+    <meta property="article:tag" content="Grpc-Python">
+    <meta property="article:tag" content="Grpc-Go">
+    <meta property="og:image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="name" content="php使用grpc服务(从0开始，并且包含mapfield文件解释) :: Hugo Relearn Theme">
+    <meta itemprop="description" content="grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。
+现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~">
+    <meta itemprop="datePublished" content="2024-03-24T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-03-24T00:00:00+00:00">
+    <meta itemprop="wordCount" content="243">
+    <meta itemprop="image" content="https://mcshelby.github.io/hugo-theme-relearn/images/hero.png">
+    <meta itemprop="keywords" content="GRPC,Php,Grpc-Php,Grpc-Python,Grpc-Go">
+    <title>php使用grpc服务(从0开始，并且包含mapfield文件解释) :: Hugo Relearn Theme</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/web/grpc-php/index.html" rel="canonical" type="text/html" title="php使用grpc服务(从0开始，并且包含mapfield文件解释) :: Hugo Relearn Theme">
+    <link href="/hugo-theme-relearn/images/logo.svg?1769159033" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/css/auto-complete/auto-complete.min.css?1769159033" rel="stylesheet">
+    <script src="/hugo-theme-relearn/js/auto-complete/auto-complete.min.js?1769159033" defer></script>
+    <script src="/hugo-theme-relearn/js/search-lunr.min.js?1769159033" defer></script>
+    <script src="/hugo-theme-relearn/js/search.min.js?1769159033" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/searchindex.en.js?1769159033";
+    </script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.min.js?1769159033" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.stemmer.support.min.js?1769159033" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.multi.min.js?1769159033" defer></script>
+    <script src="/hugo-theme-relearn/js/lunr/lunr.en.min.js?1769159033" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769159033" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/fonts/fontawesome/css/all.min.css?1769159033" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/css/perfect-scrollbar/perfect-scrollbar.min.css?1769159033" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/theme.min.css?1769159033" rel="stylesheet">
+    <link href="/hugo-theme-relearn/css/format-print.min.css?1769159033" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/web\/grpc-php\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn';
+      window.relearn.disableInlineCopyToClipboard=true;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'relearn-auto', 'relearn-dark', 'relearn-light', 'relearn-bright', 'zen-auto', 'zen-dark', 'zen-light', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <script src="/hugo-theme-relearn/js/variant.min.js?1769159033"></script>
+    <style>
+       
+      #R-body img.bg-white {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/web/grpc-php/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#流程">流程</a></li>
+    <li><a href="#安装protoc解释器">安装protoc解释器</a></li>
+    <li><a href="#安装grpc">安装grpc</a></li>
+    <li><a href="#编译protoc文件">编译protoc文件</a></li>
+    <li><a href="#编写php请求的代码客户端代码">编写php请求的代码(客户端代码)</a>
+      <ul>
+        <li><a href="#编写文件前置注意事项">编写文件前置注意事项</a></li>
+      </ul>
+    </li>
+    <li><a href="#备注">备注</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="a11y-only"><a itemprop="item" href="/hugo-theme-relearn/index.html"><span itemprop="name">Hugo Relearn Theme</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/web/index.html"><span itemprop="name">Web</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">php使用grpc服务(从0开始，并且包含mapfield文件解释)</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/McShelby/hugo-theme-relearn/edit/main/docs/content/web/php使用grpc服务/index.md" rel="external" target="_self" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/web/grpc-php/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/web/k8s-agones/index.html" title="自顶向下学习K8S--部署Agones (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/web/grpc-go-python/index.html" title="使用grpc在go后端和python服务间通信 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable web" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/grpc/index.html">GRPC</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/grpc-go/index.html">Grpc-Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/grpc-php/index.html">Grpc-Php</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/grpc-python/index.html">Grpc-Python</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/tags/php/index.html">Php</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="php使用grpc服务从0开始并且包含mapfield文件解释">php使用grpc服务(从0开始，并且包含mapfield文件解释)</h1>
+
+<p>grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。</p>
+<p>现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~</p>
+<h2 id="流程">流程<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<ul>
+<li>php的服务器安装protoc</li>
+<li>php的服务器安装grpc</li>
+<li><del>编写服务端代码</del></li>
+<li>编写客户端代码</li>
+</ul>
+<p>由于服务端(python)的代码已经编写或者说已经部署，就不做叙述了。</p>
+<p>安装代码请根据自己的php版本和grpc版本酌情自定义。本人使用的php8.0，grpc1.62.0，protobuf4.62.0</p>
+<h2 id="安装protoc解释器">安装protoc解释器<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>和windows开发一样，使用grpc服务均需要使用protoc解释器，去官方github下的release下载linux版本：
+<a href="https://github.com/protocolbuffers/protobuf/releases/download/v26.0/protoc-26.0-linux-x86_64.zip" rel="external" target="_self">protoc-26.0-linux-x86_64.zip</a></p>
+<p>解压到 <code>/usr/bin/</code>目录下</p>
+<blockquote>
+<p>如果你使用宝塔，你也可以直接先在本地电脑上解压，把解压后的bin文件夹里的protoc文件上传到 <code>/usr/bin/</code>中就好了。</p>
+</blockquote>
+<p>终端中输入 <code>protoc</code>,有返回即为成功</p>
+<h2 id="安装grpc">安装grpc<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>无论你服务器是否安装pecl，可以直接通过http请求安装php相关包，但是必须安装了php(废话)</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 下载解压 grpc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ~
+</span></span><span class="line"><span class="cl">wget http://pecl.php.net/get/grpc-1.62.0.tgz
+</span></span><span class="line"><span class="cl">tar xvf grpc-1.62.0.tgz
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> grpc-1.62.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 生成配置并编译安装(编译安装时间很长，我大概安装了一小时左右)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 注意选择你自己的路径以及php版本，我是80</span>
+</span></span><span class="line"><span class="cl">/www/server/php/80/bin/phpize
+</span></span><span class="line"><span class="cl">./configure --with-php-config<span class="o">=</span>/www/server/php/80/bin/php-config
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> make install</span></span></code></pre></div>
+<p>之后要配置php的拓展
+<strong>注意，这是必要的，compose安装的grpc依赖，底层还是调用的这个grpc拓展！</strong></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 配置PHP扩展</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> grpc-1.62.0
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;extension = grpc.so&#34;</span> &gt;&gt; /www/server/php/80/etc/php.ini
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> protobuf-4.62.0  <span class="c1"># 如果没有路径请仿照grpc安装的方式手动安装安装一下，我个人觉得可能并不需要</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;extension = protobuf.so&#34;</span> &gt;&gt; /www/server/php/80/etc/php.ini</span></span></code></pre></div>
+<p>最后重启一下php和nginx服务就大功告成了</p>
+<h2 id="编译protoc文件">编译protoc文件<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>具体的protoc文件的定义详细见我<a href="http://viogami.me/index.php/archives/158/" rel="external" target="_self">之前的博客</a></p>
+<p>需要安装protoc和grpc_php_plugin</p>
+<p>使用如下代码生成：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">protoc --php_out ./ you-file.proto  <span class="c1">#需要安装protoc解释器，生成protoc的php定义文件在当前目录(./)</span>
+</span></span><span class="line"><span class="cl">protoc --grpc_out ./ you-file.proto <span class="c1">#需要grpc_php_plugin插件安装，生成grpc文件在当前目录</span></span></span></code></pre></div>
+<p>第一行生成你的proto数据定义文件，我生成了 <code>GCNResult.php</code>,<code>Node.php</code>,<code>Edge.php</code>,<code>GraphData.php</code>,
+同时还会生成一个GPBMetaData文件夹。
+第二行生成php的grpc文件：<code>GCNServiceClient.php</code></p>
+<p>注意，如果你没有生成grpc文件的插件(安装grpc出现问题)，可以直接下载该插件
+然后通过如下代码生成 <code>xxxClient.php</code>文件</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">protoc --grpc_out ./ --plugin<span class="o">=</span>protoc-gen-grpc<span class="o">=</span>/your-path-to-plugin/grpc_php_plugin you-filename.proto
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">:: 自用
+</span></span><span class="line"><span class="cl">:: protoc --grpc_out ./ --plugin<span class="o">=</span>protoc-gen-grpc<span class="o">=</span>/opt/share/grpc_php_plugin gcn.proto</span></span></code></pre></div>
+<h2 id="编写php请求的代码客户端代码">编写php请求的代码(客户端代码)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="编写文件前置注意事项">编写文件前置注意事项<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li><strong>注意：如果你使用宝塔，需要把php设置里的禁用函数 <code>putenv</code>和 <code>proc_open</code>给删除，不然composer安装无法进行。</strong></li>
+<li>需要编写composer.json文件，因为使用了 <code>dirname(__FILE__).'/vendor/autoload.php'</code>该自动导入功能。json文件内容示例：</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;require&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;grpc/grpc&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;google/protobuf&#34;</span><span class="p">:</span> <span class="s2">&#34;*&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;autoload&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;psr-4&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;GPBMetadata\\&#34;</span><span class="p">:</span> <span class="s2">&#34;protoc/GPBMetadata/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;protoc\\&#34;</span><span class="p">:</span> <span class="s2">&#34;protoc/&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>编写后在服务器该文件目录下启动终端输入 <code>composer install</code>即可，会生成vendor文件夹</p>
+<p>现在我将编写一个最简单的php文件来调用这个服务。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="nx">dirname</span><span class="p">(</span><span class="no">__FILE__</span><span class="p">)</span><span class="o">.</span><span class="s1">&#39;/vendor/autoload.php&#39;</span><span class="p">;</span> <span class="c1">// 引入 gRPC PHP 扩展的自动加载文件
+</span></span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/GraphData.php&#39;</span><span class="p">;</span> <span class="c1">// 引入包含 protoc文件夹下的grpc生成文件
+</span></span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/Node.php&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/Edge.php&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/GCNResult.php&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="k">require</span> <span class="s1">&#39;protoc/GCNServiceClient.php&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 进行grpc请求，获取gcn处理后的数据，返回json字符串
+</span></span></span><span class="line"><span class="cl"><span class="k">function</span> <span class="nf">GCN_request</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GCNServiceClient</span><span class="p">(</span><span class="s1">&#39;localhost:9999&#39;</span><span class="p">,</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;credentials&#39;</span> <span class="o">=&gt;</span> <span class="nx">\Grpc\ChannelCredentials</span><span class="o">::</span><span class="na">createInsecure</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1">// 创建一个实例的图数据
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$G_example</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GraphData</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$G_example</span><span class="o">-&gt;</span><span class="na">setNodes</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">new</span> <span class="nx">Node</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">setId</span><span class="p">(</span><span class="s2">&#34;node1&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setFeatures</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">new</span> <span class="nx">Node</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">setId</span><span class="p">(</span><span class="s2">&#34;node2&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setFeatures</span><span class="p">([</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$G_example</span><span class="o">-&gt;</span><span class="na">setEdges</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="k">new</span> <span class="nx">Edge</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">setSourceId</span><span class="p">(</span><span class="s2">&#34;node1&#34;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">setTargetId</span><span class="p">(</span><span class="s2">&#34;node2&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1">// 发送请求并接收响应
+</span></span></span><span class="line"><span class="cl">    <span class="k">list</span><span class="p">(</span><span class="nv">$response</span><span class="p">,</span> <span class="nv">$status</span><span class="p">)</span> <span class="o">=</span> <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">ProcessGraph</span><span class="p">(</span><span class="nv">$G_example</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">wait</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$status</span><span class="o">-&gt;</span><span class="na">code</span> <span class="o">!==</span> <span class="nx">Grpc\STATUS_OK</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// gRPC 请求出错
+</span></span></span><span class="line"><span class="cl">    <span class="k">throw</span> <span class="k">new</span> <span class="nx">Exception</span><span class="p">(</span><span class="s1">&#39;Error calling grpc server -&gt; ProcessGraph: &#39;</span> <span class="o">.</span> <span class="nv">$status</span><span class="o">-&gt;</span><span class="na">details</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 因为我的返回结果是个map数据类型，php中没有该类型，需要做一个遍历取值，如果是string类型可以直接取。
+</span></span></span><span class="line"><span class="cl">    <span class="nv">$NodeScores</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$response</span><span class="o">-&gt;</span><span class="na">getNodeScores</span><span class="p">()</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$NodeScores</span><span class="p">[</span><span class="nv">$key</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">json_encode</span><span class="p">(</span><span class="nv">$NodeScores</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>该函数返回一个json数据，想要修改可以使用 <code>json_decode()</code> , 至此，大功告成！</p>
+<h2 id="备注">备注<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>因为我的protoc文件的返回结果定义为一个map，这是go才有的数据结构，php没有
+使用 <code>var_dump($response-&gt;getNodeScores())</code>可以看到这是谷歌grpc核心中定义的一个mapfield object，可以直接像go的map一样，用 <code>$response-&gt;getNodeScores()['xxx']</code>获取值。</p>
+<p>虽然官网显示有ToString()的方法：<a href="https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString" rel="external" target="_self">https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString</a>
+但是在这里无法使用，所以我只能通过遍历的方式获取所有值存到一个数组里，毕竟map结构本身就不支持一次获取全部，还是要遍历。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="viogami/blog"
+        data-repo-id="R_kgDOORWDyA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOORWDyM4Conxc"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Mar 24, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/js/perfect-scrollbar/perfect-scrollbar.min.js?1769159033" defer></script>
+    <script src="/hugo-theme-relearn/js/theme.min.js?1769159033" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

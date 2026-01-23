@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试
+【逆向】解决unity导出TextAsset后部分文本出现乱码 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Reversing :: Purple Pulpo">
+    <meta name="twitter:description" content="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试
+【逆向】解决unity导出TextAsset后部分文本出现乱码 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="Reversing :: Purple Pulpo">
+    <meta property="og:description" content="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试
+【逆向】解决unity导出TextAsset后部分文本出现乱码 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Reversing :: Purple Pulpo">
+    <meta itemprop="description" content="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试
+【逆向】解决unity导出TextAsset后部分文本出现乱码 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。">
+    <meta itemprop="datePublished" content="2025-01-20T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2025-01-20T00:00:00+00:00">
+    <meta itemprop="wordCount" content="7">
+    <title>Reversing :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/index.html" rel="canonical" type="text/html" title="Reversing :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/reversing/index.xml" rel="alternate" type="application/rss+xml" title="Reversing :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769159049" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769159049" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769159049" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769159049";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769159049" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769159049" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769159049" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769159049" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769159049" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769159049" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/reversing\/index.html';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/reversing/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#tls流量解密mitmproxy抓包模拟器流量走clash代理证书问题">TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题</a></li>
+    <li><a href="#逆向解决unity导出textasset后部分文本出现乱码">【逆向】解决unity导出TextAsset后部分文本出现乱码</a></li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Reversing</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/viogami/blog/edit/main/docs/content/reversing/_index.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/reversing/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/thinking/%E9%9A%8F%E7%AC%94/test/index.html" title="test (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/index.html" title="TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable reversing" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="reversing">Reversing</h1>
+
+<ul class="children children-type-list children-sort-">
+<li>
+<h2 id="tls流量解密mitmproxy抓包模拟器流量走clash代理证书问题"><a href="/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/index.html">TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。
+问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试</p>
+</li>
+<li>
+<h2 id="逆向解决unity导出textasset后部分文本出现乱码"><a href="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/index.html">【逆向】解决unity导出TextAsset后部分文本出现乱码</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</p>
+</li>
+</ul>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 20, 2025
+  </footer>
+</article>
+          <section>
+            <h1 class="a11y-only">Subsections of Reversing</h1>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/clash/index.html">Clash</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/mitmproxy/index.html">Mitmproxy</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/tls/index.html">TLS</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/index.html">模拟器</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="tls流量解密mitmproxy抓包模拟器流量走clash代理证书问题">TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题</h1>
+
+<p><strong>所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。</strong></p>
+<h3 id="问题场景">问题场景<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试</p>
+<p>mumu模拟器启动游戏，希望抓其传向服务器的包，实现一些自动化操作。由于游戏是日服，所以需要启用代理。我使用了clash。此外，游戏的包使用了tls1.3加密，要想截取必须获得在本地生成的密钥进行解密才能知道明文。中间人代理，我使用了mitmproxy。</p>
+<h3 id="问题显露">问题显露<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>mitmproxy可以代理一个本地端口，在tls(https)流量进入进行握手阶段的时候，通过配置证书可以解读明文.但问题是流量必须走clash的，不然没梯子访问不了国外的服务器。而clash作为代理工具是没有保存该key的功能的。</p>
+<h3 id="思路">思路<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>很自然的想法，让模拟器流量先走mitmproxy，而后再走clash作为流量出入口，mitmproxy作为模拟器和clash的中间人。这样就可以实现流量的截取和梯子转发，最后通过如wireshark这类的抓包工具进行数据包分析。</p>
+<p><a href="#R-image-95e1f2ce16ac6e9e49b05a559c83027d" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-95e1f2ce16ac6e9e49b05a559c83027d"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/1.png"></a></p>
+<h3 id="证书问题">证书问题<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>这样看起来ok了，模拟器访问网页，在终端也可以看到mitmproxy的流量经过了。但是在启动游戏的时候，依然会看到如下报错：</p>
+<blockquote>
+<p>clinet TLS handshake failed. The client may not trust the proxys certificate for xxx.com(Openssl Error ssl routines , , tlsv1 alert access denied)</p>
+</blockquote>
+<p>字面意思，mitmproxy 在进行 TLS 握手时，客户端无法信任 mitmproxy 的证书。通常情况下，mitmproxy 会自动生成一个伪造的证书来替代目标网站的真实证书，以便解密和转发流量。如果客户端（例如浏览器或模拟器）没有信任 mitmproxy 的证书，它就会拒绝与代理的安全连接。</p>
+<p><strong>那就得在模拟器安装上mitmproxy的证书。</strong>
+默认情况下，mitmproxy 的证书存储路径是 ~/.mitmproxy/（Linux/macOS）或 C:\Users&lt;username&gt;.mitmproxy\（Windows），其中有一个文件叫 mitmproxy-ca-cert.pem。
+将 mitmproxy-ca-cert.pem 证书文件传输到 Android 设备或模拟器。
+打开设备的 设置，找到 安全性 或 证书管理，然后选择 从存储导入证书。
+选择下载的证书文件并导入。
+导入后，设备应该信任 mitmproxy 的根证书。</p>
+<p>但是mumu12模拟器没有如上设置。并不是无他法。
+第一步，安装openssl
+第二步，把pem证书通过openssl转换为DER格式的证书</p>
+<p><code>openssl x509 -subject_hash_old -in mitmproxy-ca-cert.pem.pem</code></p>
+<p>第三步，重命名pem文件为 <code>哈希值.0</code>
+<a href="#R-image-6ead6dc03ffd8d89c549c595593b5709" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6ead6dc03ffd8d89c549c595593b5709"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/tls-mitmproxy-clash/2.png"></a></p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">adb root
+</span></span><span class="line"><span class="cl">adb remount
+</span></span><span class="line"><span class="cl">adb push xxxxxxx.0 /system/etc/security/cacerts/</span></span></code></pre></div>
+<p><strong>参考帖子：<a href="https://blog.csdn.net/haduwi/article/details/125696208" rel="external">https://blog.csdn.net/haduwi/article/details/125696208</a></strong></p>
+<h3 id="结束">结束<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>导入了证书后，mitmproxy的event log就没有报错了，美滋滋，开始用wireshark进行数据包分析吧。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 20, 2025
+  </footer>
+</article>
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c%23/index.html">C#</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/json/index.html">Json</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/protobuf/index.html">Protobuf</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/unity/index.html">Unity</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6/index.html">二进制文件</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html">游戏开发</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E9%80%86%E5%90%91/index.html">逆向</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="逆向解决unity导出textasset后部分文本出现乱码">【逆向】解决unity导出TextAsset后部分文本出现乱码</h1>
+
+<p>问题预览。可以看到，这是个配置文件，但是只有部分文本可读。</p>
+<p><a href="#R-image-362fdd481f5b1fc6ae5d911788f90d5f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-362fdd481f5b1fc6ae5d911788f90d5f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/1.png"></a></p>
+<p>该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。
+既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</p>
+<p>既然是游戏工程项目，考虑两个方向：是否是用protobuff读取的二进制文件；是否是直接用读取字节流的方式读取的配置文件。</p>
+<h3 id="是否是pb的二进制文件">是否是pb的二进制文件？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>直接拿到导出的二级进制文件导出到该网站识别：
+<a href="https://protobuf-decoder.netlify.app/" rel="external">https://protobuf-decoder.netlify.app/</a></p>
+<p><a href="#R-image-d1acbcb49d0499524f29e275bda18365" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d1acbcb49d0499524f29e275bda18365"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/2.png"></a></p>
+<p>可以看到，没有识别出合适的字段名。据此判断该文本文件不是pb的二进制文件。</p>
+<h3 id="是否是按字节流读取的文本">是否是按字节流读取的文本？<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>按照字节流读取文本，这在客户端中不少见, 因为比json省空间, 但缺点是可读性为0, 我的评价就是狗屎, 你少出几张宽高不是4的整倍数的图, 这都不用扣这点配置表省的空间。。在源码中可能是这样出现的：
+<a href="#R-image-9cdba986305b01fffa1258fbc14e3fa3" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cdba986305b01fffa1258fbc14e3fa3"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/3.png"></a>
+<a href="#R-image-5e4d6a1d0ac777412e00b07f7bbc38ac" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e4d6a1d0ac777412e00b07f7bbc38ac"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/4.png"></a></p>
+<p>使用010 editor打开该二进制文件。逐字节进行观察分析：所有配置文件都有相同的4B文件头，随后是文件长度的16进制，然后是相同的4B字节“00 00 00 01”,再之后是配置文件的配置项数，最后是4B的校验比特。总之就是开头的20B为配置文件的描述文件头。
+<a href="#R-image-b8ffca38591d21847ac549f693ea3d94" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b8ffca38591d21847ac549f693ea3d94"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/5.png"></a></p>
+<h3 id="获得二进制文本的字段描述">获得二进制文本的字段描述<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>此处需要逆向代码，由于是ill2cpp打包的，只能dump出函数名，但也够用了。在dnspy中搜索和配置文件同名的项，可以找到一个定义了所有配置文件model的文件夹<strong>ResDef</strong>。其中定义了配置文件的字段内容：
+<a href="#R-image-9f99260f5e694887063e6d651f24e4fb" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/6.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9f99260f5e694887063e6d651f24e4fb"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/6.png"></a></p>
+<p>该项目确实是用protobuff进行通信的，但配置文件还是json格式的，其中配置字段也符合json嵌套的格式。我们逐比特进行字段解读，发现字节流确实是可读的。其中需要注意以下三点：</p>
+<ul>
+<li>这种由开发者自定义的二进制文件，一般都是<strong>大端序</strong>读取的字节，直接用<code>readbytes</code>方法不合适，要逆序一下。</li>
+<li>注意其中的string类型的比特编码方式，一般是由4B文件指定长度，后面该长度的字节编码为字符串。</li>
+<li>注意数组类型在字节流文件中的编码方式，可能和字符串一样用4B指定长度，也可能是定长编码。本示例项目中就是定长编码，所有数组大小都固定为3。</li>
+</ul>
+<p>配置字段的定义如下：</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">AchieveBaseConfig</span> <span class="p">:</span> <span class="n">ProtoBaseStruct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">SortNO</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">string</span> <span class="n">Desc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">Classify</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">ClassifySubType</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">byte</span> <span class="n">ShowProgress</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="n">ResBehaviorRule</span> <span class="n">Behavior</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">BootyID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">MaxProgress</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">uint</span> <span class="n">JumpID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ResBehaviorRule</span> <span class="p">:</span> <span class="n">ProtoBaseStruct</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span> <span class="n">Type</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">public</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">Param</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<p>逐比特对比，符合字段的定义：
+<a href="#R-image-961723921d32461611a986cc06b2ac7f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/7.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-961723921d32461611a986cc06b2ac7f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/reversing/decrypt-textasset-garbled/7.png"></a></p>
+<h3 id="编写解密代码">编写解密代码<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>编写解密函数类BinaryConfigParser，根据字段类型逐行读取，注意大小端处理，字符串和数组类型处理以及嵌套类型的处理(需要递归)，最后在主函数中调用。如下只给出主函数的调用部分，<code>BinaryConfigParser</code>类过长，且解码不同二进制文件方法也不相同，就未放出，如需要可留言。</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Newtonsoft.Json</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Program</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 解码二进制文件</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Decode</span><span class="p">(</span><span class="kt">string</span> <span class="n">fileName</span><span class="p">,</span> <span class="kt">int</span> <span class="n">arrayLen</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">binaryFilePath</span> <span class="p">=</span> <span class="s">$&#34;TextAsset\\{fileName}&#34;</span><span class="p">;</span> <span class="c1">// 替换为实际的二进制文件路径</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态获取类型</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Type</span> <span class="n">type</span> <span class="p">=</span> <span class="n">Type</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">$&#34;ResDef.{fileName}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 动态调用泛型方法</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">method</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">BinaryConfigParser</span><span class="p">).</span><span class="n">GetMethod</span><span class="p">(</span><span class="s">&#34;ReadConfigArray&#34;</span><span class="p">).</span><span class="n">MakeGenericMethod</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1">// 读取配置项</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">configs</span> <span class="p">=</span> <span class="n">method</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]</span> <span class="p">{</span> <span class="n">binaryFilePath</span><span class="p">,</span> <span class="n">arrayLen</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存为 JSON 数组格式</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">jsonArray</span> <span class="p">=</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">configs</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 保存到文件</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">jsonOutputPath</span> <span class="p">=</span> <span class="s">$&#34;output_json\\{fileName}.json&#34;</span><span class="p">;</span> <span class="c1">// 替换为实际的 JSON 要存放的文件路径</span>
+</span></span><span class="line"><span class="cl">        <span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">jsonOutputPath</span><span class="p">,</span> <span class="n">jsonArray</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;文件 {fileName} 已解码为 JSON 文件: {jsonOutputPath}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">//自动化解码</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">AutoDecode</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">textAssetFolder</span> <span class="p">=</span> <span class="s">&#34;TextAsset&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">outputFolder</span> <span class="p">=</span> <span class="s">&#34;output_json&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 确保输出文件夹存在</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(!</span><span class="n">Directory</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Directory</span><span class="p">.</span><span class="n">CreateDirectory</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 获取TextAsset文件夹下的所有文件</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">var</span> <span class="n">files</span> <span class="p">=</span> <span class="n">Directory</span><span class="p">.</span><span class="n">GetFiles</span><span class="p">(</span><span class="n">textAssetFolder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 遍历所有文件</span>
+</span></span><span class="line"><span class="cl">        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">filePath</span> <span class="k">in</span> <span class="n">files</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">fileName</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">string</span> <span class="n">outputJsonPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span><span class="p">(</span><span class="n">outputFolder</span><span class="p">,</span> <span class="s">$&#34;{fileName}.json&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">// 检查是否已生成JSON文件</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(!</span><span class="n">File</span><span class="p">.</span><span class="n">Exists</span><span class="p">(</span><span class="n">outputJsonPath</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">try</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// // 输入固定数组长度,由于长度未知,所以循环100次，直到找到正确的长度</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// for (int arrayLen = 0; arrayLen &lt; 100; arrayLen++)</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// {</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//     // 调用Decode生成JSON</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//     Decode(fileName, arrayLen);</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">// }</span>
+</span></span><span class="line"><span class="cl">                    <span class="kt">int</span> <span class="n">arrayLen</span> <span class="p">=</span> <span class="m">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">Decode</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="n">arrayLen</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">ex</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                   <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$&#34;处理文件 {fileName} 失败！&#34;</span><span class="p">+</span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 程序入口</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">static</span> <span class="k">void</span> <span class="n">Main</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">AutoDecode</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 6, 2025
+  </footer>
+</article>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769159049" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

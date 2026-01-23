@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c&#43;&#43;开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="用最轻量的VS负载进行UE5开发(使用rider) :: Purple Pulpo">
+    <meta name="twitter:description" content="vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c&#43;&#43;开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="用最轻量的VS负载进行UE5开发(使用rider) :: Purple Pulpo">
+    <meta property="og:description" content="vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c&#43;&#43;开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Game">
+    <meta property="article:published_time" content="2024-06-12T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-06-12T00:00:00+00:00">
+    <meta property="article:tag" content="Ue5">
+    <meta property="article:tag" content="Rider">
+    <meta property="article:tag" content="Vs2022">
+    <meta property="article:tag" content="C&#43;&#43;">
+    <meta property="article:tag" content="开发环境">
+    <meta property="article:tag" content="游戏开发">
+    <meta itemprop="name" content="用最轻量的VS负载进行UE5开发(使用rider) :: Purple Pulpo">
+    <meta itemprop="description" content="vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c&#43;&#43;开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。">
+    <meta itemprop="datePublished" content="2024-06-12T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-06-12T00:00:00+00:00">
+    <meta itemprop="wordCount" content="68">
+    <meta itemprop="keywords" content="Ue5,Rider,Vs2022,C&#43;&#43;,开发环境,游戏开发,C&#43;&#43; Build Tools,C&#43;&#43; Cmake Tools for Windows">
+    <title>用最轻量的VS负载进行UE5开发(使用rider) :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.html" rel="canonical" type="text/html" title="用最轻量的VS负载进行UE5开发(使用rider) :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769159049" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769159049" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769159049" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769159049";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769159049" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769159049" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769159049" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769159049" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769159049" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769159049" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/game\/ue5-rider-vs\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/game/index.html"><span itemprop="name">Game</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">用最轻量的VS负载进行UE5开发(使用rider)</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/viogami/blog/edit/main/docs/content/game/用最轻量的VS负载进行UE5开发(使用rider)/index.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/game/index.html" title="Game (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/about/index.html" title="About (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable game" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;/index.html">C&#43;&#43;</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-build-tools/index.html">C&#43;&#43; Build Tools</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/c&#43;&#43;-cmake-tools-for-windows/index.html">C&#43;&#43; Cmake Tools for Windows</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/rider/index.html">Rider</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/ue5/index.html">Ue5</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/vs2022/index.html">Vs2022</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html">开发环境</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/index.html">游戏开发</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="用最轻量的vs负载进行ue5开发使用rider">用最轻量的VS负载进行UE5开发(使用rider)</h1>
+
+<p>从UE5官方文档来看，要下的负载还是很多的。但查看rider官方文档，只要我们下一个vs的工具集就ok了，那就试试看。</p>
+<p><a href="#R-image-a80df3295e81cbae4ee0f3f62f0ff62f" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a80df3295e81cbae4ee0f3f62f0ff62f"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/1.png"></a></p>
+<p><strong>下载 Visual Studio Build Tools：</strong></p>
+<p>访问 Visual Studio 官方网站 下载 Visual Studio Build Tools。</p>
+<p><a href="#R-image-7ecc56973c165a3be554e6f632bc0c61" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7ecc56973c165a3be554e6f632bc0c61"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/2.png"></a></p>
+<p>运行安装程序，选择所需的组件：</p>
+<ul>
+<li>
+<p>选择“<strong>C++ build tools</strong>”，这是最重要的部分。
+在安装选项中选择：
+MSVC v142 - VS 2019 C++ x64/x86 build tools（或更高版本,我用2022）
+Windows 11 SDK（win10或更高版本）
+C++ CMake tools for Windows</p>
+</li>
+<li>
+<p>选择“<strong>单个组件</strong>”中的.NET框架SDK。</p>
+</li>
+</ul>
+<p><a href="#R-image-4003b7b7f8b96923e57bfe5726474457" class="lightbox-link"><img alt="alt text" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4003b7b7f8b96923e57bfe5726474457"><img alt="alt text" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/3.png"></a></p>
+<p>开始安装，等待安装完成。</p>
+<p><strong>配置 Unreal Engine 5</strong>
+在完成上述步骤后，可以配置 Unreal Engine 5 使用这些工具来编译项目。</p>
+<p>1.启动 Unreal Engine 5 并打开项目。
+2.转到“编辑” -&gt; “项目设置”。在左侧菜单中找到“平台” -&gt; “Windows”。确认编译器路径 指向刚安装的 MSVC 编译工具，vs2022。
+3.转到”编辑器偏好设置“ -&gt;&ldquo;通用&rdquo; -&gt; &ldquo;源代码&rdquo; ，选择编辑器为 &ldquo;rider&rdquo;</p>
+<hr>
+<p>这样就完成了最轻量的使用rider做编辑器进行UE5开发了，<strong>不下载vs2022的编辑器，只下载必要构建工具，编辑器使用rider</strong>。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jun 12, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769159049" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

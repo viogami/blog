@@ -10,9 +10,9 @@
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用最轻量的VS负载进行UE5开发(使用rider)</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.html</link>
       <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/ue5-rider-vs/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/ue5-rider-vs/index.html</guid>
       <description>vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。</description>
     </item>
   </channel>

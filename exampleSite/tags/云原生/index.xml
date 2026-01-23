@@ -10,9 +10,9 @@
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自顶向下学习K8S--部署Agones</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/k8s-agones/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/k8s-agones/index.html</link>
       <pubDate>Thu, 28 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/k8s-agones/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/k8s-agones/index.html</guid>
       <description>学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。</description>
     </item>
   </channel>

@@ -9,11 +9,25 @@
     <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Project</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</guid>
+      <description>VioGo–不止聊天的奇妙bot 纯go编写的机器人业务后端，bot取名为 Vio ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。 可以完成基于chatgpt聊天任务，以及一些简单的指令响应。 如果你有想法和意见请提issue！这对我和bot都很重要！ 欢迎qq加群讨论：340961300&#xA;p5r预告信生成器API 预告信生成器国外作者原版：https://skyventuree.github.io/p5cc/index.html.我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。&#xA;基于gocq的qqbot搭建 你至少需要启动三个服务 qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。&#xA;基于pyautogui的自动化程序 主要使用pyautogui的库实现，以及使用gooey库制作了GUI。 详细请访问我的github项目页面</description>
+    </item>
+    <item>
       <title>The Ship</title>
       <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/ship/index.html</guid>
       <description>Overview of the ship</description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/index.html</guid>
+      <description>【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 dockers报错：Starting MySQL database server mysqld …failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).&#xA;自顶向下学习K8S–部署Agones 学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。&#xA;php使用grpc服务(从0开始，并且包含mapfield文件解释) grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。 现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~&#xA;使用grpc在go后端和python服务间通信 gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)</description>
     </item>
     <item>
       <title>Captain&#39;s Log</title>
@@ -23,6 +37,13 @@
       <description>The Captain&#39;s Log</description>
     </item>
     <item>
+      <title>Game</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/game/index.html</guid>
+      <description>用最轻量的VS负载进行UE5开发(使用rider) vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。</description>
+    </item>
+    <item>
       <title>About</title>
       <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/about/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -30,25 +51,18 @@
       <description>About this Website</description>
     </item>
     <item>
-      <title>Project</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blog</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/index.html</link>
-      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/index.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Thinking</title>
       <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/index.html</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/thinking/index.html</guid>
-      <description></description>
+      <description>短期回顾2024/8 这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。&#xA;Gamejam记录-2024CIGA 第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0&#xA;毕业致谢! 为了论文篇幅完整性和一些私人性，我的毕业致谢并不完整，我在此做些补充&#xA;清明记事 2024年清明节的记事&#xA;随笔 test this is a test file</description>
+    </item>
+    <item>
+      <title>Reversing</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/index.html</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/reversing/index.html</guid>
+      <description>TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试&#xA;【逆向】解决unity导出TextAsset后部分文本出现乱码 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</description>
     </item>
   </channel>
 </rss>

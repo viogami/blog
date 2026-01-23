@@ -1056,6 +1056,14 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/introduction/releasenotes/8/1/index.html"
   },
   {
+    "breadcrumb": "",
+    "content": "VioGo–不止聊天的奇妙bot 纯go编写的机器人业务后端，bot取名为 Vio ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。 可以完成基于chatgpt聊天任务，以及一些简单的指令响应。 如果你有想法和意见请提issue！这对我和bot都很重要！ 欢迎qq加群讨论：340961300\np5r预告信生成器API 预告信生成器国外作者原版：https://skyventuree.github.io/p5cc/index.html.我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。\n基于gocq的qqbot搭建 你至少需要启动三个服务 qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。\n基于pyautogui的自动化程序 主要使用pyautogui的库实现，以及使用gooey库制作了GUI。 详细请访问我的github项目页面\nFavAni–从0开始的web开发日志 演示DEMO地址 技术栈：gin+gorm+mysql+jwt+redis+grpc+pytorch+vue3+vite+tailwind\n【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(上) 之前课程设计做过，当时搞得还是挺烂的，PYQT挺好用的，现在基于之前的改进，使得功能更加符合正常的抽卡模拟器需求，同时添加连接数据库。\n【PYQT】赛马娘抽卡模拟器-基于Bwiki的抽卡模拟(下) 前言 本贴将之前没有连接数据库的抽卡模拟器全部完善，最终已经放在了Github上",
+    "description": "VioGo–不止聊天的奇妙bot 纯go编写的机器人业务后端，bot取名为 Vio ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。 可以完成基于chatgpt聊天任务，以及一些简单的指令响应。 如果你有想法和意见请提issue！这对我和bot都很重要！ 欢迎qq加群讨论：340961300",
+    "tags": [],
+    "title": "Project",
+    "uri": "/hugo-theme-relearn/project/index.html"
+  },
+  {
     "breadcrumb": "Authoring",
     "content": "In Hugo, pages are the core of your site.\nThe theme generates the navigation menu out of the given directory structure.\nOrganize your site like any other Hugo project. Typically, you will have a content directory with all your pages.\ncontent log first-day _index.md first-sub-page _index.md picture1.png plain.txt second-day index.md picture1.png picture2.png third-day.md _index.md _index.md Note While you can also go different, _index.md (with an underscore) is recommended for each directory, it’s your directory’s home page.\nSee Hugo’s guide for content to learn more.",
     "description": "Your content's directory structure",
@@ -1154,6 +1162,14 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/configuration/sidebar/width/index.html"
   },
   {
+    "breadcrumb": "",
+    "content": "【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 dockers报错：Starting MySQL database server mysqld …failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server ('2') and data dictionary ('0').\n自顶向下学习K8S–部署Agones 学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。\nphp使用grpc服务(从0开始，并且包含mapfield文件解释) grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。 现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~\n使用grpc在go后端和python服务间通信 gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)\nTypecho中代码高亮并有Mac风格 下载prism文件。在head中引用，并添加行号类。修改CSS。\nTelegram Bot部署 从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)",
+    "description": "【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 dockers报错：Starting MySQL database server mysqld …failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server ('2') and data dictionary ('0').",
+    "tags": [],
+    "title": "Web",
+    "uri": "/hugo-theme-relearn/web/index.html"
+  },
+  {
     "breadcrumb": "Configuration \u003e Customization",
     "content": "A common question is how to add extra CSS styles or JavaScript to your site. This depends on what you need.\nAdding JavaScript or Stylesheets to All Pages Simple Solution Previous documentation of Hugo recommended adding css/custom.css and/or js/custom.js to your static or assets directory. This is supported by the theme.\nTo gain more flexibility, see the next section below.\nFlexible Solution To add CSS stylesheets, JavaScript files or any other addition to the \u003chead\u003e of every page, you can include them in layouts/partials/custom-header.html or layouts/partials/custom-footer.html.\nHowever, this can make your site larger than necessary if these files are only needed on a few pages. The next section explains how to add dependencies only when needed.\nThis way of customization will discard the mechanism for the simple solution above. You will have to add code for inclusion of css/custom.css and/or js/custom.js yourself if you still need this.\nCustom Shortcodes with Dependencies Some shortcodes need extra JavaScript and CSS files. The theme only loads these when the shortcode is used. You can use this for your own shortcodes too.\nFor example, to create a shortcode called myshortcode that needs the jquery library:\nCreate the shortcode file layouts/shortcodes/myshortcode.html and add the folloging line somewhere:\n​ layouts/shortcodes/myshortcode.html ... {{- .Page.Store.Set \"hasMyShortcode\" true }} ... Option Add this to your hugo.toml:\nhugo. toml yaml json [params] [relearn] [relearn.dependencies] [relearn.dependencies.myshortcode] name = 'MyShortcode' params: {} relearn: dependencies: myshortcode: name: MyShortcode { \"params\": {}, \"relearn\": { \"dependencies\": { \"myshortcode\": { \"name\": \"MyShortcode\" } } } } Create loader file layouts/partials/dependencies/myshortcode.html:\n​ layouts/partials/dependencies/myshortcode.html {{- if eq .location \"footer\" }} \u003cscript src=\"https://www.unpkg.com/jquery/dist/jquery.js\"\u003e\u003c/script\u003e {{- end }} Important notes:\nCharacter casing is relevant! The name in hugo.toml must match the Store key used in the shortcode file, prefixed with a has. The key of relearn.dependencies must match the loader file name. See the math, mermaid, and openapi shortcodes for examples.\nNote For advanced customization, you can use the dependency loader in your own partials:\n{{- partial \"dependencies.html\" (dict \"page\" . \"location\" \"mylocation\") }} Give a unique name for the location parameter when you call it, so you can distinguish your loaders behavior depending on the location it was called from.",
     "description": "Add further code to your site",
@@ -1240,6 +1256,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Upgrade",
     "uri": "/hugo-theme-relearn/introduction/upgrade/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "用最轻量的VS负载进行UE5开发(使用rider) vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。",
+    "description": "用最轻量的VS负载进行UE5开发(使用rider) vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。",
+    "tags": [],
+    "title": "Game",
+    "uri": "/hugo-theme-relearn/game/index.html"
   },
   {
     "breadcrumb": "",
@@ -1330,6 +1354,14 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/configuration/sitemanagement/versioning/index.html"
   },
   {
+    "breadcrumb": "",
+    "content": "短期回顾2024/8 这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。\nGamejam记录-2024CIGA 第一次参加gamejam，还是有难得的体会的。我是负责程序的部分，奈何工期不够，最后演示的时候游戏还是有诸多bug，让策划老哥上台受窘了hh。但是最后我也完成了几乎所有bug的修复，上传到了itch.io网站. 并且演示视频也发到了b站：https://www.bilibili.com/video/BV1GfaHeRE3h/?spm_id_from=333.999.0.0\n毕业致谢! 为了论文篇幅完整性和一些私人性，我的毕业致谢并不完整，我在此做些补充\n清明记事 2024年清明节的记事\n随笔 test this is a test file",
+    "description": "短期回顾2024/8 这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。",
+    "tags": [],
+    "title": "Thinking",
+    "uri": "/hugo-theme-relearn/thinking/index.html"
+  },
+  {
     "breadcrumb": "Configuration",
     "content": "Width Changing the content area width\nTitles \u0026 Breadcrumbs Configuring titles and breadcrumbs to your needs\nPage Meta Information Display page meta information with your content\nHeadings Configuring heading anchors\nLinking What options are available for links and images\nHidden Pages Learn about the hidden pages feature",
     "description": "Configure the content area of your site",
@@ -1408,6 +1440,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "What's New",
     "uri": "/hugo-theme-relearn/introduction/releasenotes/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试\n【逆向】解决unity导出TextAsset后部分文本出现乱码 该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。",
+    "description": "TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试",
+    "tags": [],
+    "title": "Reversing",
+    "uri": "/hugo-theme-relearn/reversing/index.html"
   },
   {
     "breadcrumb": "Introduction",
@@ -1640,14 +1680,6 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/paas/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Project",
-    "uri": "/hugo-theme-relearn/project/index.html"
-  },
-  {
     "breadcrumb": "Tags",
     "content": "",
     "description": "",
@@ -1679,14 +1711,6 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/project/p5r_p5cc/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Blog",
-    "uri": "/hugo-theme-relearn/blog/index.html"
-  },
-  {
     "breadcrumb": "Tags",
     "content": "",
     "description": "",
@@ -1711,7 +1735,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/tls/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Reversing",
     "content": "所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。\n问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试\nmumu模拟器启动游戏，希望抓其传向服务器的包，实现一些自动化操作。由于游戏是日服，所以需要启用代理。我使用了clash。此外，游戏的包使用了tls1.3加密，要想截取必须获得在本地生成的密钥进行解密才能知道明文。中间人代理，我使用了mitmproxy。\n问题显露 mitmproxy可以代理一个本地端口，在tls(https)流量进入进行握手阶段的时候，通过配置证书可以解读明文.但问题是流量必须走clash的，不然没梯子访问不了国外的服务器。而clash作为代理工具是没有保存该key的功能的。\n思路 很自然的想法，让模拟器流量先走mitmproxy，而后再走clash作为流量出入口，mitmproxy作为模拟器和clash的中间人。这样就可以实现流量的截取和梯子转发，最后通过如wireshark这类的抓包工具进行数据包分析。\n证书问题 这样看起来ok了，模拟器访问网页，在终端也可以看到mitmproxy的流量经过了。但是在启动游戏的时候，依然会看到如下报错：\nclinet TLS handshake failed. The client may not trust the proxys certificate for xxx.com(Openssl Error ssl routines , , tlsv1 alert access denied)\n字面意思，mitmproxy 在进行 TLS 握手时，客户端无法信任 mitmproxy 的证书。通常情况下，mitmproxy 会自动生成一个伪造的证书来替代目标网站的真实证书，以便解密和转发流量。如果客户端（例如浏览器或模拟器）没有信任 mitmproxy 的证书，它就会拒绝与代理的安全连接。\n那就得在模拟器安装上mitmproxy的证书。 默认情况下，mitmproxy 的证书存储路径是 ~/.mitmproxy/（Linux/macOS）或 C:\\Users\u003cusername\u003e.mitmproxy\\（Windows），其中有一个文件叫 mitmproxy-ca-cert.pem。 将 mitmproxy-ca-cert.pem 证书文件传输到 Android 设备或模拟器。 打开设备的 设置，找到 安全性 或 证书管理，然后选择 从存储导入证书。 选择下载的证书文件并导入。 导入后，设备应该信任 mitmproxy 的根证书。\n但是mumu12模拟器没有如上设置。并不是无他法。 第一步，安装openssl 第二步，把pem证书通过openssl转换为DER格式的证书\nopenssl x509 -subject_hash_old -in mitmproxy-ca-cert.pem.pem\n第三步，重命名pem文件为 哈希值.0 adb root adb remount adb push xxxxxxx.0 /system/etc/security/cacerts/ 参考帖子：https://blog.csdn.net/haduwi/article/details/125696208\n结束 导入了证书后，mitmproxy的event log就没有报错了，美滋滋，开始用wireshark进行数据包分析吧。",
     "description": "所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。\n问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试",
     "tags": [
@@ -1721,7 +1745,7 @@ var relearn_searchindex = [
       "模拟器"
     ],
     "title": "TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题",
-    "uri": "/hugo-theme-relearn/blog/tls-mitmproxy-clash/index.html"
+    "uri": "/hugo-theme-relearn/reversing/tls-mitmproxy-clash/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -1732,7 +1756,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Reversing",
     "content": "问题预览。可以看到，这是个配置文件，但是只有部分文本可读。\n该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。 既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。\n既然是游戏工程项目，考虑两个方向：是否是用protobuff读取的二进制文件；是否是直接用读取字节流的方式读取的配置文件。\n是否是pb的二进制文件？ 直接拿到导出的二级进制文件导出到该网站识别： https://protobuf-decoder.netlify.app/\n可以看到，没有识别出合适的字段名。据此判断该文本文件不是pb的二进制文件。\n是否是按字节流读取的文本？ 按照字节流读取文本，这在客户端中不少见, 因为比json省空间, 但缺点是可读性为0, 我的评价就是狗屎, 你少出几张宽高不是4的整倍数的图, 这都不用扣这点配置表省的空间。。在源码中可能是这样出现的： 使用010 editor打开该二进制文件。逐字节进行观察分析：所有配置文件都有相同的4B文件头，随后是文件长度的16进制，然后是相同的4B字节“00 00 00 01”,再之后是配置文件的配置项数，最后是4B的校验比特。总之就是开头的20B为配置文件的描述文件头。 获得二进制文本的字段描述 此处需要逆向代码，由于是ill2cpp打包的，只能dump出函数名，但也够用了。在dnspy中搜索和配置文件同名的项，可以找到一个定义了所有配置文件model的文件夹ResDef。其中定义了配置文件的字段内容： 该项目确实是用protobuff进行通信的，但配置文件还是json格式的，其中配置字段也符合json嵌套的格式。我们逐比特进行字段解读，发现字节流确实是可读的。其中需要注意以下三点：\n这种由开发者自定义的二进制文件，一般都是大端序读取的字节，直接用readbytes方法不合适，要逆序一下。 注意其中的string类型的比特编码方式，一般是由4B文件指定长度，后面该长度的字节编码为字符串。 注意数组类型在字节流文件中的编码方式，可能和字符串一样用4B指定长度，也可能是定长编码。本示例项目中就是定长编码，所有数组大小都固定为3。 配置字段的定义如下：\npublic class AchieveBaseConfig : ProtoBaseStruct { public int SortNO; public uint ID; public string Desc; public byte Classify; public byte ClassifySubType; public byte ShowProgress; public ResBehaviorRule Behavior; public uint BootyID; public uint MaxProgress; public uint JumpID; } public class ResBehaviorRule : ProtoBaseStruct { public int ID; public int Type; public int[] Param; } 逐比特对比，符合字段的定义： 编写解密代码 编写解密函数类BinaryConfigParser，根据字段类型逐行读取，注意大小端处理，字符串和数组类型处理以及嵌套类型的处理(需要递归)，最后在主函数中调用。如下只给出主函数的调用部分，BinaryConfigParser类过长，且解码不同二进制文件方法也不相同，就未放出，如需要可留言。\nusing Newtonsoft.Json; class Program { // 解码二进制文件 static void Decode(string fileName, int arrayLen) { string binaryFilePath = $\"TextAsset\\\\{fileName}\"; // 替换为实际的二进制文件路径 // 动态获取类型 Type type = Type.GetType($\"ResDef.{fileName}\"); // 动态调用泛型方法 var method = typeof(BinaryConfigParser).GetMethod(\"ReadConfigArray\").MakeGenericMethod(type); // 读取配置项 var configs = method.Invoke(null, new object[] { binaryFilePath, arrayLen }); // 保存为 JSON 数组格式 string jsonArray = JsonConvert.SerializeObject(configs, Formatting.Indented); // 保存到文件 string jsonOutputPath = $\"output_json\\\\{fileName}.json\"; // 替换为实际的 JSON 要存放的文件路径 File.WriteAllText(jsonOutputPath, jsonArray); Console.WriteLine($\"文件 {fileName} 已解码为 JSON 文件: {jsonOutputPath}\"); } //自动化解码 static void AutoDecode() { string textAssetFolder = \"TextAsset\"; string outputFolder = \"output_json\"; // 确保输出文件夹存在 if (!Directory.Exists(outputFolder)) { Directory.CreateDirectory(outputFolder); } // 获取TextAsset文件夹下的所有文件 var files = Directory.GetFiles(textAssetFolder); // 遍历所有文件 foreach (var filePath in files) { string fileName = Path.GetFileName(filePath); string outputJsonPath = Path.Combine(outputFolder, $\"{fileName}.json\"); // 检查是否已生成JSON文件 if (!File.Exists(outputJsonPath)) { try { // // 输入固定数组长度,由于长度未知,所以循环100次，直到找到正确的长度 // for (int arrayLen = 0; arrayLen \u003c 100; arrayLen++) // { // // 调用Decode生成JSON // Decode(fileName, arrayLen); // } int arrayLen = 3; Decode(fileName, arrayLen); } catch (Exception ex) { Console.WriteLine($\"处理文件 {fileName} 失败！\"+ex.Message); } } } } // 程序入口 static void Main() { AutoDecode(); } }",
     "description": "该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。",
     "tags": [
@@ -1745,7 +1769,7 @@ var relearn_searchindex = [
       "C#"
     ],
     "title": "【逆向】解决unity导出TextAsset后部分文本出现乱码",
-    "uri": "/hugo-theme-relearn/blog/decrypt-textasset-garbled/index.html"
+    "uri": "/hugo-theme-relearn/reversing/decrypt-textasset-garbled/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -1804,14 +1828,6 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/%E9%80%86%E5%90%91/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Thinking",
-    "uri": "/hugo-theme-relearn/thinking/index.html"
-  },
-  {
     "breadcrumb": "Thinking",
     "content": "这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。\n今日傍晚出去闲散，哼着\u003c雅俗共赏\u003e，思考着一些价值理念的问题。每天这个时候就像cpu要例行执行中断指令一样，大脑到内核态运行一段时间。人对事物的看法说是随着时间而变化，但实际上这个只是没有触发点。有时候在某种经历的加持下一想通了，思维马上就变化了。这个触发点就是随缘了，什么时候思考到什么时候就，突然的，变通了，缘分需要时间。\n最近看了智能路障的一期视频，讲的消费主义的，在这个主题的壳子里他还阐述了一些关于优越感，关于资本的发展与迎合受众之间的关系使我深感赞同。这也映射到圈子氛围的话题，为什么圈子大了大家都闹麻了，核心还是优越感丢了。人们需要小众的东西来彰显自己的不同，不同使得自己独特使得自己优越。这种心理的目的和想做第一，哗众取宠是相同的。\n我说以上还是想谈论我对一些二游心理认知的变化，我现在处于混沌邪恶派。大家一样烂大家都好似。\n早期我对游戏的认识来自与一种综合性的追崇，游戏是集动画，音乐，玩法，剧本于一体的综合性艺术，是大一统的思想表达体，是包罗的表现模式。但现在我又在做拆分，细化到游戏作曲内容，画面是什么风格，制作人什么背景，玩法是基于什么。这种分久必合合久必分的思维逻辑在长久的生活中屡见不鲜。比如web的前后端，从一体机到前后端分离，到node.js的一把梭到blazor的出现。分分合合，每时每刻需要模拟的场景的不同，需要的逻辑就不一样。 在进入一个领域之前，都希望这个领域可以包罗万象，集大成于一身。在熟悉这个领域后，又领悟到这个集大成的零件是需要缝缝补补的或者随着认知深入反而是感觉是丑陋和不堪的东西。\n二游的传统受众被新入圈的人的狂热发言汗颜，本就不待见传统用户的则合并同类项，前者只好自嘲的说着正义切割。 这太诡异了，鹊觉得这是鸠占鹊巢，鸠觉得这是鹊占鸠巢。面临的只有切割，也就是标签细分。标签是给圈外人了解圈子，留下刻板印象用的，但正如上文所述，人们需要独特的东西来彰显自己，标签也是合适的东西。万物标签化，形如json。好吧，这并没什么作用，临时现象罢了。我觉得准确的趋势是无论是什么标签，市场都会定制化的保留。虽然“三流企业才做产品”，但这种行业的模仿是探路的五彩石也是能否和用户双向奔赴的测试。 人们都需要点独特和优越来为自己的存在加权重，我们没理由指责任何人，我觉得任何人说任何话都可以，但不能来自一种临时主观的理由(比如心情)。现在咒骂某些标签的变味已经无效力了。过去觉得ok的氛围也许当时就有人觉得不ok了，就像回合制，你在之前出过牌了，损失和得到都是固定的了，现在是新的回合和历史无关。如果把心态调整为每回合都是新开始，又是另一种得失体验。\n我想革二游的命，我暗暗的下决心。畸形的市场需要改变，市场和用户是双向塑造的稳态，我不知道现状形成的大影响是什么，但是某种创造性的东西一定有这样的力量。\n我只是记录我的随想，嘈杂并且无序，但确实是我大脑工作的结果，我继续哼着歌 我窝在摇椅里乘凉，和楼下老爷爷一样ye~",
     "description": "这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。",
@@ -1820,12 +1836,12 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/thinking/review_2024-8/index.html"
   },
   {
-    "breadcrumb": "Thinking",
+    "breadcrumb": "",
     "content": "心跳文学社久闻大名，梗图也很多，但是原来是17年的游戏还是老美的，也没配音，一直没启动过。\n今天看到库存就想打开试试。21年做了plus版本，虽然还没配音，但是剧情我也想吃一次原味的，做个游玩时候的心情记录。\n经典青梅开局，什么gal文化输出到了老美啊，而且文学部他是真讨论文学啊，比古典部强。写作技巧也是实在话。游戏方式是选词加好感大概。前面都是正常的，就是女角色疑似有点没见过男人了。先塑造青梅然后毁掉是吧，我是一心一意战士，绝不重蹈诚哥覆辙。\n夏树的伏笔？感觉这角色事太多 前面莫妮卡暗示挺多，伏笔 不给我一心一意战士操作空间非要我选是吧，绷不住了，还不给选莫妮卡 推完了，包括支线。总之还是挺短的，果然在有心理预期的情况下玩游戏，体验肯定是达不到预期的。喜欢纱世里，莫妮卡正常点吧，纯对我好我怎么不接受呢 支线纯糖(褒义)，后面夏树和尤里剧情纯铝铜 dlc支线的核心我觉得可以概括为：\u003cfont color=pink\u003e发现自己值得被爱 \u003c/font\u003e 其实玩了支线倒挺共情夏树的，特指最后一部分。傲娇并不是极端化出来的属性，而是现实普遍存在的心理的夸张。总而言之 反正角色各自有各自的心理问题，这不是什么戏剧化的内容，至少我觉得一定程度上解释我为什么无脑选纱世里。",
     "description": "心跳文学社久闻大名，梗图也很多，但是原来是17年的游戏还是老美的，也没配音，一直没启动过。",
     "tags": [],
     "title": "DDLC实况吐槽",
-    "uri": "/hugo-theme-relearn/thinking/ddlc/index.html"
+    "uri": "/hugo-theme-relearn/_more/ddlc/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -1922,7 +1938,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Game",
     "content": "从UE5官方文档来看，要下的负载还是很多的。但查看rider官方文档，只要我们下一个vs的工具集就ok了，那就试试看。\n下载 Visual Studio Build Tools：\n访问 Visual Studio 官方网站 下载 Visual Studio Build Tools。\n运行安装程序，选择所需的组件：\n选择“C++ build tools”，这是最重要的部分。 在安装选项中选择： MSVC v142 - VS 2019 C++ x64/x86 build tools（或更高版本,我用2022） Windows 11 SDK（win10或更高版本） C++ CMake tools for Windows\n选择“单个组件”中的.NET框架SDK。\n开始安装，等待安装完成。\n配置 Unreal Engine 5 在完成上述步骤后，可以配置 Unreal Engine 5 使用这些工具来编译项目。\n1.启动 Unreal Engine 5 并打开项目。 2.转到“编辑” -\u003e “项目设置”。在左侧菜单中找到“平台” -\u003e “Windows”。确认编译器路径 指向刚安装的 MSVC 编译工具，vs2022。 3.转到”编辑器偏好设置“ -\u003e“通用” -\u003e “源代码” ，选择编辑器为 “rider”\n这样就完成了最轻量的使用rider做编辑器进行UE5开发了，不下载vs2022的编辑器，只下载必要构建工具，编辑器使用rider。",
     "description": "vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。",
     "tags": [
@@ -1936,7 +1952,7 @@ var relearn_searchindex = [
       "C++ Cmake Tools for Windows"
     ],
     "title": "用最轻量的VS负载进行UE5开发(使用rider)",
-    "uri": "/hugo-theme-relearn/blog/ue5-rider-vs/index.html"
+    "uri": "/hugo-theme-relearn/game/ue5-rider-vs/index.html"
   },
   {
     "breadcrumb": "Thinking",
@@ -1947,7 +1963,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/thinking/graduation-thanks/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Web",
     "content": "dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server ('2') and data dictionary ('0'). 出现该问题的重要前提是：\ndocker启动mysql并不是根据官方mysql镜像，而是在一个基础php镜像上安装的mysql服务。 我的mysql数据通过docker的卷挂载在外部，通过一个mysql文件夹管理。 当我把linux上可以运行的镜像和mysql外部卷都发送给win机器运行，由于mysql数据是外部挂载的，所以会出现同一个镜像，换了操作系统却无法运行的问题。本质上是mysql在linux和win上的环境变量lower_case_table_names默认值不同导致的。由于数据库数据在linux上初始化，该值已经为0，而在win上需要为2，所以报错。\nDocker镜像确实是操作系统无关的，但是MySQL的lower_case_table_names设置是与操作系统有关的。这是因为lower_case_table_names设置决定了MySQL如何存储和比较表名和数据库名。\n在Windows和Mac系统中，文件系统通常不区分大小写，因此MySQL默认将lower_case_table_names设置为2。在这种设置下，MySQL将表名存储为小写，并且比较时不区分大小写。\n在Linux系统中，文件系统通常区分大小写，因此MySQL默认将lower_case_table_names设置为0。在这种设置下，MySQL将表名存储为给定的大小写，并且比较时区分大小写。\n当你在一个系统（例如Windows）上创建MySQL数据，然后尝试在另一个系统（例如Linux）上使用这些数据时，可能会出现这个错误。这是因为数据字典（存储了表名和数据库名的元数据）的lower_case_table_names设置与服务器的设置不一致。\n解决方案 解决个蛋，一般都是放在linux上运行的，mysql在哪初始化就在哪部署。将镜像和外部卷都放在linux机器上部署就好了。win上报错要启动mysql前修改那个环境变量的值。\n或者有一种麻烦的思路，就是将其mysql服务从一个容器中剥离出来，新开一个容器启动，这样方便设置环境变量。如果要修改一个非mysql基础镜像的mysql环境变量还是比较繁琐的。新开一个容器，用docker-compose启动即可。",
     "description": "dockers报错：Starting MySQL database server mysqld ...failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server ('2') and data dictionary ('0').",
     "tags": [
@@ -1958,7 +1974,7 @@ var relearn_searchindex = [
       "开发问题"
     ],
     "title": "【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错",
-    "uri": "/hugo-theme-relearn/blog/docker-mysql-error/index.html"
+    "uri": "/hugo-theme-relearn/web/docker-mysql-error/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -2041,7 +2057,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Web",
     "content": "学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。\n本文基本从0开始部署Agones，进而逐步理解docker，理解K8S。\n相信如果你能发现本文，自然了解Agones是什么，如果不知道自行了解下，不做多介绍，引用官方介绍：\nAgones 是一个开源平台，用于部署、托管、扩展和编排专用游戏服务器，用于大型多人游戏，构建在行业标准的分布式系统平台 Kubernetes 之上。\n部署Agones只是一个任务性的引子，重点还是K8S.\n准备工作 安装docker-desktop 由于我是win机器，在一切之前，得介绍下开发环境，但很简单。 首先得安装docker，注意如下：\n打开任务管理器，看看cpu有没有开启虚拟化，没有则在bios设置中开启。(必要) 安装wsl，无需开启hyper-v,所以家庭还是专业版的windows没啥影响。 自备代理工具，docker官网需要魔法。 安装完docker基本就完成了。\n由于是个人开发测试用，只用部署一个单节点集群就好了，而这在docker-desktop中已经集成了，很方便，如下所示，打开即可：\nkubectl get nodes 如果返回类似 Ready 状态的节点，说明 Kubernetes 已经启动成功。\n注意 ❌：Docker Desktop 的 Kubernetes 只能运行在单个节点上，不适用于生产环境的高可用集群。\nvscode的K8S插件 安装桌面版的docker是有图形化界面的，很直观，但K8S目前我们是没有GUI的，需要吗？并不一定，使用gui会更多的限制你。 Kubernetes 本身主要是通过 kubectl 命令行工具和 YAML 配置文件进行管理的。\n虽然有 kubernetes-dashboard，但别着急，在vscode的插件也有gui可以打开dashboard。推荐安装docker和k8s插件，在vscode中集成开发，然后我逐步解释下插件中每个显示项的作用，从这里就开始理解如何使用K8S辣\nNamespace（命名空间）Kubernetes 内部的逻辑隔离单位，用于划分不同的应用、环境或团队。一个集群可以包含多个 Namespace，每个 Namespace 内的资源相互独立。 Workloads（工作负载）管理 Kubernetes 里运行的应用程序，本质上就是 运行 Pod 的控制器。Workload 负责定义应用如何部署、扩缩容、更新和运行。 Network（网络） 负责 Kubernetes Pod 之间、Pod 和外部系统之间的通信。管理 Service、Ingress、Network Policy 这些 K8s 网络资源。 Storage（存储）管理 Kubernetes 里的持久化存储，确保 Pod 重新启动后数据不会丢失。Volume 只在 Pod 生命周期内有效，但 PersistentVolume（PV）可持久存储数据。 Configuration（配置管理）管理应用的配置信息、环境变量、Secrets（敏感信息）。让应用和环境解耦，比如可以在不修改代码的情况下更改应用配置。 Custom Resource（自定义资源）扩展 Kubernetes，增加新的资源类型，比如 Agones 添加了 GameServer 资源。允许你 创建自己的 K8s API，以适配特定的业务需求。 Helm Releases（Helm 版本管理）管理 Helm 安装的应用（比如 agones）。Helm 是 Kubernetes 的包管理工具，可以一键安装、更新、删除复杂应用。 但Docker Desktop 不包含K8S的包管理工具 Helm 但安装了K8S插件会自动提示下载 kubectl和 helm，前者是命令行操作工具。都是编译好的exe。如果需要可以配到环境变量中，位置在 .../user/.vs-kubernetes下\n提出疑问-区别概念 好了，在部署之前，安装了上文所说的插件，如果刚入门K8S，难免有一些疑问，下面我着重进行些概念补充，希望下面可以顺利进行~\nKubernetes 中 Node 和 Pod 的关系 Node（节点）就是机器，它可以是：物理机（裸机服务器），虚拟机（云服务器、Docker Desktop 里的虚拟 K8s 节点），你的本机（如果你用 Docker Desktop Kubernetes）\nPod（Pod 是容器的封装单位），Pod 运行在 Node上，一个Pod 里面可以有一个或多个容器，Pod共享存储（Volume）、网络（IP 地址）等，K8s 只管理 Pod，不直接管理容器\n如果 Kubernetes 是一个数据中心：\nNode = 一台服务器 Pod = 服务器上的一个应用进程组（可能包含多个容器） 容器 = 运行的进程（比如 Nginx、MySQL 等） 现实中，一个项目是不是只要一个k8s集群就够了？ YES！一个 Kubernetes 集群足够应付绝大部分的项目需求，包括扩展、弹性、资源管理和容器的自动化部署。\n一个K8S集群中会有很多nodes，这些nodes就是物理上的机器，可以有很多个，每个nodes里有很多pods，pods才是实际的部署的应用。nodes已经完成了分布式，多集群可能确实在大型复杂项目的跨地区部署中用到，但咱可以不用了解\n命名空间和nodes有什么区别，为什么有了nodes还需要namespace Nodes（节点） 物理或虚拟机，负责运行 Pod 实际的计算资源（CPU、内存、存储） Namespace（命名空间） 逻辑隔离的环境，管理不同的 K8s 资源 逻辑上的组织单位，不影响物理资源分配 可以把 Node 理解为 “真实的服务器”，而 Namespace 更像是 “应用的文件夹或项目空间” 安装Agones 好了，终于来到重点也不算是重点的部分了。\n但并不重要，因为你可以根据官方文档逐步操作 根据agones官方文档，安装可以通过yaml文件，也可以通过helm包管理安装。\n我是用kubectl命令行拉取的yaml文件完成的安装\nkubectl create namespace agones-system kubectl apply --server-side -f https://raw.githubusercontent.com/googleforgames/agones/release-1.48.0/install/yaml/install.yaml 然后你就可以在 Custom Resource中发现拉去下来的服务了！\n接下来按照官方文档操作进行部署了，并不赘述，因为本文不是介绍怎么部署agones。\n本人使用rider及其K8S插件，在游戏开发的时候进行服务器集群控制的。记住命令行得到pod的ip和端口，接下来就是网络通信的知识了。如果要在unity中和部署的服务器应用通信，自写和后端的通信协议，Agones只是个后台应用调度工具，不涉及和前端交互。\n注意 ❌ Agones Unity SDK 适用于 服务器端（GameServer） 的 Unity 进程而不是前端！\n例如：你用 Unity 制作了一款 服务器端模拟的游戏逻辑，需要让 Agones 调度这个服务器。或者你的游戏服务器是 Unity 编写的，想要与 Agones 交互来管理它的生命周期。但是，如果你想让 Unity 客户端 连接到 GameServer，那 Unity SDK 并不需要。客户端应该直接用 WebSocket、TCP、UDP、HTTP 连接 GameServer。\n结束 怎么就结束了？ 因为从安装agones敲下一行命令行开始，已经完成了一次K8S的体验，只要了解从0到启动一个K8S单节点集群的全过程每个操作的意义，那么恭喜你，已经入门K8S了，就这么简单，剩下的内容需要在一次次部署应用，一次次开关容器中不断积累吧。这不是整体图看这个概念那个概念是什么意思可以解决的。\n怎么用kubectl操作，怎么用helm包管理，这就是启动K8S后亟待解决的唯二的问题，在实践中结束吧！\n如果你有任何疑问，都可以评论联系我~",
     "description": "学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。",
     "tags": [
@@ -2052,7 +2068,7 @@ var relearn_searchindex = [
       "云原生"
     ],
     "title": "自顶向下学习K8S--部署Agones",
-    "uri": "/hugo-theme-relearn/blog/k8s-agones/index.html"
+    "uri": "/hugo-theme-relearn/web/k8s-agones/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -2095,7 +2111,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/php/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Web",
     "content": "grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。\n现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~\n流程 php的服务器安装protoc php的服务器安装grpc 编写服务端代码 编写客户端代码 由于服务端(python)的代码已经编写或者说已经部署，就不做叙述了。\n安装代码请根据自己的php版本和grpc版本酌情自定义。本人使用的php8.0，grpc1.62.0，protobuf4.62.0\n安装protoc解释器 和windows开发一样，使用grpc服务均需要使用protoc解释器，去官方github下的release下载linux版本： protoc-26.0-linux-x86_64.zip\n解压到 /usr/bin/目录下\n如果你使用宝塔，你也可以直接先在本地电脑上解压，把解压后的bin文件夹里的protoc文件上传到 /usr/bin/中就好了。\n终端中输入 protoc,有返回即为成功\n安装grpc 无论你服务器是否安装pecl，可以直接通过http请求安装php相关包，但是必须安装了php(废话)\n# 下载解压 grpc cd ~ wget http://pecl.php.net/get/grpc-1.62.0.tgz tar xvf grpc-1.62.0.tgz cd grpc-1.62.0 # 生成配置并编译安装(编译安装时间很长，我大概安装了一小时左右) # 注意选择你自己的路径以及php版本，我是80 /www/server/php/80/bin/phpize ./configure --with-php-config=/www/server/php/80/bin/php-config make \u0026\u0026 make install 之后要配置php的拓展 注意，这是必要的，compose安装的grpc依赖，底层还是调用的这个grpc拓展！\n# 配置PHP扩展 cd grpc-1.62.0 echo \"extension = grpc.so\" \u003e\u003e /www/server/php/80/etc/php.ini cd protobuf-4.62.0 # 如果没有路径请仿照grpc安装的方式手动安装安装一下，我个人觉得可能并不需要 echo \"extension = protobuf.so\" \u003e\u003e /www/server/php/80/etc/php.ini 最后重启一下php和nginx服务就大功告成了\n编译protoc文件 具体的protoc文件的定义详细见我之前的博客\n需要安装protoc和grpc_php_plugin\n使用如下代码生成：\nprotoc --php_out ./ you-file.proto #需要安装protoc解释器，生成protoc的php定义文件在当前目录(./) protoc --grpc_out ./ you-file.proto #需要grpc_php_plugin插件安装，生成grpc文件在当前目录 第一行生成你的proto数据定义文件，我生成了 GCNResult.php,Node.php,Edge.php,GraphData.php, 同时还会生成一个GPBMetaData文件夹。 第二行生成php的grpc文件：GCNServiceClient.php\n注意，如果你没有生成grpc文件的插件(安装grpc出现问题)，可以直接下载该插件 然后通过如下代码生成 xxxClient.php文件\nprotoc --grpc_out ./ --plugin=protoc-gen-grpc=/your-path-to-plugin/grpc_php_plugin you-filename.proto :: 自用 :: protoc --grpc_out ./ --plugin=protoc-gen-grpc=/opt/share/grpc_php_plugin gcn.proto 编写php请求的代码(客户端代码) 编写文件前置注意事项 注意：如果你使用宝塔，需要把php设置里的禁用函数 putenv和 proc_open给删除，不然composer安装无法进行。 需要编写composer.json文件，因为使用了 dirname(__FILE__).'/vendor/autoload.php'该自动导入功能。json文件内容示例： { \"require\": { \"grpc/grpc\": \"*\", \"google/protobuf\": \"*\" }, \"autoload\": { \"psr-4\": { \"GPBMetadata\\\\\": \"protoc/GPBMetadata/\", \"protoc\\\\\": \"protoc/\" } } } 编写后在服务器该文件目录下启动终端输入 composer install即可，会生成vendor文件夹\n现在我将编写一个最简单的php文件来调用这个服务。\n\u003c?php require dirname(__FILE__).'/vendor/autoload.php'; // 引入 gRPC PHP 扩展的自动加载文件 require 'protoc/GraphData.php'; // 引入包含 protoc文件夹下的grpc生成文件 require 'protoc/Node.php'; require 'protoc/Edge.php'; require 'protoc/GCNResult.php'; require 'protoc/GCNServiceClient.php'; // 进行grpc请求，获取gcn处理后的数据，返回json字符串 function GCN_request() { $client = new GCNServiceClient('localhost:9999', [ 'credentials' =\u003e \\Grpc\\ChannelCredentials::createInsecure(), ]); // 创建一个实例的图数据 $G_example = new GraphData(); $G_example-\u003esetNodes([ (new Node())-\u003esetId(\"node1\")-\u003esetFeatures([0.1, 0.2, 0.3]), (new Node())-\u003esetId(\"node2\")-\u003esetFeatures([0.4, 0.5, 0.6]), ]); $G_example-\u003esetEdges([ (new Edge())-\u003esetSourceId(\"node1\")-\u003esetTargetId(\"node2\"), ]); // 发送请求并接收响应 list($response, $status) = $client-\u003eProcessGraph($G_example)-\u003ewait(); if ($status-\u003ecode !== Grpc\\STATUS_OK) { // gRPC 请求出错 throw new Exception('Error calling grpc server -\u003e ProcessGraph: ' . $status-\u003edetails); exit(1); } // 因为我的返回结果是个map数据类型，php中没有该类型，需要做一个遍历取值，如果是string类型可以直接取。 $NodeScores = []; foreach ($response-\u003egetNodeScores() as $key =\u003e $value) { $NodeScores[$key] = $value; } return json_encode($NodeScores); } 该函数返回一个json数据，想要修改可以使用 json_decode() , 至此，大功告成！\n备注 因为我的protoc文件的返回结果定义为一个map，这是go才有的数据结构，php没有 使用 var_dump($response-\u003egetNodeScores())可以看到这是谷歌grpc核心中定义的一个mapfield object，可以直接像go的map一样，用 $response-\u003egetNodeScores()['xxx']获取值。\n虽然官网显示有ToString()的方法：https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString 但是在这里无法使用，所以我只能通过遍历的方式获取所有值存到一个数组里，毕竟map结构本身就不支持一次获取全部，还是要遍历。",
     "description": "grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。\n现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~",
     "tags": [
@@ -2106,7 +2122,7 @@ var relearn_searchindex = [
       "Grpc-Go"
     ],
     "title": "php使用grpc服务(从0开始，并且包含mapfield文件解释)",
-    "uri": "/hugo-theme-relearn/blog/grpc-php/index.html"
+    "uri": "/hugo-theme-relearn/web/grpc-php/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -2117,7 +2133,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/python/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Web",
     "content": "grpc前言 gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架， 基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。 grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)\n由于我的一个go后端(也可以不是go)需要实现神经网络相关的功能，我要调用一个python的服务，于是想到了使用grpc的方式。\n初次接触，将从0介绍到功能实现。\n感谢官方的文档\nhttps://grpc.io/docs/languages/go/quickstart/\n主要流程 定义.proto文件：创建一个 .proto 文件，定义图数据和 GCN 结果的消息类型以及服务接口。 生成 gRPC 代码：使用 Protocol Buffers 编译器 protoc，根据 .proto 文件生成 Go 和 Python 的 gRPC 代码。 实现 Python 服务器：在 Python 中实现 gRPC 服务器，接收来自 Go 客户端的图数据，进行 GCN 处理，并返回处理结果。 实现 Go 客户端：在 Go 中实现 gRPC 客户端，发送图数据到 Python 服务器，并接收处理结果。 安装protoc解释器 grpc是通过pb(protocolbuffer)这个协议工作的，首先安装protoc的解释器，并将其bin文件夹添加到环境变量。 地址：https://github.com/protocolbuffers/protobuf/releases 下载后解压到任意文件夹位置，然后将解压后的bin文件夹添加到环境变量。\n打开cmd输入 protoc有数据返回就ok了。\n为了在项目中使用protoc的一些指令可以正常工作，还有把bin文件下的 protoc.exe文件复制一份到 C:\\Windows\\System32文件夹下。\n顺便一提，为了proto文件可以在vscode高亮显示，可以安装官方的插件：protobuf，作者：pbkit\ngo端工作 首先安装go的grpc库\ngo get -u google.golang.org/grpc 然后安装可以将proto文件自动解析为go文件的解释器：\ngo install google.golang.org/protobuf/cmd/protoc-gen-go go install google.golang.org/grpc/cmd/protoc-gen-go-grpc 定义proto文件 gcn.proto： 其中go_package是指定生成的文件位置和文件所在包名。“.” 表示文件生成在当前目录，“；”表示参数分割，后面的proto是将生成文件放在proto包中。 还有更多可选参数，自行参考官方\ngo_package：指定生成 Go 代码时的包路径，格式为 option go_package = “package_path”;，用于将生成的代码放置在指定的 Go 包中。\njava_package：指定生成 Java 代码时的包路径，格式为 option java_package = “package_path”;，用于将生成的代码放置在指定的 Java 包中。\njava_outer_classname：指定生成 Java 代码时的外部类名，格式为 option java_outer_classname = “ClassName”;，用于指定生成的 Java 类的外部类名。\ncc_generic_services：指定是否生成 C++ 通用服务（generic services），格式为 option cc_generic_services = true; 或 option cc_generic_services = false;，默认为 true。\ncc_enable_arenas：指定是否启用 C++ arenas 内存管理，格式为 option cc_enable_arenas = true; 或 option cc_enable_arenas = false;，默认为 false。\noptimize_for：指定优化选项，可以是 SPEED、CODE_SIZE 或 LITE_RUNTIME，格式为 option optimize_for = SPEED;，默认为 SPEED。\ndeprecated：指定消息或字段已过时，格式为 option deprecated = true;。\nrpc_timeout：指定 gRPC 调用的超时时间，格式为 option rpc_timeout = “10s”;，表示超时时间为 10 秒。\ngcn.proto协议文件具体定义为：\nsyntax = \"proto3\"; option go_package = \".;proto\"; message Node { string id = 1; repeated float features = 2; } message Edge { string source_id = 1; string target_id = 2; } message GraphData { repeated Node nodes = 1; repeated Edge edges = 2; } message GCNResult { map\u003cstring, float\u003e node_scores = 1; } service GCNService { rpc ProcessGraph(GraphData) returns (GCNResult); } 我这里是用来处理图数据。\n接下来生成 gRPC 代码：\nprotoc --go_out=. --go_opt=paths=source_relative your_proto_file.proto protoc --go-grpc_out=. --go-grpc_opt=paths=source_relative your_proto_file.proto 会生成两个文件 gcn.pb.go和 gcn_grpc.pb.go\n前者生成的文件，包含所有pb协议的go代码，将数据格式写为go的结构体形式。包含填充、序列化，检索请求和响应消息类型。 后者包含客户端使用中定义的方法，调用的接口类型。以及服务端要实现的接口类型。包含创建客户端服务和服务端服务的方法。 请注意，无论go后端作为请求grpc的一方(client)还是做出响应的一方(server),这两个文件都是必须生成的。 使用 client := pb.NewXXXXServiceClient(conn)的方式创建客户端 最后就是完成go端的grpc请求代码，每次请求都创建一个grpc的连接，请求完毕defer断开：\nfunc GCN_request() (map[string]float32, error) { conn, err := grpc.Dial(\"localhost:9999\", grpc.WithTransportCredentials(insecure.NewCredentials())) if err != nil { // Failed to connect to gcnserver(py) by grpc return nil, err } defer conn.Close() client := pb.NewGCNServiceClient(conn) // 创建一个实例的图数据 G_example := \u0026pb.GraphData{ Nodes: []*pb.Node{ {Id: \"node1\", Features: []float32{0.1, 0.2, 0.3}}, {Id: \"node2\", Features: []float32{0.4, 0.5, 0.6}}, }, Edges: []*pb.Edge{ {SourceId: \"node1\", TargetId: \"node2\"}, }, } // 发送请求并接收响应 result, err := client.ProcessGraph(context.Background(), G_example) if err != nil { // Error calling ProcessGraph return nil, err } return result.NodeScores, err } 最后的最后别忘了创建一个路由调用这个方法。\npython端工作 py同样安装grpc相关库\npip install grpcio pip install grpcio-tools 生成grpc文件 终端cd到proto文件目录下，执行：\npython -m grpc_tools.protoc -I ./ --python_out=./ --grpc_python_out=. your-file.proto py的服务端代码grpc相关的代码较为简洁，重点在于数据处理。将其服务端口和grpc客户端的请求端口保持一致。 部分代码取自官方示例。\nimport grpc from concurrent import futures from proto import gcn_pb2_grpc, gcn_pb2 class GCNServicer(gcn_pb2_grpc.GCNServiceServicer): def ProcessGraph(self, request, context): # Process graph data using GCN and return result # example: return gcn_pb2.GCNResult(node_scores={\"node1\": 0.5, \"node2\": 0.8}) def server(): server = grpc.server(futures.ThreadPoolExecutor(max_workers=10)) gcn_pb2_grpc.add_GCNServiceServicer_to_server(GCNServicer(), server) server.add_insecure_port('[::]:9999') server.start() print('gRPC 服务端已开启,端口为9999...') server.wait_for_termination() if __name__ == '__main__': server() 启动 做好了以上工作就大功告成了，启动两个服务即可\ngo run main.go\npython server.py\n然后访问定义的路由地址，如下显示，nice~",
     "description": "gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)",
     "tags": [
@@ -2128,7 +2144,7 @@ var relearn_searchindex = [
       "Grpc-Python"
     ],
     "title": "使用grpc在go后端和python服务间通信",
-    "uri": "/hugo-theme-relearn/blog/grpc-go-python/index.html"
+    "uri": "/hugo-theme-relearn/web/grpc-go-python/index.html"
   },
   {
     "breadcrumb": "Project",
@@ -2171,7 +2187,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/typecho/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Web",
     "content": "三步 下载prism文件。 在head中引用，并添加行号类。 修改CSS。 第一步：官网下载，选择语言和需要的插件 易得\n第二步：header.php文件的head块中添加如下代码 \u003c!-- 为pre块添加 line-numbers 类 --\u003e \u003cscript\u003e document.addEventListener('DOMContentLoaded', function () { var codeBlocks = document.querySelectorAll('.post-content pre:not(.line-numbers)'); codeBlocks.forEach(function (codeBlock) { codeBlock.classList.add('line-numbers'); }); }); \u003c/script\u003e \u003c!-- prism 代码高亮\u0026主题选择 --\u003e \u003c!-- 注意prismjs_theme 是我在function文件中定义的 --\u003e \u003c?php if ($this-\u003eoptions-\u003eprismjs_theme == 'tomorrow') : ?\u003e \u003clink rel=\"stylesheet\" href=\"\u003c?php $this-\u003eoptions-\u003ethemeUrl('替换为你的prism.css的路径，下同'); ?\u003e\" /\u003e \u003cscript src=\"\u003c?php $this-\u003eoptions-\u003ethemeUrl('替换为你的prism.js的路径，下同'); ?\u003e\"\u003e\u003c/script\u003e \u003c?php elseif ($this-\u003eoptions-\u003eprismjs_theme == 'coy') : ?\u003e \u003clink rel=\"stylesheet\" href=\"\u003c?php $this-\u003eoptions-\u003ethemeUrl('prismjs/coy/prism.css'); ?\u003e\" /\u003e \u003cscript src=\"\u003c?php $this-\u003eoptions-\u003ethemeUrl('prismjs/coy/prism.js'); ?\u003e\"\u003e\u003c/script\u003e \u003c?php endif; ?\u003e \u003c!-- 修改为mac样式,请替换你的mac.css文件路径--\u003e \u003clink rel=\"stylesheet\" href=\"\u003c?php $this-\u003eoptions-\u003ethemeUrl('css/mac.css'); ?\u003e\" /\u003e 第三步：修改满意的CSS 下面只写了 mac.css文件。 注意，我的效果也修改了下载了 prism.css文件。 更具体的css可以参考我的github仓库，该主题是开源的。\n/* macOS 风格的代码框样式 */ pre[class*=language-] { position: relative; padding: 20px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px; transition: box-shadow 0.3s ease-in-out; max-height: 100%; max-width: 85%; padding-top: 50px; } /* macOS 风格的图标 */ pre[class*=language-]::before { content: \"\"; position: absolute; background: url(\"../img/icon_mac.svg\"); background-position-y: center; top: 15px; left: 20px; height: 14px; width: 54px; margin-left: 5px; display: block; } /* 悬浮 */ pre[class*=language-]:hover { box-shadow: 0 25px 15px rgba(0, 0, 0, 0.2); } 你也可以直接从我的仓库拉取源代码！👉👉Ayakin",
     "description": "下载prism文件。在head中引用，并添加行号类。修改CSS。",
     "tags": [
@@ -2181,7 +2197,7 @@ var relearn_searchindex = [
       "CSS"
     ],
     "title": "Typecho中代码高亮并有Mac风格",
-    "uri": "/hugo-theme-relearn/blog/prism-mac-style/index.html"
+    "uri": "/hugo-theme-relearn/web/prism-mac-style/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -2192,7 +2208,7 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/telegram/index.html"
   },
   {
-    "breadcrumb": "Blog",
+    "breadcrumb": "Web",
     "content": "基本示例我放在了github上：Gobot 最终实现效果 👇👇👇 创建bot 从botfather处创建bot，命名为 vio. 明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)\n使用HTTPS 在Telegram的Bot API中，使用HTTPS是强烈建议的。如果Bot使用HTTP而不是HTTPS，Telegram服务器可能会拒绝处理请求。 为了确保Tg Bot能够正常运行并保障通信安全，最好使用HTTPS。许多服务提供商都提供免费的SSL证书. 如：Let’s Encrypt证书，它是一种免费的、开源的证书颁发机构（CA），可以用来为服务器启用HTTPS，从而实现安全的Bot通信。\n但是如果部署在paas平台，则无需考虑证书相关的问题，更多部署细节可以查看我 仓库的说明\n响应方式 Telegram Bot有以下响应方式：\n长轮询（Long Polling）： 这是一种常见的实时通信方式。Bot向Telegram服务器发送一个请求，然后服务器一直保持连接打开，直到有新消息到达。这样，Bot能够即时收到用户的消息并立即作出响应。长轮询是一种相对简单的方式，适用于需要实时性的场景。\nWebhook： Webhook是一种更为高效和现代的方式。允许你在你的服务器上设置一个HTTP端点，当有新消息到达时，Telegram服务器会向这个端点发送POST请求。这样，你的Bot可以立即得知有新消息，并作出响应。使用Webhook能够避免频繁的轮询操作，提高效率。\n云函数（Cloud Functions）： 你还可以将Bot的部分功能部署到云函数（如AWS Lambda、Google Cloud Functions等）上，以响应特定的事件。这样可以实现高度的可伸缩性和响应性。\nwebhook 为了有较好的实时通信体验，并且完成多方通信，我准备使用webhook的方案。\n设置Webhook端点： 在我服务器上，创建一个HTTP端点来接收Telegram的Webhook请求。这个端点需要运行在公共网络上，并且能够处理POST请求。这个端点将会接收到所有的Telegram消息。\n配置Bot的Webhook： 使用Telegram Bot API设置Bot的Webhook，指向刚刚创建的HTTP端点。可以使用NewWebhook方法，指定Webhook的URL(我部署在paas平台上，无需使用证书密钥)。\npaas平台部署 我选择了zeabur这个服务提供平台,\nzeabur上项目部署非常快,甚至不用写dockfile,而且对go项目有完整的支持,算是符合他们的口号:\nDeploying your service with one click\n在使用paas服务时，需要注意项目的端口号设置,最好设置在环境变量中,然后在项目中通过 os.Getenv(\"xxx\")来获取端口号.\nzeabur的go项目中，环境变量PORT是默认8080，且为全局的。也可以不设置，直接调用就好了。\n对于tgbot：官方示例中使用的8443端口，在部署到paas平台时8443端口需要确认是否开放。 我建议不要使用官方示例中把端口号写明的写法，通过环境变量PORT调用端口号，避免webhook创建失败，或者监听未开放的端口等问题。 调用chatGPT API 首先获取密钥 但是注意，不是申请了账号密钥就可以使用的，只有三个月内注册的账号每个月有免费的5$的额度。如果没有额度，申请的密钥也是无法使用的。很多购买的GPT的账号，api基本都是没额度或者额度每个月都被其他人用完的，可以使用国内的中转代理，来解决密钥的问题。 我推荐一个：柏拉图次元Al\nGPT代理问题 注意：如果使用中转，需要更换post请求的URL\n使用go-openai库后，需要更改config 更多细节可以查看服务提供商的文档，以及这个issue\n示例：URL：\"https://api.example.com/v1\". 其中后面的“v1”是必须的\n实现数据处理逻辑 对于tgbot来说，私聊要回复信息需要知道user的id或者username，但是在群里中需要知道chat的id。\n注意，tg的群组分为group和supergroup，公开的群组都是supergroup，只有私群是group。\n设置了消息处理逻辑，如果想直接用chatgpt的api来聊天，写一个函数调用就可以了。\n对于go语言来说，有一个以及封装好的，对于openai API使用的库：go-openai\n重新部署 把chatGPT的API密钥写在环境变量中，redeploy服务就好了",
     "description": "从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)",
     "tags": [
@@ -2202,7 +2218,7 @@ var relearn_searchindex = [
       "Webhook"
     ],
     "title": "Telegram Bot部署",
-    "uri": "/hugo-theme-relearn/blog/telegram-bot/index.html"
+    "uri": "/hugo-theme-relearn/web/telegram-bot/index.html"
   },
   {
     "breadcrumb": "Tags",
@@ -2251,6 +2267,14 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: a secret",
     "uri": "/hugo-theme-relearn/tags/the-hidden/index.html"
+  },
+  {
+    "breadcrumb": "",
+    "content": "👋Hi~there 我是 Viogami 一个有服务器开发经验的游戏开发者 – 这是我的博客网站,能像镜子一样反射我的type🤗\n熟悉web后端技术栈，游戏方面也有诸多实践\n📓 My favorite language 👉 \u003ca href=\"https://golang.org\" style=\"color: #00ADD8\"\u003eGolang \u003c/a\u003e\n开发的时候是有各种弯弯绕绕，但是go的输出确实大道至简\nfmt.Println(\"If you can Coding , you must be a Designer!\") 🌐🌐🌐 目前从业互联网后端，每天精进一点设计哲学，向架构发展中。熟悉各种互联网基础设施，并发编程略有实践。 虽然工作内容是天天CURD，但是关注追踪新技术永远乐此不疲。新框架，新组件，预发布，抢先版，喜欢尝试并应用不稳定。\n互联网方面是自己走通过全流程的，前后端然后测试部署等，自然也熟悉python，多用来编写自动化脚本，测试等。AI和机器学习相关方面已止步，底层是无力了解了自有大能为我提供api🙏。\ndocker重度爱好，部署尝试过K8S，但并不熟练。\n🎮🎮🎮 游戏开发方面，unity苦手，除了正向开发，逆向也做了很多工作，不敢说对游戏开发底层有什么理解，但是游戏表现层的实现思路差不多翻来覆去搞的明明白白了。联机方面，对web的数据包传输有相关实践，也做过联机游戏的服务端设计。每一步都是为了自己游戏的铺垫吧。\n主流游戏引擎均有实践，美术音乐靠ai，一点剪辑建模经验，自学日语，双料特工。还是希望有专业的小伙伴联系我，当然，我得先发布我的demo，哈哈\n游戏经历可通过我主页的steam图标点击查看(欢迎好友位)。动作游戏才是游戏之魂！\n崇拜的游戏制作人： Kojima😶‍🌫️ 希望和小岛一样越活越年轻\n👥 友情链接 我的typecho博客站",
+    "description": "About this Website",
+    "tags": [],
+    "title": "About",
+    "uri": "/hugo-theme-relearn/_more/about/index.html"
   },
   {
     "breadcrumb": "Front Matter",
@@ -3464,6 +3488,14 @@ var relearn_searchindex = [
     "uri": "/hugo-theme-relearn/tags/taxonomy/index.html"
   },
   {
+    "breadcrumb": "Thinking \u003e 随笔",
+    "content": "this is a test file",
+    "description": "this is a test file",
+    "tags": [],
+    "title": "test",
+    "uri": "/hugo-theme-relearn/thinking/%E9%9A%8F%E7%AC%94/test/index.html"
+  },
+  {
     "breadcrumb": "Options",
     "content": "",
     "description": "",
@@ -3686,5 +3718,13 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Option :: Versions",
     "uri": "/hugo-theme-relearn/options/versions/index.html"
+  },
+  {
+    "breadcrumb": "Thinking",
+    "content": "test this is a test file",
+    "description": "test this is a test file",
+    "tags": [],
+    "title": "随笔",
+    "uri": "/hugo-theme-relearn/thinking/%E9%9A%8F%E7%AC%94/index.html"
   }
 ]

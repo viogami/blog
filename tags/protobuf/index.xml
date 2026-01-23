@@ -10,9 +10,9 @@
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/tags/protobuf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【逆向】解决unity导出TextAsset后部分文本出现乱码</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/blog/decrypt-textasset-garbled/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/reversing/decrypt-textasset-garbled/index.html</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/blog/decrypt-textasset-garbled/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/reversing/decrypt-textasset-garbled/index.html</guid>
       <description>该文件是通过解包软件从ab包直接导出的，不存在ab包加密的问题。既然部分文本可读，那么该文件加密的可能性很小，部分加密这种也太小众了。</description>
     </item>
   </channel>

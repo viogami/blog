@@ -3,7 +3,7 @@
   <channel>
     <title>Project :: Purple Pulpo</title>
     <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/project/index.html</link>
-    <description></description>
+    <description>VioGo–不止聊天的奇妙bot 纯go编写的机器人业务后端，bot取名为 Vio ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。 可以完成基于chatgpt聊天任务，以及一些简单的指令响应。 如果你有想法和意见请提issue！这对我和bot都很重要！ 欢迎qq加群讨论：340961300&#xA;p5r预告信生成器API 预告信生成器国外作者原版：https://skyventuree.github.io/p5cc/index.html.我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。&#xA;基于gocq的qqbot搭建 你至少需要启动三个服务 qsign服务器 go-cqhttp 你自己的机器人后端 gocq只需要启动项目即可，不需要配置域名，qsign和你的后端都需要配置域名 为了可以实现双向通信，你的后端需要实现websocket的通信。&#xA;基于pyautogui的自动化程序 主要使用pyautogui的库实现，以及使用gooey库制作了GUI。 详细请访问我的github项目页面</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>

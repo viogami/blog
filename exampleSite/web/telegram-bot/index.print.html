@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="print">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.154.5">
+    <meta name="generator" content="Relearn 9.0.3+8bb66fa674351f3a0b0917a7552caac686eca920">
+    <meta name="description" content="从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)">
+    <meta name="author" content="Captain Hugo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Telegram Bot部署 :: Purple Pulpo">
+    <meta name="twitter:description" content="从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)">
+    <meta property="og:url" content="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/telegram-bot/index.html">
+    <meta property="og:site_name" content="Purple Pulpo">
+    <meta property="og:title" content="Telegram Bot部署 :: Purple Pulpo">
+    <meta property="og:description" content="从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Web">
+    <meta property="article:published_time" content="2023-12-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-07T00:00:00+00:00">
+    <meta property="article:tag" content="Telegram">
+    <meta property="article:tag" content="Bot">
+    <meta property="article:tag" content="Go">
+    <meta property="article:tag" content="Webhook">
+    <meta itemprop="name" content="Telegram Bot部署 :: Purple Pulpo">
+    <meta itemprop="description" content="从botfather处创建bot，命名为 vio.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)">
+    <meta itemprop="datePublished" content="2023-12-07T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2023-12-07T00:00:00+00:00">
+    <meta itemprop="wordCount" content="71">
+    <meta itemprop="keywords" content="Telegram,Bot,Go,Webhook">
+    <title>Telegram Bot部署 :: Purple Pulpo</title>
+    <link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/telegram-bot/index.html" rel="canonical" type="text/html" title="Telegram Bot部署 :: Purple Pulpo">
+    <link href="/hugo-theme-relearn/exampleSite/images/logo.svg?1769159049" rel="icon" type="image/svg+xml">
+    <link href="/hugo-theme-relearn/exampleSite/css/auto-complete/auto-complete.min.css?1769159049" rel="stylesheet">
+    <script src="/hugo-theme-relearn/exampleSite/js/auto-complete/auto-complete.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search-lunr.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/search.min.js?1769159049" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/hugo-theme-relearn/exampleSite/searchindex.en.js?1769159049";
+    </script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.stemmer.support.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.multi.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/lunr/lunr.en.min.js?1769159049" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769159049" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/hugo-theme-relearn/exampleSite/fonts/fontawesome/css/all.min.css?1769159049" rel="stylesheet"></noscript>
+    <link href="/hugo-theme-relearn/exampleSite/css/perfect-scrollbar/perfect-scrollbar.min.css?1769159049" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/theme.min.css?1769159049" rel="stylesheet">
+    <link href="/hugo-theme-relearn/exampleSite/css/format-print.min.css?1769159049" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = `.min`;
+      window.relearn.path='\/web\/telegram-bot\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='https:\/\/mcshelby.github.io\/hugo-theme-relearn\/exampleSite';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto', 'neon', 'learn' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+    <style>
+       
+      #R-body svg.purple,
+      #R-body svg.purple :not([fill]),
+      #R-body svg.purple [fill='black'],
+      #R-body svg.purple [fill='#000000'] {
+        fill: var(--INTERNAL-PRIMARY-color);
+      }
+    </style>
+  </head>
+  <body class="mobile-support print" data-origin="/hugo-theme-relearn/exampleSite/web/telegram-bot/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#基本示例我放在了github上gobot">基本示例我放在了github上：Gobot</a></li>
+    <li><a href="#最终实现效果-">最终实现效果 👇👇👇</a></li>
+    <li><a href="#创建bot">创建bot</a></li>
+    <li><a href="#使用https">使用HTTPS</a></li>
+    <li><a href="#响应方式">响应方式</a></li>
+    <li><a href="#webhook">webhook</a></li>
+    <li><a href="#paas平台部署">paas平台部署</a></li>
+    <li><a href="#调用chatgpt-api">调用chatGPT API</a>
+      <ul>
+        <li><a href="#首先获取密钥">首先获取密钥</a></li>
+        <li><a href="#gpt代理问题">GPT代理问题</a></li>
+        <li><a href="#实现数据处理逻辑">实现数据处理逻辑</a></li>
+        <li><a href="#重新部署">重新部署</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/index.html"><span itemprop="name">Purple Pulpo</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/hugo-theme-relearn/exampleSite/web/index.html"><span itemprop="name">Web</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Telegram Bot部署</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="https://github.com/viogami/blog/edit/main/docs/content/web/Telegram Bot部署/index.md" rel="external" title="Edit (CTRL+ALT+w)"><i class="fa-fw fas fa-pen"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-print default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/web/telegram-bot/index.print.html" title="Print whole chapter (CTRL+ALT+p)"><i class="fa-fw fas fa-print"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/web/prism-mac-style/index.html" title="Typecho中代码高亮并有Mac风格 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/hugo-theme-relearn/exampleSite/log/index.html" title="Captain's Log (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable web" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/bot/index.html">Bot</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/go/index.html">Go</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/telegram/index.html">Telegram</a></li>
+    <li><a class="term-link" href="/hugo-theme-relearn/exampleSite/tags/webhook/index.html">Webhook</a></li>
+  </ul>
+</div>
+  </header>
+
+<h1 id="telegram-bot部署">Telegram Bot部署</h1>
+
+<h2 id="基本示例我放在了github上gobot">基本示例我放在了github上：<a href="https://github.com/viogami/viogo" rel="external">Gobot</a><span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h2 id="最终实现效果-">最终实现效果 👇👇👇<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p><a href="#R-image-ede315387c0e1bd82764be333702bb09" class="lightbox-link"><img alt="img" class="lazy lightbox figure-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/web/telegram-bot/1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ede315387c0e1bd82764be333702bb09"><img alt="img" class="lazy lightbox lightbox-image" loading="lazy" src="/hugo-theme-relearn/exampleSite/web/telegram-bot/1.png"></a></p>
+<h2 id="创建bot">创建bot<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>从botfather处创建bot，命名为 <code>vio</code>.
+明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)</p>
+<h2 id="使用https">使用HTTPS<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>在Telegram的Bot API中，使用HTTPS是强烈建议的。如果Bot使用HTTP而不是HTTPS，Telegram服务器可能会拒绝处理请求。
+为了确保Tg Bot能够正常运行并保障通信安全，最好使用HTTPS。许多服务提供商都提供免费的SSL证书.
+如：<strong>Let&rsquo;s Encrypt证书</strong>，它是一种免费的、开源的证书颁发机构（CA），可以用来为服务器启用HTTPS，从而实现安全的Bot通信。</p>
+<p>但是如果部署在paas平台，则无需考虑证书相关的问题，更多部署细节可以查看我 <a href="https://github.com/viogami/viogo#%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98" rel="external">仓库的说明</a></p>
+<h2 id="响应方式">响应方式<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>Telegram Bot有以下响应方式：</p>
+<p>长轮询（Long Polling）： 这是一种常见的实时通信方式。Bot向Telegram服务器发送一个请求，然后服务器一直保持连接打开，直到有新消息到达。这样，Bot能够即时收到用户的消息并立即作出响应。长轮询是一种相对简单的方式，适用于需要实时性的场景。</p>
+<p>Webhook： Webhook是一种更为高效和现代的方式。允许你在你的服务器上设置一个HTTP端点，当有新消息到达时，Telegram服务器会向这个端点发送POST请求。这样，你的Bot可以立即得知有新消息，并作出响应。使用Webhook能够避免频繁的轮询操作，提高效率。</p>
+<p>云函数（Cloud Functions）： 你还可以将Bot的部分功能部署到云函数（如AWS Lambda、Google Cloud Functions等）上，以响应特定的事件。这样可以实现高度的可伸缩性和响应性。</p>
+<h2 id="webhook">webhook<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>为了有较好的实时通信体验，并且完成多方通信，我准备使用webhook的方案。</p>
+<p><strong>设置Webhook端点</strong>： 在我服务器上，创建一个HTTP端点来接收Telegram的Webhook请求。这个端点需要运行在公共网络上，并且能够处理POST请求。这个端点将会接收到所有的Telegram消息。</p>
+<p><strong>配置Bot的Webhook</strong>： 使用Telegram Bot API设置Bot的Webhook，指向刚刚创建的HTTP端点。可以使用NewWebhook方法，指定Webhook的URL(我部署在paas平台上，无需使用证书密钥)。</p>
+<h2 id="paas平台部署">paas平台部署<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<p>我选择了zeabur这个服务提供平台,</p>
+<p>zeabur上项目部署非常快,甚至不用写dockfile,而且对go项目有完整的支持,算是符合他们的口号:</p>
+<blockquote>
+<p>Deploying your service with one click</p>
+</blockquote>
+<p>在使用paas服务时，需要注意项目的端口号设置,最好设置在环境变量中,然后在项目中通过 <code>os.Getenv(&quot;xxx&quot;)</code>来获取端口号.</p>
+<p>zeabur的go项目中，环境变量PORT是默认8080，且为全局的。也可以不设置，直接调用就好了。</p>
+<ul>
+<li>对于tgbot：官方示例中使用的8443端口，在部署到paas平台时8443端口需要确认是否开放。 我建议不要使用官方示例中把端口号写明的写法，通过环境变量PORT调用端口号，避免webhook创建失败，或者监听未开放的端口等问题。</li>
+</ul>
+<h2 id="调用chatgpt-api">调用chatGPT API<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="首先获取密钥">首先获取密钥<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>但是注意，不是申请了账号密钥就可以使用的，只有三个月内注册的账号每个月有免费的5$的额度。如果没有额度，申请的密钥也是无法使用的。很多购买的GPT的账号，api基本都是没额度或者额度每个月都被其他人用完的，可以使用国内的中转代理，来解决密钥的问题。 我推荐一个：<a href="https://one-api.bltcy.top/" rel="external">柏拉图次元Al</a></p>
+<h3 id="gpt代理问题">GPT代理问题<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>注意：如果使用中转，需要更换post请求的URL</p>
+<p>使用go-openai库后，需要更改config
+更多细节可以查看服务提供商的文档，以及这个<a href="https://github.com/sashabaranov/go-openai/issues/513#issuecomment-1851585302" rel="external">issue</a></p>
+<p>示例：<code>URL：&quot;https://api.example.com/v1&quot;</code>.
+其中后面的“v1”是必须的</p>
+<h3 id="实现数据处理逻辑">实现数据处理逻辑<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>对于tgbot来说，私聊要回复信息需要知道user的id或者username，但是在群里中需要知道chat的id。</p>
+<p>注意，tg的群组分为group和supergroup，公开的群组都是supergroup，只有私群是group。</p>
+<p>设置了消息处理逻辑，如果想直接用chatgpt的api来聊天，写一个函数调用就可以了。</p>
+<p>对于go语言来说，有一个以及封装好的，对于openai API使用的库：<a href="https://github.com/sashabaranov/go-openai" rel="external">go-openai</a></p>
+<h3 id="重新部署">重新部署<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>把chatGPT的API密钥写在环境变量中，redeploy服务就好了</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Dec 7, 2023
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/hugo-theme-relearn/exampleSite/js/perfect-scrollbar/perfect-scrollbar.min.js?1769159049" defer></script>
+    <script src="/hugo-theme-relearn/exampleSite/js/theme.min.js?1769159049" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

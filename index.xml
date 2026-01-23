@@ -9,11 +9,25 @@
     <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Project</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/project/index.html</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/project/index.html</guid>
+      <description>VioGo–不止聊天的奇妙bot 纯go编写的机器人业务后端，bot取名为 Vio ，qq机器人的实现基于gocq提供的api，基于gocq的上报事件调用转发外部讯息并返回。 可以完成基于chatgpt聊天任务，以及一些简单的指令响应。 如果你有想法和意见请提issue！这对我和bot都很重要！ 欢迎qq加群讨论：340961300</description>
+    </item>
+    <item>
       <title>Introduction</title>
       <link>https://mcshelby.github.io/hugo-theme-relearn/introduction/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mcshelby.github.io/hugo-theme-relearn/introduction/index.html</guid>
       <description>Discover what this Hugo theme is all about.&#xA;Getting Started Initialize your website in a few simple steps</description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/web/index.html</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/web/index.html</guid>
+      <description>【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错 dockers报错：Starting MySQL database server mysqld …failed 进入容器内部，查看mysql错误日志：cat /var/log/mysql/error.log mysql具体报错：Different lower_case_table_names settings for server (&#39;2&#39;) and data dictionary (&#39;0&#39;).</description>
     </item>
     <item>
       <title>Configuration</title>
@@ -23,11 +37,25 @@
       <description>Find out how to configure and customize your site.&#xA;Site Management Get yourself familiar with the general structure of your website</description>
     </item>
     <item>
+      <title>Game</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/game/index.html</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/game/index.html</guid>
+      <description>用最轻量的VS负载进行UE5开发(使用rider) vs的C桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成–TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。</description>
+    </item>
+    <item>
       <title>Authoring</title>
       <link>https://mcshelby.github.io/hugo-theme-relearn/authoring/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://mcshelby.github.io/hugo-theme-relearn/authoring/index.html</guid>
       <description>Learn how to create and organize your content pages.&#xA;Directory Structure Your content&#39;s directory structure</description>
+    </item>
+    <item>
+      <title>Thinking</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/index.html</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/index.html</guid>
+      <description>短期回顾2024/8 这段时间没做什么项目相关，自上次gamejam之后，只接手了一个游戏的后端项目，但短期内暂无后续。我自己还是看好这个项目的，和我未来的规划不谋而合吧，很乐意合作。</description>
     </item>
     <item>
       <title>Shortcodes</title>
@@ -37,25 +65,11 @@
       <description>Hugo uses Markdown as its content format. However, there are a lot of things that Markdown doesn’t support well. To overcome those limitations, Hugo created the concept of shortcodes.</description>
     </item>
     <item>
-      <title>Project</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/project/index.html</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/project/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Blog</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/blog/index.html</link>
+      <title>Reversing</title>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/reversing/index.html</link>
       <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/blog/index.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Thinking</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/thinking/index.html</link>
-      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/thinking/index.html</guid>
-      <description></description>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/reversing/index.html</guid>
+      <description>TLS流量解密，mitmproxy抓包模拟器流量走clash代理证书问题 所谓tls加密，其实就是https，或者是wss，但是wss也是https的升级。所以解密tls实际上就是解读https流量。 问题场景 工具： mitmproxy,mumu模拟器12，clash，wireshake(可选)，openssl，adb调试</description>
     </item>
   </channel>
 </rss>

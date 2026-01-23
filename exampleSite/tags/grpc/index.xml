@@ -10,16 +10,16 @@
     <atom:link href="https://mcshelby.github.io/hugo-theme-relearn/exampleSite/tags/grpc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>php使用grpc服务(从0开始，并且包含mapfield文件解释)</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-php/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-php/index.html</link>
       <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-php/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-php/index.html</guid>
       <description>grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。&#xA;现在我希望我的一个php项目也可以调用该服务，现在来试一试吧~</description>
     </item>
     <item>
       <title>使用grpc在go后端和python服务间通信</title>
-      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html</link>
+      <link>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-go-python/index.html</link>
       <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/blog/grpc-go-python/index.html</guid>
+      <guid>https://mcshelby.github.io/hugo-theme-relearn/exampleSite/web/grpc-go-python/index.html</guid>
       <description>gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)</description>
     </item>
   </channel>
