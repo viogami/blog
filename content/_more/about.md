@@ -1,13 +1,10 @@
----
-# don't change
-type: misc
++++
+description = 'About this Website'
+title = 'About'
 
-# change these
-jobTitle: gopher
-name: viogami
-bio: true
-icon: ":coffee:"
----
+[params]
+  menuPre = '<i class="fa-fw fas fa-info-circle"></i> '
++++
 
 ## 👋Hi~there
 
@@ -15,7 +12,7 @@ icon: ":coffee:"
 
 > 熟悉web后端技术栈，游戏方面也有诸多实践
 
-📓 My favorite language 👉 <a href="https://golang.org" style="color: #00ADD8">Golang </a>
+📓 My favorite language 👉 `<a href="https://golang.org" style="color: #00ADD8">`Golang `</a>`
 
 > 开发的时候是有各种弯弯绕绕，但是go的输出确实大道至简
 
@@ -44,10 +41,11 @@ docker重度爱好，部署尝试过K8S，但并不熟练。
 希望和小岛一样越活越年轻
 
 <!-- 添加github简介 -->
+
 <div align="center" >
     <img src="https://camo.githubusercontent.com/2e168acdd82ce05689f70926a5db0c44fb8ec14a4916336d7323a81cc537062c/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d76696f67616d69266c61796f75743d636f6d7061637426686964655f626f726465723d74727565"
         alt="viogami's github stats"
-        data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs/?username=viogami&amp;layout=compact&amp;hide_border=true"
+        data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs/?username=viogami&layout=compact&hide_border=true"
         style="width: 90%; height: auto;"
         />
 </div>
@@ -56,4 +54,4 @@ docker重度爱好，部署尝试过K8S，但并不熟练。
 
 ### 👥 友情链接
 
-- [我的typecho博客站](http://viogami.tech)
+- [我的typecho博客站](http://vioblog.zeabur.app)

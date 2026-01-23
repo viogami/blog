@@ -1,3 +1,55 @@
+[menu]
+  [[menu.shortcuts]]
+    pre = '<i class="fab fa-github"></i> '
+    name = 'Github'
+    url = 'https://github.com/viogami'
+    weight = 1
+
+  [[menu.shortcuts]]
+    pre = '<i class="fab fa-bilibili"></i> '
+    name = 'Bilibili'
+    url = 'https://space.bilibili.com/396367307'
+
+  [[menu.shortcuts]]
+    pre = '<i class="fab fa-steam"></i> '
+    name = 'Steam'
+    url = 'https://steamcommunity.com/id/viogami/'
+
+  [[menu.shortcuts]]
+    pre = '<i class="fa-fw fas fa-info-circle"></i> '
+    name = '关于'
+    url = '/more/about'
+
+[params]
+  linkTitle = "Vio Lab"
+  showVisitedLinks = true
+  themeVariant = [
+    { identifier = 'retro-auto',    name = 'Retro Learn/Neon', auto = [ 'learn', 'neon' ] },
+    { identifier = 'neon',          logo = { src = '/images/logo.svg' } },
+    { identifier = 'learn'          },
+
+    { identifier = 'relearn-auto',  name = 'Relearn Light/Dark', auto = [ 'relearn-light', 'relearn-dark' ] },
+    { identifier = 'relearn-dark'   },
+    { identifier = 'relearn-light'  }
+  ]
+
+  editURL = 'https://github.com/viogami/blog/edit/main/docs/content/${FilePath}'
+
+  collapsibleMenu = true
+
+
+[params.relearn.dependencies]
+  [params.relearn.dependencies.math]
+    name = 'Math'
+  [params.relearn.dependencies.mermaid]
+    name = 'Mermaid'
+  [params.relearn.dependencies.openapi]
+    name = 'OpenApi'
+  [params.relearn.dependencies.search]
+    name = 'Search'
+  [params.relearn.dependencies.theme]
+    name = 'Theme'
+
 [module]
   [module.hugoVersion]
     min = '0.141.0'
@@ -5,6 +57,11 @@
 [mediaTypes]
   [mediaTypes.'text/javascript']
     suffixes = ['js']
+
+[outputs]
+  home = ['html', 'rss', 'markdown', 'source']
+  page = ['html', 'markdown', 'source']
+  section = ['html', 'rss', 'markdown', 'source']
 
 [outputFormats]
   [outputFormats.print]
@@ -23,32 +80,7 @@
     permalinkable = false
     noUgly = true
 
-  # unused since 7.0.0 but left in here to generate warnings
-  [outputFormats.search]
-    name= 'search'
-    baseName = 'index.searchindex'
-    isHTML = true
-    mediaType = 'text/html'
-    permalinkable = false
-    noUgly = true
-
-  # unused since 7.0.0 but left in here to generate warnings
-  [outputFormats.searchpage]
-    name= 'searchpage'
-    baseName = 'index.searchpage'
-    isHTML = true
-    mediaType = 'text/html'
-    permalinkable = false
-    noUgly = true
-
-[params.relearn.dependencies]
-  [params.relearn.dependencies.math]
-    name = 'Math'
-  [params.relearn.dependencies.mermaid]
-    name = 'Mermaid'
-  [params.relearn.dependencies.openapi]
-    name = 'OpenApi'
-  [params.relearn.dependencies.search]
-    name = 'Search'
-  [params.relearn.dependencies.theme]
-    name = 'Theme'
+[taxonomies]
+  category = 'categories'
+  mycustomtag = 'mycustomtags'
+  tag = 'tags'
