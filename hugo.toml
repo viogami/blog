@@ -37,6 +37,10 @@
 
   collapsibleMenu = true
 
+  [params.author]
+    emailname = ''
+    name = 'viogami'
+
 
 [params.relearn.dependencies]
   [params.relearn.dependencies.math]

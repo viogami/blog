@@ -1,10 +1,9 @@
 +++
 description = 'About this Website'
 title = 'About'
-headless = true
 
 [params]
-  menuPre = '`<i class="fa-fw fas fa-info-circle"></i>` '
+  menuPre = '<i class="fa-fw fas fa-info-circle"></i>'
 +++
 
 ## 👋Hi~there
@@ -13,7 +12,9 @@ headless = true
 
 > 熟悉web后端技术栈，游戏方面也有诸多实践
 
-📓 My favorite language 👉 `<a href="https://golang.org" style="color: #00ADD8">`Golang `</a>`
+📓 My favorite language 👉
+
+{{% button href="https://golang.org" target="" type="" style="" color="#00ADD8" icon="fab fa-golang" iconposition="" %}}Golang{{% /button %}}
 
 > 开发的时候是有各种弯弯绕绕，但是go的输出确实大道至简
 
@@ -32,7 +33,7 @@ docker重度爱好，部署尝试过K8S，但并不熟练。
 
 ### 🎮🎮🎮
 
-游戏开发方面，unity苦手，除了正向开发，逆向也做了很多工作，不敢说对游戏开发底层有什么理解，但是游戏表现层的实现思路差不多翻来覆去搞的明明白白了。联机方面，对web的数据包传输有相关实践，也做过联机游戏的服务端设计。每一步都是为了自己游戏的铺垫吧。
+略懂游戏开发，正在做一个格斗项目，逆向也做过不少工作，不敢说对游戏开发底层有什么理解，但是游戏表现层的实现思路差不多翻来覆去搞的明明白白了。联机方面，设计过web数据包底层传输(tcp)，也做过联机游戏的服务端设计。每一步都是为了自己游戏的铺垫吧。
 
 主流游戏引擎均有实践，美术音乐靠ai，一点剪辑建模经验，自学日语，双料特工。还是希望有专业的小伙伴联系我，当然，我得先发布我的demo，哈哈
 
@@ -40,18 +41,6 @@ docker重度爱好，部署尝试过K8S，但并不熟练。
 
 崇拜的游戏制作人： [Kojima😶‍🌫️](https://www.kojimaproductions.jp/zh-hans)
 希望和小岛一样越活越年轻
-
-<!-- 添加github简介 -->
-
-<div align="center" >
-    <img src="https://camo.githubusercontent.com/2e168acdd82ce05689f70926a5db0c44fb8ec14a4916336d7323a81cc537062c/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67732f3f757365726e616d653d76696f67616d69266c61796f75743d636f6d7061637426686964655f626f726465723d74727565"
-        alt="viogami's github stats"
-        data-canonical-src="https://github-readme-stats.vercel.app/api/top-langs/?username=viogami&layout=compact&hide_border=true"
-        style="width: 90%; height: auto;"
-        />
-</div>
-
----
 
 ### 👥 友情链接
 

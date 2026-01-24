@@ -1,7 +1,6 @@
-+++
-linktitle = 'viogami lab'
-title = 'The Viogami lab'
-type = 'home'
-+++
-
-welcome to my blog!
+---
+linktitle: "viogami lab"
+title: "The Viogami lab"
+type: "home"
+hideAuthorDate: true
+---
