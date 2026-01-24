@@ -15,56 +15,90 @@
   "editor.formatOnSave": true,
   "extensions.ignoreRecommendations": false,
   "prettier.useEditorConfig": true,
-  "spellright.documentTypes": ["latex", "markdown"],
-  "spellright.language": ["en"],
-  "frontMatter.panel.openOnSupportedFile": true,
+
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.taxonomy.frontMatterType": "YAML",
+  "frontMatter.content.defaultSorting": "LastModifiedAsc",
+  "frontMatter.content.hideFm": false,
+  "frontMatter.content.pageFolders": [
+    {
+      "contentTypes": ["default"],
+      "path": "[[workspace]]/content",
+      "title": "Docs"
+    }
+  ],
+
+  "frontMatter.extends": ["./vscode-frontmatter/snippets.en.json"],
+  "frontMatter.framework.startCommand": "hugo server -p 1313 --bind 0.0.0.0 --navigateToChanged",
+  "frontMatter.git.commitMessage": "docs: changes via Front Matter CMS editor",
+  "frontMatter.git.enabled": true,
+  "frontMatter.global.activeMode": "Editor",
+  "frontMatter.global.modes": [
+    {
+      "id": "Power",
+      "features": ["dashboard.data.view", "dashboard.snippets.manage", "dashboard.snippets.view", "dashboard.taxonomy.view", "panel.actions", "panel.contentType", "panel.globalSettings", "panel.metadata", "panel.otherActions", "panel.recentlyModified", "panel.seo"]
+    },
+    {
+      "id": "Editor",
+      "features": ["dashboard.snippets.view", "dashboard.taxonomy.view", "panel.actions", "panel.metadata"]
+    }
+  ],
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.preview.pathName": "{{pathToken.relPath}}/",
+  "frontMatter.taxonomy.categories": [],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
-      "pageBundle": false,
+      "pageBundle": true,
       "previewPath": null,
       "fields": [
         {
-          "title": "Title",
+          "title": "标题",
           "name": "title",
           "type": "string"
         },
         {
-          "title": "Description",
+          "title": "地址",
+          "name": "slug",
+          "type": "string"
+        },
+        {
+          "title": "描述",
           "name": "description",
           "type": "string"
         },
         {
-          "title": "Publishing date",
+          "title": "发布日期",
           "name": "date",
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
         },
         {
-          "title": "Content preview",
+          "title": "内容预览",
           "name": "preview",
           "type": "image"
         },
         {
-          "title": "Is in draft",
+          "title": "保存为草稿",
           "name": "draft",
           "type": "draft"
         },
         {
-          "title": "Tags",
+          "title": "标签",
           "name": "tags",
           "type": "tags"
         },
         {
-          "title": "Categories",
+          "title": "分类",
           "name": "categories",
           "type": "categories"
         }
       ]
     }
   ],
-  "frontMatter.framework.id": "hugo",
-  "frontMatter.content.publicFolder": "static",
-  "frontMatter.preview.host": "http://localhost:1313"
+  "frontMatter.media.contentTypes": [{
+    "name": "default",
+    "fileTypes": ["png", "jpg", "jpeg", "gif"]
+  }]
 }

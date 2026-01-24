@@ -183,7 +183,7 @@ class MyMainForm(QMainWindow, Ui_Form):
                     card_type = 'SR'
                 else:
                     card_type = 'R'
-    
+  
                 cards_star.append(card_type)
   
             if 'SR' in cards_star:
@@ -292,7 +292,7 @@ class MyMainForm(QMainWindow, Ui_Form):
                     card_type = 'SR'
                 else:
                     card_type = 'R'
-    
+  
                 cards_star.append(card_type)
   
             if 'SR' in cards_star:
@@ -518,4 +518,4 @@ db_name = "card_database.db"#db文件名
 
 ## 最后
 
-### 放在了 `<u>`[github](https://github.com/viogami/DrawCard_uma) `</u>`上，觉得有用可以Star☆ ，hh
+### 放在了 [github](https://github.com/viogami/DrawCard_uma) 上，觉得有用可以Star☆ ，hh

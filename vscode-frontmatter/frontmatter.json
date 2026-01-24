@@ -96,5 +96,5 @@
       ]
     }
   ],
-  "frontMatter.taxonomy.frontMatterType": "TOML"
+  "frontMatter.taxonomy.frontMatterType": "YAML"
 }

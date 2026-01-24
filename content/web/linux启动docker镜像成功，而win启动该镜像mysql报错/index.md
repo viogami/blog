@@ -1,5 +1,5 @@
 ---
-title: 【开发问题】linux启动docker镜像成功，而win启动该镜像mysql报错
+title: linux启动docker镜像成功，而win启动该镜像mysql报错
 slug: docker-mysql-error
 tags: 
   - docker
@@ -9,7 +9,6 @@ tags:
   - 开发问题
 date: 2024-04-27
 ---
-
 - dockers报错：`Starting MySQL database server mysqld ...failed`
 - 进入容器内部，查看mysql错误日志：`cat /var/log/mysql/error.log`
 - mysql具体报错：`Different lower_case_table_names settings for server ('2') and data dictionary ('0').`
@@ -21,7 +20,7 @@ date: 2024-04-27
 - docker启动mysql并不是根据官方mysql镜像，而是在一个基础php镜像上安装的mysql服务。
 - 我的mysql数据通过docker的卷挂载在外部，通过一个mysql文件夹管理。
 
-当我把linux上可以运行的镜像和mysql外部卷都发送给win机器运行，由于**mysql数据是外部挂载的**，所以会出现同一个镜像，换了操作系统却无法运行的问题。本质上是mysql在linux和win上的环境变量`lower_case_table_names`默认值不同导致的。由于数据库数据在linux上初始化，该值已经为0，而在win上需要为2，所以报错。
+当我把linux上可以运行的镜像和mysql外部卷都发送给win机器运行，由于**mysql数据是外部挂载的**，所以会出现同一个镜像，换了操作系统却无法运行的问题。本质上是mysql在linux和win上的环境变量 `lower_case_table_names`默认值不同导致的。由于数据库数据在linux上初始化，该值已经为0，而在win上需要为2，所以报错。
 
 > Docker镜像确实是操作系统无关的，但是MySQL的lower_case_table_names设置是与操作系统有关的。这是因为lower_case_table_names设置决定了MySQL如何存储和比较表名和数据库名。
 >
