@@ -1,7 +1,6 @@
 +++
 description = 'About this Website'
 title = 'About'
-headless = true
 
 [params]
   menuPre = '<i class="fa-fw fas fa-info-circle"></i>'
