@@ -1,6 +1,6 @@
 ---
 title: 自顶向下学习K8S--部署Agones
-subtitle: 我是gopher，离不开云原生，自然也逃不了理解docker和K8S这俩。今天抽空想玩下agones，进而对K8S有实践性的理解
+description: 我是gopher，离不开云原生，自然也逃不了理解docker和K8S这俩。今天抽空想玩下agones，进而对K8S有实践性的理解
 slug: k8s-agones
 tags: 
   - K8S
@@ -8,13 +8,7 @@ tags:
   - agones
   - kubernetes
   - 云原生
-summary: 
 date: 2024-03-28
-cardimage: 
-featureimage:
-caption: 
-authors:
-  - viogami: author.png
 ---
 
 学一个新事物从底层理论学肯定是最系统的，但不是最工程的。对于K8S，我个人认为相比苦苦理解各种集群，节点，pods等等概念，不如实际上手一次，从实践上逐步理解理论，自顶向下才是最快最高效的学习模式，因为目的是使用K8S，是工程化，而不是了解k8s架构，设计云云。
@@ -141,19 +135,3 @@ kubectl apply --server-side -f https://raw.githubusercontent.com/googleforgames/
 怎么用kubectl操作，怎么用helm包管理，这就是启动K8S后亟待解决的唯二的问题，在实践中结束吧！
 
 ### 如果你有任何疑问，都可以评论联系我~
-
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

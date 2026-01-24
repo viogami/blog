@@ -1,26 +1,14 @@
 ---
 # general config
 title: Typecho中代码高亮并有Mac风格
-subtitle: 
 slug: prism-mac-style
 tags: 
   - Typecho
   - Prism
   - Mac风格
   - CSS
-summary: 下载prism文件。在head中引用，并添加行号类。修改CSS。
+description: 下载prism文件。在head中引用，并添加行号类。修改CSS。
 date: 2023-12-10
-authors:
-  - viogami: author.png
-
-# # card specific config
-# summary: A summary of the blog post
-# cardimage: photo1_card.jpeg
-
-# # post specific config
-# featureimage: photo1.jpeg
-# caption: Some image caption
-# toc: true
 ---
 ## 三步
 
@@ -97,19 +85,3 @@ pre[class*=language-]:hover {
 ```
 
 ## 你也可以直接从我的仓库拉取源代码！👉👉**[Ayakin](https://github.com/viogami/Ayakin-TypechoTheme)**
-
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

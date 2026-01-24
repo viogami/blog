@@ -18,7 +18,7 @@
   [[menu.shortcuts]]
     pre = '<i class="fa-fw fas fa-info-circle"></i> '
     name = '关于'
-    url = '/more/about'
+    url = '/_more/about'
 
 [params]
   linkTitle = "Vio Lab"

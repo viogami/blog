@@ -9,19 +9,8 @@ tags:
   - grpc-php
   - grpc-python
   - grpc-go
-summary: grpc是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
+description: grpc是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
 date: 2024-03-24
-authors:
-  - viogami: author.png
-
-# # card specific config
-# summary: A summary of the blog post
-# cardimage: photo1_card.jpeg
-
-# # post specific config
-# featureimage: photo1.jpeg
-# caption: Some image caption
-# toc: true
 ---
 grpc是面对微服务框架而风生水起的，上次我用python编写了一个图神经网络处理的微服务，使用grpc放在我的服务器本地端口上。
 
@@ -188,18 +177,3 @@ function GCN_request()
 虽然官网显示有ToString()的方法：[https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString](https://cloud.google.com/dotnet/docs/reference/Google.Protobuf/latest/Google.Protobuf.Collections.MapField-2#Google_Protobuf_Collections_MapField_2_ToString)
 但是在这里无法使用，所以我只能通过遍历的方式获取所有值存到一个数组里，毕竟map结构本身就不支持一次获取全部，还是要遍历。
 
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

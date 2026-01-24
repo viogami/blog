@@ -1,26 +1,14 @@
 ---
 # general config
 title: Telegram Bot部署
-subtitle: 
 slug: telegram-bot
 tags: 
   - Telegram
   - Bot
   - Go
   - Webhook
-summary: 从botfather处创建bot，命名为 `vio`.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)
+description: 从botfather处创建bot，命名为 `vio`.明确使用需求和目的，进而选择开发工具和相关库(主要使用go和colly库，tg官方也有go的api库)
 date: 2023-12-07
-authors:
-  - viogami: author.png
-
-# # card specific config
-# summary: A summary of the blog post
-# cardimage: photo1_card.jpeg
-
-# # post specific config
-# featureimage: photo1.jpeg
-# caption: Some image caption
-# toc: true
 ---
 ## 基本示例我放在了github上：[Gobot][1]
 
@@ -109,18 +97,3 @@ zeabur的go项目中，环境变量PORT是默认8080，且为全局的。也可�
   [5]: https://github.com/sashabaranov/go-openai/issues/513#issuecomment-1851585302
   [6]: https://github.com/sashabaranov/go-openai
 
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

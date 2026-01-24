@@ -3,9 +3,7 @@
 title: p5r预告信生成器API
 slug: "p5r_p5cc"
 date: 2025-02-05
-summary: 预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html).我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。
-authors:
-  - viogami: author.png
+description: 预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html).我制作了api版本供生产或娱乐使用。网页版有汉化版但最近网站貌似挂了，如果反响好我就自己部署一个网页版公开下。
 ---
 预告信生成器国外作者原版：[https://skyventuree.github.io/p5cc/index.html](https://skyventuree.github.io/p5cc/index.html)
 
@@ -58,18 +56,3 @@ All assets are all under fair use.
 
 *Credits can also be seen on the website along with links to the original site and owners, at the bottom of the page.*
 
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

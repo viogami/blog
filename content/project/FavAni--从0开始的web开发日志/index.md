@@ -1,14 +1,7 @@
 ---
 title: FavAni--从0开始的web开发日志
 slug: "FavAni"
-subtitle: 
-summary:
 date: 2023-09-30
-cardimage: 
-featureimage: 
-caption: 
-authors:
-  - viogami: author.png
 ---
 ## [演示DEMO地址](http://fa.viogami.tech/)
 
@@ -110,18 +103,3 @@ vue基本官方文档就能解决90%的问题，构建后大小也很惊人， �
   [5]: https://github.com/bangumi/api/blob/master/docs-raw/How-to-Auth.md
   [6]: https://github.com/qingwave/weave
 
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

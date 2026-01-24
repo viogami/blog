@@ -3,8 +3,6 @@ title: 基于gocq的qqbot搭建
 slug: "gocq_based"
 subtitle: 
 date: 2024-01-27
-authors:
-  - viogami: author.png
 ---
 你至少需要启动三个服务
 
@@ -268,19 +266,3 @@ servers:
 我用go写的后端
 创建ws连接的路由
 部署你的后端到国外服务器上/Paas上,将pass提供的地址作为ws地址。
-
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

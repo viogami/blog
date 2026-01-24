@@ -1,6 +1,5 @@
 ---
 title: 用最轻量的VS负载进行UE5开发(使用rider)
-subtitle: 本人常用rider，不希望多安装一个vs，体积大是一方面，也不太习惯了。
 slug: ue5-rider-vs
 tags:
     - ue5
@@ -11,11 +10,11 @@ tags:
     - 游戏开发
     - c++ build tools
     - c++ cmake tools for windows
-summary: vs的C++桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成--TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c++编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢。
+description: 本人常用rider，不希望多安装一个vs，体积大是一方面，也不太习惯了。所以查阅了相关文档，发现只要安装vs的构建工具就可以了，下面记录一下过程。
 date: 2024-06-12
-authors:
-  - viogami: author.png
 ---
+
+vs的C++桌面开发环境还是挺重要的，很多软件都可能会用到(比如AI音声生成--TTS，有的项目也要其SDK)，早下晚下罢了。同样的，ue5没有vs是不行的，rider可没有c++编译器和c++开发环境，所以vs该下还是要下。因为有了rider，那么如何不下载vs的编辑器，最轻量的进行UE5开发呢?
 
 从UE5官方文档来看，要下的负载还是很多的。但查看rider官方文档，只要我们下一个vs的工具集就ok了，那就试试看。
 
@@ -51,19 +50,3 @@ C++ CMake tools for Windows
 ----------
 
 这样就完成了最轻量的使用rider做编辑器进行UE5开发了，**不下载vs2022的编辑器，只下载必要构建工具，编辑器使用rider**。
-
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>

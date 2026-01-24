@@ -1,7 +1,6 @@
 ---
 # general config
 title: 使用grpc在go后端和python服务间通信
-subtitle: 
 slug: grpc-go-python
 tags: 
   - gRPC
@@ -9,19 +8,8 @@ tags:
   - python
   - grpc-go
   - grpc-python
-summary: gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
+description: gRPC是Google 开发的高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议进行通信，使用 Protocol Buffers（protobuf）作为接口定义语言，可以看为一种协议。grpc可以用于各种不同服务间的通信，屏蔽底层细节(如编程语言，操作系统等)
 date: 2024-03-21
-authors:
-  - viogami: author.png
-
-# # card specific config
-# summary: A summary of the blog post
-# cardimage: photo1_card.jpeg
-
-# # post specific config
-# featureimage: photo1.jpeg
-# caption: Some image caption
-# toc: true
 ---
 ## grpc前言
 
@@ -235,19 +223,3 @@ if __name__ == '__main__':
 然后访问定义的路由地址，如下显示，nice~
 
 ![2](1.png)
-
-<script src="https://giscus.app/client.js"
-        data-repo="viogami/blog"
-        data-repo-id="R_kgDOORWDyA"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOORWDyM4Conxc"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
