@@ -33,7 +33,7 @@
     { identifier = 'relearn-light'  }
   ]
 
-  editURL = 'https://github.com/viogami/blog/edit/main/docs/content/${FilePath}'
+  editURL = 'https://github.com/viogami/blog/edit/main/content/${FilePath}'
 
   collapsibleMenu = true
 
@@ -63,9 +63,9 @@
     suffixes = ['js']
 
 [outputs]
-  home = ['html', 'rss', 'markdown', 'source']
-  page = ['html', 'markdown', 'source']
-  section = ['html', 'rss', 'markdown', 'source']
+  home = ['html', 'rss', 'markdown']
+  page = ['html', 'markdown']
+  section = ['html', 'rss', 'markdown']
 
 [outputFormats]
   [outputFormats.print]
