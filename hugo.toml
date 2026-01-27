@@ -27,10 +27,7 @@
     { identifier = 'retro-auto',    name = 'Retro Learn/Neon', auto = [ 'learn', 'neon' ] },
     { identifier = 'neon',          logo = { src = '/images/logo.svg' } },
     { identifier = 'learn'          },
-
-    { identifier = 'relearn-auto',  name = 'Relearn Light/Dark', auto = [ 'relearn-light', 'relearn-dark' ] },
     { identifier = 'relearn-dark'   },
-    { identifier = 'relearn-light'  }
   ]
 
   editURL = 'https://github.com/viogami/blog/edit/main/content/${FilePath}'
