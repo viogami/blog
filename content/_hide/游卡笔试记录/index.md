@@ -1,12 +1,16 @@
 ---
 title: 游卡笔试记录
-slug: "interview-youka-written-test"
-description: "第一次笔试，心理压力较大。校园招聘看到的春招岗位，游戏服务器开发。我开始问有没有go的岗，hr说有(我在boss没看到)，随即加了微信，很快被捞了"
+slug: interview-youka-written-test
+description: 第一次笔试，心理压力较大。校园招聘看到的春招岗位，游戏服务器开发。我开始问有没有go的岗，hr说有(我在boss没看到)，随即加了微信，很快被捞了
 date: 2024-03-28
 preview: ""
-draft: true
-tags: ["面试","笔试","游卡"]
-categories: ["面试记录"]
+draft: false
+tags:
+    - 面试
+    - 笔试
+    - 游卡
+categories:
+    - 面试记录
 ---
 
 笔试23道题，15单选，5多选，3算法，时间一个小时半，就是牛客网的笔试系统。
