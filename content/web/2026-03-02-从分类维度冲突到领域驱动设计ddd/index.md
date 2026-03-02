@@ -4,7 +4,7 @@ slug: from-category-conflict-to-ddd
 description: 在分类问题中，无论是开发还是生活种，通常都习惯是单维树状结构表达的，但多数情况下，事物是多维属性的。
 date: 2026-03-02T01:42:07.509Z
 preview: ""
-draft: true
+draft: false
 tags:
     - DDD
     - 领域驱动设计
