@@ -73,7 +73,7 @@ AI调用：
 - 前端设计: 预计做成一个后台管理面板，精力有限，会使用直接模板，注重功能的实现，不只聊天！
 - 结构体设计完全遵循gocq文档
 - 使用go的websocket库创建和qqbot的ws连接，为基于gocq的qqbot的服务入口。
-- gocq的配置建议阅读我的[个人博客](http://viogami.tech/index.php/blog/144/)
+- gocq的配置建议阅读我的[个人博客](../gocq_based/)
 - chatgpt的调用参考go的openai库文档即可，也很完善。注意调用api是无法进行联系上下文对话的，要实现上下文对话只有把历史消息都post给api，这显然是不现实的。
 
 ## 部署建议

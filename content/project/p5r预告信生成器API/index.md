@@ -15,10 +15,10 @@ GitHub页面：[https://github.com/viogami/WebAPI/tree/master/p5cc](https://gith
 
 > 快速开始
 
-`http://api.viogami.tech/p5cc/:text`
+`https://vioapi.zeabur.app/p5cc/:text`
 
 eg:
-[http://api.viogami.tech/p5cc/persona5](http://vioapi.zeabur.app/p5cc/persona5)
+[https://vioapi.zeabur.app/p5cc/persona5](http://vioapi.zeabur.app/p5cc/persona5)
 
 ## 感谢[p5r风格字体的制作者](https://github.com/LzxHahaha)和[预告信样式的制作者](https://github.com/skyventuree)
 
