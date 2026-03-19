@@ -2,11 +2,12 @@
 title: 锈蚀
 slug: time-corrosion
 description: 善于总结，就能发现时间的副作用
-date: 2026-03-16T16:33:51.310Z
+date: 2026-03-19T15:12:57.558Z
 preview: ""
-draft: true
+draft: false
 tags: []
-categories: []
+categories:
+    - "2026"
 ---
 
 善于总结，就能发现时间的副作用
