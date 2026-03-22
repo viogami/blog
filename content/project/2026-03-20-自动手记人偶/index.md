@@ -47,6 +47,14 @@ categories:
 
 ![ai生成设计方案](./ai-.png)
 
+### 多端构建
+
+使用next，原生支持web，可用electron打包桌面端，移动端也构建了快速打包方案。
+
+- `apps/docs` 文档站，未用，保留
+- `apps/mobile` 移动端，可用EAS云端构建
+- `apps/web` 包含网页端和electron构建，PACKAGING.md文档有详细构建说明
+
 ### Monorepo 结构
 
 ```text
@@ -80,14 +88,6 @@ npm run dev --workspace=web
 npm run dev --workspace=mobile
 ```
 
-### 校验命令
-
-```bash
-npm run check-types --workspace=web
-npm run check-types --workspace=mobile
-npm run check-types --workspace=@repo/anime-core
-```
-
 ### 已实现的共享策略
 
 - 共享：类型定义、Bangumi 请求封装、Tier 规则、九宫格算法、Zustand store
@@ -102,6 +102,10 @@ npm run check-types --workspace=@repo/anime-core
 - `packages/anime-core/src/store.ts`
 - `packages/anime-core/src/rank.ts`
 - `packages/anime-core/src/grid.ts`
+
+### 👉[更详细的本人博客](https://viogami.github.io/blog/project/auto-memories-doll/index.html)
+
+### 👉[B站视频](https://www.bilibili.com/video/BV1sFAFzPE6t/#reply116265721007210)
 
 ## C.H backend (Go + PostgreSQL)
 
@@ -206,7 +210,7 @@ go run main.go
 
 ## 部署方案
 
-当前使用**vercel**部署前端 + **zeabur**部署后端 + **supabase**部署数据库。
+当前使用**vercel**部署前端 + **zeabur**部署后端(clawcloud备选) + **supabase**部署数据库。
 
 博客站点记录项目文档(github.io)
 
