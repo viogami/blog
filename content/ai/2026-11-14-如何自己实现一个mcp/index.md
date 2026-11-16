@@ -346,7 +346,3 @@ echo '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{"_meta":{"io.model
 - MCP Inspector：https://github.com/modelcontextprotocol/inspector
 - FastMCP：https://github.com/PrefectHQ/fastmcp
 ```
-
----
-
-参考资料与判断依据：2026-07-28 版规范取消了 `initialize` 握手与 `Mcp-Session-Id`、新增 `server/discover`、并在 HTTP 头里带 `Mcp-Method`/`Mcp-Name` [cite:bdeeecaa-1][cite:21d0d6f4-3]；「资源不存在」错误码由 `-32002` 统一为 `-32602` [cite:21d0d6f4-5]；TS v2 的 `serveStdio` + `registerTool` 写法 [cite:5e9bee5c-2]；Python v2 把 `FastMCP` 改名 `MCPServer`、传输配置移到 `run()` [cite:1f10b3f8-2][cite:5e9bee5c-1]；v2 SDK 与 FastMCP 的定位差异 [cite:a4706b62-1]，FastMCP 4 与官方 SDK 的内置 `FastMCP` 是两个库 [cite:a4706b62-2]；工具命名与描述实践 [cite:5deaf56f-1]、无参数工具的 `{"type":"object","additionalProperties":false}` 写法 [cite:5deaf56f-3]；Inspector 的两种跑法 [cite:a4706b62-4]；Claude Desktop 配置只吃 stdio 形状 [cite:6903cc1e-5]。
